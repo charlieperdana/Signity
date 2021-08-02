@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, Team 11 Lucu")
+        Text("Hello, Team 11 Lucu Onboarding")
+            .fontWeight(.ultraLight)
             .padding()
     }
 }
