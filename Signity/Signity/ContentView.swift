@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         Text("Hello, Team 11 Lucu Onboarding")
-            .fontWeight(.bold)
+            .fontWeight(.ultraLight)
             .padding()
     }
 }
