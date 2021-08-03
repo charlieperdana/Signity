@@ -16,6 +16,9 @@
 		5561AADB26B7ED96001896B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5561AAD926B7ED96001896B3 /* LaunchScreen.storyboard */; };
 		5561AAE626B7ED97001896B3 /* SignityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561AAE526B7ED97001896B3 /* SignityTests.swift */; };
 		5561AAF126B7ED97001896B3 /* SignityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561AAF026B7ED97001896B3 /* SignityUITests.swift */; };
+		55BD80EA26B924A70048244D /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BD80E926B924A70048244D /* Onboarding.swift */; };
+		55BD80EF26B937670048244D /* OnboardingRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BD80EE26B937670048244D /* OnboardingRegion.swift */; };
+		55BD80FC26B955930048244D /* CoursePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BD80FB26B955930048244D /* CoursePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		5561AAEC26B7ED97001896B3 /* SignityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5561AAF026B7ED97001896B3 /* SignityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityUITests.swift; sourceTree = "<group>"; };
 		5561AAF226B7ED97001896B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55BD80E926B924A70048244D /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		55BD80EE26B937670048244D /* OnboardingRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRegion.swift; sourceTree = "<group>"; };
+		55BD80FB26B955930048244D /* CoursePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -346,6 +352,7 @@
 		5561AB1A26B7F1BC001896B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				55BD80FB26B955930048244D /* CoursePage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -423,6 +430,8 @@
 		5561AB2526B7F1C6001896B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				55BD80E926B924A70048244D /* Onboarding.swift */,
+				55BD80EE26B937670048244D /* OnboardingRegion.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -557,8 +566,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55BD80EF26B937670048244D /* OnboardingRegion.swift in Sources */,
 				5561AACC26B7ED94001896B3 /* AppDelegate.swift in Sources */,
 				5561AACE26B7ED94001896B3 /* SceneDelegate.swift in Sources */,
+				55BD80EA26B924A70048244D /* Onboarding.swift in Sources */,
+				55BD80FC26B955930048244D /* CoursePage.swift in Sources */,
 				5561AAD026B7ED94001896B3 /* ContentView.swift in Sources */,
 				5561AAD326B7ED94001896B3 /* Signity.xcdatamodeld in Sources */,
 			);
