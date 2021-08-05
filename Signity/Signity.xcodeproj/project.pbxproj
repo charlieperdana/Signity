@@ -16,6 +16,9 @@
 		5561AADB26B7ED96001896B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5561AAD926B7ED96001896B3 /* LaunchScreen.storyboard */; };
 		5561AAE626B7ED97001896B3 /* SignityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561AAE526B7ED97001896B3 /* SignityTests.swift */; };
 		5561AAF126B7ED97001896B3 /* SignityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561AAF026B7ED97001896B3 /* SignityUITests.swift */; };
+		55BD80EA26B924A70048244D /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BD80E926B924A70048244D /* Onboarding.swift */; };
+		55BD80EF26B937670048244D /* OnboardingRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BD80EE26B937670048244D /* OnboardingRegion.swift */; };
+		55BD80FC26B955930048244D /* CoursePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BD80FB26B955930048244D /* CoursePage.swift */; };
 		7D31CADA26B908820027EB3E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CAD926B908820027EB3E /* CameraViewController.swift */; };
 		7D31CADC26B908B80027EB3E /* CameraRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CADB26B908B80027EB3E /* CameraRepresentable.swift */; };
 		7D31CADE26B909510027EB3E /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CADD26B909510027EB3E /* PracticeView.swift */; };
@@ -78,6 +81,9 @@
 		5561AAEC26B7ED97001896B3 /* SignityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5561AAF026B7ED97001896B3 /* SignityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityUITests.swift; sourceTree = "<group>"; };
 		5561AAF226B7ED97001896B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55BD80E926B924A70048244D /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		55BD80EE26B937670048244D /* OnboardingRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRegion.swift; sourceTree = "<group>"; };
+		55BD80FB26B955930048244D /* CoursePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePage.swift; sourceTree = "<group>"; };
 		7D31CAD926B908820027EB3E /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = Signity/Module/Practice/View/CameraPreview/CameraViewController.swift; sourceTree = SOURCE_ROOT; };
 		7D31CADB26B908B80027EB3E /* CameraRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraRepresentable.swift; path = Signity/Module/Practice/View/CameraPreview/CameraRepresentable.swift; sourceTree = SOURCE_ROOT; };
 		7D31CADD26B909510027EB3E /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PracticeView.swift; path = Signity/Module/Practice/View/PracticeView.swift; sourceTree = SOURCE_ROOT; };
@@ -405,6 +411,7 @@
 		5561AB1A26B7F1BC001896B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				55BD80FB26B955930048244D /* CoursePage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -483,6 +490,8 @@
 		5561AB2526B7F1C6001896B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				55BD80E926B924A70048244D /* Onboarding.swift */,
+				55BD80EE26B937670048244D /* OnboardingRegion.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -685,6 +694,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55BD80EF26B937670048244D /* OnboardingRegion.swift in Sources */,
+				55BD80EA26B924A70048244D /* Onboarding.swift in Sources */,
+				55BD80FC26B955930048244D /* CoursePage.swift in Sources */,
+				7D31CAD526B902290027EB3E /* CameraService.swift in Sources */,
 				7DEF5F4E26BBD86C00D64354 /* PracticeViewModel.swift in Sources */,
 				7D31CAE926B951CA0027EB3E /* ChatBubble.swift in Sources */,
 				5561AACC26B7ED94001896B3 /* AppDelegate.swift in Sources */,
