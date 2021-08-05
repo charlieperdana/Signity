@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,28 @@
 		55BD80EA26B924A70048244D /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BD80E926B924A70048244D /* Onboarding.swift */; };
 		55BD80EF26B937670048244D /* OnboardingRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BD80EE26B937670048244D /* OnboardingRegion.swift */; };
 		55BD80FC26B955930048244D /* CoursePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BD80FB26B955930048244D /* CoursePage.swift */; };
+		7D31CAD526B902290027EB3E /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CAD426B902290027EB3E /* CameraService.swift */; };
+		7D31CADA26B908820027EB3E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CAD926B908820027EB3E /* CameraViewController.swift */; };
+		7D31CADC26B908B80027EB3E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CADB26B908B80027EB3E /* CameraView.swift */; };
+		7D31CADE26B909510027EB3E /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CADD26B909510027EB3E /* PracticeView.swift */; };
+		7D31CAE326B92D580027EB3E /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CAE226B92D580027EB3E /* ProgressBar.swift */; };
+		7D31CAE526B936CC0027EB3E /* ChatTriangleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CAE426B936CC0027EB3E /* ChatTriangleShape.swift */; };
+		7D31CAE726B94EB60027EB3E /* PhraseStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CAE626B94EB60027EB3E /* PhraseStyle.swift */; };
+		7D31CAE926B951CA0027EB3E /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CAE826B951CA0027EB3E /* ChatBubble.swift */; };
+		7D31CAEB26B97ED80027EB3E /* HorizontalModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CAEA26B97ED80027EB3E /* HorizontalModules.swift */; };
+		7D31CAED26B97F2F0027EB3E /* PhraseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CAEC26B97F2F0027EB3E /* PhraseButton.swift */; };
+		7D31CAF126B994BD0027EB3E /* CameraViewController+DrawLandmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CAF026B994BD0027EB3E /* CameraViewController+DrawLandmark.swift */; };
+		7D31CAF326BA6B9A0027EB3E /* CameraNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CAF226BA6B9A0027EB3E /* CameraNavigationBar.swift */; };
+		7D31CAF526BAD5020027EB3E /* HandLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CAF426BAD5020027EB3E /* HandLines.swift */; };
+		7D31CAF826BAE6290027EB3E /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CAF726BAE6290027EB3E /* Hand.swift */; };
+		7D31CAFA26BB9B380027EB3E /* HandLandmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CAF926BB9B380027EB3E /* HandLandmarks.swift */; };
+		7D31CAFF26BBA7A20027EB3E /* PlaybackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CAFE26BBA7A20027EB3E /* PlaybackButton.swift */; };
+		7D31CB0226BBADAE0027EB3E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7D31CB0126BBADAE0027EB3E /* Lottie */; };
+		7D31CB0426BBB3A30027EB3E /* blender.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D31CB0326BBB3A30027EB3E /* blender.json */; };
+		7D31CB0626BBB3B20027EB3E /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CB0526BBB3B20027EB3E /* LottieView.swift */; };
+		7DEF5F4426BBBAA700D64354 /* person.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DEF5F4326BBBAA700D64354 /* person.json */; };
+		7DEF5F4C26BBD39200D64354 /* SentenceFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF5F4B26BBD39200D64354 /* SentenceFeedbackView.swift */; };
+		7DEF5F4E26BBD86C00D64354 /* PracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF5F4D26BBD86C00D64354 /* PracticeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +79,27 @@
 		55BD80E926B924A70048244D /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		55BD80EE26B937670048244D /* OnboardingRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRegion.swift; sourceTree = "<group>"; };
 		55BD80FB26B955930048244D /* CoursePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePage.swift; sourceTree = "<group>"; };
+		7D31CAD426B902290027EB3E /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraService.swift; path = Signity/Module/Practice/Service/CameraService.swift; sourceTree = SOURCE_ROOT; };
+		7D31CAD926B908820027EB3E /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = Signity/Module/Practice/View/CameraPreview/CameraViewController.swift; sourceTree = SOURCE_ROOT; };
+		7D31CADB26B908B80027EB3E /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = Signity/Module/Practice/View/CameraPreview/CameraView.swift; sourceTree = SOURCE_ROOT; };
+		7D31CADD26B909510027EB3E /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PracticeView.swift; path = Signity/Module/Practice/View/PracticeView.swift; sourceTree = SOURCE_ROOT; };
+		7D31CAE226B92D580027EB3E /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProgressBar.swift; path = Signity/Themes/View/ProgressBar.swift; sourceTree = SOURCE_ROOT; };
+		7D31CAE426B936CC0027EB3E /* ChatTriangleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatTriangleShape.swift; path = Signity/Themes/Shape/ChatTriangleShape.swift; sourceTree = SOURCE_ROOT; };
+		7D31CAE626B94EB60027EB3E /* PhraseStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhraseStyle.swift; path = Signity/Themes/Modifier/PhraseStyle.swift; sourceTree = SOURCE_ROOT; };
+		7D31CAE826B951CA0027EB3E /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatBubble.swift; path = Signity/Module/Practice/View/ChatBubble.swift; sourceTree = SOURCE_ROOT; };
+		7D31CAEA26B97ED80027EB3E /* HorizontalModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HorizontalModules.swift; path = Signity/Module/Practice/View/HorizontalModules.swift; sourceTree = SOURCE_ROOT; };
+		7D31CAEC26B97F2F0027EB3E /* PhraseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseButton.swift; sourceTree = "<group>"; };
+		7D31CAF026B994BD0027EB3E /* CameraViewController+DrawLandmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CameraViewController+DrawLandmark.swift"; path = "Signity/Module/Practice/View/CameraPreview/CameraViewController+DrawLandmark.swift"; sourceTree = SOURCE_ROOT; };
+		7D31CAF226BA6B9A0027EB3E /* CameraNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraNavigationBar.swift; sourceTree = "<group>"; };
+		7D31CAF426BAD5020027EB3E /* HandLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HandLines.swift; path = Signity/Themes/Shape/HandLines.swift; sourceTree = SOURCE_ROOT; };
+		7D31CAF726BAE6290027EB3E /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Hand.swift; path = Signity/Module/Practice/Model/Hand.swift; sourceTree = SOURCE_ROOT; };
+		7D31CAF926BB9B380027EB3E /* HandLandmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HandLandmarks.swift; path = Signity/Themes/Shape/HandLandmarks.swift; sourceTree = SOURCE_ROOT; };
+		7D31CAFE26BBA7A20027EB3E /* PlaybackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackButton.swift; sourceTree = "<group>"; };
+		7D31CB0326BBB3A30027EB3E /* blender.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blender.json; sourceTree = "<group>"; };
+		7D31CB0526BBB3B20027EB3E /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		7DEF5F4326BBBAA700D64354 /* person.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = person.json; sourceTree = "<group>"; };
+		7DEF5F4B26BBD39200D64354 /* SentenceFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceFeedbackView.swift; sourceTree = "<group>"; };
+		7DEF5F4D26BBD86C00D64354 /* PracticeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PracticeViewModel.swift; path = Signity/Module/Practice/ViewModel/PracticeViewModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D31CB0226BBADAE0027EB3E /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,9 +219,10 @@
 		5561AB0326B7EE0C001896B3 /* Practice */ = {
 			isa = PBXGroup;
 			children = (
+				7D31CAF626BAE61E0027EB3E /* Model */,
+				7D31CAD326B9021C0027EB3E /* Service */,
 				5561AB2026B7F1C2001896B3 /* ViewModel */,
 				5561AB2226B7F1C2001896B3 /* View */,
-				5561AB2126B7F1C2001896B3 /* Model */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -254,6 +299,9 @@
 		5561AB0B26B7F015001896B3 /* Themes */ = {
 			isa = PBXGroup;
 			children = (
+				7D31CAFD26BBA1940027EB3E /* Shape */,
+				7D31CAFC26BBA18F0027EB3E /* View */,
+				7D31CAFB26BBA1870027EB3E /* Modifier */,
 			);
 			path = Themes;
 			sourceTree = "<group>";
@@ -261,6 +309,8 @@
 		5561AB0C26B7F0BD001896B3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7DEF5F4326BBBAA700D64354 /* person.json */,
+				7D31CB0326BBB3A30027EB3E /* blender.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -395,20 +445,18 @@
 		5561AB2026B7F1C2001896B3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7DEF5F4D26BBD86C00D64354 /* PracticeViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		5561AB2126B7F1C2001896B3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		5561AB2226B7F1C2001896B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7D31CAD626B9080C0027EB3E /* CameraPreview */,
+				7D31CADD26B909510027EB3E /* PracticeView.swift */,
+				7D31CAE826B951CA0027EB3E /* ChatBubble.swift */,
+				7D31CAEA26B97ED80027EB3E /* HorizontalModules.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -436,6 +484,63 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		7D31CAD326B9021C0027EB3E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7D31CAD426B902290027EB3E /* CameraService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7D31CAD626B9080C0027EB3E /* CameraPreview */ = {
+			isa = PBXGroup;
+			children = (
+				7D31CAD926B908820027EB3E /* CameraViewController.swift */,
+				7D31CADB26B908B80027EB3E /* CameraView.swift */,
+				7D31CAF026B994BD0027EB3E /* CameraViewController+DrawLandmark.swift */,
+			);
+			path = CameraPreview;
+			sourceTree = "<group>";
+		};
+		7D31CAF626BAE61E0027EB3E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D31CAF726BAE6290027EB3E /* Hand.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7D31CAFB26BBA1870027EB3E /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				7D31CAE626B94EB60027EB3E /* PhraseStyle.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
+		7D31CAFC26BBA18F0027EB3E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7D31CAE226B92D580027EB3E /* ProgressBar.swift */,
+				7D31CAF226BA6B9A0027EB3E /* CameraNavigationBar.swift */,
+				7D31CAEC26B97F2F0027EB3E /* PhraseButton.swift */,
+				7D31CAFE26BBA7A20027EB3E /* PlaybackButton.swift */,
+				7D31CB0526BBB3B20027EB3E /* LottieView.swift */,
+				7DEF5F4B26BBD39200D64354 /* SentenceFeedbackView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7D31CAFD26BBA1940027EB3E /* Shape */ = {
+			isa = PBXGroup;
+			children = (
+				7D31CAF426BAD5020027EB3E /* HandLines.swift */,
+				7D31CAF926BB9B380027EB3E /* HandLandmarks.swift */,
+				7D31CAE426B936CC0027EB3E /* ChatTriangleShape.swift */,
+			);
+			path = Shape;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -452,6 +557,9 @@
 			dependencies = (
 			);
 			name = Signity;
+			packageProductDependencies = (
+				7D31CB0126BBADAE0027EB3E /* Lottie */,
+			);
 			productName = Signity;
 			productReference = 5561AAC826B7ED94001896B3 /* Signity.app */;
 			productType = "com.apple.product-type.application";
@@ -523,6 +631,9 @@
 				Base,
 			);
 			mainGroup = 5561AABF26B7ED94001896B3;
+			packageReferences = (
+				7D31CB0026BBADAE0027EB3E /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 5561AAC926B7ED94001896B3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -539,8 +650,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D31CB0426BBB3A30027EB3E /* blender.json in Resources */,
 				5561AADB26B7ED96001896B3 /* LaunchScreen.storyboard in Resources */,
 				5561AAD826B7ED96001896B3 /* Preview Assets.xcassets in Resources */,
+				7DEF5F4426BBBAA700D64354 /* person.json in Resources */,
 				5561AAD526B7ED96001896B3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,12 +680,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				55BD80EF26B937670048244D /* OnboardingRegion.swift in Sources */,
-				5561AACC26B7ED94001896B3 /* AppDelegate.swift in Sources */,
-				5561AACE26B7ED94001896B3 /* SceneDelegate.swift in Sources */,
 				55BD80EA26B924A70048244D /* Onboarding.swift in Sources */,
 				55BD80FC26B955930048244D /* CoursePage.swift in Sources */,
+				7D31CAD526B902290027EB3E /* CameraService.swift in Sources */,
+				7DEF5F4E26BBD86C00D64354 /* PracticeViewModel.swift in Sources */,
+				7D31CAE926B951CA0027EB3E /* ChatBubble.swift in Sources */,
+				5561AACC26B7ED94001896B3 /* AppDelegate.swift in Sources */,
+				5561AACE26B7ED94001896B3 /* SceneDelegate.swift in Sources */,
+				7D31CAF526BAD5020027EB3E /* HandLines.swift in Sources */,
+				7D31CAF126B994BD0027EB3E /* CameraViewController+DrawLandmark.swift in Sources */,
+				7D31CAFF26BBA7A20027EB3E /* PlaybackButton.swift in Sources */,
+				7D31CAE526B936CC0027EB3E /* ChatTriangleShape.swift in Sources */,
+				7D31CADA26B908820027EB3E /* CameraViewController.swift in Sources */,
+				7D31CB0626BBB3B20027EB3E /* LottieView.swift in Sources */,
+				7D31CAED26B97F2F0027EB3E /* PhraseButton.swift in Sources */,
 				5561AAD026B7ED94001896B3 /* ContentView.swift in Sources */,
 				5561AAD326B7ED94001896B3 /* Signity.xcdatamodeld in Sources */,
+				7D31CAF326BA6B9A0027EB3E /* CameraNavigationBar.swift in Sources */,
+				7D31CAE726B94EB60027EB3E /* PhraseStyle.swift in Sources */,
+				7D31CADE26B909510027EB3E /* PracticeView.swift in Sources */,
+				7D31CAF826BAE6290027EB3E /* Hand.swift in Sources */,
+				7D31CAFA26BB9B380027EB3E /* HandLandmarks.swift in Sources */,
+				7D31CAEB26B97ED80027EB3E /* HorizontalModules.swift in Sources */,
+				7D31CAE326B92D580027EB3E /* ProgressBar.swift in Sources */,
+				7D31CADC26B908B80027EB3E /* CameraView.swift in Sources */,
+				7DEF5F4C26BBD39200D64354 /* SentenceFeedbackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,7 +874,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Signity/Preview Content\"";
-				DEVELOPMENT_TEAM = ND4DZWJCVY;
+				DEVELOPMENT_TEAM = 6QH35NFSG6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Signity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -763,7 +895,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Signity/Preview Content\"";
-				DEVELOPMENT_TEAM = ND4DZWJCVY;
+				DEVELOPMENT_TEAM = 6QH35NFSG6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Signity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -901,6 +1033,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7D31CB0026BBADAE0027EB3E /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D31CB0126BBADAE0027EB3E /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D31CB0026BBADAE0027EB3E /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		5561AAD126B7ED94001896B3 /* Signity.xcdatamodeld */ = {

@@ -9,8 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, Team 11 Lucu")
-            .padding()
+        NavigationView {
+            VStack {
+                Text("Hello, Team 11 Lucu")
+                    .padding()
+                NavigationLink(destination: PracticeView()) {
+                    Text("To Camera")
+                        .navigationBarTitle("", displayMode: .inline)
+                        .navigationBarHidden(true)
+                }
+            }
+        }
     }
 }
 
