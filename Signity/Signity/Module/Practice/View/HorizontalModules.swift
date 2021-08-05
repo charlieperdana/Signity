@@ -15,9 +15,10 @@ struct HorizontalModules: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
                 ForEach(Array(alphabets), id: \.self) { char in
-                    LetterButton(practiceDone: false, isCurrentLetter: viewModel.currentSelected == char, letter: char) {
+                    PhraseButton(practiceDone: false, isSelected: viewModel.currentSelected == char, isSentence: false, phrase: String(char)) {
                         viewModel.currentSelected = char
                     }
+
                 }
             }
         }

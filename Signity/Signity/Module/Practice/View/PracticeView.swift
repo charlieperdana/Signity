@@ -49,8 +49,9 @@ struct PracticeView: View {
                     }
                     
                     VStack(alignment: .trailing) {
-                        LottieView(name: "person", playbackSpeed: viewModel.playbackSpeed)
+                        LottieView(name: "arya", playbackSpeed: viewModel.playbackSpeed)
                             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200)
+                            .background(Color.white)
 
                         PlaybackButton(state: viewModel.playbackState) {
                             if viewModel.playbackState == .slow {
