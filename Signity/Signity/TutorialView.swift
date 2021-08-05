@@ -13,8 +13,25 @@ struct TutorialView: View {
             Text("Selamat Pagi")
                 .fontWeight(.semibold)
                 .font(.system(size:17, design: .rounded))
-            LottieView(filename: "lottie1")
+            
+            LottieView(filename: "dolphin")
                 .frame(width:240, height:320)
+            
+            Button(action: {
+                print("slow clicked")
+            }, label: {
+                HStack {
+                    Image(systemName: "tortoise")
+                        .foregroundColor(.white)
+                    Text("Slow")
+                        .fontWeight(.semibold)
+                        .font(.system(.body, design: .rounded))
+                        .foregroundColor(.white)
+                }
+                .background(Color("SignityPurple"))
+                .frame(width: 105, height: 38)
+                .foregroundColor(Color("SignityPurple"))
+            })
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
                     .frame(width: 105, height: 38)
@@ -50,6 +67,8 @@ struct TutorialView: View {
         }
     }
 }
+
+
 
 struct TutorialView_Previews: PreviewProvider {
     static var previews: some View {

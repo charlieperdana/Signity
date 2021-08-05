@@ -15,7 +15,7 @@ struct CompareView: View {
                 .font(.system(size:17, design: .rounded))
             HStack {
                 VStack {
-                    LottieView(filename: "lottie1")
+                    LottieView(filename: "dolphin")
                         .frame(width:171, height:320)
                     Text("Jakarta")
                         .fontWeight(.semibold)
@@ -23,7 +23,7 @@ struct CompareView: View {
                         .foregroundColor(.black)
                 }
                 VStack {
-                    LottieView(filename: "lottie1")
+                    LottieView(filename: "dolphin")
                         .frame(width:171, height:320)
                     Text("Denpasar")
                         .fontWeight(.semibold)
