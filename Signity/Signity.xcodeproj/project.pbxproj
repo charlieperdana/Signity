@@ -478,6 +478,8 @@
 		5561AB2526B7F1C6001896B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				55BD80E926B924A70048244D /* Onboarding.swift */,
+				55BD80EE26B937670048244D /* OnboardingRegion.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -511,8 +513,6 @@
 		7D31CAFB26BBA1870027EB3E /* Modifier */ = {
 			isa = PBXGroup;
 			children = (
-				55BD80E926B924A70048244D /* Onboarding.swift */,
-				55BD80EE26B937670048244D /* OnboardingRegion.swift */,
 				7D31CAE626B94EB60027EB3E /* PhraseStyle.swift */,
 			);
 			path = Modifier;
@@ -680,8 +680,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				55BD80EF26B937670048244D /* OnboardingRegion.swift in Sources */,
-				5561AACC26B7ED94001896B3 /* AppDelegate.swift in Sources */,
-				5561AACE26B7ED94001896B3 /* SceneDelegate.swift in Sources */,
 				55BD80EA26B924A70048244D /* Onboarding.swift in Sources */,
 				55BD80FC26B955930048244D /* CoursePage.swift in Sources */,
 				7D31CAD526B902290027EB3E /* CameraService.swift in Sources */,
