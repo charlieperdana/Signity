@@ -30,16 +30,19 @@ struct OnboardingRegion: View {
     
     var body: some View {
         NavigationView {
-            VStack(alignment: .center) {
+            VStack() {
                 Text("BISINDO daerah mana yang kamu gunakan?")
                     .font(.system(size: 22))
                     .fontWeight(.bold)
-                    .foregroundColor(Color.black)
+                    .foregroundColor(Color(#colorLiteral(red: 0.08235294118, green: 0.1098039216, blue: 0.4, alpha: 1)))
                     .multilineTextAlignment(.center)
                     .padding(.leading)
                     .fixedSize(horizontal: false, vertical: true)
+                    
                 
                 Image("onboarding2")
+                    .padding([.top], 20.0)
+                    .padding([.bottom], 10)
 //                    .resizable()
 //                    .frame(width: 200.0, height: 200.0)
                 
@@ -57,6 +60,7 @@ struct OnboardingRegion: View {
                             Text("Jakarta")
                                 .fontWeight(.bold)
                                 .font(.system(size: 17))
+                                .foregroundColor(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
                                 .multilineTextAlignment(.center)
                             Spacer()
                         }
@@ -65,7 +69,7 @@ struct OnboardingRegion: View {
                         .background(Color.white)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.blue, lineWidth: 2))
+                                .stroke(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)), lineWidth: 1))
                         
                     }
                     Button(action: {
@@ -79,6 +83,7 @@ struct OnboardingRegion: View {
                             Text("Denpasar")
                                 .fontWeight(.bold)
                                 .font(.system(size: 17))
+                                .foregroundColor(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
                                 .multilineTextAlignment(.center)
                             Spacer()
                         }
@@ -87,9 +92,10 @@ struct OnboardingRegion: View {
                         .background(Color.white)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.blue, lineWidth: 2))
+                                .stroke(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)), lineWidth: 1))
                         
                     }
+                    
                     Button(action: {
                         self.check3 = "checked"
                         self.check2 = "checkEmpty"
@@ -101,6 +107,7 @@ struct OnboardingRegion: View {
                             Text("Lainnya")
                                 .fontWeight(.bold)
                                 .font(.system(size: 17))
+                                .foregroundColor(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
                                 .multilineTextAlignment(.center)
                             Spacer()
                         }
@@ -109,11 +116,14 @@ struct OnboardingRegion: View {
                         .background(Color.white)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.blue, lineWidth: 2))
+                                .stroke(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)), lineWidth: 1))
                         
                     }
+                    
                 }
-                .padding(.all)
+                .padding(.bottom)
+              
+            
                 
                 VStack {
                     Button(action: {
@@ -129,20 +139,25 @@ struct OnboardingRegion: View {
                                 .font(.system(size: 17))
                                 .multilineTextAlignment(.center)
                             Spacer()
+                            
                         }
                         .padding()
                         .foregroundColor(.white)
-                        .background(Color.blue)
+                        .background(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
                         .cornerRadius(10)
                         
                     }
-                    .padding(.all)
+                    .frame(width: 358.0, height: 44.0)
                     
                     //MARK: - NAVIGATION LINKS
                     NavigationLink(destination: CoursePage(), isActive: $showCourse) {
                         EmptyView()
                     }
                 }
+                .offset(y: 90)
+                
+               
+                    
                 
                 
             }

@@ -12,11 +12,12 @@ struct Onboarding: View {
     @State var showCourse = false
     var body: some View {
         NavigationView {
-            VStack {
+            VStack  {
                 Text("Selamat Datang!")
                     .font(.system(size: 22))
                     .fontWeight(.bold)
-                    .foregroundColor(Color.black)
+                    .foregroundColor(Color(#colorLiteral(red: 0.08235294118, green: 0.1098039216, blue: 0.4, alpha: 1)))
+                
                 
                 Image("onboarding1")
 //                    .resizable()
@@ -25,8 +26,9 @@ struct Onboarding: View {
                 Text("Apakah kamu pernah belajar BISINDO sebelumnya?")
                     .font(.system(size: 17))
                     .fontWeight(.regular)
-                    .foregroundColor(Color(hue: 0.668, saturation: 0.913, brightness: 0.726))
+                    .foregroundColor(Color(#colorLiteral(red: 0.08235294118, green: 0.1098039216, blue: 0.4, alpha: 1)))
                     .multilineTextAlignment(.center)
+                    .offset(y: 10)
                 
                 VStack(alignment:.leading) {
                     
@@ -46,7 +48,7 @@ struct Onboarding: View {
                         }
                         .padding()
                         .foregroundColor(.white)
-                        .background(Color(.displayP3, red: 1.0, green: 0.0, blue: 0.0))
+                        .background(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
                         .cornerRadius(10)
                     }
                     
@@ -61,6 +63,7 @@ struct Onboarding: View {
                             Text("Pernah, saya mengerti BISINDO")
                                 .fontWeight(.bold)
                                 .font(.system(size: 17))
+                                .foregroundColor(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
                                 .multilineTextAlignment(.center)
                             Spacer()
                         }
@@ -69,11 +72,12 @@ struct Onboarding: View {
                         .background(Color.white)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.blue, lineWidth: 2))
+                                .stroke(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1))))
                         
                     }
                 }
                 .padding(.vertical)
+                .offset(y: 20)
                 
                 //MARK: - NAVIGATION LINKS
                 NavigationLink(destination: OnboardingRegion(), isActive: $showNextOnboard) {
