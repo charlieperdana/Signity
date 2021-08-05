@@ -64,9 +64,9 @@ struct OnboardingSimulasi: View {
                 .cornerRadius(13)
                     })
         }
-        }
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: btnBack)
+        }
     }
 }
 struct OnboardingSimulasi_Previews: PreviewProvider {

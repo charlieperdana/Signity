@@ -65,9 +65,9 @@ struct OnboardingLatihanTiru: View {
                 .cornerRadius(13)
                     })
         }
-        }
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: btnBack)
+        }
     }
 }
 
