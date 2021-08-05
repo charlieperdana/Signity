@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CameraNavigationBar: View {
+    var title: String
+    
     var body: some View {
         VStack {
             ZStack(alignment: .top) {
@@ -23,7 +25,7 @@ struct CameraNavigationBar: View {
                         })
                         Spacer()
                     }
-                    Text("Latihan Tiru")
+                    Text(title)
                     HStack {
                         Spacer()
                         Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
@@ -44,7 +46,7 @@ struct CameraNavigationBar: View {
 
 struct CameraNavigationBar_Previews: PreviewProvider {
     static var previews: some View {
-        CameraNavigationBar()
+        CameraNavigationBar(title: "Latihan Tiru")
     }
 }
 

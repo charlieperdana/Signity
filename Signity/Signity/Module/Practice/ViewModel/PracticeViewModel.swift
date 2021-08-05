@@ -15,10 +15,12 @@ class PracticeViewModel: ObservableObject {
             playbackSpeed = (newValue == .slow ? 0.5 : 1.0)
         }
     }
+    @Published var currentVideo: String
     var playbackSpeed: CGFloat
     
     init() {
         self.currentSelected = "B"
+        self.currentVideo = "blender"
         self.playbackState = .normal
         self.playbackSpeed = 1.0
     }

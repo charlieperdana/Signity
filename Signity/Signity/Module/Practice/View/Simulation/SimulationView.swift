@@ -1,16 +1,14 @@
 //
-//  PracticeView.swift
+//  SimulationView.swift
 //  Signity
 //
-//  Created by Andrean Lay on 03/08/21.
+//  Created by Andrean Lay on 05/08/21.
 //
 
 import SwiftUI
 
-struct PracticeView: View {
-    @StateObject var viewModel = PracticeViewModel()
-    @State var value: Double = 0.5
-    
+struct SimulationView: View {
+    @StateObject var viewModel = SimulationViewModel()
     @State var navBarHidden = false
     
     var body: some View {
@@ -33,10 +31,12 @@ struct PracticeView: View {
             }
             
             if !self.navBarHidden {
-                CameraNavigationBar(title: "Latihan Tiru")
+                CameraNavigationBar(title: "Latihan Simulasi")
             }
             
             VStack {
+                ProgressBar(value: .constant(0.5))
+                
                 HStack(alignment: .top) {
                     ChatBubble() {
                         Text("Selamat pagi")
@@ -48,20 +48,34 @@ struct PracticeView: View {
                             .multilineTextAlignment(.leading)
                     }
                     
-                    VideoView(videoName: $viewModel.currentVideo, playbackSpeed: $viewModel.playbackSpeed, playbackState: $viewModel.playbackState)
+                    LottieView(name: "blender", playbackSpeed: 1.0)
+                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200)
+                        .background(Color.white)
+                        .cornerRadius(25)
                 }
                 .padding()
+                
                 Spacer()
-                HorizontalModules(viewModel: viewModel)
+                
+                HStack {
+                    YourTurnView()
+                    Spacer()
+                    HintButton()
+                }
+                .padding(.horizontal)
+                
+                SentenceFeedbackView()
+                    .padding(.bottom, 40)
             }
             .padding(.top, self.navBarHidden ? 35 : 75)
         }
-        .edgesIgnoringSafeArea(.all)
+        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct PracticeView_Previews: PreviewProvider {
+struct SimulationView_Previews: PreviewProvider {
     static var previews: some View {
-        PracticeView()
+        SimulationView()
+            .preferredColorScheme(.dark)
     }
 }

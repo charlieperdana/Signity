@@ -22,12 +22,13 @@ struct ProgressBar: View {
                     .foregroundColor(.white)
                     .cornerRadius(25)
                     .offset(x: 1, y: 0)
-                    .animation(.linear)
             }
         }
-        .frame(width: .infinity, height: 10)
-        .padding()
-        .animation(.easeIn)
+        .frame(maxWidth: .infinity)
+        .frame(height: 10)
+        .padding(.horizontal)
+        .padding(.top)
+        .animation(.linear)
     }
 }
 

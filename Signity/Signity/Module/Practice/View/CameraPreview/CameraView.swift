@@ -2,22 +2,19 @@
 //  CameraView.swift
 //  Signity
 //
-//  Created by Andrean Lay on 03/08/21.
+//  Created by Andrean Lay on 05/08/21.
 //
 
 import SwiftUI
 
-struct CameraView: UIViewControllerRepresentable {
-    var processLandmarksHandler: ([Hand]) -> Void
-    
-    func makeUIViewController(context: Context) -> CameraViewController {
-        let cameraVC = CameraViewController()
-        cameraVC.processLandmarksHandler = processLandmarksHandler
-        
-        return cameraVC
+struct CameraView: View {
+    var body: some View {
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
-    
-    func updateUIViewController(_ uiViewController: CameraViewController, context: Context) {
-        
+}
+
+struct CameraView_Previews: PreviewProvider {
+    static var previews: some View {
+        CameraView()
     }
 }

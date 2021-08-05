@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var temp = 0
+    
     var body: some View {
         NavigationView {
             VStack {
-                Text("Hello, Team 11 Lucu")
+                Text("Hello, Team \(Int.random(in: 0...2)) Lucu")
                     .padding()
-                NavigationLink(destination: PracticeView()) {
-                    Text("To Camera")
-                        .navigationBarTitle("", displayMode: .inline)
-                        .navigationBarHidden(true)
+                Button("Click me - \(temp)") {
+                    temp += 1
                 }
             }
         }
