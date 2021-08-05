@@ -12,17 +12,16 @@ struct TutorialView: View {
         VStack {
             Text("Selamat Pagi")
                 .fontWeight(.semibold)
-                .font(.headline)
-            LottieView(filename: "IMG_1219.mov.lottie")
+                .font(.system(size:17, design: .rounded))
+            LottieView(filename: "lottie1")
                 .frame(width:240, height:320)
-            
-            Spacer()
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
                     .frame(width: 105, height: 38)
                     .foregroundColor(Color("SignityPurple"))
                 Text("Slow")
                     .fontWeight(.semibold)
+                    .font(.system(.body, design: .rounded))
                     .foregroundColor(.white)
             }
             Spacer()
@@ -31,17 +30,20 @@ struct TutorialView: View {
                     .frame(width: 358, height: 50)
                     .foregroundColor(Color("SignityPurple"))
                 Text("Mulai Latihan").bold()
+                    .font(.system(size:17, design: .rounded))
                     .foregroundColor(.white)
             }
             Text("Bandingkan kalimat ini dengan BISINDO daerah lain")
-                .font(.system(size: 13))
+                .font(.system(size: 13, design: .rounded))
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(Color("SignityPurple"), lineWidth: 1)
                     .frame(width: 358, height: 50)
+                    .font(.system(size:17, design: .rounded))
                     .foregroundColor(.white)
                     
                 Text("Bandingkan").bold()
+                    .font(.system(size:17, design: .rounded))
                     .foregroundColor(Color("SignityPurple"))
             }
             Spacer()

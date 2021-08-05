@@ -12,11 +12,24 @@ struct CompareView: View {
         VStack {
             Text("Aku sehat, bagaimana denganmu?")
                 .fontWeight(.semibold)
-                .font(.headline)
-            Spacer()
+                .font(.system(size:17, design: .rounded))
             HStack {
-                //lottie video view
-                //lottie video view
+                VStack {
+                    LottieView(filename: "lottie1")
+                        .frame(width:171, height:320)
+                    Text("Jakarta")
+                        .fontWeight(.semibold)
+                        .font(.system(size:17, design: .rounded))
+                        .foregroundColor(.black)
+                }
+                VStack {
+                    LottieView(filename: "lottie1")
+                        .frame(width:171, height:320)
+                    Text("Denpasar")
+                        .fontWeight(.semibold)
+                        .font(.system(size:17, design: .rounded))
+                        .foregroundColor(.black)
+                }
             }
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
@@ -24,6 +37,7 @@ struct CompareView: View {
                     .foregroundColor(Color("SignityPurple"))
                 Text("Slow")
                     .fontWeight(.semibold)
+                    .font(.system(size:17, design: .rounded))
                     .foregroundColor(.white)
             }
             Spacer()
