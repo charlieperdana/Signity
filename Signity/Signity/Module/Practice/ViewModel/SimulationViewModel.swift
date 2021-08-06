@@ -9,4 +9,6 @@ import Foundation
 
 class SimulationViewModel: ObservableObject {
     @Published var detectedHands = [Hand]()
+    
+    @Published var simulationDone = false
 }

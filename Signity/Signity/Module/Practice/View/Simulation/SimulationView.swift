@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct SimulationView: View {
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    
     @StateObject var viewModel = SimulationViewModel()
     @State var navBarHidden = false
     
     var body: some View {
-        CustomNavigation(navBarCollapsed: navBarHidden, destination: Onboarding(), isRoot: false, isLast: false, title: "Latihan Simulasi") {
-            Group {
+        NavigationView {
+            ZStack {
                 CameraRepresentable() { hands, _ in
                     viewModel.detectedHands = hands
                 }
@@ -28,6 +30,19 @@ struct SimulationView: View {
                 .onTapGesture {
                     withAnimation {
                         self.navBarHidden.toggle()
+                    }
+                }
+                
+                if !navBarHidden {
+                    CameraNavigationBar(title: "Latihan Simulasi",
+                                        leftAction: {
+                                            mode.wrappedValue.dismiss()
+                                        }, rightAction: {
+                                            viewModel.simulationDone = true
+                                        })
+                    
+                    NavigationLink(destination: EmptyView(), isActive: $viewModel.simulationDone) {
+                        EmptyView()
                     }
                 }
 
@@ -58,6 +73,7 @@ struct SimulationView: View {
                 }
                 .padding(.top, self.navBarHidden ? 35 : 75)
             }
+            .navigationBarHidden(true)
             .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
         }
         

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PracticeView: View {
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    
     @StateObject var viewModel = PracticeViewModel()
     @State var value: Double = 0.5
     
@@ -15,8 +17,8 @@ struct PracticeView: View {
     @State var guidePassed = false
     
     var body: some View {
-        CustomNavigation(navBarCollapsed: navBarHidden, destination: SimulationView(), isRoot: true, isLast: false, title: "Latihan Tiru") {
-            Group {
+        NavigationView {
+            ZStack {
                 CameraRepresentable() { hands, highConfidenceLandmarks in
                     viewModel.detectedHands = hands
                     
@@ -38,6 +40,19 @@ struct PracticeView: View {
                     }
                 }
                 
+                if !navBarHidden {
+                    CameraNavigationBar(title: "Latihan Tiru",
+                                        leftAction: {
+                                            mode.wrappedValue.dismiss()
+                                        }, rightAction: {
+                                            viewModel.practiceDone = true
+                                        })
+                    
+                    NavigationLink(destination: SimulationView(), isActive: $viewModel.practiceDone) {
+                        EmptyView()
+                    }
+                }
+                
                 if !guidePassed {
                     HandGuide()
                 } else {
@@ -54,6 +69,7 @@ struct PracticeView: View {
                     .padding(.top, self.navBarHidden ? 35 : 75)
                 }
             }
+            .navigationBarHidden(true)
             .edgesIgnoringSafeArea(.all)
         }
     }

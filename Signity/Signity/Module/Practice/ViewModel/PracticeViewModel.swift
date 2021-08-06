@@ -18,6 +18,8 @@ class PracticeViewModel: ObservableObject {
     @Published var currentVideo: String
     var playbackSpeed: CGFloat
     
+    @Published var practiceDone = false
+    
     init() {
         self.currentSelected = "B"
         self.currentVideo = "blender"

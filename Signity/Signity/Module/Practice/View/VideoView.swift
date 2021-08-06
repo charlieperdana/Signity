@@ -17,7 +17,7 @@ struct VideoView: View {
             LottieView(name: videoName, playbackSpeed: playbackSpeed)
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200)
                 .background(Color.white)
-                .cornerRadius(25)
+                .cornerRadius(13)
             
             PlaybackButton(state: playbackState) {
                 if playbackState == .slow {

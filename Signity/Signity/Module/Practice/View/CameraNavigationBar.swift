@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CameraNavigationBar: View {
     var title: String
+    var leftAction: () -> Void
+    var rightAction: () -> Void
     
     var body: some View {
         VStack {
@@ -20,7 +22,7 @@ struct CameraNavigationBar: View {
                     .frame(width: UIScreen.main.bounds.width, height: 95)
                 Group {
                     HStack {
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        Button(action: leftAction, label: {
                             Image(systemName: "chevron.left")
                         })
                         Spacer()
@@ -28,8 +30,8 @@ struct CameraNavigationBar: View {
                     Text(title)
                     HStack {
                         Spacer()
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                            Text("Done")
+                        Button(action: rightAction, label: {
+                            Text("Selesai")
                         })
                     }
                 }
@@ -46,26 +48,6 @@ struct CameraNavigationBar: View {
 
 struct CameraNavigationBar_Previews: PreviewProvider {
     static var previews: some View {
-        CameraNavigationBar(title: "Latihan Tiru")
+        CameraNavigationBar(title: "Latihan Tiru", leftAction: {}, rightAction: {})
     }
 }
-
-//struct CameraNavigationBar<Left, Center, Right>: View where Left: View, Center: View, Right: View {
-//    let left: () -> Left
-//    let center: () -> Center
-//    let right: () -> Right
-//
-//    var body: some View {
-//        ZStack {
-//            HStack {
-//                left()
-//                Spacer()
-//            }
-//            center()
-//            HStack {
-//                Spacer()
-//                right()
-//            }
-//        }
-//    }
-//}

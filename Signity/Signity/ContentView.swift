@@ -16,8 +16,11 @@ struct ContentView: View {
                 Text("Hello, Team \(Int.random(in: 0...2)) Lucu")
                     .padding()
                 Button("Click me - \(temp)") {
-                    temp += 1
+
                 }
+                
+                Image(systemName: "checkmark.circle.fill")
+                    .foregroundColor(.blue)
             }
         }
     }
