@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4A20590D26BC4A620077C9BF /* OnboardingLatihanTiru.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A20590C26BC4A620077C9BF /* OnboardingLatihanTiru.swift */; };
 		4A20591726BC50B70077C9BF /* OnboardingSimulasi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A20591626BC50B70077C9BF /* OnboardingSimulasi.swift */; };
+		4A20591C26BC58390077C9BF /* AccomplishmentTiru.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A20591B26BC58390077C9BF /* AccomplishmentTiru.swift */; };
+		4A7FC9A926BCFD3700F58A7B /* AccomplishmentSimulasi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FC9A826BCFD3700F58A7B /* AccomplishmentSimulasi.swift */; };
 		5561AACC26B7ED94001896B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561AACB26B7ED94001896B3 /* AppDelegate.swift */; };
 		5561AACE26B7ED94001896B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561AACD26B7ED94001896B3 /* SceneDelegate.swift */; };
 		5561AAD026B7ED94001896B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561AACF26B7ED94001896B3 /* ContentView.swift */; };
@@ -65,6 +67,8 @@
 /* Begin PBXFileReference section */
 		4A20590C26BC4A620077C9BF /* OnboardingLatihanTiru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingLatihanTiru.swift; sourceTree = "<group>"; };
 		4A20591626BC50B70077C9BF /* OnboardingSimulasi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSimulasi.swift; sourceTree = "<group>"; };
+		4A20591B26BC58390077C9BF /* AccomplishmentTiru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccomplishmentTiru.swift; sourceTree = "<group>"; };
+		4A7FC9A826BCFD3700F58A7B /* AccomplishmentSimulasi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccomplishmentSimulasi.swift; sourceTree = "<group>"; };
 		5561AAC826B7ED94001896B3 /* Signity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Signity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5561AACB26B7ED94001896B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5561AACD26B7ED94001896B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +153,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4A20592026BC58430077C9BF /* Accomplishment */ = {
+			isa = PBXGroup;
+			children = (
+				4A20592126BC58740077C9BF /* View */,
+			);
+			path = Accomplishment;
+			sourceTree = "<group>";
+		};
+		4A20592126BC58740077C9BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A20591B26BC58390077C9BF /* AccomplishmentTiru.swift */,
+				4A7FC9A826BCFD3700F58A7B /* AccomplishmentSimulasi.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5561AABF26B7ED94001896B3 = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +245,7 @@
 				5561AB0326B7EE0C001896B3 /* Practice */,
 				5561AB0226B7EE05001896B3 /* Onboarding */,
 				4A20591126BC4A690077C9BF /* OnboardingLatihan */,
+				4A20592026BC58430077C9BF /* Accomplishment */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -710,6 +732,7 @@
 				7DEF5F4E26BBD86C00D64354 /* PracticeViewModel.swift in Sources */,
 				7D31CAE926B951CA0027EB3E /* ChatBubble.swift in Sources */,
 				5561AACC26B7ED94001896B3 /* AppDelegate.swift in Sources */,
+				4A7FC9A926BCFD3700F58A7B /* AccomplishmentSimulasi.swift in Sources */,
 				5561AACE26B7ED94001896B3 /* SceneDelegate.swift in Sources */,
 				7D31CAF526BAD5020027EB3E /* HandLines.swift in Sources */,
 				7D31CAF126B994BD0027EB3E /* CameraViewController+DrawLandmark.swift in Sources */,
@@ -724,6 +747,7 @@
 				7D31CAE726B94EB60027EB3E /* PhraseStyle.swift in Sources */,
 				7D31CADE26B909510027EB3E /* PracticeView.swift in Sources */,
 				7D31CAF826BAE6290027EB3E /* Hand.swift in Sources */,
+				4A20591C26BC58390077C9BF /* AccomplishmentTiru.swift in Sources */,
 				7D31CAFA26BB9B380027EB3E /* HandLandmarks.swift in Sources */,
 				7D31CAEB26B97ED80027EB3E /* HorizontalModules.swift in Sources */,
 				7D31CAE326B92D580027EB3E /* ProgressBar.swift in Sources */,
