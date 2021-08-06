@@ -44,6 +44,13 @@
 		ABF01C1626BCEDC700B0E08F /* TutorialPhraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF01C1526BCEDC700B0E08F /* TutorialPhraseView.swift */; };
 		ABF01C1B26BCF97800B0E08F /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF01C1A26BCF97800B0E08F /* TutorialViewModel.swift */; };
 		ABF01C2026BD049100B0E08F /* ComparePhraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF01C1F26BD049100B0E08F /* ComparePhraseView.swift */; };
+		D5242D1026BBF7C3002E3589 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5242D0F26BBF7C3002E3589 /* CategoryModel.swift */; };
+		D5242D1226BC3089002E3589 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5242D1126BC3089002E3589 /* CharacterCell.swift */; };
+		D5242D1426BC327F002E3589 /* PhraseACell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5242D1326BC327F002E3589 /* PhraseACell.swift */; };
+		D5242D1826BC349E002E3589 /* BasicCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5242D1726BC349E002E3589 /* BasicCharacterView.swift */; };
+		D5242D1A26BC34C9002E3589 /* BasicPhraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5242D1926BC34C9002E3589 /* BasicPhraseView.swift */; };
+		D5242D1D26BC34EF002E3589 /* SituationPhraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5242D1C26BC34EF002E3589 /* SituationPhraseView.swift */; };
+		D5242D1F26BD12C1002E3589 /* PhraseBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5242D1E26BD12C1002E3589 /* PhraseBCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +113,13 @@
 		ABF01C1526BCEDC700B0E08F /* TutorialPhraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TutorialPhraseView.swift; path = Signity/TutorialPhraseView.swift; sourceTree = SOURCE_ROOT; };
 		ABF01C1A26BCF97800B0E08F /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TutorialViewModel.swift; path = Signity/TutorialViewModel.swift; sourceTree = SOURCE_ROOT; };
 		ABF01C1F26BD049100B0E08F /* ComparePhraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ComparePhraseView.swift; path = Signity/ComparePhraseView.swift; sourceTree = SOURCE_ROOT; };
+		D5242D0F26BBF7C3002E3589 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoryModel.swift; path = Signity/Module/CategoryModel.swift; sourceTree = SOURCE_ROOT; };
+		D5242D1126BC3089002E3589 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharacterCell.swift; path = View/Resources/CharacterCell.swift; sourceTree = SOURCE_ROOT; };
+		D5242D1326BC327F002E3589 /* PhraseACell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhraseACell.swift; path = View/Resources/PhraseACell.swift; sourceTree = SOURCE_ROOT; };
+		D5242D1726BC349E002E3589 /* BasicCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BasicCharacterView.swift; path = View/BasicCharacterView.swift; sourceTree = SOURCE_ROOT; };
+		D5242D1926BC34C9002E3589 /* BasicPhraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BasicPhraseView.swift; path = View/BasicPhraseView.swift; sourceTree = SOURCE_ROOT; };
+		D5242D1C26BC34EF002E3589 /* SituationPhraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SituationPhraseView.swift; path = View/SituationPhraseView.swift; sourceTree = SOURCE_ROOT; };
+		D5242D1E26BD12C1002E3589 /* PhraseBCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhraseBCell.swift; path = View/Resources/PhraseBCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -433,6 +447,7 @@
 		5561AB1D26B7F1BF001896B3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D5242D0F26BBF7C3002E3589 /* CategoryModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -447,6 +462,10 @@
 		5561AB1F26B7F1BF001896B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D5242D1726BC349E002E3589 /* BasicCharacterView.swift */,
+				D5242D1926BC34C9002E3589 /* BasicPhraseView.swift */,
+				D5242D1C26BC34EF002E3589 /* SituationPhraseView.swift */,
+				D5242D1626BC3476002E3589 /* Resources */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -548,6 +567,16 @@
 				7D31CAE426B936CC0027EB3E /* ChatTriangleShape.swift */,
 			);
 			path = Shape;
+			sourceTree = "<group>";
+		};
+		D5242D1626BC3476002E3589 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D5242D1126BC3089002E3589 /* CharacterCell.swift */,
+				D5242D1326BC327F002E3589 /* PhraseACell.swift */,
+				D5242D1E26BD12C1002E3589 /* PhraseBCell.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -693,7 +722,9 @@
 				55BD80FC26B955930048244D /* CoursePage.swift in Sources */,
 				7D31CAD526B902290027EB3E /* CameraService.swift in Sources */,
 				7DEF5F4E26BBD86C00D64354 /* PracticeViewModel.swift in Sources */,
+				D5242D1226BC3089002E3589 /* CharacterCell.swift in Sources */,
 				7D31CAE926B951CA0027EB3E /* ChatBubble.swift in Sources */,
+				D5242D1A26BC34C9002E3589 /* BasicPhraseView.swift in Sources */,
 				5561AACC26B7ED94001896B3 /* AppDelegate.swift in Sources */,
 				5561AACE26B7ED94001896B3 /* SceneDelegate.swift in Sources */,
 				7D31CAF526BAD5020027EB3E /* HandLines.swift in Sources */,
@@ -702,11 +733,14 @@
 				7D31CAFF26BBA7A20027EB3E /* PlaybackButton.swift in Sources */,
 				7D31CAE526B936CC0027EB3E /* ChatTriangleShape.swift in Sources */,
 				7D31CADA26B908820027EB3E /* CameraViewController.swift in Sources */,
+				D5242D1426BC327F002E3589 /* PhraseACell.swift in Sources */,
 				7D31CB0626BBB3B20027EB3E /* LottieView.swift in Sources */,
 				ABF01C1B26BCF97800B0E08F /* TutorialViewModel.swift in Sources */,
 				ABF01C1626BCEDC700B0E08F /* TutorialPhraseView.swift in Sources */,
 				7D31CAED26B97F2F0027EB3E /* PhraseButton.swift in Sources */,
+				D5242D1D26BC34EF002E3589 /* SituationPhraseView.swift in Sources */,
 				5561AAD026B7ED94001896B3 /* ContentView.swift in Sources */,
+				D5242D1026BBF7C3002E3589 /* CategoryModel.swift in Sources */,
 				5561AAD326B7ED94001896B3 /* Signity.xcdatamodeld in Sources */,
 				7D31CAF326BA6B9A0027EB3E /* CameraNavigationBar.swift in Sources */,
 				7D31CAE726B94EB60027EB3E /* PhraseStyle.swift in Sources */,
@@ -715,8 +749,10 @@
 				7D31CAFA26BB9B380027EB3E /* HandLandmarks.swift in Sources */,
 				7D31CAEB26B97ED80027EB3E /* HorizontalModules.swift in Sources */,
 				7D31CAE326B92D580027EB3E /* ProgressBar.swift in Sources */,
+				D5242D1F26BD12C1002E3589 /* PhraseBCell.swift in Sources */,
 				7D31CADC26B908B80027EB3E /* CameraView.swift in Sources */,
 				7DEF5F4C26BBD39200D64354 /* SentenceFeedbackView.swift in Sources */,
+				D5242D1826BC349E002E3589 /* BasicCharacterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -886,7 +922,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Signity/Preview Content\"";
-				DEVELOPMENT_TEAM = 6QH35NFSG6;
+				DEVELOPMENT_TEAM = C2B99LH67K;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Signity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -907,7 +943,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Signity/Preview Content\"";
-				DEVELOPMENT_TEAM = 6QH35NFSG6;
+				DEVELOPMENT_TEAM = C2B99LH67K;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Signity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
