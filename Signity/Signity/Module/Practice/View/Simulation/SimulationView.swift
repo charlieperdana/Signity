@@ -35,15 +35,7 @@ struct SimulationView: View {
                     ProgressBar(value: .constant(0.5))
                     
                     HStack(alignment: .top) {
-                        ChatBubble() {
-                            Text("Selamat pagi")
-                                .padding(.all, 15)
-                                .padding(.trailing, 10)
-                                .background(Color.white)
-                                .opacity(0.85)
-                                .modifier(PhraseStyle())
-                                .multilineTextAlignment(.leading)
-                        }
+                        ChatBubble(text: "Selamat pagi")
                         
                         LottieView(name: "blender", playbackSpeed: 1.0)
                             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200)

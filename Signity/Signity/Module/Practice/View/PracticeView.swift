@@ -35,15 +35,7 @@ struct PracticeView: View {
 
                 VStack {
                     HStack(alignment: .top) {
-                        ChatBubble() {
-                            Text("Selamat pagi")
-                                .padding(.all, 15)
-                                .padding(.trailing, 10)
-                                .background(Color.white)
-                                .opacity(0.85)
-                                .modifier(PhraseStyle())
-                                .multilineTextAlignment(.leading)
-                        }
+                        ChatBubble(text: "Selamat pagi")
 
                         VideoView(videoName: $viewModel.currentVideo, playbackSpeed: $viewModel.playbackSpeed, playbackState: $viewModel.playbackState)
                     }
