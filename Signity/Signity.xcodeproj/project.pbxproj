@@ -38,6 +38,7 @@
 		7D31CB0426BBB3A30027EB3E /* blender.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D31CB0326BBB3A30027EB3E /* blender.json */; };
 		7D31CB0626BBB3B20027EB3E /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CB0526BBB3B20027EB3E /* LottieView.swift */; };
 		7D62645626BC422C00788502 /* CustomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62645526BC422C00788502 /* CustomNavigation.swift */; };
+		7D62645926BD0EB700788502 /* HandGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62645826BD0EB700788502 /* HandGuide.swift */; };
 		7D993FA126BBE21D0078450F /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D993FA026BBE21D0078450F /* VideoView.swift */; };
 		7D993FA526BBE6670078450F /* SimulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D993FA426BBE6670078450F /* SimulationView.swift */; };
 		7D993FA826BBEC520078450F /* HintButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D993FA726BBEC520078450F /* HintButton.swift */; };
@@ -102,6 +103,7 @@
 		7D31CB0326BBB3A30027EB3E /* blender.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blender.json; sourceTree = "<group>"; };
 		7D31CB0526BBB3B20027EB3E /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		7D62645526BC422C00788502 /* CustomNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigation.swift; sourceTree = "<group>"; };
+		7D62645826BD0EB700788502 /* HandGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandGuide.swift; sourceTree = "<group>"; };
 		7D993FA026BBE21D0078450F /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		7D993FA426BBE6670078450F /* SimulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationView.swift; sourceTree = "<group>"; };
 		7D993FA726BBEC520078450F /* HintButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintButton.swift; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 				7D993FA026BBE21D0078450F /* VideoView.swift */,
 				7D993FA626BBEC2C0078450F /* Simulation */,
 				7D62645526BC422C00788502 /* CustomNavigation.swift */,
+				7D62645826BD0EB700788502 /* HandGuide.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -713,6 +716,7 @@
 				7D993FA126BBE21D0078450F /* VideoView.swift in Sources */,
 				7D62645626BC422C00788502 /* CustomNavigation.swift in Sources */,
 				5561AAD026B7ED94001896B3 /* ContentView.swift in Sources */,
+				7D62645926BD0EB700788502 /* HandGuide.swift in Sources */,
 				7D993FAA26BBEC680078450F /* YourTurnView.swift in Sources */,
 				5561AAD326B7ED94001896B3 /* Signity.xcdatamodeld in Sources */,
 				7D31CAF326BA6B9A0027EB3E /* CameraNavigationBar.swift in Sources */,

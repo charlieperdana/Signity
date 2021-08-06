@@ -14,7 +14,7 @@ struct SimulationView: View {
     var body: some View {
         CustomNavigation(navBarCollapsed: navBarHidden, destination: Onboarding(), isRoot: false, isLast: false, title: "Latihan Simulasi") {
             Group {
-                CameraRepresentable() { hands in
+                CameraRepresentable() { hands, _ in
                     viewModel.detectedHands = hands
                 }
                 .overlay(

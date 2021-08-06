@@ -21,7 +21,7 @@ class CameraViewController: UIViewController {
     var layer = CAShapeLayer()
     var path = UIBezierPath()
     
-    var processLandmarksHandler: (([Hand]) -> Void)?
+    var processLandmarksHandler: (([Hand], _ highConfidenceLandmarks: Int) -> Void)?
     
     private let videoOutputQueue = DispatchQueue(label: "VideoOutput", qos: .userInteractive)
     
@@ -106,22 +106,27 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         let handler = VNImageRequestHandler(cmSampleBuffer: sampleBuffer, orientation: .up, options: [:])
         
         var hands = [Hand]()
+        var highConfidenceLandmarks = 0
         
         do {
             try handler.perform([handPoseRequest])
 
             if let results = handPoseRequest.results {
                 results.forEach { observation in
-                    hands.append(self.createHandModel(from: observation))
+                    let processedData = self.createHandModel(from: observation)
+                    hands.append(processedData.createdModel)
+                    
+                    highConfidenceLandmarks += processedData.highConfidenceLandmarks
                 }
                 
             }
+
         } catch {
             
         }
         
         DispatchQueue.main.async {
-            self.processLandmarksHandler!(hands)
+            self.processLandmarksHandler!(hands, highConfidenceLandmarks)
         }
     }
     
