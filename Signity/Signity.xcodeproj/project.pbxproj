@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		553E437126BDAD0900ED706E /* ProgressBarCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553E437026BDAD0900ED706E /* ProgressBarCourse.swift */; };
+		5555CD6726BD40400082AA01 /* CourseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5555CD6626BD40400082AA01 /* CourseModel.swift */; };
+		5555CD7D26BD437C0082AA01 /* CardViewCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5555CD7C26BD437C0082AA01 /* CardViewCourse.swift */; };
 		5561AACC26B7ED94001896B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561AACB26B7ED94001896B3 /* AppDelegate.swift */; };
 		5561AACE26B7ED94001896B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561AACD26B7ED94001896B3 /* SceneDelegate.swift */; };
 		5561AAD026B7ED94001896B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561AACF26B7ED94001896B3 /* ContentView.swift */; };
@@ -61,6 +64,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		553E437026BDAD0900ED706E /* ProgressBarCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarCourse.swift; sourceTree = "<group>"; };
+		5555CD6626BD40400082AA01 /* CourseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseModel.swift; sourceTree = "<group>"; };
+		5555CD7C26BD437C0082AA01 /* CardViewCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCourse.swift; sourceTree = "<group>"; };
 		5561AAC826B7ED94001896B3 /* Signity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Signity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5561AACB26B7ED94001896B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5561AACD26B7ED94001896B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -403,6 +409,8 @@
 			isa = PBXGroup;
 			children = (
 				55BD80FB26B955930048244D /* CoursePage.swift */,
+				5555CD7C26BD437C0082AA01 /* CardViewCourse.swift */,
+				553E437026BDAD0900ED706E /* ProgressBarCourse.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -417,6 +425,7 @@
 		5561AB1C26B7F1BD001896B3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5555CD6626BD40400082AA01 /* CourseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -692,8 +701,10 @@
 				7D31CAFF26BBA7A20027EB3E /* PlaybackButton.swift in Sources */,
 				7D31CAE526B936CC0027EB3E /* ChatTriangleShape.swift in Sources */,
 				7D31CADA26B908820027EB3E /* CameraViewController.swift in Sources */,
+				5555CD7D26BD437C0082AA01 /* CardViewCourse.swift in Sources */,
 				7D31CB0626BBB3B20027EB3E /* LottieView.swift in Sources */,
 				7D31CAED26B97F2F0027EB3E /* PhraseButton.swift in Sources */,
+				553E437126BDAD0900ED706E /* ProgressBarCourse.swift in Sources */,
 				5561AAD026B7ED94001896B3 /* ContentView.swift in Sources */,
 				5561AAD326B7ED94001896B3 /* Signity.xcdatamodeld in Sources */,
 				7D31CAF326BA6B9A0027EB3E /* CameraNavigationBar.swift in Sources */,
@@ -704,6 +715,7 @@
 				7D31CAEB26B97ED80027EB3E /* HorizontalModules.swift in Sources */,
 				7D31CAE326B92D580027EB3E /* ProgressBar.swift in Sources */,
 				7D31CADC26B908B80027EB3E /* CameraView.swift in Sources */,
+				5555CD6726BD40400082AA01 /* CourseModel.swift in Sources */,
 				7DEF5F4C26BBD39200D64354 /* SentenceFeedbackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

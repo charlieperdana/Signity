@@ -10,6 +10,7 @@ import SwiftUI
 struct Onboarding: View {
     @State var showNextOnboard = false
     @State var showCourse = false
+    
     var body: some View {
         NavigationView {
             VStack  {
@@ -35,7 +36,7 @@ struct Onboarding: View {
                     Button(action: {
                         print("Belum")
                         DispatchQueue.main.asyncAfter(deadline: .now()) {
-                            self.showNextOnboard = true
+                            self.showCourse = true
                         }
                     }) {
                         HStack {
@@ -49,13 +50,13 @@ struct Onboarding: View {
                         .padding()
                         .foregroundColor(.white)
                         .background(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
-                        .cornerRadius(10)
+                        .cornerRadius(13)
                     }
                     
                     Button(action: {
                         print("Pernah")
                         DispatchQueue.main.asyncAfter(deadline: .now()) {
-                            self.showCourse = true
+                            self.showNextOnboard = true
                         }
                     }) {
                         HStack {
@@ -71,7 +72,7 @@ struct Onboarding: View {
                         .foregroundColor(.blue)
                         .background(Color.white)
                         .overlay(
-                            RoundedRectangle(cornerRadius: 10)
+                            RoundedRectangle(cornerRadius: 13)
                                 .stroke(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1))))
                         
                     }
@@ -83,9 +84,9 @@ struct Onboarding: View {
                 NavigationLink(destination: OnboardingRegion(), isActive: $showNextOnboard) {
                     EmptyView()
                 }
-                NavigationLink(destination: CoursePage(), isActive: $showCourse) {
-                    EmptyView()
-                }
+//                NavigationLink(destination: CoursePage(), isActive: $showCourse) {
+//                    EmptyView()
+//                }
                 
                 
             }
