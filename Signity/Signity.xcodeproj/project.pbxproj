@@ -41,6 +41,9 @@
 		7DEF5F4426BBBAA700D64354 /* person.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DEF5F4326BBBAA700D64354 /* person.json */; };
 		7DEF5F4C26BBD39200D64354 /* SentenceFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF5F4B26BBD39200D64354 /* SentenceFeedbackView.swift */; };
 		7DEF5F4E26BBD86C00D64354 /* PracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF5F4D26BBD86C00D64354 /* PracticeViewModel.swift */; };
+		ABF01C1626BCEDC700B0E08F /* TutorialPhraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF01C1526BCEDC700B0E08F /* TutorialPhraseView.swift */; };
+		ABF01C1B26BCF97800B0E08F /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF01C1A26BCF97800B0E08F /* TutorialViewModel.swift */; };
+		ABF01C2026BD049100B0E08F /* ComparePhraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF01C1F26BD049100B0E08F /* ComparePhraseView.swift */; };
 		D5242D1026BBF7C3002E3589 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5242D0F26BBF7C3002E3589 /* CategoryModel.swift */; };
 		D5242D1226BC3089002E3589 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5242D1126BC3089002E3589 /* CharacterCell.swift */; };
 		D5242D1426BC327F002E3589 /* PhraseACell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5242D1326BC327F002E3589 /* PhraseACell.swift */; };
@@ -107,6 +110,9 @@
 		7DEF5F4326BBBAA700D64354 /* person.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = person.json; sourceTree = "<group>"; };
 		7DEF5F4B26BBD39200D64354 /* SentenceFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceFeedbackView.swift; sourceTree = "<group>"; };
 		7DEF5F4D26BBD86C00D64354 /* PracticeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PracticeViewModel.swift; path = Signity/Module/Practice/ViewModel/PracticeViewModel.swift; sourceTree = SOURCE_ROOT; };
+		ABF01C1526BCEDC700B0E08F /* TutorialPhraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TutorialPhraseView.swift; path = Signity/TutorialPhraseView.swift; sourceTree = SOURCE_ROOT; };
+		ABF01C1A26BCF97800B0E08F /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TutorialViewModel.swift; path = Signity/TutorialViewModel.swift; sourceTree = SOURCE_ROOT; };
+		ABF01C1F26BD049100B0E08F /* ComparePhraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ComparePhraseView.swift; path = Signity/ComparePhraseView.swift; sourceTree = SOURCE_ROOT; };
 		D5242D0F26BBF7C3002E3589 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoryModel.swift; path = Signity/Module/CategoryModel.swift; sourceTree = SOURCE_ROOT; };
 		D5242D1126BC3089002E3589 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharacterCell.swift; path = View/Resources/CharacterCell.swift; sourceTree = SOURCE_ROOT; };
 		D5242D1326BC327F002E3589 /* PhraseACell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhraseACell.swift; path = View/Resources/PhraseACell.swift; sourceTree = SOURCE_ROOT; };
@@ -339,6 +345,7 @@
 		5561AB0E26B7F190001896B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ABF01C1F26BD049100B0E08F /* ComparePhraseView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -353,6 +360,7 @@
 		5561AB1126B7F1B3001896B3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				ABF01C1A26BCF97800B0E08F /* TutorialViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -367,6 +375,7 @@
 		5561AB1326B7F1B3001896B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ABF01C1526BCEDC700B0E08F /* TutorialPhraseView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -720,11 +729,14 @@
 				5561AACE26B7ED94001896B3 /* SceneDelegate.swift in Sources */,
 				7D31CAF526BAD5020027EB3E /* HandLines.swift in Sources */,
 				7D31CAF126B994BD0027EB3E /* CameraViewController+DrawLandmark.swift in Sources */,
+				ABF01C2026BD049100B0E08F /* ComparePhraseView.swift in Sources */,
 				7D31CAFF26BBA7A20027EB3E /* PlaybackButton.swift in Sources */,
 				7D31CAE526B936CC0027EB3E /* ChatTriangleShape.swift in Sources */,
 				7D31CADA26B908820027EB3E /* CameraViewController.swift in Sources */,
 				D5242D1426BC327F002E3589 /* PhraseACell.swift in Sources */,
 				7D31CB0626BBB3B20027EB3E /* LottieView.swift in Sources */,
+				ABF01C1B26BCF97800B0E08F /* TutorialViewModel.swift in Sources */,
+				ABF01C1626BCEDC700B0E08F /* TutorialPhraseView.swift in Sources */,
 				7D31CAED26B97F2F0027EB3E /* PhraseButton.swift in Sources */,
 				D5242D1D26BC34EF002E3589 /* SituationPhraseView.swift in Sources */,
 				5561AAD026B7ED94001896B3 /* ContentView.swift in Sources */,
