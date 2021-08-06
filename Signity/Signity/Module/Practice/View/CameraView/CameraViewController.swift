@@ -18,9 +18,6 @@ class CameraViewController: UIViewController {
     
     var previewView: UIView!
     
-    var layer = CAShapeLayer()
-    var path = UIBezierPath()
-    
     var processLandmarksHandler: (([Hand], _ highConfidenceLandmarks: Int) -> Void)?
     
     private let videoOutputQueue = DispatchQueue(label: "VideoOutput", qos: .userInteractive)
@@ -57,7 +54,6 @@ class CameraViewController: UIViewController {
         }
         
         self.camera = device
-//        self.camera.setFPS(CAMERA_FPS)
         self.setupSession()
     }
     
@@ -100,9 +96,6 @@ class CameraViewController: UIViewController {
 
 extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        layer.removeFromSuperlayer()
-        path.removeAllPoints()
-        
         let handler = VNImageRequestHandler(cmSampleBuffer: sampleBuffer, orientation: .up, options: [:])
         
         var hands = [Hand]()
