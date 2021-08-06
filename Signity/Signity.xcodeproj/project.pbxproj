@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A20590D26BC4A620077C9BF /* OnboardingLatihanTiru.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A20590C26BC4A620077C9BF /* OnboardingLatihanTiru.swift */; };
+		4A20591726BC50B70077C9BF /* OnboardingSimulasi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A20591626BC50B70077C9BF /* OnboardingSimulasi.swift */; };
+		4A20591C26BC58390077C9BF /* AccomplishmentTiru.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A20591B26BC58390077C9BF /* AccomplishmentTiru.swift */; };
+		4A7FC9A926BCFD3700F58A7B /* AccomplishmentSimulasi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FC9A826BCFD3700F58A7B /* AccomplishmentSimulasi.swift */; };
 		5561AACC26B7ED94001896B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561AACB26B7ED94001896B3 /* AppDelegate.swift */; };
 		5561AACE26B7ED94001896B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561AACD26B7ED94001896B3 /* SceneDelegate.swift */; };
 		5561AAD026B7ED94001896B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561AACF26B7ED94001896B3 /* ContentView.swift */; };
@@ -38,6 +42,8 @@
 		7D31CB0226BBADAE0027EB3E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7D31CB0126BBADAE0027EB3E /* Lottie */; };
 		7D31CB0426BBB3A30027EB3E /* blender.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D31CB0326BBB3A30027EB3E /* blender.json */; };
 		7D31CB0626BBB3B20027EB3E /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CB0526BBB3B20027EB3E /* LottieView.swift */; };
+		7D62646826BD3F7B00788502 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62646726BD3F7B00788502 /* TutorialView.swift */; };
+		7D62646A26BD405D00788502 /* CompareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62646926BD405D00788502 /* CompareView.swift */; };
 		7DEF5F4426BBBAA700D64354 /* person.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DEF5F4326BBBAA700D64354 /* person.json */; };
 		7DEF5F4C26BBD39200D64354 /* SentenceFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF5F4B26BBD39200D64354 /* SentenceFeedbackView.swift */; };
 		7DEF5F4E26BBD86C00D64354 /* PracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF5F4D26BBD86C00D64354 /* PracticeViewModel.swift */; };
@@ -71,6 +77,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A20590C26BC4A620077C9BF /* OnboardingLatihanTiru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingLatihanTiru.swift; sourceTree = "<group>"; };
+		4A20591626BC50B70077C9BF /* OnboardingSimulasi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSimulasi.swift; sourceTree = "<group>"; };
+		4A20591B26BC58390077C9BF /* AccomplishmentTiru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccomplishmentTiru.swift; sourceTree = "<group>"; };
+		4A7FC9A826BCFD3700F58A7B /* AccomplishmentSimulasi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccomplishmentSimulasi.swift; sourceTree = "<group>"; };
 		5561AAC826B7ED94001896B3 /* Signity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Signity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5561AACB26B7ED94001896B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5561AACD26B7ED94001896B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,12 +117,14 @@
 		7D31CAFE26BBA7A20027EB3E /* PlaybackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackButton.swift; sourceTree = "<group>"; };
 		7D31CB0326BBB3A30027EB3E /* blender.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blender.json; sourceTree = "<group>"; };
 		7D31CB0526BBB3B20027EB3E /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		7D62646726BD3F7B00788502 /* TutorialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TutorialView.swift; path = Signity/Module/Tutorial/View/TutorialView.swift; sourceTree = SOURCE_ROOT; };
+		7D62646926BD405D00788502 /* CompareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompareView.swift; path = Signity/Module/Compare/View/CompareView.swift; sourceTree = SOURCE_ROOT; };
 		7DEF5F4326BBBAA700D64354 /* person.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = person.json; sourceTree = "<group>"; };
 		7DEF5F4B26BBD39200D64354 /* SentenceFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceFeedbackView.swift; sourceTree = "<group>"; };
 		7DEF5F4D26BBD86C00D64354 /* PracticeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PracticeViewModel.swift; path = Signity/Module/Practice/ViewModel/PracticeViewModel.swift; sourceTree = SOURCE_ROOT; };
-		ABF01C1526BCEDC700B0E08F /* TutorialPhraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TutorialPhraseView.swift; path = Signity/TutorialPhraseView.swift; sourceTree = SOURCE_ROOT; };
-		ABF01C1A26BCF97800B0E08F /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TutorialViewModel.swift; path = Signity/TutorialViewModel.swift; sourceTree = SOURCE_ROOT; };
-		ABF01C1F26BD049100B0E08F /* ComparePhraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ComparePhraseView.swift; path = Signity/ComparePhraseView.swift; sourceTree = SOURCE_ROOT; };
+		ABF01C1526BCEDC700B0E08F /* TutorialPhraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TutorialPhraseView.swift; path = Signity/Module/Tutorial/View/TutorialPhraseView.swift; sourceTree = SOURCE_ROOT; };
+		ABF01C1A26BCF97800B0E08F /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TutorialViewModel.swift; path = Signity/Module/Tutorial/ViewModel/TutorialViewModel.swift; sourceTree = SOURCE_ROOT; };
+		ABF01C1F26BD049100B0E08F /* ComparePhraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ComparePhraseView.swift; path = Signity/Module/Compare/View/ComparePhraseView.swift; sourceTree = SOURCE_ROOT; };
 		D5242D0F26BBF7C3002E3589 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoryModel.swift; path = Signity/Module/CategoryModel.swift; sourceTree = SOURCE_ROOT; };
 		D5242D1126BC3089002E3589 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharacterCell.swift; path = View/Resources/CharacterCell.swift; sourceTree = SOURCE_ROOT; };
 		D5242D1326BC327F002E3589 /* PhraseACell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhraseACell.swift; path = View/Resources/PhraseACell.swift; sourceTree = SOURCE_ROOT; };
@@ -148,6 +160,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A20591126BC4A690077C9BF /* OnboardingLatihan */ = {
+			isa = PBXGroup;
+			children = (
+				4A20591226BC4A840077C9BF /* View */,
+			);
+			path = OnboardingLatihan;
+			sourceTree = "<group>";
+		};
+		4A20591226BC4A840077C9BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A20590C26BC4A620077C9BF /* OnboardingLatihanTiru.swift */,
+				4A20591626BC50B70077C9BF /* OnboardingSimulasi.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A20592026BC58430077C9BF /* Accomplishment */ = {
+			isa = PBXGroup;
+			children = (
+				4A20592126BC58740077C9BF /* View */,
+			);
+			path = Accomplishment;
+			sourceTree = "<group>";
+		};
+		4A20592126BC58740077C9BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A20591B26BC58390077C9BF /* AccomplishmentTiru.swift */,
+				4A7FC9A826BCFD3700F58A7B /* AccomplishmentSimulasi.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5561AABF26B7ED94001896B3 = {
 			isa = PBXGroup;
 			children = (
@@ -216,12 +262,13 @@
 			children = (
 				5561AB0926B7EFA1001896B3 /* Compare */,
 				5561AB0826B7EF8C001896B3 /* Tutorial */,
-				5561AB0726B7EF67001896B3 /* Accomplishment */,
 				5561AB0626B7EF49001896B3 /* Setting */,
 				5561AB0526B7EF11001896B3 /* Course */,
 				5561AB0426B7EE72001896B3 /* Category */,
 				5561AB0326B7EE0C001896B3 /* Practice */,
 				5561AB0226B7EE05001896B3 /* Onboarding */,
+				4A20591126BC4A690077C9BF /* OnboardingLatihan */,
+				4A20592026BC58430077C9BF /* Accomplishment */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -275,16 +322,6 @@
 				5561AB1726B7F1BA001896B3 /* Model */,
 			);
 			path = Setting;
-			sourceTree = "<group>";
-		};
-		5561AB0726B7EF67001896B3 /* Accomplishment */ = {
-			isa = PBXGroup;
-			children = (
-				5561AB1426B7F1B7001896B3 /* ViewModel */,
-				5561AB1526B7F1B7001896B3 /* View */,
-				5561AB1626B7F1B7001896B3 /* Model */,
-			);
-			path = Accomplishment;
 			sourceTree = "<group>";
 		};
 		5561AB0826B7EF8C001896B3 /* Tutorial */ = {
@@ -345,6 +382,7 @@
 		5561AB0E26B7F190001896B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7D62646926BD405D00788502 /* CompareView.swift */,
 				ABF01C1F26BD049100B0E08F /* ComparePhraseView.swift */,
 			);
 			path = View;
@@ -375,30 +413,10 @@
 		5561AB1326B7F1B3001896B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7D62646726BD3F7B00788502 /* TutorialView.swift */,
 				ABF01C1526BCEDC700B0E08F /* TutorialPhraseView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		5561AB1426B7F1B7001896B3 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		5561AB1526B7F1B7001896B3 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		5561AB1626B7F1B7001896B3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		5561AB1726B7F1BA001896B3 /* Model */ = {
@@ -721,11 +739,15 @@
 				55BD80EA26B924A70048244D /* Onboarding.swift in Sources */,
 				55BD80FC26B955930048244D /* CoursePage.swift in Sources */,
 				7D31CAD526B902290027EB3E /* CameraService.swift in Sources */,
+				4A20590D26BC4A620077C9BF /* OnboardingLatihanTiru.swift in Sources */,
+				4A20591726BC50B70077C9BF /* OnboardingSimulasi.swift in Sources */,
 				7DEF5F4E26BBD86C00D64354 /* PracticeViewModel.swift in Sources */,
 				D5242D1226BC3089002E3589 /* CharacterCell.swift in Sources */,
 				7D31CAE926B951CA0027EB3E /* ChatBubble.swift in Sources */,
+				7D62646826BD3F7B00788502 /* TutorialView.swift in Sources */,
 				D5242D1A26BC34C9002E3589 /* BasicPhraseView.swift in Sources */,
 				5561AACC26B7ED94001896B3 /* AppDelegate.swift in Sources */,
+				4A7FC9A926BCFD3700F58A7B /* AccomplishmentSimulasi.swift in Sources */,
 				5561AACE26B7ED94001896B3 /* SceneDelegate.swift in Sources */,
 				7D31CAF526BAD5020027EB3E /* HandLines.swift in Sources */,
 				7D31CAF126B994BD0027EB3E /* CameraViewController+DrawLandmark.swift in Sources */,
@@ -739,6 +761,7 @@
 				ABF01C1626BCEDC700B0E08F /* TutorialPhraseView.swift in Sources */,
 				7D31CAED26B97F2F0027EB3E /* PhraseButton.swift in Sources */,
 				D5242D1D26BC34EF002E3589 /* SituationPhraseView.swift in Sources */,
+				7D62646A26BD405D00788502 /* CompareView.swift in Sources */,
 				5561AAD026B7ED94001896B3 /* ContentView.swift in Sources */,
 				D5242D1026BBF7C3002E3589 /* CategoryModel.swift in Sources */,
 				5561AAD326B7ED94001896B3 /* Signity.xcdatamodeld in Sources */,
@@ -746,6 +769,7 @@
 				7D31CAE726B94EB60027EB3E /* PhraseStyle.swift in Sources */,
 				7D31CADE26B909510027EB3E /* PracticeView.swift in Sources */,
 				7D31CAF826BAE6290027EB3E /* Hand.swift in Sources */,
+				4A20591C26BC58390077C9BF /* AccomplishmentTiru.swift in Sources */,
 				7D31CAFA26BB9B380027EB3E /* HandLandmarks.swift in Sources */,
 				7D31CAEB26B97ED80027EB3E /* HorizontalModules.swift in Sources */,
 				7D31CAE326B92D580027EB3E /* ProgressBar.swift in Sources */,
@@ -922,7 +946,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Signity/Preview Content\"";
-				DEVELOPMENT_TEAM = C2B99LH67K;
+				DEVELOPMENT_TEAM = 6QH35NFSG6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Signity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -943,7 +967,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Signity/Preview Content\"";
-				DEVELOPMENT_TEAM = C2B99LH67K;
+				DEVELOPMENT_TEAM = 6QH35NFSG6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Signity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
