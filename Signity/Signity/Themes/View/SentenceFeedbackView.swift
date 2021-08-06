@@ -10,6 +10,7 @@ import SwiftUI
 struct SentenceFeedbackView: View {
     var words = ["Selamat", "pagi"]
     @State var currentCorrect = 1
+    @State var animate = false
     
     var body: some View {
         ZStack {
@@ -26,7 +27,10 @@ struct SentenceFeedbackView: View {
             .modifier(PhraseStyle())
         }
         .frame(width: UIScreen.main.bounds.width - 30, height: 50)
-        .animation(.linear)
+        .animation(.linear, value: animate)
+        .onAppear {
+            self.animate.toggle()
+        }
     }
 }
 

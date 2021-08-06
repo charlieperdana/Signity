@@ -14,49 +14,47 @@ struct PracticeView: View {
     @State var navBarHidden = false
     
     var body: some View {
-        ZStack {
-            CameraRepresentable() { hands in
-                viewModel.detectedHands = hands
-            }
-            .overlay(
-                ZStack {
-                    HandLines(for: viewModel.detectedHands)
-                        .stroke(Color.green, lineWidth: 2)
-                    HandLandmarks(for: viewModel.detectedHands)
-                        .fill(Color.green)
+        CustomNavigation(navBarCollapsed: navBarHidden, destination: SimulationView(), isRoot: true, isLast: false, title: "Latihan Tiru") {
+            Group {
+                CameraRepresentable() { hands in
+                    viewModel.detectedHands = hands
                 }
-            )
-            .onTapGesture {
-                withAnimation {
-                    self.navBarHidden.toggle()
-                }
-            }
-            
-            if !self.navBarHidden {
-                CameraNavigationBar(title: "Latihan Tiru")
-            }
-            
-            VStack {
-                HStack(alignment: .top) {
-                    ChatBubble() {
-                        Text("Selamat pagi")
-                            .padding(.all, 15)
-                            .padding(.trailing, 10)
-                            .background(Color.white)
-                            .opacity(0.85)
-                            .modifier(PhraseStyle())
-                            .multilineTextAlignment(.leading)
+                .overlay(
+                    ZStack {
+                        HandLines(for: viewModel.detectedHands)
+                            .stroke(Color.green, lineWidth: 2)
+                        HandLandmarks(for: viewModel.detectedHands)
+                            .fill(Color.green)
                     }
-                    
-                    VideoView(videoName: $viewModel.currentVideo, playbackSpeed: $viewModel.playbackSpeed, playbackState: $viewModel.playbackState)
+                )
+                .onTapGesture {
+                    withAnimation {
+                        self.navBarHidden.toggle()
+                    }
                 }
-                .padding()
-                Spacer()
-                HorizontalModules(viewModel: viewModel)
+
+                VStack {
+                    HStack(alignment: .top) {
+                        ChatBubble() {
+                            Text("Selamat pagi")
+                                .padding(.all, 15)
+                                .padding(.trailing, 10)
+                                .background(Color.white)
+                                .opacity(0.85)
+                                .modifier(PhraseStyle())
+                                .multilineTextAlignment(.leading)
+                        }
+
+                        VideoView(videoName: $viewModel.currentVideo, playbackSpeed: $viewModel.playbackSpeed, playbackState: $viewModel.playbackState)
+                    }
+                    .padding()
+                    Spacer()
+                    HorizontalModules(viewModel: viewModel)
+                }
+                .padding(.top, self.navBarHidden ? 35 : 75)
             }
-            .padding(.top, self.navBarHidden ? 35 : 75)
+            .edgesIgnoringSafeArea(.all)
         }
-        .edgesIgnoringSafeArea(.all)
     }
 }
 

@@ -37,8 +37,8 @@
 		7D31CB0226BBADAE0027EB3E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7D31CB0126BBADAE0027EB3E /* Lottie */; };
 		7D31CB0426BBB3A30027EB3E /* blender.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D31CB0326BBB3A30027EB3E /* blender.json */; };
 		7D31CB0626BBB3B20027EB3E /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31CB0526BBB3B20027EB3E /* LottieView.swift */; };
+		7D62645626BC422C00788502 /* CustomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62645526BC422C00788502 /* CustomNavigation.swift */; };
 		7D993FA126BBE21D0078450F /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D993FA026BBE21D0078450F /* VideoView.swift */; };
-		7D993FA326BBE46D0078450F /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D993FA226BBE46D0078450F /* CameraView.swift */; };
 		7D993FA526BBE6670078450F /* SimulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D993FA426BBE6670078450F /* SimulationView.swift */; };
 		7D993FA826BBEC520078450F /* HintButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D993FA726BBEC520078450F /* HintButton.swift */; };
 		7D993FAA26BBEC680078450F /* YourTurnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D993FA926BBEC680078450F /* YourTurnView.swift */; };
@@ -84,8 +84,8 @@
 		55BD80E926B924A70048244D /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		55BD80EE26B937670048244D /* OnboardingRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRegion.swift; sourceTree = "<group>"; };
 		55BD80FB26B955930048244D /* CoursePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePage.swift; sourceTree = "<group>"; };
-		7D31CAD926B908820027EB3E /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = Signity/Module/Practice/View/CameraPreview/CameraViewController.swift; sourceTree = SOURCE_ROOT; };
-		7D31CADB26B908B80027EB3E /* CameraRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraRepresentable.swift; path = Signity/Module/Practice/View/CameraPreview/CameraRepresentable.swift; sourceTree = SOURCE_ROOT; };
+		7D31CAD926B908820027EB3E /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = Signity/Module/Practice/View/CameraView/CameraViewController.swift; sourceTree = SOURCE_ROOT; };
+		7D31CADB26B908B80027EB3E /* CameraRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraRepresentable.swift; path = Signity/Module/Practice/View/CameraView/CameraRepresentable.swift; sourceTree = SOURCE_ROOT; };
 		7D31CADD26B909510027EB3E /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PracticeView.swift; path = Signity/Module/Practice/View/PracticeView.swift; sourceTree = SOURCE_ROOT; };
 		7D31CAE226B92D580027EB3E /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProgressBar.swift; path = Signity/Themes/View/ProgressBar.swift; sourceTree = SOURCE_ROOT; };
 		7D31CAE426B936CC0027EB3E /* ChatTriangleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatTriangleShape.swift; path = Signity/Themes/Shape/ChatTriangleShape.swift; sourceTree = SOURCE_ROOT; };
@@ -93,7 +93,7 @@
 		7D31CAE826B951CA0027EB3E /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatBubble.swift; path = Signity/Module/Practice/View/ChatBubble.swift; sourceTree = SOURCE_ROOT; };
 		7D31CAEA26B97ED80027EB3E /* HorizontalModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HorizontalModules.swift; path = Signity/Module/Practice/View/HorizontalModules.swift; sourceTree = SOURCE_ROOT; };
 		7D31CAEC26B97F2F0027EB3E /* PhraseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseButton.swift; sourceTree = "<group>"; };
-		7D31CAF026B994BD0027EB3E /* CameraViewController+DrawLandmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CameraViewController+DrawLandmark.swift"; path = "Signity/Module/Practice/View/CameraPreview/CameraViewController+DrawLandmark.swift"; sourceTree = SOURCE_ROOT; };
+		7D31CAF026B994BD0027EB3E /* CameraViewController+DrawLandmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CameraViewController+DrawLandmark.swift"; path = "Signity/Module/Practice/View/CameraView/CameraViewController+DrawLandmark.swift"; sourceTree = SOURCE_ROOT; };
 		7D31CAF226BA6B9A0027EB3E /* CameraNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraNavigationBar.swift; sourceTree = "<group>"; };
 		7D31CAF426BAD5020027EB3E /* HandLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HandLines.swift; path = Signity/Themes/Shape/HandLines.swift; sourceTree = SOURCE_ROOT; };
 		7D31CAF726BAE6290027EB3E /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Hand.swift; path = Signity/Module/Practice/Model/Hand.swift; sourceTree = SOURCE_ROOT; };
@@ -101,8 +101,8 @@
 		7D31CAFE26BBA7A20027EB3E /* PlaybackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackButton.swift; sourceTree = "<group>"; };
 		7D31CB0326BBB3A30027EB3E /* blender.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blender.json; sourceTree = "<group>"; };
 		7D31CB0526BBB3B20027EB3E /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		7D62645526BC422C00788502 /* CustomNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigation.swift; sourceTree = "<group>"; };
 		7D993FA026BBE21D0078450F /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
-		7D993FA226BBE46D0078450F /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		7D993FA426BBE6670078450F /* SimulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationView.swift; sourceTree = "<group>"; };
 		7D993FA726BBEC520078450F /* HintButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintButton.swift; sourceTree = "<group>"; };
 		7D993FA926BBEC680078450F /* YourTurnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTurnView.swift; sourceTree = "<group>"; };
@@ -463,12 +463,13 @@
 		5561AB2226B7F1C2001896B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7D31CAD626B9080C0027EB3E /* CameraPreview */,
+				7D31CAD626B9080C0027EB3E /* CameraView */,
 				7D31CADD26B909510027EB3E /* PracticeView.swift */,
 				7D31CAE826B951CA0027EB3E /* ChatBubble.swift */,
 				7D31CAEA26B97ED80027EB3E /* HorizontalModules.swift */,
 				7D993FA026BBE21D0078450F /* VideoView.swift */,
 				7D993FA626BBEC2C0078450F /* Simulation */,
+				7D62645526BC422C00788502 /* CustomNavigation.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -496,15 +497,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		7D31CAD626B9080C0027EB3E /* CameraPreview */ = {
+		7D31CAD626B9080C0027EB3E /* CameraView */ = {
 			isa = PBXGroup;
 			children = (
 				7D31CAD926B908820027EB3E /* CameraViewController.swift */,
 				7D31CADB26B908B80027EB3E /* CameraRepresentable.swift */,
 				7D31CAF026B994BD0027EB3E /* CameraViewController+DrawLandmark.swift */,
-				7D993FA226BBE46D0078450F /* CameraView.swift */,
 			);
-			path = CameraPreview;
+			path = CameraView;
 			sourceTree = "<group>";
 		};
 		7D31CAF626BAE61E0027EB3E /* Model */ = {
@@ -697,7 +697,6 @@
 				55BD80EF26B937670048244D /* OnboardingRegion.swift in Sources */,
 				55BD80EA26B924A70048244D /* Onboarding.swift in Sources */,
 				55BD80FC26B955930048244D /* CoursePage.swift in Sources */,
-				7D31CAD526B902290027EB3E /* CameraService.swift in Sources */,
 				7DEF5F4E26BBD86C00D64354 /* PracticeViewModel.swift in Sources */,
 				7D31CAE926B951CA0027EB3E /* ChatBubble.swift in Sources */,
 				5561AACC26B7ED94001896B3 /* AppDelegate.swift in Sources */,
@@ -712,6 +711,7 @@
 				7D993FA826BBEC520078450F /* HintButton.swift in Sources */,
 				7D31CAED26B97F2F0027EB3E /* PhraseButton.swift in Sources */,
 				7D993FA126BBE21D0078450F /* VideoView.swift in Sources */,
+				7D62645626BC422C00788502 /* CustomNavigation.swift in Sources */,
 				5561AAD026B7ED94001896B3 /* ContentView.swift in Sources */,
 				7D993FAA26BBEC680078450F /* YourTurnView.swift in Sources */,
 				5561AAD326B7ED94001896B3 /* Signity.xcdatamodeld in Sources */,
@@ -724,7 +724,6 @@
 				7D31CAE326B92D580027EB3E /* ProgressBar.swift in Sources */,
 				7D31CADC26B908B80027EB3E /* CameraRepresentable.swift in Sources */,
 				7D993FA526BBE6670078450F /* SimulationView.swift in Sources */,
-				7D993FA326BBE46D0078450F /* CameraView.swift in Sources */,
 				7DEF5F4C26BBD39200D64354 /* SentenceFeedbackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

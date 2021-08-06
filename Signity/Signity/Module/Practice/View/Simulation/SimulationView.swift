@@ -12,64 +12,63 @@ struct SimulationView: View {
     @State var navBarHidden = false
     
     var body: some View {
-        ZStack {
-            CameraRepresentable() { hands in
-                viewModel.detectedHands = hands
-            }
-            .overlay(
-                ZStack {
-                    HandLines(for: viewModel.detectedHands)
-                        .stroke(Color.green, lineWidth: 2)
-                    HandLandmarks(for: viewModel.detectedHands)
-                        .fill(Color.green)
+        CustomNavigation(navBarCollapsed: navBarHidden, destination: Onboarding(), isRoot: false, isLast: false, title: "Latihan Simulasi") {
+            Group {
+                CameraRepresentable() { hands in
+                    viewModel.detectedHands = hands
                 }
-            )
-            .onTapGesture {
-                withAnimation {
-                    self.navBarHidden.toggle()
-                }
-            }
-            
-            if !self.navBarHidden {
-                CameraNavigationBar(title: "Latihan Simulasi")
-            }
-            
-            VStack {
-                ProgressBar(value: .constant(0.5))
-                
-                HStack(alignment: .top) {
-                    ChatBubble() {
-                        Text("Selamat pagi")
-                            .padding(.all, 15)
-                            .padding(.trailing, 10)
-                            .background(Color.white)
-                            .opacity(0.85)
-                            .modifier(PhraseStyle())
-                            .multilineTextAlignment(.leading)
+                .overlay(
+                    ZStack {
+                        HandLines(for: viewModel.detectedHands)
+                            .stroke(Color.green, lineWidth: 2)
+                        HandLandmarks(for: viewModel.detectedHands)
+                            .fill(Color.green)
                     }
+                )
+                .onTapGesture {
+                    withAnimation {
+                        self.navBarHidden.toggle()
+                    }
+                }
+
+                VStack {
+                    ProgressBar(value: .constant(0.5))
                     
-                    LottieView(name: "blender", playbackSpeed: 1.0)
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200)
-                        .background(Color.white)
-                        .cornerRadius(25)
-                }
-                .padding()
-                
-                Spacer()
-                
-                HStack {
-                    YourTurnView()
+                    HStack(alignment: .top) {
+                        ChatBubble() {
+                            Text("Selamat pagi")
+                                .padding(.all, 15)
+                                .padding(.trailing, 10)
+                                .background(Color.white)
+                                .opacity(0.85)
+                                .modifier(PhraseStyle())
+                                .multilineTextAlignment(.leading)
+                        }
+                        
+                        LottieView(name: "blender", playbackSpeed: 1.0)
+                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200)
+                            .background(Color.white)
+                            .cornerRadius(25)
+                    }
+                    .padding()
+                    
                     Spacer()
-                    HintButton()
+                    
+                    HStack {
+                        YourTurnView()
+                        Spacer()
+                        HintButton()
+                    }
+                    .padding(.horizontal)
+                    
+                    SentenceFeedbackView()
+                        .padding(.bottom, 40)
                 }
-                .padding(.horizontal)
-                
-                SentenceFeedbackView()
-                    .padding(.bottom, 40)
+                .padding(.top, self.navBarHidden ? 35 : 75)
             }
-            .padding(.top, self.navBarHidden ? 35 : 75)
+            .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
         }
-        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+        
     }
 }
 
