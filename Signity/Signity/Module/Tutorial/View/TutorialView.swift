@@ -14,7 +14,7 @@ struct TutorialView: View {
                 .fontWeight(.semibold)
                 .font(.system(size:17, design: .rounded))
             
-            LottieView(filename: "dolphin")
+            LottieView(name: "blender", playbackSpeed: 1.0)
                 .frame(width:240, height:320)
             
             Button(action: {
