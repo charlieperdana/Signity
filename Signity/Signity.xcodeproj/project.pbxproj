@@ -238,7 +238,6 @@
 			children = (
 				5561AB0926B7EFA1001896B3 /* Compare */,
 				5561AB0826B7EF8C001896B3 /* Tutorial */,
-				5561AB0726B7EF67001896B3 /* Accomplishment */,
 				5561AB0626B7EF49001896B3 /* Setting */,
 				5561AB0526B7EF11001896B3 /* Course */,
 				5561AB0426B7EE72001896B3 /* Category */,
@@ -299,16 +298,6 @@
 				5561AB1726B7F1BA001896B3 /* Model */,
 			);
 			path = Setting;
-			sourceTree = "<group>";
-		};
-		5561AB0726B7EF67001896B3 /* Accomplishment */ = {
-			isa = PBXGroup;
-			children = (
-				5561AB1426B7F1B7001896B3 /* ViewModel */,
-				5561AB1526B7F1B7001896B3 /* View */,
-				5561AB1626B7F1B7001896B3 /* Model */,
-			);
-			path = Accomplishment;
 			sourceTree = "<group>";
 		};
 		5561AB0826B7EF8C001896B3 /* Tutorial */ = {
@@ -399,27 +388,6 @@
 			children = (
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		5561AB1426B7F1B7001896B3 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		5561AB1526B7F1B7001896B3 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		5561AB1626B7F1B7001896B3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		5561AB1726B7F1BA001896B3 /* Model */ = {
