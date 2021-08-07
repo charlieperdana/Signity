@@ -82,11 +82,11 @@ struct Onboarding: View {
                 
                 //MARK: - NAVIGATION LINKS
                 NavigationLink(destination: OnboardingRegion(), isActive: $showNextOnboard) {
-                    EmptyView()
-                }
-//                NavigationLink(destination: CoursePage(), isActive: $showCourse) {
 //                    EmptyView()
-//                }
+                }
+                NavigationLink(destination: CoursePage(items: CourseSection.data), isActive: $showCourse) {
+                    
+                }
                 
                 
             }

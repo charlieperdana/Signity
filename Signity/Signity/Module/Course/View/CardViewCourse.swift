@@ -13,9 +13,10 @@ struct CardViewCourse: View {
     
     var body: some View {
         HStack {
-            Image("sample1")
+            Image("\(item.image)")
                 .resizable()
-                .frame(width: 60.0, height: 60.0)
+                .scaledToFit()
+            
             VStack(alignment: .leading) {
                 HStack {
                     Text(item.typeName)
@@ -40,7 +41,7 @@ struct CardViewCourse: View {
                     .accessibilityValue(Text("20"))
     
                 
-                ProgressBarCourse(value: 3.0, maxValue: 10.0)
+                ProgressBarCourse(value: Double(item.progress), maxValue: Double(item.numExercise))
                     .frame(height: 8)
             }
             .padding()

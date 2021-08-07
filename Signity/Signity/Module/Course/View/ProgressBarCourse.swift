@@ -58,7 +58,7 @@ struct ProgressBarCourse_Previews: PreviewProvider {
     
     static var previews: some View {
         ProgressBarCourse(value: 3.0, maxValue: 10.0)
-                    .frame(height: 10)
-                    .padding(30)
+            .frame(height: 10)
+            .padding(30)
     }
 }
