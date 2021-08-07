@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A153D2326BE557300FD475E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A153D2226BE557300FD475E /* SettingsView.swift */; };
+		4A153D2B26BE558900FD475E /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A153D2A26BE558900FD475E /* CollectionView.swift */; };
 		4A20590D26BC4A620077C9BF /* OnboardingLatihanTiru.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A20590C26BC4A620077C9BF /* OnboardingLatihanTiru.swift */; };
 		4A20591726BC50B70077C9BF /* OnboardingSimulasi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A20591626BC50B70077C9BF /* OnboardingSimulasi.swift */; };
 		4A20591C26BC58390077C9BF /* AccomplishmentTiru.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A20591B26BC58390077C9BF /* AccomplishmentTiru.swift */; };
@@ -77,6 +79,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A153D2226BE557300FD475E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = View/SettingsView.swift; sourceTree = SOURCE_ROOT; };
+		4A153D2A26BE558900FD475E /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionView.swift; path = View/CollectionView.swift; sourceTree = SOURCE_ROOT; };
 		4A20590C26BC4A620077C9BF /* OnboardingLatihanTiru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingLatihanTiru.swift; sourceTree = "<group>"; };
 		4A20591626BC50B70077C9BF /* OnboardingSimulasi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSimulasi.swift; sourceTree = "<group>"; };
 		4A20591B26BC58390077C9BF /* AccomplishmentTiru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccomplishmentTiru.swift; sourceTree = "<group>"; };
@@ -262,13 +266,13 @@
 			children = (
 				5561AB0926B7EFA1001896B3 /* Compare */,
 				5561AB0826B7EF8C001896B3 /* Tutorial */,
+				4A20592026BC58430077C9BF /* Accomplishment */,
 				5561AB0626B7EF49001896B3 /* Setting */,
 				5561AB0526B7EF11001896B3 /* Course */,
 				5561AB0426B7EE72001896B3 /* Category */,
 				5561AB0326B7EE0C001896B3 /* Practice */,
 				5561AB0226B7EE05001896B3 /* Onboarding */,
 				4A20591126BC4A690077C9BF /* OnboardingLatihan */,
-				4A20592026BC58430077C9BF /* Accomplishment */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -429,6 +433,8 @@
 		5561AB1826B7F1BA001896B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4A153D2226BE557300FD475E /* SettingsView.swift */,
+				4A153D2A26BE558900FD475E /* CollectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -747,6 +753,7 @@
 				7D62646826BD3F7B00788502 /* TutorialView.swift in Sources */,
 				D5242D1A26BC34C9002E3589 /* BasicPhraseView.swift in Sources */,
 				5561AACC26B7ED94001896B3 /* AppDelegate.swift in Sources */,
+				4A153D2326BE557300FD475E /* SettingsView.swift in Sources */,
 				4A7FC9A926BCFD3700F58A7B /* AccomplishmentSimulasi.swift in Sources */,
 				5561AACE26B7ED94001896B3 /* SceneDelegate.swift in Sources */,
 				7D31CAF526BAD5020027EB3E /* HandLines.swift in Sources */,
@@ -776,6 +783,7 @@
 				D5242D1F26BD12C1002E3589 /* PhraseBCell.swift in Sources */,
 				7D31CADC26B908B80027EB3E /* CameraView.swift in Sources */,
 				7DEF5F4C26BBD39200D64354 /* SentenceFeedbackView.swift in Sources */,
+				4A153D2B26BE558900FD475E /* CollectionView.swift in Sources */,
 				D5242D1826BC349E002E3589 /* BasicCharacterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
