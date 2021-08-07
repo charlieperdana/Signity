@@ -44,7 +44,7 @@ struct AccomplishmentSimulasi: View {
                 Spacer()
                     
                     Image("LatihanSimulasi_Badge")
-                        .offset(y:70)
+                        .offset(y:48)
                     
                 Spacer()
                     
