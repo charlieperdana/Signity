@@ -52,9 +52,9 @@ struct OnboardingLatihanTiru: View {
             
             Spacer()
             
-            Button(action: {
-                print("Go to next page")
-                            },
+            NavigationLink(
+                destination: Text("Page latihan Tiru"),
+                
             label: {
                 Text("Berikutnya")
                 .foregroundColor(.white)

@@ -51,9 +51,9 @@ struct OnboardingSimulasi: View {
             
             Spacer()
             
-            Button(action: {
-                print("Go to next page")
-                            },
+            NavigationLink(
+                destination: Text("Page latihan Simulasi"),
+                
             label: {
                 Text("Berikutnya")
                 .foregroundColor(.white)

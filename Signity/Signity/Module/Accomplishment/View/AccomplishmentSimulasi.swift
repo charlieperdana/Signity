@@ -56,10 +56,9 @@ struct AccomplishmentSimulasi: View {
                 Spacer()
                     
                     
-                    Button(action: {
-                        print("Go to simulasi practice page")
-                        
-                                    },
+                NavigationLink(
+                    destination: Text("Balik ke page pelajaran"),
+                    
                     label: {
                         Text("Mulai Latihan Simulasi")
                         .foregroundColor(.white)
