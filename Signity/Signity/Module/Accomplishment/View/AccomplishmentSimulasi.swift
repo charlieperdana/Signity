@@ -44,7 +44,7 @@ struct AccomplishmentSimulasi: View {
                 Spacer()
                     
                     Image("LatihanSimulasi_Badge")
-                        .offset(y:70)
+                        .offset(y:48)
                     
                 Spacer()
                     
@@ -56,10 +56,9 @@ struct AccomplishmentSimulasi: View {
                 Spacer()
                     
                     
-                    Button(action: {
-                        print("Go to simulasi practice page")
-                        
-                                    },
+                NavigationLink(
+                    destination: Text("Balik ke page pelajaran"),
+                    
                     label: {
                         Text("Mulai Latihan Simulasi")
                         .foregroundColor(.white)

@@ -33,7 +33,6 @@ struct AccomplishmentTiru: View {
             
             VStack{
                 
-                    
                     Text("Latihan Tiru Selesai!")
                         .font(.system(size: 32, design: .rounded))
                         .fontWeight(.bold)
@@ -46,18 +45,14 @@ struct AccomplishmentTiru: View {
                     
                 Spacer()
                     
-                    
                     Image("bottomCircle")
                         .offset(y:148)
-                
                   
                 Spacer()
                     
+                NavigationLink(
+                    destination: Text("Page Simulasi practice"),
                     
-                    Button(action: {
-                        print("Go to simulasi practice page")
-                        
-                                    },
                     label: {
                         Text("Mulai Latihan Simulasi")
                         .foregroundColor(.white)

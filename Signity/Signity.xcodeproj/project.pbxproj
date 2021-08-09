@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,7 @@
 		38A00CAD6D3635F49D2E8777 /* SentenceFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987CCAD410893A903846610A /* SentenceFeedbackView.swift */; };
 		3B9AF74576B582B36790443D /* person.json in Resources */ = {isa = PBXBuildFile; fileRef = 617AE4E0ADFD1EB1B30CEEA9 /* person.json */; };
 		3CC6C39BC8E7F3CFEED05989 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83878CD97BD140ABD104ECC6 /* Onboarding.swift */; };
+		3F426FA2579AA91947449ED2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F3D84A0A7604AB9049B68A /* SettingsView.swift */; };
 		496A42468A95303ECA86D483 /* PhraseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FDD3F9D4DB3C38A02F4D76 /* PhraseButton.swift */; };
 		524825ED58397E1E94A10618 /* PlaybackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F139692329014ADE4D25E3 /* PlaybackButton.swift */; };
 		5B2CB0C4F72B3DF6F0B3E836 /* SignityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8AA153DB638E5543DF0E7 /* SignityTests.swift */; };
@@ -61,6 +62,7 @@
 		D00C409638D13A7EDA5DDCD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7B3399D5BCEF5CDBDB6DA1 /* ContentView.swift */; };
 		D7A6003F26CAD5C08AF09AE4 /* SimulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBABD56B2392B76F8D92AD37 /* SimulationView.swift */; };
 		DB4207052D8FD93F264D787B /* CameraRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96FBD18996C823EE0C1B021 /* CameraRepresentable.swift */; };
+		E6BB61039551A3FA7EACDA5A /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD188080E4DE4461D42AC80B /* CollectionView.swift */; };
 		EE8A3342919A6E51AD06F3EB /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BD103C4E035C99740F69B634 /* Lottie */; };
 		EFE5E06B9AA1CED7A1ED0DB6 /* HintButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A658F1F3904143390E2BA0 /* HintButton.swift */; };
 		FC65BE15315AB48DDB1684DF /* HorizontalModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0F6AB7A446A3B393E745F /* HorizontalModules.swift */; };
@@ -71,13 +73,14 @@
 		001BF5FAC6DE6AF875597DB9 /* ColorConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConfig.swift; sourceTree = "<group>"; };
 		0571F9AE291B03B6EFAC539C /* ColorPallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPallete.swift; sourceTree = "<group>"; };
 		0EFC6CF4A807F86FDF36B22D /* BasicCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCharacterView.swift; sourceTree = "<group>"; };
+		13F3D84A0A7604AB9049B68A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		1AE6978CB75C4A8BAC76BA89 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		262DD59938FEE703EF945011 /* PhraseBCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseBCell.swift; sourceTree = "<group>"; };
 		270663A6100EF4D5836B3A09 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		279805C3262B54732701EA9F /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		2C5CEB645E725CEFE6E62118 /* PhraseStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseStyle.swift; sourceTree = "<group>"; };
 		2DC5C4BE237D93EA6CB23CE2 /* OnboardingRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRegion.swift; sourceTree = "<group>"; };
-		2FD16F2268223352C27FA8A2 /* Signity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Signity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FD16F2268223352C27FA8A2 /* Signity.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Signity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F31F17EFF5297A4B6C2558 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		37E0F6AB7A446A3B393E745F /* HorizontalModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalModules.swift; sourceTree = "<group>"; };
 		3888DBCED1D5EC48E193EB91 /* SignityUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SignityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +121,7 @@
 		BF0B436DD6DAF9D1667BB1BC /* PracticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewModel.swift; sourceTree = "<group>"; };
 		C07A0C50D46C78B7D34FDB24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C794D8A0D50E58BD6C56F66B /* CoursePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePage.swift; sourceTree = "<group>"; };
+		CD188080E4DE4461D42AC80B /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		D1FDD3F9D4DB3C38A02F4D76 /* PhraseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseButton.swift; sourceTree = "<group>"; };
 		D44B8AE401E1AF9CAF282DA8 /* SituationPhraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SituationPhraseView.swift; sourceTree = "<group>"; };
 		D8F0F68D1A393723854BF024 /* ChatTriangleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTriangleShape.swift; sourceTree = "<group>"; };
@@ -329,6 +333,7 @@
 				CEA1B5EE744C7B38717B757F /* Onboarding */,
 				4D42AC9C26757F045F3FF6C3 /* OnboardingLatihan */,
 				A53AD3AC945FB39BCE9894F5 /* Practice */,
+				B54BDE346464675A4C4FFD2C /* Settings */,
 				ED152C325C6ABE4E24C8566C /* Tutorial */,
 			);
 			path = Module;
@@ -379,6 +384,14 @@
 			path = Compare;
 			sourceTree = "<group>";
 		};
+		B54BDE346464675A4C4FFD2C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B88A3BDB9AB45D97DF3F5F77 /* View */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		B5D6E0671E5C1F2DEC5EF61C /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +410,15 @@
 				88CBFD65052E9248C1978184 /* CameraView */,
 				22557335EE844B7B6EC69B99 /* Practice */,
 				6022506133676281C10110E3 /* Simulation */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B88A3BDB9AB45D97DF3F5F77 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CD188080E4DE4461D42AC80B /* CollectionView.swift */,
+				13F3D84A0A7604AB9049B68A /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -562,6 +584,8 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 9960AD806CB30C9922FBB468 /* Build configuration list for PBXProject "Signity" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -627,6 +651,7 @@
 				FE5220F21863C2B7F851F3AC /* CharacterCell.swift in Sources */,
 				2DE307E1D08040D56ED29EE3 /* ChatBubble.swift in Sources */,
 				9FED50ED7D44182DFC591429 /* ChatTriangleShape.swift in Sources */,
+				E6BB61039551A3FA7EACDA5A /* CollectionView.swift in Sources */,
 				24C76697610B98314D84E7EF /* ColorConfig.swift in Sources */,
 				CD723BAE78FF4946B516D483 /* ColorPallete.swift in Sources */,
 				851C5E38307AD135B7FD9397 /* ComparePhraseView.swift in Sources */,
@@ -654,6 +679,7 @@
 				1B405264C46BAE647B06BB01 /* ProgressBar.swift in Sources */,
 				BD474682C4EF22D12528286A /* SceneDelegate.swift in Sources */,
 				38A00CAD6D3635F49D2E8777 /* SentenceFeedbackView.swift in Sources */,
+				3F426FA2579AA91947449ED2 /* SettingsView.swift in Sources */,
 				388B23B90718820A73A0951C /* Signity.xcdatamodeld in Sources */,
 				D7A6003F26CAD5C08AF09AE4 /* SimulationView.swift in Sources */,
 				156BDFD68BD5D417A9A3C1B1 /* SimulationViewModel.swift in Sources */,
@@ -725,7 +751,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6QH35NFSG6;
 				INFOPLIST_FILE = Signity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -814,7 +839,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6QH35NFSG6;
 				INFOPLIST_FILE = Signity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
