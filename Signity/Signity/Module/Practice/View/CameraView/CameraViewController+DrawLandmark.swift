@@ -16,11 +16,21 @@ extension CameraViewController {
         return convertedPoint
     }
     
-    func createHandModel(from observation: VNHumanHandPoseObservation) -> Hand {
+    func createHandModel(from observation: VNHumanHandPoseObservation) -> (createdModel: Hand, highConfidenceLandmarks: Int) {
         var hand = Hand()
+        var highConfidenceLandmarks = 0
         
         do {
             let points = try observation.recognizedPoints(.all)
+    
+            for child in Mirror(reflecting: points).children {
+
+                if let joint = child.value as? (key: VNHumanHandPoseObservation.JointName, value: VNRecognizedPoint) {
+                    if joint.value.confidence >= 0.85 {
+                        highConfidenceLandmarks += 1
+                    }
+                }
+            }
             
             hand.thumb.tip = self.processPoint(for: points[.thumbTip]!)
             hand.thumb.dip = self.processPoint(for: points[.thumbIP]!)
@@ -52,6 +62,6 @@ extension CameraViewController {
             
         }
         
-        return hand
+        return (hand, highConfidenceLandmarks)
     }
 }

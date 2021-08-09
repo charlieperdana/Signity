@@ -1,0 +1,30 @@
+name: Signity
+options:
+  bundleIdPrefix: AppleAcademy
+  deploymentTarget:
+    iOS: 14.4
+packages:
+  Lottie:
+    url: https://github.com/airbnb/lottie-ios
+    majorVersion: 3.2.3
+targets:
+  Signity:
+    type: application
+    platform: iOS
+    dependencies:
+      - package: Lottie
+    sources: 
+      - path: Signity
+    scheme:
+      testTargets:
+      - SignityTests
+  SignityTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: SignityTests
+  SignityUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: SignityUITests

@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct CameraView: UIViewControllerRepresentable {
-    var processLandmarksHandler: ([Hand]) -> Void
+struct CameraRepresentable: UIViewControllerRepresentable {
+    var processLandmarksHandler: ([Hand], _ highConfidenceLandmarks: Int) -> Void
     
     func makeUIViewController(context: Context) -> CameraViewController {
         let cameraVC = CameraViewController()
