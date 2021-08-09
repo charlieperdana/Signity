@@ -18,10 +18,7 @@ class CameraViewController: UIViewController {
     
     var previewView: UIView!
     
-    var layer = CAShapeLayer()
-    var path = UIBezierPath()
-    
-    var processLandmarksHandler: (([Hand]) -> Void)?
+    var processLandmarksHandler: (([Hand], _ highConfidenceLandmarks: Int) -> Void)?
     
     private let videoOutputQueue = DispatchQueue(label: "VideoOutput", qos: .userInteractive)
     
@@ -57,7 +54,6 @@ class CameraViewController: UIViewController {
         }
         
         self.camera = device
-//        self.camera.setFPS(CAMERA_FPS)
         self.setupSession()
     }
     
@@ -100,28 +96,30 @@ class CameraViewController: UIViewController {
 
 extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        layer.removeFromSuperlayer()
-        path.removeAllPoints()
-        
         let handler = VNImageRequestHandler(cmSampleBuffer: sampleBuffer, orientation: .up, options: [:])
         
         var hands = [Hand]()
+        var highConfidenceLandmarks = 0
         
         do {
             try handler.perform([handPoseRequest])
 
             if let results = handPoseRequest.results {
                 results.forEach { observation in
-                    hands.append(self.createHandModel(from: observation))
+                    let processedData = self.createHandModel(from: observation)
+                    hands.append(processedData.createdModel)
+                    
+                    highConfidenceLandmarks += processedData.highConfidenceLandmarks
                 }
                 
             }
+
         } catch {
             
         }
         
         DispatchQueue.main.async {
-            self.processLandmarksHandler!(hands)
+            self.processLandmarksHandler!(hands, highConfidenceLandmarks)
         }
     }
     

@@ -10,21 +10,26 @@ import SwiftUI
 struct SentenceFeedbackView: View {
     var words = ["Selamat", "pagi"]
     @State var currentCorrect = 1
+    @State var animate = false
     
     var body: some View {
         ZStack {
             Rectangle()
-                .frame(width: 250, height: 50)
                 .background(Color.white)
                 .cornerRadius(13)
-                .opacity(0.8)
+                .opacity(0.6)
             HStack {
                 ForEach(words.indices) { i in
                     Text(words[i])
-                        .foregroundColor(i < currentCorrect ? .green : Color("DarkPurple"))
+                        .foregroundColor(i < currentCorrect ? Color("Green") : Color("DarkPurple"))
                 }
             }
             .modifier(PhraseStyle())
+        }
+        .frame(width: UIScreen.main.bounds.width - 30, height: 50)
+        .animation(.linear, value: animate)
+        .onAppear {
+            self.animate.toggle()
         }
     }
 }
