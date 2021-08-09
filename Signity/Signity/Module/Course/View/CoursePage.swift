@@ -76,13 +76,10 @@ struct CoursePage: View {
                     
                 }
             }
-            
-        }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarHidden(true)
-        .navigationBarTitle("")
-        
-        
+            .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
+            .navigationBarTitle("")
+        }        
     }
 }
 
