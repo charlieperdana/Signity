@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProgressBar: View {
     @Binding var value: Double
+    @State var animate = false
     
     var body: some View {
         GeometryReader { geo in
@@ -22,12 +23,16 @@ struct ProgressBar: View {
                     .foregroundColor(.white)
                     .cornerRadius(25)
                     .offset(x: 1, y: 0)
-                    .animation(.linear)
             }
         }
-        .frame(width: .infinity, height: 10)
-        .padding()
-        .animation(.easeIn)
+        .frame(maxWidth: .infinity)
+        .frame(height: 10)
+        .padding(.horizontal)
+        .padding(.top)
+        .animation(.linear, value: animate)
+        .onAppear {
+            self.animate.toggle()
+        }
     }
 }
 
