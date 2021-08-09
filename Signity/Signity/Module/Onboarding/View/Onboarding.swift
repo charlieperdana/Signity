@@ -11,6 +11,9 @@ struct Onboarding: View {
     @State var showNextOnboard = false
     @State var showCourse = false
     
+
+    let defaults = UserDefaults.standard
+    
     var body: some View {
         NavigationView {
             VStack  {
@@ -38,6 +41,7 @@ struct Onboarding: View {
                         DispatchQueue.main.asyncAfter(deadline: .now()) {
                             self.showCourse = true
                         }
+                        defaults.set(true, forKey: "isBeginner")
                     }) {
                         HStack {
                             Spacer()
@@ -58,6 +62,7 @@ struct Onboarding: View {
                         DispatchQueue.main.asyncAfter(deadline: .now()) {
                             self.showNextOnboard = true
                         }
+                        defaults.set(false, forKey: "isBeginner")
                     }) {
                         HStack {
                             Spacer()

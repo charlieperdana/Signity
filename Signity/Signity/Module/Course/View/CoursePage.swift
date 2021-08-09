@@ -11,6 +11,8 @@ struct CoursePage: View {
     
     @State var items: [CourseSection]
     
+    @State private var regionals = UserDefaults.standard.string(forKey: "region") ?? ""
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -30,7 +32,7 @@ struct CoursePage: View {
                     }
                     .padding(.horizontal)
                     
-                    Text("BISINDO Jakarta")
+                    Text("BISINDO \(self.regionals)")
                         .fontWeight(.semibold)
                         .font(.system(size: 17))
                         .foregroundColor(Color(#colorLiteral(red: 0.08235294118, green: 0.1098039216, blue: 0.4, alpha: 1)))
