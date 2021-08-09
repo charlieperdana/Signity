@@ -48,11 +48,20 @@ struct CoursePage: View {
                                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                                             .foregroundColor(Color(#colorLiteral(red: 0.08235294118, green: 0.1098039216, blue: 0.4, alpha: 1)))) {
                                     ForEach(section.item, id: \.title) { item in
-                                        CardViewCourse(item: item)
-                                            .frame(height: 100.0)
-                                            .listRowBackground(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
-                                            .background(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
-                                            .cornerRadius(13)
+                                        if(item.isLock){
+                                            CardViewCourseLock(item: item)
+                                                .frame(height: 100.0)
+                                                .listRowBackground(Color(#colorLiteral(red: 0.8862745098, green: 0.8862745098, blue: 0.8862745098, alpha: 1)))
+                                                .background(Color(#colorLiteral(red: 0.8862745098, green: 0.8862745098, blue: 0.8862745098, alpha: 1)))
+                                                .cornerRadius(13)
+                                        } else {
+                                            CardViewCourse(item: item)
+                                                .frame(height: 100.0)
+                                                .listRowBackground(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
+                                                .background(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
+                                                .cornerRadius(13)
+                                        }
+                                        
                                     }
                                 }
                             }
