@@ -13,6 +13,8 @@ struct OnboardingRegion: View {
     @State var check3: String = "checkEmpty"
     @State var showCourse = false
     
+    let defaults = UserDefaults.standard
+    
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
         var btnBack : some View { Button(action: {
@@ -131,6 +133,13 @@ struct OnboardingRegion: View {
                         DispatchQueue.main.asyncAfter(deadline: .now()) {
                             self.showCourse = true
                         }
+                        if (self.check1=="checked"){
+                            defaults.set("Jakarta", forKey: "region")
+                        } else if (self.check2=="checked"){
+                            defaults.set("Denpasar", forKey: "region")
+                        } else {
+                            defaults.set("Lainnya", forKey: "region")
+                        }
                     }) {
                         HStack {
                             Spacer()
@@ -172,6 +181,16 @@ struct OnboardingRegion: View {
         
     
     }
+    
+//    func getOptionRegion()  {
+//        if (self.check1 == "checked"){
+//            defaults.set("Jakarta", forKey: "region")
+//        } else if (self.check2 == "checked"){
+//            defaults.set("Denpasar", forKey: "region")
+//        } else {
+//            defaults.set("Lainnya", forKey: "region")
+//        }
+//    }
 }
 
 struct OnboardingRegion_Previews: PreviewProvider {

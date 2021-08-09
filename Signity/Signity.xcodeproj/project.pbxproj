@@ -32,6 +32,7 @@
 		3F426FA2579AA91947449ED2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F3D84A0A7604AB9049B68A /* SettingsView.swift */; };
 		496A42468A95303ECA86D483 /* PhraseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FDD3F9D4DB3C38A02F4D76 /* PhraseButton.swift */; };
 		524825ED58397E1E94A10618 /* PlaybackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F139692329014ADE4D25E3 /* PlaybackButton.swift */; };
+		553E439A26C13AD700ED706E /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553E439926C13AD700ED706E /* OnboardingData.swift */; };
 		5B2CB0C4F72B3DF6F0B3E836 /* SignityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8AA153DB638E5543DF0E7 /* SignityTests.swift */; };
 		60C13B7A61BF3FDD49E56CD3 /* OnboardingRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5C4BE237D93EA6CB23CE2 /* OnboardingRegion.swift */; };
 		61E538B9C9C7313D2974E558 /* CoursePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C794D8A0D50E58BD6C56F66B /* CoursePage.swift */; };
@@ -84,7 +85,7 @@
 		279805C3262B54732701EA9F /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		2C5CEB645E725CEFE6E62118 /* PhraseStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseStyle.swift; sourceTree = "<group>"; };
 		2DC5C4BE237D93EA6CB23CE2 /* OnboardingRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRegion.swift; sourceTree = "<group>"; };
-		2FD16F2268223352C27FA8A2 /* Signity.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Signity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FD16F2268223352C27FA8A2 /* Signity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Signity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F31F17EFF5297A4B6C2558 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		37E0F6AB7A446A3B393E745F /* HorizontalModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalModules.swift; sourceTree = "<group>"; };
 		3888DBCED1D5EC48E193EB91 /* SignityUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SignityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +97,7 @@
 		4F3B710B9C4E7AF146316DE2 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		4F7B3399D5BCEF5CDBDB6DA1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		547B85768E0463A85FF0B252 /* SignityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityUITests.swift; sourceTree = "<group>"; };
+		553E439926C13AD700ED706E /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		5952026596553C5C9494F027 /* AccomplishmentSimulasi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccomplishmentSimulasi.swift; sourceTree = "<group>"; };
 		61571D475D68A328D52A1734 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		617AE4E0ADFD1EB1B30CEEA9 /* person.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = person.json; sourceTree = "<group>"; };
@@ -256,6 +258,14 @@
 				79C835FF1E0714022ED1328B /* View */,
 			);
 			path = OnboardingLatihan;
+			sourceTree = "<group>";
+		};
+		553E439826C13AC700ED706E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				553E439926C13AD700ED706E /* OnboardingData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5C4CB7B44BF9F7F48B60678D /* Model */ = {
@@ -454,6 +464,7 @@
 		CEA1B5EE744C7B38717B757F /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				553E439826C13AC700ED706E /* Model */,
 				A7BE239C761E118D7ECAC804 /* View */,
 			);
 			path = Onboarding;
@@ -676,6 +687,7 @@
 				CD723BAE78FF4946B516D483 /* ColorPallete.swift in Sources */,
 				851C5E38307AD135B7FD9397 /* ComparePhraseView.swift in Sources */,
 				07313F35F001E5F7B3FF6F58 /* CompareView.swift in Sources */,
+				553E439A26C13AD700ED706E /* OnboardingData.swift in Sources */,
 				D00C409638D13A7EDA5DDCD5 /* ContentView.swift in Sources */,
 				321BCF0933B9CC69F646AE75 /* CourseModel.swift in Sources */,
 				61E538B9C9C7313D2974E558 /* CoursePage.swift in Sources */,
@@ -773,6 +785,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = ND4DZWJCVY;
 				INFOPLIST_FILE = Signity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -861,6 +874,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = ND4DZWJCVY;
 				INFOPLIST_FILE = Signity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
