@@ -150,7 +150,7 @@ struct OnboardingRegion: View {
                     .frame(width: 358.0, height: 44.0)
                     
                     //MARK: - NAVIGATION LINKS
-                    NavigationLink(destination: CoursePage(), isActive: $showCourse) {
+                    NavigationLink(destination: CoursePage(items: CourseSection.data), isActive: $showCourse) {
                         EmptyView()
                     }
                 }

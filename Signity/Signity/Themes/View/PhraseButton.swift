@@ -38,7 +38,7 @@ struct PhraseButton: View {
     var body: some View {
         Button(phrase, action: action)
             .frame(width: width, height: height)
-            .font(.title2.bold())
+//            .font(.title2.bold())
             .background(backgroundColor)
             .cornerRadius(13)
             .opacity(0.8)
