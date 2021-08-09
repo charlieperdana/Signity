@@ -13,6 +13,8 @@ struct CoursePage: View {
     
     @State private var regionals = UserDefaults.standard.string(forKey: "region") ?? ""
     
+    @State private var showSettings = false
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -26,7 +28,14 @@ struct CoursePage: View {
                             
                             Spacer()
                             
-                            Image("settingBtn")
+                            Button(action: {
+                                self.showSettings = true
+                            }) {
+                                Image(systemName: "gear")
+                                    .resizable()
+                                    .frame(width: 35, height: 35)
+                            }
+                            .foregroundColor(Color("MainPurple"))
                         }
                         
                     }
@@ -79,7 +88,10 @@ struct CoursePage: View {
             .navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
             .navigationBarTitle("")
-        }        
+        }
+        .sheet(isPresented: $showSettings) {
+            SettingsView()
+        }
     }
 }
 
