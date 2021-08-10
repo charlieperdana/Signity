@@ -9,7 +9,19 @@ import SwiftUI
 
 struct StartPracticeButton: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Spacer()
+            Text("Mulai Latihan")
+                .fontWeight(.bold)
+                .font(.system(size: 17))
+                .multilineTextAlignment(.center)
+            Spacer()
+            
+        }
+        .padding()
+        .foregroundColor(.white)
+        .background(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
+        .cornerRadius(13)
     }
 }
 

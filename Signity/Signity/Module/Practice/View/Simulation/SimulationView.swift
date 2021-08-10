@@ -10,13 +10,18 @@ import SwiftUI
 struct SimulationView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
-    @StateObject var viewModel = SimulationViewModel()
-    @State var navBarHidden = false
+    @StateObject var viewModel: SimulationViewModel
+    
+    init(category: Category) {
+        _viewModel = StateObject(wrappedValue: SimulationViewModel(category: category))
+    }
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
             ZStack {
-                CameraRepresentable() { hands, _ in
+                CameraRepresentable(addToLandmarkQueue: { arr in
+                    viewModel.addToActionsList(landmark: arr)
+                }) { hands, _ in
                     viewModel.detectedHands = hands
                 }
                 .overlay(
@@ -29,11 +34,11 @@ struct SimulationView: View {
                 )
                 .onTapGesture {
                     withAnimation {
-                        self.navBarHidden.toggle()
+                        self.viewModel.navBarHidden.toggle()
                     }
                 }
                 
-                if !navBarHidden {
+                if !viewModel.navBarHidden {
                     CameraNavigationBar(title: "Latihan Simulasi",
                                         leftAction: {
                                             mode.wrappedValue.dismiss()
@@ -41,7 +46,7 @@ struct SimulationView: View {
                                             viewModel.simulationDone = true
                                         })
                     
-                    NavigationLink(destination: EmptyView(), isActive: $viewModel.simulationDone) {
+                    NavigationLink(destination: AccomplishmentSimulasi(), isActive: $viewModel.simulationDone) {
                         EmptyView()
                     }
                 }
@@ -50,9 +55,9 @@ struct SimulationView: View {
                     ProgressBar(value: .constant(0.5))
                     
                     HStack(alignment: .top) {
-                        ChatBubble(text: "Selamat pagi")
+                        ChatBubble(text: viewModel.speakerCurrentWord)
                         
-                        LottieView(name: "blender", playbackSpeed: 1.0)
+                        LottieView(name: viewModel.speakerCurrentWord, playbackSpeed: 1.0)
                             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200)
                             .background(Color.white)
                             .cornerRadius(25)
@@ -68,21 +73,21 @@ struct SimulationView: View {
                     }
                     .padding(.horizontal)
                     
-                    SentenceFeedbackView()
+                    SentenceFeedbackView(words: $viewModel.wordTracking, currentCorrect: $viewModel.correctWord)
                         .padding(.bottom, 40)
                 }
-                .padding(.top, self.navBarHidden ? 35 : 75)
+                .padding(.top, self.viewModel.navBarHidden ? 35 : 75)
             }
             .navigationBarHidden(true)
             .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
         }
         
-    }
+//    }
 }
 
 struct SimulationView_Previews: PreviewProvider {
     static var previews: some View {
-        SimulationView()
+        SimulationView(category: Category())
             .preferredColorScheme(.dark)
     }
 }

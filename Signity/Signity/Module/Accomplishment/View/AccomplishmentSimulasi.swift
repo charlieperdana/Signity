@@ -26,13 +26,27 @@ struct AccomplishmentSimulasi: View {
     }
     
     var body: some View {
-        NavigationView{
+//        NavigationView{
         
         ZStack{
             
             Color(#colorLiteral(red: 0.2533461452, green: 0.3034159541, blue: 0.8465253711, alpha: 1)).ignoresSafeArea(.all)
             
             VStack{
+                HStack {
+                    Button(action: {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }) {
+                        HStack {
+                            Image("backBtn")
+                                .aspectRatio(contentMode: .fit)
+                                .foregroundColor(.white)
+                            
+                        }
+                    }
+                    Spacer()
+                }
+                .padding(.top, 75)
                 
                     
                     Text("Simulasi Pelajaran Selesai!")
@@ -57,10 +71,10 @@ struct AccomplishmentSimulasi: View {
                     
                     
                 NavigationLink(
-                    destination: Text("Balik ke page pelajaran"),
+                    destination: CoursePage(items: []),
                     
                     label: {
-                        Text("Mulai Latihan Simulasi")
+                        Text("Kembali ke pelajaran")
                         .foregroundColor(.white)
                         .font(.system(size:22, design:.rounded))
                         .fontWeight(.bold)
@@ -70,7 +84,7 @@ struct AccomplishmentSimulasi: View {
                             })
             }
 
-    }
+//    }
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: btnBack)
             

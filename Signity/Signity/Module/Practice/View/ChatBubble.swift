@@ -15,6 +15,7 @@ struct ChatBubble : View {
             Text(text)
                 .padding(.all, 15)
                 .padding(.trailing, 10)
+                .frame(maxWidth: .infinity)
                 .background(Color.white)
                 .opacity(0.85)
                 .modifier(PhraseStyle())

@@ -19,6 +19,7 @@ class CameraViewController: UIViewController {
     var previewView: UIView!
     
     var processLandmarksHandler: (([Hand], _ highConfidenceLandmarks: Int) -> Void)?
+    var addToLandmarkQueue: (([Double]) -> Void)?
     
     private let videoOutputQueue = DispatchQueue(label: "VideoOutput", qos: .userInteractive)
     
@@ -100,18 +101,41 @@ extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         
         var hands = [Hand]()
         var highConfidenceLandmarks = 0
+
+        var leftHand: [Double] = Array(repeating: -1, count: 63)
+        var rightHand: [Double] = Array(repeating: -1, count: 63)
+        var currentLandmarks = [Double]()
         
         do {
             try handler.perform([handPoseRequest])
 
             if let results = handPoseRequest.results {
-                results.forEach { observation in
+                try results.forEach { observation in
                     let processedData = self.createHandModel(from: observation)
                     hands.append(processedData.createdModel)
                     
                     highConfidenceLandmarks += processedData.highConfidenceLandmarks
+                    
+                    let keypoints = try! observation.keypointsMultiArray()
+                    let wristPoint = try observation.recognizedPoint(.wrist)
+                    let thumbPoint = try observation.recognizedPoint(.thumbTip)
+                    
+                    let thumbTip = self.previewLayer.captureDevicePointConverted(fromLayerPoint: thumbPoint.location)
+                    let wrist = self.previewLayer.captureDevicePointConverted(fromLayerPoint: wristPoint.location)
+                    
+                    if let buff = try? UnsafeBufferPointer<Double>(keypoints) {
+                        let arr = Array(buff)
+                        
+                        if wrist.x > thumbTip.x {
+                            leftHand = arr
+                        } else {
+                            rightHand = arr
+                        }
+                    }
                 }
                 
+                currentLandmarks = leftHand + rightHand
+                self.addToLandmarkQueue!(currentLandmarks)
             }
 
         } catch {

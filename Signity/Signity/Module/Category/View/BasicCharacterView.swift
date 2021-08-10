@@ -23,33 +23,48 @@ struct BasicCharacterView: View {
             }
         }
     
+    var title: String
+    var courses: [Course]
+    
     static let column = 5
     static let row = 6
     
+    @State var showPractice = false
+    
     
     var body: some View {
-        NavigationView{
+//        NavigationView{
             ScrollView(.vertical, showsIndicators: false) {
-                ForEach(0..<BasicCharacterView.row) { i
-                    in
-                    HStack{
-                        ForEach(0..<BasicCharacterView.column) { j
-                            in CharacterCell()
+//                ForEach(0..<BasicCharacterView.row) { i
+//                    in
+//                    HStack{
+//                        ForEach(0..<BasicCharacterView.column) { j
+//                            in CharacterCell()
+//                        }
+//                    }
+//                }
+                ForEach(courses) { course in
+                    CharacterCell(text: course.name!)
+                        .onTapGesture {
+                            self.showPractice = true
                         }
-                    }
                 }
+                
+//                NavigationLink(destination: PracticeView(), isActive: $showPractice) {
+//                    EmptyView()
+//                }
             }
-            .navigationBarTitle("Abjad", displayMode: .inline)
+            .navigationBarTitle(title, displayMode: .inline)
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: btnBack)
             .padding()
-                        
-        }
+                   
+//        }
     }
 }
 
 struct BasicCharacterView_Previews: PreviewProvider {
     static var previews: some View {
-        BasicCharacterView()
+        BasicCharacterView(title: "Angka", courses: [])
     }
 }

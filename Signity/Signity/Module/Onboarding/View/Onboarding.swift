@@ -10,7 +10,6 @@ import SwiftUI
 struct Onboarding: View {
     @State var showNextOnboard = false
     @State var showCourse = false
-    
 
     let defaults = UserDefaults.standard
     
@@ -99,6 +98,9 @@ struct Onboarding: View {
             .padding(.all)
         }
         .navigationBarHidden(true)
+        .onAppear {
+            self.showCourse = UserData.shared.firstLaunched
+        }
         
         
     }

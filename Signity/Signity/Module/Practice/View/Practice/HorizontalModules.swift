@@ -8,15 +8,22 @@
 import SwiftUI
 
 struct HorizontalModules: View {
-    @ObservedObject var viewModel: PracticeViewModel
-    var alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    var category: Category
+    @Binding var currentSelected: String
+    var isSentence: Bool {
+        category.typeEnum == .situation
+    }
+    
+    var courses: [Course] {
+        category.courses!.array as! [Course]
+    }
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
-                ForEach(Array(alphabets), id: \.self) { char in
-                    PhraseButton(practiceDone: false, isSelected: viewModel.currentSelected == char, isSentence: false, phrase: String(char)) {
-                        viewModel.currentSelected = char
+                ForEach(courses, id: \.self) { course in
+                    PhraseButton(practiceDone: course.completionState == 1, isSelected: course.name! == currentSelected, isSentence: isSentence, phrase: course.name!) {
+                        self.currentSelected = course.name!
                     }
 
                 }
@@ -26,8 +33,8 @@ struct HorizontalModules: View {
     }
 }
 
-struct HorizontalModules_Previews: PreviewProvider {
-    static var previews: some View {
-        HorizontalModules(viewModel: PracticeViewModel())
-    }
-}
+//struct HorizontalModules_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HorizontalModules(viewModel: PracticeViewModel())
+//    }
+//}

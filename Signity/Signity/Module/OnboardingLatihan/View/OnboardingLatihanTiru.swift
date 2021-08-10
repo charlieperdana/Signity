@@ -23,10 +23,27 @@ struct OnboardingLatihanTiru: View {
         }
     }
     
+    var category: Category
+    var chosenWord: String
+    
     var body: some View {
-        
-        NavigationView{
+//        Group {
         VStack {
+            HStack {
+                Button(action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                }) {
+                    HStack {
+                        Image("backBtn")
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundColor(.white)
+                        
+                    }
+                }
+                Spacer()
+            }
+            .padding()
+            .padding(.bottom, 30)
             
             Text("Latihan Tiru")
                 .font(.system(size: 32, design: .rounded))
@@ -53,7 +70,7 @@ struct OnboardingLatihanTiru: View {
             Spacer()
             
             NavigationLink(
-                destination: Text("Page latihan Tiru"),
+                destination: PracticeView(category: category, chosenWord: chosenWord),
                 
             label: {
                 Text("Berikutnya")
@@ -65,15 +82,13 @@ struct OnboardingLatihanTiru: View {
                 .cornerRadius(13)
                     })
         }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: btnBack)
-        }
+        .navigationBarHidden(true)
     }
 }
 
 
-struct OnboardingLatihanTiru_Previews: PreviewProvider {
-    static var previews: some View {
-        OnboardingLatihanTiru()
-    }
-}
+//struct OnboardingLatihanTiru_Previews: PreviewProvider {
+//    static var previews: some View {
+//        OnboardingLatihanTiru()
+//    }
+//}
