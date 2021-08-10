@@ -23,6 +23,8 @@ struct OnboardingSimulasi: View {
         }
     }
     
+    var category: Category
+    
     var body: some View {
         NavigationView{
         VStack {
@@ -52,7 +54,7 @@ struct OnboardingSimulasi: View {
             Spacer()
             
             NavigationLink(
-                destination: Text("Page latihan Simulasi"),
+                destination: SimulationView(category: category),
                 
             label: {
                 Text("Berikutnya")
@@ -71,6 +73,6 @@ struct OnboardingSimulasi: View {
 }
 struct OnboardingSimulasi_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingSimulasi()
+        OnboardingSimulasi(category: Category())
     }
 }

@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct TutorialView: View {
+    
+    
     var body: some View {
         VStack {
             Text("Selamat Pagi")
                 .fontWeight(.semibold)
                 .font(.system(size:17, design: .rounded))
+                .padding(.top)
             
             LottieView(name: "blender", playbackSpeed: 1.0)
                 .frame(width:240, height:320)
@@ -65,6 +68,7 @@ struct TutorialView: View {
             }
             Spacer()
         }
+        .navigationBarItems(leading: BackButton())
     }
 }
 

@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct BackButton: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+        }) {
+            HStack {
+                Image("backBtn")
+                    .aspectRatio(contentMode: .fit)
+                    .foregroundColor(.white)
+                
+            }
+        }
     }
 }
 

@@ -16,14 +16,14 @@ struct PhraseButton: View {
     
     var width: CGFloat {
         if isSentence {
-            return isSelected ? 250 : 200
+            return isSelected ? 260 : 220
         } else {
             return isSelected ? 48 : 40
         }
     }
     var height: CGFloat {
         if isSentence {
-            return isSelected ? 50 : 40
+            return isSelected ? 60 : 50
         } else {
             return isSelected ? 48 : 40
         }
@@ -38,7 +38,7 @@ struct PhraseButton: View {
     var body: some View {
         Button(phrase, action: action)
             .frame(width: width, height: height)
-//            .font(.title2.bold())
+            .font(.title2.bold())
             .background(backgroundColor)
             .cornerRadius(13)
             .opacity(0.8)

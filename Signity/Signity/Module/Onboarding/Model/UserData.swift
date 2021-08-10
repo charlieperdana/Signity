@@ -20,12 +20,30 @@ class UserData {
         }
     }
     
+    var firstLaunched: Bool {
+        get {
+            UserDefaults.standard.bool(forKey: "firstLaunched")
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "firstLaunched")
+        }
+    }
+    
     var region : String {
         get {
             UserDefaults.standard.string(forKey: "regionBisindo")!
         }
         set {
             UserDefaults.standard.set(newValue, forKey: "regionBisindo")
+        }
+    }
+    
+    var level: Int {
+        get {
+            UserDefaults.standard.integer(forKey: "currentLevel")
+        }
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: "currentLevel")
         }
     }
     

@@ -13,28 +13,24 @@ struct TutorialPhraseView: View {
     @StateObject var viewModel = TutorialViewModel()
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-
-        var btnBack : some View { Button(action: {
-            self.presentationMode.wrappedValue.dismiss()
-            }) {
-                HStack {
-                Image("chevron.backward")
-                }
-            }
-        }
+    
+    var category: Category
+    var chosenWord: String
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
             VStack  {
-                Text("Selamat Pagi")
+                Text(chosenWord)
                     .font(.system(size: 17, design: .rounded))
                     .fontWeight(.semibold)
                     .foregroundColor(Color("DarkPurple"))
+                    .padding(.top)
                 
-                LottieView(name: "person", playbackSpeed: viewModel.playbackSpeed)
+                LottieView(name: "terimaKasihJKT", playbackSpeed: viewModel.playbackSpeed)
                     //lottie name should be variable of content
                     .frame(minWidth: 0, maxWidth: 240, minHeight: 0, maxHeight: 320)
                     .background(Color.white)
+                    .cornerRadius(13)
                 
                 PlaybackButton(state: viewModel.playbackState) {
                     if viewModel.playbackState == .slow {
@@ -96,27 +92,27 @@ struct TutorialPhraseView: View {
                 .padding(.vertical)
                 .offset(y: 20)
                 
-                NavigationLink(destination: PracticeView(), isActive: $isPresentingPractice) {
+                NavigationLink(destination: OnboardingLatihanTiru(category: category, chosenWord: chosenWord), isActive: $isPresentingPractice) {
                     EmptyView()
                 }
 
                 .sheet(isPresented: $isPresentingCompareModal, content: {
-                    ComparePhraseView()
+                    ComparePhraseView(chosenWord: chosenWord)
                 })
                 
-            }
-            .padding(.all)
+//            }
 
             .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading: btnBack)
-            .navigationBarTitle("Sapaan", displayMode: .inline)
+            .navigationBarItems(leading: BackButton())
+            .navigationBarTitle(category.name!, displayMode: .inline)
             //navbar title name should be variable of category name
         }
+        .padding()
     }
 }
 
-struct TutorialPhraseView_Previews: PreviewProvider {
-    static var previews: some View {
-        TutorialPhraseView()
-    }
-}
+//struct TutorialPhraseView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TutorialPhraseView(category: , chosenWord: <#String#>)
+//    }
+//}

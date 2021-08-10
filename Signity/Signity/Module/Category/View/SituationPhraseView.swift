@@ -32,7 +32,7 @@ struct SituationPhraseView: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     ForEach(0..<SituationPhraseView.row) { i
                         in
-                        PhraseACell()
+//                        PhraseCell()
                         PhraseBCell()
                     }
                 }
@@ -59,9 +59,9 @@ struct SituationPhraseView: View {
                 }
                 .frame(width: 358.0, height: 44.0)
                 //MARK: - NAVIGATION LINKS
-                NavigationLink(destination: PracticeView(), isActive: $showPractice) {
-                    EmptyView()
-                }
+//                NavigationLink(destination: PracticeView(), isActive: $showPractice) {
+//                    EmptyView()
+//                }
                 
             }
             .navigationBarTitle("Menanyakan Kabar", displayMode: .inline)

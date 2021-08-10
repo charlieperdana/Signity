@@ -20,17 +20,19 @@ struct ComparePhraseView: View {
         }
     }
     
+    var chosenWord: String
+    
     var body: some View {
         NavigationView {
             VStack  {
-                Text("Selamat Pagi")
+                Text(chosenWord)
                     .font(.system(size: 17, design: .rounded))
                     .fontWeight(.semibold)
                     .foregroundColor(Color("DarkPurple"))
                 
                 HStack {
                     VStack {
-                        LottieView(name: "person", playbackSpeed: viewModel.playbackSpeed)
+                        LottieView(name: "terimaKasihJKT", playbackSpeed: viewModel.playbackSpeed)
                             //lottie name should be variable of content
                             .frame(minWidth: 0, maxWidth: 171, minHeight: 0, maxHeight: 320)
                             .background(Color.white)
@@ -40,7 +42,7 @@ struct ComparePhraseView: View {
                             .foregroundColor(Color("DarkPurple"))
                     }
                     VStack {
-                        LottieView(name: "blender", playbackSpeed: viewModel.playbackSpeed)
+                        LottieView(name: "terimaKasihDPS", playbackSpeed: viewModel.playbackSpeed)
                             //lottie name should be variable of content
                             .frame(minWidth: 0, maxWidth: 171, minHeight: 0, maxHeight: 320)
                             .background(Color.white)
@@ -70,6 +72,6 @@ struct ComparePhraseView: View {
 
 struct ComparePhraseView_Previews: PreviewProvider {
     static var previews: some View {
-        ComparePhraseView()
+        ComparePhraseView(chosenWord: "")
     }
 }

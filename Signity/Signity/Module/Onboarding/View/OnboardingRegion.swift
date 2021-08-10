@@ -29,10 +29,27 @@ struct OnboardingRegion: View {
             }
         }
     
+    @StateObject var viewModel = OnboardingViewModel()
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
             VStack() {
+                HStack {
+                    Button(action: {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }) {
+                        HStack {
+                            Image("backBtn")
+                                .aspectRatio(contentMode: .fit)
+                                .foregroundColor(.white)
+                            
+                        }
+                    }
+                    Spacer()
+                }
+                .padding(.top, 75)
+                .padding(.bottom, 30)
+                
                 Text("BISINDO daerah mana yang kamu gunakan?")
                     .font(.system(size: 22))
                     .fontWeight(.bold)
@@ -140,6 +157,11 @@ struct OnboardingRegion: View {
                         } else {
                             defaults.set("Lainnya", forKey: "regionBisindo")
                         }
+                        
+                        UserData.shared.firstLaunched = true
+                        UserData.shared.level = 0
+                        
+                        viewModel.initializeCourses()
                     }) {
                         HStack {
                             Spacer()
@@ -158,23 +180,22 @@ struct OnboardingRegion: View {
                     }
                     .frame(width: 358.0, height: 44.0)
                     
-                    //MARK: - NAVIGATION LINKS
-                    NavigationLink(destination: CoursePage(items: CourseSection.data).navigationBarHidden(true), isActive: $showCourse) {
-                        EmptyView()
-                    }
                 }
                 .offset(y: 90)
                 
-               
-                    
+                //MARK: - NAVIGATION LINKS
+                NavigationLink(destination: CoursePage(items: CourseSection.data), isActive: $showCourse) {
+                    EmptyView()
+                }
                 
                 
             }
             .offset(y: -100)
             .padding(.all)
-        }
+//        }
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: btnBack)
+        .navigationBarHidden(true)
         
         
         

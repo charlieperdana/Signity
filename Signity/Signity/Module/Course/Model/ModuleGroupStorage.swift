@@ -12,9 +12,14 @@ class ModuleGroupStorage: NSObject, ObservableObject {
     var moduleGroups = CurrentValueSubject<[ModuleGroup], Never>([])
     private let moduleGroupsFetchController: NSFetchedResultsController<ModuleGroup>
 
+    static let shared = ModuleGroupStorage()
+    
     override init() {
         let fetchRequest: NSFetchRequest<ModuleGroup> = ModuleGroup.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "regionName == %@", UserData.shared.region)
+        fetchRequest.sortDescriptors = [
+            NSSortDescriptor(key: "level", ascending: true)
+        ]
         
         moduleGroupsFetchController = NSFetchedResultsController(
             fetchRequest: fetchRequest,

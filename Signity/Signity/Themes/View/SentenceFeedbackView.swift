@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct SentenceFeedbackView: View {
-    var words = ["Selamat", "pagi"]
-    @State var currentCorrect = 1
+    @Binding var words: [String]
+    @Binding var currentCorrect: Int
+    
     @State var animate = false
     
     var body: some View {
@@ -19,7 +20,7 @@ struct SentenceFeedbackView: View {
                 .cornerRadius(13)
                 .opacity(0.6)
             HStack {
-                ForEach(words.indices) { i in
+                ForEach(words.indices, id: \.self) { i in
                     Text(words[i])
                         .foregroundColor(i < currentCorrect ? Color("Green") : Color("DarkPurple"))
                 }
@@ -36,7 +37,7 @@ struct SentenceFeedbackView: View {
 
 struct SentenceFeedbackView_Previews: PreviewProvider {
     static var previews: some View {
-        SentenceFeedbackView()
+        SentenceFeedbackView(words: .constant([]), currentCorrect: .constant(1))
             .preferredColorScheme(.dark)
     }
 }
