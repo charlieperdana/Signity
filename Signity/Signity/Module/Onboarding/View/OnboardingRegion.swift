@@ -134,11 +134,11 @@ struct OnboardingRegion: View {
                             self.showCourse = true
                         }
                         if (self.check1=="checked"){
-                            defaults.set("Jakarta", forKey: "region")
+                            defaults.set("Jakarta", forKey: "regionBisindo")
                         } else if (self.check2=="checked"){
-                            defaults.set("Denpasar", forKey: "region")
+                            defaults.set("Denpasar", forKey: "regionBisindo")
                         } else {
-                            defaults.set("Lainnya", forKey: "region")
+                            defaults.set("Lainnya", forKey: "regionBisindo")
                         }
                     }) {
                         HStack {
@@ -159,7 +159,7 @@ struct OnboardingRegion: View {
                     .frame(width: 358.0, height: 44.0)
                     
                     //MARK: - NAVIGATION LINKS
-                    NavigationLink(destination: CoursePage(items: CourseSection.data), isActive: $showCourse) {
+                    NavigationLink(destination: CoursePage(items: CourseSection.data).navigationBarHidden(true), isActive: $showCourse) {
                         EmptyView()
                     }
                 }

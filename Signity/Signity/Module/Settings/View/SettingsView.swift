@@ -14,20 +14,17 @@ struct SettingsView: View {
     var communityImage = ["LogoGerkatin","PUSBISINDO","BISINDO 2.0"]
     var name = ["GERKATIN","PUSBISINDO","BISINDO 2.0"]
     var headline = ["Gerakan untuk Kesejahteraan Tuna rungu Indonesia", "Wadah pembelajaran dan penelitian bahasa isyarat alamiah di Indonesia","Platform informasi keberagaman Bahasa Isyarat Indonesia."]
-    
-    
-    var daerah = ["Jakarta", "Denpasar"]
-    @State private var selection = 0
 
+    @StateObject var viewModel = SettingViewModel()
     
     var body: some View {
         
         NavigationView{
                 
                 List {
-                    Picker(selection:$selection, label: Text("Pilih Daerah BISINDO")){
-                        ForEach(0 ..< daerah.count){
-                            Text(self.daerah[$0])
+                    Picker(selection: $viewModel.currentRegion, label: Text("Pilih Daerah BISINDO")){
+                        ForEach(viewModel.daerah, id: \.self){
+                            Text($0)
                             
                             
                         }
