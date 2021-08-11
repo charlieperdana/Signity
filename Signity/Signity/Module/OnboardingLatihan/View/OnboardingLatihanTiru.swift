@@ -8,29 +8,12 @@
 import SwiftUI
 
 struct OnboardingLatihanTiru: View {
-    
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
     var category: Category
     var chosenWord: String
-    
+
     var body: some View {
         VStack {
-//            HStack {
-//                Button(action: {
-//                    self.presentationMode.wrappedValue.dismiss()
-//                }) {
-//                    HStack {
-//                        Image("backBtn")
-//                            .aspectRatio(contentMode: .fit)
-//                            .foregroundColor(.white)
-//                        
-//                    }
-//                }
-//                Spacer()
-//            }
-//            .padding()
-//            .padding(.bottom, 30)
+            BackButton()
             
             Text("Latihan Tiru")
                 .font(.system(size: 32, design: .rounded))
@@ -68,15 +51,17 @@ struct OnboardingLatihanTiru: View {
                     .background(Color("MainPurple"))
                 .cornerRadius(13)
             })
+            
         }
+        .padding()
+        
         .navigationBarHidden(true)
-        .navigationBarItems(leading: BackButton())
     }
 }
 
 
-//struct OnboardingLatihanTiru_Previews: PreviewProvider {
-//    static var previews: some View {
-//        OnboardingLatihanTiru()
-//    }
-//}
+struct OnboardingLatihanTiru_Previews: PreviewProvider {
+    static var previews: some View {
+        OnboardingLatihanTiru(category: Category(), chosenWord: "")
+    }
+}
