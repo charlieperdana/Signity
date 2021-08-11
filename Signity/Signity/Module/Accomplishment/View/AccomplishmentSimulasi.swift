@@ -71,7 +71,7 @@ struct AccomplishmentSimulasi: View {
                     
                     
                 NavigationLink(
-                    destination: CoursePage(items: []),
+                    destination: CoursePage(),
                     
                     label: {
                         Text("Kembali ke pelajaran")

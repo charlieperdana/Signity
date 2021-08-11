@@ -16,7 +16,6 @@ class ModuleGroupStorage: NSObject, ObservableObject {
     
     override init() {
         let fetchRequest: NSFetchRequest<ModuleGroup> = ModuleGroup.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "regionName == %@", UserData.shared.region)
         fetchRequest.sortDescriptors = [
             NSSortDescriptor(key: "level", ascending: true)
         ]

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G80" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Category" representedClassName="Category" syncable="YES" codeGenerationType="class">
+        <attribute name="code" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="type" optional="YES" attributeType="String"/>
         <relationship name="courses" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Course" inverseName="category" inverseEntity="Course"/>
@@ -18,7 +19,7 @@
         <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Category" inverseName="moduleGroup" inverseEntity="Category"/>
     </entity>
     <elements>
-        <element name="Category" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="Category" positionX="-63" positionY="-18" width="128" height="104"/>
         <element name="Course" positionX="-54" positionY="-9" width="128" height="74"/>
         <element name="ModuleGroup" positionX="-54" positionY="27" width="128" height="89"/>
     </elements>

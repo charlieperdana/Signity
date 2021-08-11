@@ -15,10 +15,11 @@ struct BackButton: View {
             self.presentationMode.wrappedValue.dismiss()
         }) {
             HStack {
-                Image("backBtn")
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundColor(.white)
-                
+                Image(systemName: "chevron.backward")
+                    .resizable()
+                    .frame(width: 12, height: 20)
+                    .foregroundColor(Color("MainPurple"))
+                Spacer()
             }
         }
     }

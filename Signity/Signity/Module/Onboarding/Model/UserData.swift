@@ -7,48 +7,46 @@
 
 import Foundation
 
+enum RegionType: String, Codable {
+    case jakarta = "Jakarta"
+    case denpasar = "Denpasar"
+}
 
-class UserData {
-    static let shared = UserData()
+class UserProfile: NSObject, Codable {
+    var currentRegion: RegionType
+    var proficiency: [RegionType: Int]
     
-    var isBisindoBeginner : Bool {
+    init(currentRegion: RegionType, proficiency: [RegionType: Int]) {
+        self.currentRegion = currentRegion
+        self.proficiency = proficiency
+    }
+}
+
+extension UserDefaults {
+    private enum Keys {
+        static let onboardingDidCompleteKey = "OnboardingDidComplete"
+        static let userProfileKey = "UserProfile"
+    }
+    
+    @objc var userProfile: UserProfile {
         get {
-            UserDefaults.standard.bool(forKey: "isBeginner")
+            let fetchedProfile = object(forKey: Keys.userProfileKey) as! Data
+            let profile = try! JSONDecoder().decode(UserProfile.self, from: fetchedProfile)
+            
+            return profile
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: "isBeginner")
+            let encodedProfile = try! JSONEncoder().encode(newValue)
+            setValue(encodedProfile, forKey: Keys.userProfileKey)
         }
     }
     
-    var firstLaunched: Bool {
+    @objc var didCompleteSetup: Bool {
         get {
-            UserDefaults.standard.bool(forKey: "firstLaunched")
+            bool(forKey: Keys.onboardingDidCompleteKey)
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: "firstLaunched")
+            set(newValue, forKey: Keys.onboardingDidCompleteKey)
         }
-    }
-    
-    var region : String {
-        get {
-            UserDefaults.standard.string(forKey: "regionBisindo")!
-        }
-        set {
-            UserDefaults.standard.set(newValue, forKey: "regionBisindo")
-        }
-    }
-    
-    var level: Int {
-        get {
-            UserDefaults.standard.integer(forKey: "currentLevel")
-        }
-        set {
-            UserDefaults.standard.setValue(newValue, forKey: "currentLevel")
-        }
-    }
-    
-    init() {
-        self.isBisindoBeginner = UserDefaults.standard.object(forKey: "isBeginner") as? Bool ?? false
-        self.region = UserDefaults.standard.object(forKey: "regionBisindo") as? String ?? ""
     }
 }

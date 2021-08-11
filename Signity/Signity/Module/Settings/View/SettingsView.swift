@@ -25,8 +25,6 @@ struct SettingsView: View {
                     Picker(selection: $viewModel.currentRegion, label: Text("Pilih Daerah BISINDO")){
                         ForEach(viewModel.daerah, id: \.self){
                             Text($0)
-                            
-                            
                         }
                     }
                     

@@ -14,10 +14,10 @@ struct CardViewCourse: View {
     
     var body: some View {
         NavigationLink(
-//            destination: CategoryView(title: item.name!, courses: Array(item.courses as! Set<Course>)), isActive: $showCategory) {
             destination: CategoryView(category: item), isActive: $showCategory) {
+            
             HStack {
-                Image(item.name!)
+                Image("\(item.code!) - \(item.name!)")
                     .resizable()
                     .scaledToFit()
                 
@@ -34,9 +34,6 @@ struct CardViewCourse: View {
                             .accessibilityValue(Text("20 minutes"))
                     }
                     .font(.caption)
-                    
-                    
-                    
                     
                     Text(item.name!)
                         .font(.headline)
@@ -58,13 +55,12 @@ struct CardViewCourse: View {
         
     }
 }
-//
-//struct CardViewCourse_Previews: PreviewProvider {
-//    static var item = CourseSection.dataItem[0]
-//    static var previews: some View {
-//        CardViewCourse(item: item)
-//            .background(Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)))
-//            .previewLayout(.fixed(width: 400, height: 100))
-//            .cornerRadius(13)
-//    }
-//}
+
+struct CardViewCourse_Previews: PreviewProvider {
+    static var previews: some View {
+        CardViewCourse(item: Category())
+            .background(Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)))
+            .previewLayout(.fixed(width: 400, height: 100))
+            .cornerRadius(13)
+    }
+}

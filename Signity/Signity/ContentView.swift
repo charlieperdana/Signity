@@ -7,22 +7,16 @@
 
 import SwiftUI
 
+class ViewModel: ObservableObject {
+    var availableRegions = ["Jakarta", "Denpasar", "Lainnya"]
+    @Published var currentChosen: RegionType = .jakarta
+}
+
 struct ContentView: View {
-    @State var temp = 0
+    @StateObject var viewModel = ViewModel()
     
     var body: some View {
-        NavigationView {
-            VStack {
-                Text("Hello, Team \(Int.random(in: 0...2)) Lucu")
-                    .padding()
-                Button("Click me - \(temp)") {
-
-                }
-                
-                Image(systemName: "checkmark.circle.fill")
-                    .foregroundColor(.blue)
-            }
-        }
+        Text("Hello World")
     }
 }
 

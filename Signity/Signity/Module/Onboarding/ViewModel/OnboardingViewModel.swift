@@ -8,8 +8,32 @@
 import Foundation
 
 class OnboardingViewModel: ObservableObject {
+    private(set) var availableRegion = ["Jakarta", "Denpasar", "Lainnya"]
+    @Published var selectedRegion = ""
     
-    func initializeCourses() {
+    func completeOnboardingSetup() {
+        let region = RegionType(rawValue: selectedRegion)
+        let selectedRegion = region ?? .jakarta
+        
+        var proficiency = [RegionType: Int]()
+        for region in availableRegion {
+            if let regionType = RegionType(rawValue: region) {
+                proficiency[regionType] = (selectedRegion == regionType ? 100 : 0)
+            }
+        }
+        
+        let profile = UserProfile(
+            currentRegion: selectedRegion,
+            proficiency: proficiency
+        )
+        
+        self.initializeCourses()
+        
+        UserDefaults.standard.userProfile = profile
+        UserDefaults.standard.didCompleteSetup = true
+    }
+    
+    private func initializeCourses() {
         let context = PersistenceController.shared.persistentContainer.viewContext
         
         for region in AvailableCourses.regions {
@@ -21,6 +45,7 @@ class OnboardingViewModel: ObservableObject {
 
                 for module in moduleCategory.modules {
                     let category = Category(context: context)
+                    category.code = module.code
                     category.name = module.title
                     category.type = module.type
                     

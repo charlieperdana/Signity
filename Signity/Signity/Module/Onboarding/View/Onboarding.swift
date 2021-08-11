@@ -15,7 +15,9 @@ struct Onboarding: View {
     
     var body: some View {
         NavigationView {
-            VStack  {
+            VStack(alignment: .center)  {
+                Spacer()
+                
                 Text("Selamat Datang!")
                     .font(.system(size: 22))
                     .fontWeight(.bold)
@@ -23,8 +25,6 @@ struct Onboarding: View {
                 
                 
                 Image("onboarding1")
-//                    .resizable()
-//                    .frame(width: 200.0, height: 200.0)
                 
                 Text("Apakah kamu pernah belajar BISINDO sebelumnya?")
                     .font(.system(size: 17))
@@ -33,7 +33,7 @@ struct Onboarding: View {
                     .multilineTextAlignment(.center)
                     .offset(y: 10)
                 
-                VStack(alignment:.leading) {
+                VStack(alignment:.leading, spacing: 15) {
                     
                     Button(action: {
                         print("Belum")
@@ -84,25 +84,24 @@ struct Onboarding: View {
                 .padding(.vertical)
                 .offset(y: 20)
                 
+                Spacer()
+                
                 //MARK: - NAVIGATION LINKS
-                NavigationLink(destination: OnboardingRegion(), isActive: $showNextOnboard) {
-//                    EmptyView()
+                NavigationLink(destination: OnboardingRegion(), isActive: $showNextOnboard) {}
+                NavigationLink(destination: CoursePage(), isActive: $showCourse) {
+                    EmptyView()
                 }
-                NavigationLink(destination: CoursePage(items: CourseSection.data), isActive: $showCourse) {
-                    
-                }
-                
-                
             }
-            .offset(y: -100)
             .padding(.all)
+            .padding(.bottom, 150)
+            
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarHidden(true)
         }
-        .navigationBarHidden(true)
+        
         .onAppear {
-            self.showCourse = UserData.shared.firstLaunched
+            self.showCourse = UserDefaults.standard.didCompleteSetup
         }
-        
-        
     }
 }
 
