@@ -10,40 +10,27 @@ import SwiftUI
 struct OnboardingLatihanTiru: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-
-    var btnBack : some View { Button(action: {
-        self.presentationMode.wrappedValue.dismiss()
-        }) {
-            HStack {
-            Image("backBtn")
-                .aspectRatio(contentMode: .fit)
-                .foregroundColor(.white)
-
-            }
-        }
-    }
     
     var category: Category
     var chosenWord: String
     
     var body: some View {
-//        Group {
         VStack {
-            HStack {
-                Button(action: {
-                    self.presentationMode.wrappedValue.dismiss()
-                }) {
-                    HStack {
-                        Image("backBtn")
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.white)
-                        
-                    }
-                }
-                Spacer()
-            }
-            .padding()
-            .padding(.bottom, 30)
+//            HStack {
+//                Button(action: {
+//                    self.presentationMode.wrappedValue.dismiss()
+//                }) {
+//                    HStack {
+//                        Image("backBtn")
+//                            .aspectRatio(contentMode: .fit)
+//                            .foregroundColor(.white)
+//                        
+//                    }
+//                }
+//                Spacer()
+//            }
+//            .padding()
+//            .padding(.bottom, 30)
             
             Text("Latihan Tiru")
                 .font(.system(size: 32, design: .rounded))
@@ -80,9 +67,10 @@ struct OnboardingLatihanTiru: View {
                 .frame(width: 358, height: 50)
                     .background(Color("MainPurple"))
                 .cornerRadius(13)
-                    })
+            })
         }
         .navigationBarHidden(true)
+        .navigationBarItems(leading: BackButton())
     }
 }
 
