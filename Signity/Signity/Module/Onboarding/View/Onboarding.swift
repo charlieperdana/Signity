@@ -98,6 +98,7 @@ struct Onboarding: View {
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         
         .onAppear {
             self.showCourse = UserDefaults.standard.didCompleteSetup
