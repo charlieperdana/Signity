@@ -24,7 +24,7 @@ struct SignityButton: View {
             }
             .padding()
             .foregroundColor(.white)
-            .background(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
+            .background(Color("MainPurple"))
             .cornerRadius(13)
         }
     }

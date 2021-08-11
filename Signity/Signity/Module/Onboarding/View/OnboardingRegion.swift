@@ -40,7 +40,7 @@ struct OnboardingRegion: View {
                     }
                 }
                 Spacer()
-                DoneButton() {
+                SignityButton(text: "Selesai") {
                     viewModel.completeOnboardingSetup()
                     self.showCourse = true
                 }
