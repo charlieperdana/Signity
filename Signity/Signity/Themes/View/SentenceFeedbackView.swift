@@ -25,7 +25,7 @@ struct SentenceFeedbackView: View {
                         .foregroundColor(i < currentCorrect ? Color("Green") : Color("DarkPurple"))
                 }
             }
-            .modifier(PhraseStyle())
+            .modifier(SignitySubtitle(color: .darkPurple))
         }
         .frame(width: UIScreen.main.bounds.width - 30, height: 50)
         .animation(.linear, value: animate)

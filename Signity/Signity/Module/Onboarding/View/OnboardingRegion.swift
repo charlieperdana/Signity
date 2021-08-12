@@ -22,10 +22,7 @@ struct OnboardingRegion: View {
             GeometryReader { geo in
                 VStack {
                     Text("BISINDO daerah mana yang kamu gunakan?")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("DarkPurple"))
-                        .multilineTextAlignment(.center)
+                        .modifier(SignitySubtitle(color: .darkPurple))
                         .padding(.leading)
                         .fixedSize(horizontal: false, vertical: true)
                     

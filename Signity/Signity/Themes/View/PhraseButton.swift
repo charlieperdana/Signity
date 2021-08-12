@@ -31,18 +31,17 @@ struct PhraseButton: View {
     var backgroundColor: Color {
         practiceDone ? Color("Green") : Color.white
     }
-    var textColor: Color {
-        practiceDone ? Color.white : Color("DarkPurple")
+    var textColor: SignityTextColor {
+        practiceDone ? .white : .darkPurple
     }
     
     var body: some View {
         Button(phrase, action: action)
             .frame(width: width, height: height)
-            .font(.title2.bold())
             .background(backgroundColor)
             .cornerRadius(13)
             .opacity(0.8)
-            .foregroundColor(textColor)
+            .modifier(SignitySubtitle(color: textColor))
     }
 }
 

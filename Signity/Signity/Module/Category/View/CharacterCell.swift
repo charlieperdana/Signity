@@ -17,9 +17,7 @@ struct CharacterCell: View {
                 .frame(width: width, height: width)
                 .foregroundColor(Color("MainPurple"))
             Text(text)
-                .font(.largeTitle)
-                .foregroundColor(.white)
-                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                .modifier(SignityLargeTitle(color: .white))
          }
     }
 }

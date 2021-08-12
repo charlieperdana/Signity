@@ -24,29 +24,21 @@ struct CardViewCourse: View {
                 VStack(alignment: .leading) {
                     HStack {
                         Text(item.type!)
-                            .font(.caption)
-                            .padding(.bottom,5)
+                            .padding(.bottom, 5)
                         Spacer()
                         Text("\(item.completedCourses)/\(item.courseCount)")
                             .padding(.trailing, 20)
-                            .accessibilityElement(children: .ignore)
-                            .accessibilityLabel(Text("Meeting length"))
-                            .accessibilityValue(Text("20 minutes"))
                     }
-                    .font(.caption)
+                    .modifier(SignitySubhead(color: .white))
                     
                     Text(item.name!)
-                        .font(.headline)
-                        .accessibilityElement(children: .ignore)
-                        .accessibilityLabel(Text("Attendees"))
-                        .accessibilityValue(Text("20"))
+                        .modifier(SignityHeadline(color: .white))
         
                     
                     ProgressBarCourse(value: Double(item.completedCourses), maxValue: Double(item.courseCount))
                         .frame(height: 8)
                 }
                 .padding()
-                .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
                 
             }.onTapGesture {
                 self.showCategory = true

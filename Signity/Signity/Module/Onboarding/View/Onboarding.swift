@@ -18,27 +18,19 @@ struct Onboarding: View {
                 Spacer()
                 
                 Text("Selamat Datang!")
-                    .font(.system(size: 22))
-                    .fontWeight(.bold)
-                    .foregroundColor(Color("DarkPurple"))
-                
+                    .modifier(SignitySubtitle(color: .darkPurple))
                 
                 Image("onboarding1")
                 
                 Text("Apakah kamu pernah belajar BISINDO sebelumnya?")
-                    .font(.system(size: 17))
-                    .fontWeight(.regular)
-                    .foregroundColor(Color(#colorLiteral(red: 0.08235294118, green: 0.1098039216, blue: 0.4, alpha: 1)))
-                    .multilineTextAlignment(.center)
+                    .modifier(SignityBody(color: .darkPurple))
                     .offset(y: 10)
                 
                 VStack(alignment:.leading, spacing: 15) {
-                    
                     SignityButton(text: "Belum, saya masih pemula") {
                         viewModel.completeOnboardingSetup()
                         self.showCourse = true
                     }
-                    
                     SignityButtonOutline(text: "Pernah, saya mengerti BISINDO") {
                         self.showNextOnboard = true
                     }

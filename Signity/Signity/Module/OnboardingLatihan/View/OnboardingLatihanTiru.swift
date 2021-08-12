@@ -12,8 +12,8 @@ struct OnboardingLatihanTiru: View {
     var chosenWord: String
 
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
-    @State var navBarHidden = false
+
+    @State var showPractice = false
     
     var body: some View {
         VStack {
@@ -22,9 +22,7 @@ struct OnboardingLatihanTiru: View {
             }
             
             Text("Latihan Tiru")
-                .font(.system(size: 32, design: .rounded))
-                .fontWeight(.bold)
-                .foregroundColor(Color("MainPurple"))
+                .modifier(SignityTitle(color: .mainPurple))
 
                 
 
@@ -36,37 +34,22 @@ struct OnboardingLatihanTiru: View {
             Spacer()
             
             Text("Latihan kalimat BISINDO dengan menirukan video peragaan")
-                .font(.system(size:17, design:.rounded))
-                .fontWeight(.semibold)
-                .foregroundColor(Color("MainPurple"))
-                .multilineTextAlignment(.center)
-                .padding(.horizontal,50)
-                .offset(y:-52)
+                .modifier(SignityHeadlineThin(color: .mainPurple))
+                .padding(.horizontal, 50)
+                .offset(y: -52)
             
             Spacer()
             
-            NavigationLink(
-                destination: PracticeView(category: category, chosenWord: chosenWord),
-                
-            label: {
-                Text("Berikutnya")
-                .foregroundColor(.white)
-                .font(.system(size:22, design:.rounded))
-                .fontWeight(.bold)
-                .frame(width: 358, height: 50)
-                    .background(Color("MainPurple"))
-                .cornerRadius(13)
-            })
+            SignityButton(text: "Berikutnya") {
+                self.showPractice = true
+            }
             
+            NavigationLink(destination: PracticeView(category: category, chosenWord: chosenWord), isActive: $showPractice) {
+                EmptyView()
+            }
         }
         .padding()
-    
-        .navigationBarHidden(self.navBarHidden)
-        
-        .onTapGesture {
-            self.navBarHidden = true
-            print("Onboarding practice appearing..")
-        }
+
     }
 }
 

@@ -17,9 +17,7 @@ struct PhraseCell: View {
                 .frame(width: 358, height: 48)
                 .foregroundColor(asker ? Color("MainPurple") : Color("LightPurple"))
             Text(text)
-                .font(.system(size: 17))
-                .fontWeight(.semibold)
-                .foregroundColor(asker ? .white : Color("DarkPurple"))
+                .modifier(SignityHeadlineThin(color: asker ? .white : .darkPurple))
         }
     }
 }

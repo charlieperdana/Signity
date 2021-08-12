@@ -16,6 +16,7 @@ struct HandGuide: View {
             VStack {
                 Image("VerticalPhoneGuide")
                 Text("Letakan ponsel secara vertikal")
+                    .modifier(SignityBody(color: .white))
                 Image("HandGuide")
                     .padding(.top, 125)
             }

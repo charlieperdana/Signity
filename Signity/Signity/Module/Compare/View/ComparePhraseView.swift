@@ -26,9 +26,7 @@ struct ComparePhraseView: View {
         NavigationView {
             VStack  {
                 Text(chosenWord)
-                    .font(.system(size: 17, design: .rounded))
-                    .fontWeight(.semibold)
-                    .foregroundColor(Color("DarkPurple"))
+                    .modifier(SignityHeadlineThin(color: .darkPurple))
                 
                 HStack {
                     VStack {
@@ -37,9 +35,7 @@ struct ComparePhraseView: View {
                             .frame(minWidth: 0, maxWidth: 171, minHeight: 0, maxHeight: 320)
                             .background(Color.white)
                         Text("Jakarta")
-                            .font(.system(size: 17, design: .rounded))
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color("DarkPurple"))
+                            .modifier(SignityHeadline(color: .darkPurple))
                     }
                     VStack {
                         LottieView(name: "terimaKasihDPS", playbackSpeed: viewModel.playbackSpeed)
@@ -47,9 +43,7 @@ struct ComparePhraseView: View {
                             .frame(minWidth: 0, maxWidth: 171, minHeight: 0, maxHeight: 320)
                             .background(Color.white)
                         Text("Denpasar")
-                            .font(.system(size: 17, design: .rounded))
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color("DarkPurple"))
+                            .modifier(SignityHeadline(color: .darkPurple))
                     }
                 }
                 PlaybackButton(state: viewModel.playbackState) {

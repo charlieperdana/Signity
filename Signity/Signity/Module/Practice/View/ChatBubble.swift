@@ -18,7 +18,7 @@ struct ChatBubble : View {
                 .frame(maxWidth: .infinity)
                 .background(Color.white)
                 .opacity(0.85)
-                .modifier(PhraseStyle())
+                .modifier(SignitySubtitle(color: .darkPurple))
                 .multilineTextAlignment(.leading)
                 .clipShape(ChatTriangleShape())
         }

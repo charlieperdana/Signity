@@ -30,9 +30,7 @@ struct OnboardingSimulasi: View {
         VStack {
             
             Text("Simulasi Pelajaran")
-                .font(.system(size: 32, design: .rounded))
-                .fontWeight(.bold)
-                .foregroundColor(Color("MainPurple"))
+                .modifier(SignityTitle(color: .mainPurple))
 
                 
 
@@ -44,10 +42,7 @@ struct OnboardingSimulasi: View {
             Spacer()
             
             Text("Berlatih tanya jawab seperti percakapan langsung")
-                .font(.system(size:17, design:.rounded))
-                .fontWeight(.semibold)
-                .foregroundColor(Color("MainPurple"))
-                .multilineTextAlignment(.center)
+                .modifier(SignityHeadlineThin(color: .mainPurple))
                 .padding(.horizontal,50)
                 .offset(y:-60)
             

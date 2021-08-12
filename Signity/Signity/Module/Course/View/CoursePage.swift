@@ -19,9 +19,7 @@ struct CoursePage: View {
                     Group {
                         HStack(alignment: .center){
                             Text("Pelajaran")
-                                .font(.system(size: 34))
-                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                                .foregroundColor(Color(#colorLiteral(red: 0.08235294118, green: 0.1098039216, blue: 0.4, alpha: 1)))
+                                .modifier(SignityLargeTitle(color: .darkPurple))
                             
                             Spacer()
                             
@@ -40,9 +38,7 @@ struct CoursePage: View {
                     .padding(.top, 50)
                     
                     Text("BISINDO \(viewModel.currentRegion)")
-                        .fontWeight(.semibold)
-                        .font(.system(size: 17))
-                        .foregroundColor(Color(#colorLiteral(red: 0.08235294118, green: 0.1098039216, blue: 0.4, alpha: 1)))
+                        .modifier(SignityHeadlineThin(color: .darkPurple))
                         .padding([.leading, .bottom])
                         
                     
@@ -52,9 +48,7 @@ struct CoursePage: View {
                     VStack(alignment:.leading){
                         ForEach(viewModel.currentModules) { group in
                             Section(header: Text(group.name!)
-                                        .font(.system(size: 22))
-                                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                                        .foregroundColor(Color(#colorLiteral(red: 0.08235294118, green: 0.1098039216, blue: 0.4, alpha: 1)))) {
+                                        .modifier(SignitySubtitle(color: .darkPurple))) {
                                 ForEach((group.categories?.array as! [Category])) { item in
                                     if item.moduleGroup!.level > viewModel.regionProficiency {
                                         CardViewCourseLock(item: item)
