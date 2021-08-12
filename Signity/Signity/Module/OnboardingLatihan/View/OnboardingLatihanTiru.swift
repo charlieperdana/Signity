@@ -8,12 +8,20 @@
 import SwiftUI
 
 struct OnboardingLatihanTiru: View {
+    @EnvironmentObject var navManager: NavigationManager
+    
     var category: Category
     var chosenWord: String
 
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    @State var navBarHidden = false
+    
     var body: some View {
         VStack {
-            BackButton()
+            BackButton {
+                self.presentationMode.wrappedValue.dismiss()
+            }
             
             Text("Latihan Tiru")
                 .font(.system(size: 32, design: .rounded))
@@ -54,8 +62,13 @@ struct OnboardingLatihanTiru: View {
             
         }
         .padding()
+    
+        .navigationBarHidden(self.navBarHidden)
         
-        .navigationBarHidden(true)
+        .onTapGesture {
+            self.navBarHidden = true
+            print("Onboarding practice appearing..")
+        }
     }
 }
 

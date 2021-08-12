@@ -52,6 +52,8 @@ struct CategoryView: View {
         
         .navigationBarTitle(category.name!, displayMode: .inline)
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: BackButton())
+        .navigationBarItems(leading: BackButton {
+            self.presentationMode.wrappedValue.dismiss()
+        })
     }
 }

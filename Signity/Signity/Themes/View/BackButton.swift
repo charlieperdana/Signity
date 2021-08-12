@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct BackButton: View {
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    var action: () -> Void
     
     var body: some View {
-        Button(action: {
-            self.presentationMode.wrappedValue.dismiss()
-        }) {
+        Button(action: action) {
             HStack {
                 Image(systemName: "chevron.backward")
                     .resizable()
@@ -27,6 +25,6 @@ struct BackButton: View {
 
 struct BackButton_Previews: PreviewProvider {
     static var previews: some View {
-        BackButton()
+        BackButton(action: {})
     }
 }

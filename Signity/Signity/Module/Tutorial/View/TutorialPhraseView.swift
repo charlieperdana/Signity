@@ -12,10 +12,12 @@ struct TutorialPhraseView: View {
     @State var isPresentingCompareModal = false
     @StateObject var viewModel = TutorialViewModel()
 
-    @State var showingNavBar = true
+    @State var navBarHidden = false
     
     var category: Category
     var chosenWord: String
+    
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
         VStack  {
@@ -41,6 +43,7 @@ struct TutorialPhraseView: View {
             Spacer()
             VStack(alignment:.leading) {
                 SignityButton(text: "Mulai Latihan") {
+                    self.navBarHidden = true
                     self.isPresentingPractice = true
                 }
                 
@@ -53,24 +56,8 @@ struct TutorialPhraseView: View {
                     Spacer()
                 }
                 
-                Button(action: {
-                    DispatchQueue.main.asyncAfter(deadline: .now()) {
-                        self.isPresentingCompareModal = true
-                    }
-                }) {
-                    HStack {
-                        Spacer()
-                        Text("Bandingkan")
-                            .fontWeight(.bold)
-                            .font(.system(size: 17, design: .rounded))
-                            .foregroundColor(Color("MainPurple"))
-                        Spacer()
-                    }
-                    .padding()
-                    .background(Color.white)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 13)
-                            .stroke(Color("MainPurple")))
+                SignityButtonOutline(text: "Bandingkan") {
+                    self.isPresentingCompareModal = true
                 }
             }
             .padding(.vertical)
@@ -83,16 +70,16 @@ struct TutorialPhraseView: View {
             })
         }
         .padding()
-        
+
         .navigationBarTitle(category.name!, displayMode: .inline)
-        .navigationBarBackButtonHidden(self.showingNavBar)
-        .navigationBarItems(leading: BackButton())
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: BackButton {
+            self.presentationMode.wrappedValue.dismiss()
+        })
+        .navigationBarHidden(self.navBarHidden)
         
         .onAppear {
-            self.showingNavBar = true
-        }
-        .onDisappear {
-            self.showingNavBar = false
+            self.navBarHidden = false
         }
     }
 }
