@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct BackButton: View {
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    var action: () -> Void
     
     var body: some View {
-        Button(action: {
-            self.presentationMode.wrappedValue.dismiss()
-        }) {
+        Button(action: action) {
             HStack {
-                Image("backBtn")
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundColor(.white)
-                
+                Image(systemName: "chevron.backward")
+                    .resizable()
+                    .frame(width: 12, height: 20)
+                    .foregroundColor(Color("MainPurple"))
+                Spacer()
             }
         }
     }
@@ -26,6 +25,6 @@ struct BackButton: View {
 
 struct BackButton_Previews: PreviewProvider {
     static var previews: some View {
-        BackButton()
+        BackButton(action: {})
     }
 }

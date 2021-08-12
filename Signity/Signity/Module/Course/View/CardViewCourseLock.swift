@@ -12,17 +12,14 @@ struct CardViewCourseLock: View {
     @State var showCategory = false
     
     var body: some View {
-//        NavigationLink(
-//            //            destination: CategoryView(title: item.name!, courses: Array(item.courses as! Set<Course>)), isActive: $showCategory) {
-//            destination: CategoryView(category: item), isActive: $showCategory) {
         HStack {
-            Image("\(item.name!)Grey")
+            Image("\(item.code!) - \(item.name!) Locked")
                 .resizable()
                 .scaledToFit()
             
             VStack(alignment: .leading) {
                 HStack {
-                    Text(item.name!)
+                    Text(item.type!)
                         .font(.caption)
                         .foregroundColor(Color(#colorLiteral(red: 0.4078431373, green: 0.4078431373, blue: 0.4078431373, alpha: 1)))
                         .padding(.bottom,5)
@@ -30,16 +27,8 @@ struct CardViewCourseLock: View {
                     Image("lock")
                         .resizable()
                         .scaledToFit()
-                    //                        Text("\(item.progress)/\(item.numExercise)")
-                    //                            .padding(.trailing, 20)
-                    //                            .accessibilityElement(children: .ignore)
-                    //                            .accessibilityLabel(Text("Meeting length"))
-                    //                            .accessibilityValue(Text("20 minutes"))
                 }
                 .font(.caption)
-                
-                
-                
                 
                 Text("\(item.name!)")
                     .font(.headline)
@@ -54,8 +43,6 @@ struct CardViewCourseLock: View {
             }
             .padding()
             .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-            
-//        }
         }
     }
 }

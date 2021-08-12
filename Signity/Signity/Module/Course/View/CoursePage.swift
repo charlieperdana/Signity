@@ -8,9 +8,6 @@
 import SwiftUI
 
 struct CoursePage: View {
-    
-    @State var items: [CourseSection]
-
     @State private var showSettings = false
     
     @StateObject var viewModel = CourseViewModel()
@@ -53,38 +50,13 @@ struct CoursePage: View {
                     
                     
                     VStack(alignment:.leading){
-    //                    List{
-//                            ForEach(items, id: \.name) { section in
-//                                Section(header: Text(section.name)
-//                                            .font(.system(size: 22))
-//                                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-//                                            .foregroundColor(Color(#colorLiteral(red: 0.08235294118, green: 0.1098039216, blue: 0.4, alpha: 1)))) {
-//                                    ForEach(section.item, id: \.title) { item in
-//                                        if(item.isLock){
-//                                            CardViewCourseLock(item: item)
-//                                                .frame(height: 100.0)
-//                                                .listRowBackground(Color(#colorLiteral(red: 0.8862745098, green: 0.8862745098, blue: 0.8862745098, alpha: 1)))
-//                                                .background(Color(#colorLiteral(red: 0.8862745098, green: 0.8862745098, blue: 0.8862745098, alpha: 1)))
-//                                                .cornerRadius(13)
-//                                        } else {
-//                                            CardViewCourse(item: item)
-//                                                .frame(height: 100.0)
-//                                                .listRowBackground(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
-//                                                .background(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
-//                                                .cornerRadius(13)
-//                                        }
-//
-//                                    }
-//                                }
-//                            }
-                            
-                        ForEach(viewModel.moduleGroups) { group in
+                        ForEach(viewModel.currentModules) { group in
                             Section(header: Text(group.name!)
                                         .font(.system(size: 22))
                                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                                         .foregroundColor(Color(#colorLiteral(red: 0.08235294118, green: 0.1098039216, blue: 0.4, alpha: 1)))) {
                                 ForEach((group.categories?.array as! [Category])) { item in
-                                    if item.moduleGroup!.level > UserData.shared.level {
+                                    if item.moduleGroup!.level > viewModel.regionProficiency {
                                         CardViewCourseLock(item: item)
                                             .frame(height: 100.0)
                                             .listRowBackground(Color(#colorLiteral(red: 0.8862745098, green: 0.8862745098, blue: 0.8862745098, alpha: 1)))
@@ -120,6 +92,6 @@ struct CoursePage: View {
 
 struct CoursePage_Previews: PreviewProvider {
     static var previews: some View {
-        CoursePage(items: CourseSection.data)
+        CoursePage()
     }
 }

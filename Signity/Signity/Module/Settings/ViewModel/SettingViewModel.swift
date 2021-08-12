@@ -8,19 +8,22 @@
 import Foundation
 
 class SettingViewModel: ObservableObject {
-    var daerah = ["Jakarta", "Denpasar"]
+    private(set) var daerah = ["Jakarta", "Denpasar"]
     
     var currentRegion: String {
         set {
-            UserData.shared.region = newValue
+            let profile = UserDefaults.standard.userProfile
+            profile.currentRegion = RegionType(rawValue: newValue)!
+            UserDefaults.standard.userProfile = profile
+            
             objectWillChange.send()
         }
         get {
-            UserData.shared.region
+            UserDefaults.standard.userProfile.currentRegion.rawValue
         }
     }
     
     init() {
-        currentRegion = UserData.shared.region
+        currentRegion =  UserDefaults.standard.userProfile.currentRegion.rawValue
     }
 }
