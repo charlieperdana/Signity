@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct OnboardingRegion: View {
-    @StateObject var viewModel = OnboardingViewModel()
+    @ObservedObject var viewModel: OnboardingViewModel
     @State var showCourse = false
+    
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
         VStack {
-            BackButton()
+            BackButton {
+                self.presentationMode.wrappedValue.dismiss()
+            }
             
             GeometryReader { geo in
                 VStack {
@@ -56,6 +60,6 @@ struct OnboardingRegion: View {
 
 struct OnboardingRegion_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingRegion()
+        OnboardingRegion(viewModel: OnboardingViewModel())
     }
 }

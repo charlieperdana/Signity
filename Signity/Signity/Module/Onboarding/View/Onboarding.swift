@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Onboarding: View {
+    @StateObject var viewModel = OnboardingViewModel()
     @State var showNextOnboard = false
     @State var showCourse = false
 
@@ -35,50 +36,13 @@ struct Onboarding: View {
                 
                 VStack(alignment:.leading, spacing: 15) {
                     
-                    Button(action: {
-                        print("Belum")
-                        DispatchQueue.main.asyncAfter(deadline: .now()) {
-                            self.showCourse = true
-                        }
-                        defaults.set(true, forKey: "isBeginner")
-                    }) {
-                        HStack {
-                            Spacer()
-                            Text("Belum, saya masih pemula")
-                                .fontWeight(.bold)
-                                .font(.system(size: 17))
-                                .multilineTextAlignment(.center)
-                            Spacer()
-                        }
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
-                        .cornerRadius(13)
+                    SignityButton(text: "Belum, saya masih pemula") {
+                        viewModel.completeOnboardingSetup()
+                        self.showCourse = true
                     }
                     
-                    Button(action: {
-                        print("Pernah")
-                        DispatchQueue.main.asyncAfter(deadline: .now()) {
-                            self.showNextOnboard = true
-                        }
-                        defaults.set(false, forKey: "isBeginner")
-                    }) {
-                        HStack {
-                            Spacer()
-                            Text("Pernah, saya mengerti BISINDO")
-                                .fontWeight(.bold)
-                                .font(.system(size: 17))
-                                .foregroundColor(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
-                                .multilineTextAlignment(.center)
-                            Spacer()
-                        }
-                        .padding()
-                        .foregroundColor(.blue)
-                        .background(Color.white)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 13)
-                                .stroke(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1))))
-                        
+                    SignityButtonOutline(text: "Pernah, saya mengerti BISINDO") {
+                        self.showNextOnboard = true
                     }
                 }
                 .padding(.vertical)
@@ -87,7 +51,7 @@ struct Onboarding: View {
                 Spacer()
                 
                 //MARK: - NAVIGATION LINKS
-                NavigationLink(destination: OnboardingRegion(), isActive: $showNextOnboard) {}
+                NavigationLink(destination: OnboardingRegion(viewModel: viewModel), isActive: $showNextOnboard) {}
                 NavigationLink(destination: CoursePage(), isActive: $showCourse) {
                     EmptyView()
                 }
@@ -98,7 +62,6 @@ struct Onboarding: View {
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)
         }
-        .navigationViewStyle(StackNavigationViewStyle())
         
         .onAppear {
             self.showCourse = UserDefaults.standard.didCompleteSetup
