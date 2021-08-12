@@ -41,20 +41,16 @@ struct TutorialPhraseView: View {
                 }
             }
             Spacer()
-            VStack(alignment:.leading) {
+            VStack(alignment: .center) {
                 SignityButton(text: "Mulai Latihan") {
                     self.navBarHidden = true
                     self.isPresentingPractice = true
                 }
                 
-                HStack {
-                    Spacer()
-                    Text("Bandingkan kalimat ini dengan BISINDO daerah lain")
-                        .font(.system(size: 13, design: .rounded))
-                        .fontWeight(.regular)
-                        .foregroundColor(Color("DarkPurple"))
-                    Spacer()
-                }
+                Text("Bandingkan kalimat ini dengan BISINDO daerah lain")
+                    .font(.system(size: 13, design: .rounded))
+                    .fontWeight(.regular)
+                    .foregroundColor(Color("DarkPurple"))
                 
                 SignityButtonOutline(text: "Bandingkan") {
                     self.isPresentingCompareModal = true

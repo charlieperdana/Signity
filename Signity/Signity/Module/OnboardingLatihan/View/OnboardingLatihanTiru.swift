@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct OnboardingLatihanTiru: View {
-    @EnvironmentObject var navManager: NavigationManager
-    
     var category: Category
     var chosenWord: String
 
