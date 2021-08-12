@@ -16,7 +16,7 @@ class CoreMLHelper {
         jakartaMotionSign = try! SignityVisionMotionJKT(configuration: MLModelConfiguration())
     }
     
-    func predict(multiArray: MLMultiArray) -> String {
+    func predict(multiArray: MLMultiArray) -> String { // 1 x 60 x 126
         do {
             let prediction = try jakartaSign.prediction(Landmarks: multiArray)
             

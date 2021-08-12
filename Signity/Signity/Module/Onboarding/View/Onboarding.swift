@@ -20,7 +20,7 @@ struct Onboarding: View {
                 Text("Selamat Datang!")
                     .font(.system(size: 22))
                     .fontWeight(.bold)
-                    .foregroundColor(Color(#colorLiteral(red: 0.08235294118, green: 0.1098039216, blue: 0.4, alpha: 1)))
+                    .foregroundColor(Color("DarkPurple"))
                 
                 
                 Image("onboarding1")

@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+//TODO:
+//1. Put selected word in the middle
+//
+
 struct HorizontalModules: View {
     var category: Category
     @Binding var currentSelected: String
