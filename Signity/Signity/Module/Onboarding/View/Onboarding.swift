@@ -11,8 +11,6 @@ struct Onboarding: View {
     @StateObject var viewModel = OnboardingViewModel()
     @State var showNextOnboard = false
     @State var showCourse = false
-
-    let defaults = UserDefaults.standard
     
     var body: some View {
         NavigationView {
