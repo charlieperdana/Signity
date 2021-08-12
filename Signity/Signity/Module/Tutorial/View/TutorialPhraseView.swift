@@ -71,7 +71,7 @@ struct TutorialPhraseView: View {
         }
         .padding()
 
-        .navigationBarTitle(category.name!, displayMode: .inline)
+        .navigationBarTitle(category.name ?? "Not found", displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: BackButton {
             self.presentationMode.wrappedValue.dismiss()

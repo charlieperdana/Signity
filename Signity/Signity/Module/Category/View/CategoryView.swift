@@ -10,7 +10,7 @@ import SwiftUI
 struct CategoryView: View {
     var category: Category
     var courses: [Course] {
-        category.courses?.array as! [Course]
+        (category.courses?.array as? [Course]) ?? []
     }
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
@@ -29,9 +29,15 @@ struct CategoryView: View {
                 } else {
                     VStack {
                         ForEach(courses.indices, id: \.self) { i in
-                            NavigationLink(destination: TutorialPhraseView(category: courses[i].category!, chosenWord: courses[i].name!), label: {
-                                PhraseCell(asker: i % 2 == 0, text: courses[i].name!)
-                            })
+                            if let currentCategory = courses[i].category {
+                                NavigationLink(
+                                    destination: TutorialPhraseView(
+                                        category: currentCategory,
+                                        chosenWord: courses[i].name ?? "Not found")) {
+                                        
+                                    PhraseCell(asker: i % 2 == 0, text: courses[i].name ?? "Not found")
+                                }
+                            }
                         }
                     }
                 }
@@ -44,13 +50,13 @@ struct CategoryView: View {
             }
             
             NavigationLink(
-                destination: OnboardingLatihanTiru(category: category, chosenWord: courses[0].name!),
+                destination: OnboardingLatihanTiru(category: category, chosenWord: courses[0].name ?? "Not found"),
                 isActive: $showPracticeOnboarding
             ){}
         }
         .padding()
         
-        .navigationBarTitle(category.name!, displayMode: .inline)
+        .navigationBarTitle(category.name ?? "Not found", displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: BackButton {
             self.presentationMode.wrappedValue.dismiss()
