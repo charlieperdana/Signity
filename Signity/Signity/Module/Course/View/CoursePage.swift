@@ -18,7 +18,7 @@ struct CoursePage: View {
                 Group {
                     HStack(alignment: .center){
                         Text("Pelajaran")
-                            .modifier(SignityLargeTitle(color: .darkPurple))
+                            .modifier(SignityLargeTitle(color: .text))
                         
                         Spacer()
                         
@@ -29,7 +29,7 @@ struct CoursePage: View {
                                 .resizable()
                                 .frame(width: 35, height: 35)
                         }
-                        .foregroundColor(Color("MainPurple"))
+                        .foregroundColor(Color("Button"))
                     }
                     
                 }
@@ -37,7 +37,7 @@ struct CoursePage: View {
                 .padding(.top, 50)
                 
                 Text("BISINDO \(viewModel.currentRegion)")
-                    .modifier(SignityHeadlineThin(color: .darkPurple))
+                    .modifier(SignityHeadlineThin(color: .text))
                     .padding([.leading, .bottom])
                 
                 
@@ -47,7 +47,7 @@ struct CoursePage: View {
                 VStack(alignment:.leading){
                     ForEach(viewModel.currentModules) { group in
                         Section(header: Text(group.name)
-                                    .modifier(SignitySubtitle(color: .darkPurple))) {
+                                    .modifier(SignitySubtitle(color: .text))) {
                             ForEach(group.categories) { item in
                                 CardViewCourse(category: item, proficiency: viewModel.regionProficiency)
                             }

@@ -16,18 +16,14 @@ struct SignityButtonOutline: View {
             HStack {
                 Spacer()
                 Text(text)
-                    .fontWeight(.bold)
-                    .font(.system(size: 17))
-                    .foregroundColor(Color("MainPurple"))
-                    .multilineTextAlignment(.center)
+                    .modifier(SignityHeadline(color: .button))
                 Spacer()
             }
             .padding()
             .foregroundColor(.blue)
-            .background(Color.white)
             .overlay(
                 RoundedRectangle(cornerRadius: 13)
-                    .stroke(Color("MainPurple")))
+                    .stroke(Color("Button")))
             
         }
     }

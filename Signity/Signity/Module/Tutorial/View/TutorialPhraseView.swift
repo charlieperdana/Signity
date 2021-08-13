@@ -22,7 +22,7 @@ struct TutorialPhraseView: View {
     var body: some View {
         VStack  {
             Text(chosenWord)
-                .modifier(SignityHeadlineThin(color: .darkPurple))
+                .modifier(SignityHeadlineThin(color: .text))
                 .padding(.top)
             
             LottieView(name: "terimaKasihJKT", playbackSpeed: viewModel.playbackSpeed)
@@ -46,7 +46,7 @@ struct TutorialPhraseView: View {
                 }
                 
                 Text("Bandingkan kalimat ini dengan BISINDO daerah lain")
-                    .modifier(SignityFootnote(color: .mainPurple))
+                    .modifier(SignityFootnote(color: .text))
                 
                 SignityButtonOutline(text: "Bandingkan") {
                     self.isPresentingCompareModal = true

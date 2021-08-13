@@ -8,6 +8,10 @@
 import Foundation
 
 enum SignityTextColor: String {
+    case text = "Text"
+    case courseCard = "CourseCard"
+    case button = "Button"
+    
     case mainPurple = "MainPurple"
     case darkPurple = "DarkPurple"
     case white = "White"

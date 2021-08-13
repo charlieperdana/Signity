@@ -13,7 +13,6 @@ struct SignityFootnote: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.footnote)
-            .multilineTextAlignment(.center)
             .foregroundColor(Color(color.rawValue))
     }
 }

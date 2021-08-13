@@ -19,17 +19,14 @@ struct CollectionView: View {
                 .padding(.horizontal, 10)
             VStack(alignment: .leading) {
                 Text(name)
-                    .fontWeight(.semibold)
-                    .font(.system(size:17, design:.rounded))
-                    .foregroundColor(Color("DarkPurple"))
+                    .modifier(SignityHeadlineThin(color: .text))
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 
                 Text(headline)
-                    .font(.system(size:13, design:.rounded))
-                    .foregroundColor(Color("DarkPurple"))
+                    .modifier(SignityFootnote(color: .text))
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             }
-            Image("Nextbutton")
+            Image("chevron.right")
                 .padding(.trailing,20)
         }
         .padding(.bottom, 20)

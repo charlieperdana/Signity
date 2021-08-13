@@ -29,13 +29,13 @@ struct CourseCell: View {
     
     var bgColor: Color {
         if course.category.typeEnum == .basic || isEven {
-            return Color("MainPurple")
+            return Color("CourseButton")
         } else {
             return Color("LightPurple")
         }
     }
     var textColor: SignityTextColor {
-        bgColor == Color("MainPurple") ? .white : .darkPurple
+        bgColor == Color("CourseButton") ? .white : .darkPurple
     }
     
     var body: some View {

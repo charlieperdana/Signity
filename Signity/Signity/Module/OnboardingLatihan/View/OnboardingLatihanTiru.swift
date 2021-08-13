@@ -22,19 +22,15 @@ struct OnboardingLatihanTiru: View {
             }
             
             Text("Latihan Tiru")
-                .modifier(SignityTitle(color: .mainPurple))
+                .modifier(SignityTitle(color: .text))
 
-                
-
-            
             Image("Ilustrasi Tiru")
                 .offset(y:30)
-            
             
             Spacer()
             
             Text("Latihan kalimat BISINDO dengan menirukan video peragaan")
-                .modifier(SignityHeadlineThin(color: .mainPurple))
+                .modifier(SignityHeadlineThin(color: .gray1))
                 .padding(.horizontal, 50)
                 .offset(y: -52)
             

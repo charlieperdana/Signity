@@ -18,12 +18,12 @@ struct Onboarding: View {
                 Spacer()
                 
                 Text("Selamat Datang!")
-                    .modifier(SignitySubtitle(color: .darkPurple))
+                    .modifier(SignitySubtitle(color: .text))
                 
                 Image("onboarding1")
                 
                 Text("Apakah kamu pernah belajar BISINDO sebelumnya?")
-                    .modifier(SignityBody(color: .darkPurple))
+                    .modifier(SignityBody(color: .text))
                     .offset(y: 10)
                 
                 VStack(alignment:.leading, spacing: 15) {
@@ -52,6 +52,7 @@ struct Onboarding: View {
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)
         }
+        .accentColor(Color("NavigationItem"))
         
         .onAppear {
             self.showCourse = UserDefaults.standard.didCompleteSetup

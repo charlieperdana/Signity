@@ -31,7 +31,7 @@ struct CardViewCourse: View {
     }
     
     var backgroundColor: Color {
-        categoryLocked ? Color("Gray1") : Color("MainPurple")
+        categoryLocked ? Color("Gray1") : Color("CourseCategory")
     }
 
     var body: some View {

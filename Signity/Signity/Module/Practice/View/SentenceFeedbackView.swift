@@ -22,7 +22,7 @@ struct SentenceFeedbackView: View {
             HStack {
                 ForEach(words.indices, id: \.self) { i in
                     Text(words[i])
-                        .foregroundColor(i < currentCorrect ? Color("Green") : Color("DarkPurple"))
+                        .foregroundColor(i < currentCorrect ? Color("FeedbackCorrect") : Color("DarkPurple"))
                 }
             }
             .modifier(SignitySubtitle(color: .darkPurple))

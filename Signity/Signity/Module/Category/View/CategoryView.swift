@@ -26,6 +26,7 @@ struct CategoryView: View {
             
             if category.typeEnum == .situation {
                 SignityButton(text: "Mulai Latihan") {
+                    self.navBarHidden = true
                     self.showPracticeOnboarding = true
                 }
             }
@@ -37,10 +38,14 @@ struct CategoryView: View {
         }
         .padding()
         
+        .navigationBarHidden(self.navBarHidden)
         .navigationBarTitle(category.name, displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: BackButton {
             self.presentationMode.wrappedValue.dismiss()
         })
+        .onAppear {
+            self.navBarHidden = false
+        }
     }
 }

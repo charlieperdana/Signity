@@ -14,7 +14,7 @@ struct HintButton: View {
                 .modifier(SignityHeadlineThin(color: .white))
         })
         .frame(width: 80, height: 40)
-        .background(Color("MainPurple"))
+        .background(Color("Button"))
         .cornerRadius(15)
     }
 }

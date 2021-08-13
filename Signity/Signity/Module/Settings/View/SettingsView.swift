@@ -25,14 +25,15 @@ struct SettingsView: View {
                     }
                 }
                 
-                Section(header: Text("Kontak Komunitas")){
+                Section(
+                    header: Text("Kontak Komunitas")
+                        .modifier(SignityFootnote(color: .text))
+                ){
                     Text("Hubungi kontak komunitas dibawah ini untuk mempelajari BISINDO lebih lanjut")
-                        .multilineTextAlignment(.leading)
-                        .font(.system(size:13, design:.rounded))
-                        .foregroundColor(Color("DarkPurple"))
-                        .padding(.bottom,10)
-                        .padding(.top,12)
-                    ForEach(name.indices) {i in
+                        .modifier(SignityFootnote(color: .text))
+                        .padding(.bottom, 10)
+                        .padding(.top, 12)
+                    ForEach(name.indices) { i in
                         CollectionView(communityImage:communityImage[i], name:name[i], headline:headline[i])
                     }
                 }
@@ -43,9 +44,10 @@ struct SettingsView: View {
                 self.presentationMode.wrappedValue.dismiss()
             }, label: {
                 Text("Selesai")
-                    .foregroundColor(Color("MainPurple"))
+                    .foregroundColor(Color("NavigationItem"))
             }))
         }
+        .accentColor(Color("NavigationItem"))
     }
 }
 struct SettingsView_Previews: PreviewProvider {
