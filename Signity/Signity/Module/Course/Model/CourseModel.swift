@@ -110,7 +110,7 @@ struct AvailableCourses {
                             code: "PER001",
                             title: "Nama",
                             type: "Kata Dasar",
-                            level: 1,
+                            level: 1000,
                             submodules: [
                                 
                             ]
@@ -119,7 +119,7 @@ struct AvailableCourses {
                             code: "PER002",
                             title: "Kota",
                             type: "Kata Dasar",
-                            level: 2,
+                            level: 1000,
                             submodules: [
 
                             ]
@@ -128,7 +128,7 @@ struct AvailableCourses {
                             code: "PER003",
                             title: "Bertemu Teman Baru",
                             type: "Situasi",
-                            level: 2,
+                            level: 1000,
                             submodules: [
                                 
                             ]

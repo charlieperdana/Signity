@@ -13,7 +13,7 @@ struct CoursePage: View {
     @StateObject var viewModel = CourseViewModel()
     
     var body: some View {
-        ScrollView {
+        ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: false) {
             VStack(alignment:.leading){
                 Group {
                     HStack(alignment: .center){
