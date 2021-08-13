@@ -38,7 +38,7 @@ class PracticeViewModel: ObservableObject {
     func addLandmarks(landmark: [Double]) {
         handLandmarks.append(landmark)
         
-        if handLandmarks.count == 60 {
+        if handLandmarks.count >= 60 {
             do {
                 let landmarks = try MLMultiArray(shape: [1, 60, 126], dataType: .double)
                 for (row, arr) in self.handLandmarks.enumerated() {
@@ -47,10 +47,8 @@ class PracticeViewModel: ObservableObject {
                     }
                 }
                 
-                let predictedSign = predictor.predictAction(multiArray: landmarks)
-                
-                print("Predicted: \(predictedSign)")
-                
+                let predictedSign = predictor.predict(multiArray: landmarks)
+
                 if predictedSign == chosenWord {
                     for course in category.courses {
                         if course.name == chosenWord {
@@ -58,12 +56,13 @@ class PracticeViewModel: ObservableObject {
                             PersistenceController.shared.saveContext()
                         }
                     }
+                    
                 }
             } catch {
                 
             }
             
-            handLandmarks.removeAll()
+            handLandmarks.removeFirst(30)
         }
     }
 }
