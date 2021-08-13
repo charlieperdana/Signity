@@ -13,63 +13,53 @@ struct CoursePage: View {
     @StateObject var viewModel = CourseViewModel()
     
     var body: some View {
-//        NavigationView {
-            ScrollView {
-                VStack(alignment:.leading){
-                    Group {
-                        HStack(alignment: .center){
-                            Text("Pelajaran")
-                                .modifier(SignityLargeTitle(color: .darkPurple))
-                            
-                            Spacer()
-                            
-                            Button(action: {
-                                self.showSettings = true
-                            }) {
-                                Image(systemName: "gear")
-                                    .resizable()
-                                    .frame(width: 35, height: 35)
-                            }
-                            .foregroundColor(Color("MainPurple"))
-                        }
+        ScrollView {
+            VStack(alignment:.leading){
+                Group {
+                    HStack(alignment: .center){
+                        Text("Pelajaran")
+                            .modifier(SignityLargeTitle(color: .darkPurple))
                         
-                    }
-                    .padding(.horizontal)
-                    .padding(.top, 50)
-                    
-                    Text("BISINDO \(viewModel.currentRegion)")
-                        .modifier(SignityHeadlineThin(color: .darkPurple))
-                        .padding([.leading, .bottom])
+                        Spacer()
                         
-                    
-                    Spacer()
-                    
-                    
-                    VStack(alignment:.leading){
-                        ForEach(viewModel.currentModules) { group in
-                            Section(header: Text(group.name)
-                                        .modifier(SignitySubtitle(color: .darkPurple))) {
-                                ForEach(group.categories) { item in
-                                    CardViewCourse(category: item, proficiency: viewModel.regionProficiency)
-                                        .frame(height: 100.0)
-                                        .listRowBackground(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
-                                        .background(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
-                                        .cornerRadius(13)
-                                    
-                                }
-                            }
+                        Button(action: {
+                            self.showSettings = true
+                        }) {
+                            Image(systemName: "gear")
+                                .resizable()
+                                .frame(width: 35, height: 35)
                         }
-    //                    }
+                        .foregroundColor(Color("MainPurple"))
                     }
-                    .padding(.horizontal)
-                    
                     
                 }
+                .padding(.horizontal)
+                .padding(.top, 50)
+                
+                Text("BISINDO \(viewModel.currentRegion)")
+                    .modifier(SignityHeadlineThin(color: .darkPurple))
+                    .padding([.leading, .bottom])
+                
+                
+                Spacer()
+                
+                
+                VStack(alignment:.leading){
+                    ForEach(viewModel.currentModules) { group in
+                        Section(header: Text(group.name)
+                                    .modifier(SignitySubtitle(color: .darkPurple))) {
+                            ForEach(group.categories) { item in
+                                CardViewCourse(category: item, proficiency: viewModel.regionProficiency)
+                            }
+                        }
+                    }
+                }
+                .padding(.horizontal)
             }
-            
-            .navigationBarBackButtonHidden(true)
-            .navigationBarHidden(true)
-//        }
+        }
+        
+        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
         .sheet(isPresented: $showSettings) {
             SettingsView()
         }

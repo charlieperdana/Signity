@@ -26,9 +26,17 @@ struct CardViewCourse: View {
         return name
     }
     
+    var foregroundColor: SignityTextColor {
+        categoryLocked ? .gray3 : .white
+    }
+    
+    var backgroundColor: Color {
+        categoryLocked ? Color("Gray1") : Color("MainPurple")
+    }
+
     var body: some View {
         NavigationLink(
-            destination: CategoryView(category: category), isActive: $showCategory) {
+            destination: CategoryView(category: category)) {
             
             HStack {
                 Image(categoryIcon)
@@ -40,25 +48,27 @@ struct CardViewCourse: View {
                         Text(category.type)
                             .padding(.bottom, 5)
                         Spacer()
-                        Text("\(category.completedCourses)/\(category.courseCount)")
-                            .padding(.trailing, 20)
+                        if categoryLocked {
+                            Image(systemName: "lock.fill")
+                        } else {
+                            Text("\(category.completedCourses)/\(category.courseCount)")
+                                .modifier(SignitySubhead(color: foregroundColor))
+                        }
                     }
-                    .modifier(SignitySubhead(color: .white))
+                    .modifier(SignitySubhead(color: foregroundColor))
                     
                     Text(category.name)
-                        .modifier(SignityHeadline(color: .white))
-        
+                        .modifier(SignityHeadline(color: foregroundColor))
                     
-                    ProgressBarCourse(value: Double(category.completedCourses), maxValue: Double(category.courseCount))
-                        .frame(height: 8)
+                    ProgressBarCourse(value: Double(category.completedCourses), maxValue: Double(category.courseCount), locked: categoryLocked)
                 }
                 .padding()
-                
-            }.onTapGesture {
-                self.showCategory = true
             }
+            .frame(height: 100.0)
+            .background(backgroundColor)
+            .cornerRadius(13)
         }
-        
+        .disabled(self.categoryLocked)
     }
 }
 

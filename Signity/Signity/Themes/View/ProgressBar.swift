@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProgressBar: View {
-    @Binding var value: Double
+    var value: Double
     @State var animate = false
     
     var body: some View {
@@ -38,6 +38,6 @@ struct ProgressBar: View {
 
 struct Preview_ProgressBar: PreviewProvider {
     static var previews: some View {
-        ProgressBar(value: .constant(0.5))
+        ProgressBar(value: 0.5)
     }
 }

@@ -11,45 +11,48 @@ struct ProgressBarCourse: View {
     
     private let value: Double
     private let maxValue: Double
-    private let backgroundEnabled: Bool
+    private let locked: Bool
     private let backgroundColor: Color
     private let foregroundColor: Color
     
     init(value: Double,
          maxValue: Double,
-         backgroundEnabled: Bool = true,
-         backgroundColor: Color = Color(#colorLiteral(red: 0.08235294118, green: 0.1098039216, blue: 0.4, alpha: 1)),
-         foregroundColor: Color = Color.white) {
+         locked: Bool) {
         self.value = value
         self.maxValue = maxValue
-        self.backgroundEnabled = backgroundEnabled
-        self.backgroundColor = backgroundColor
-        self.foregroundColor = foregroundColor
+        self.locked = locked
+        self.backgroundColor = locked ? Color("Gray3") : Color("DarkPurple")
+        self.foregroundColor = locked ? Color.clear : Color("White")
     }
     
     private func progress(value: Double,
                           maxValue: Double,
                           width: CGFloat) -> CGFloat {
-        let percentage = value / maxValue
-        return width *  CGFloat(percentage)
+        let percentage: CGFloat
+        
+        if value == 0 {
+            percentage = .zero
+        } else {
+            percentage = CGFloat(value / maxValue)
+        }
+        
+        return width * percentage
     }
     
     var body: some View {
         ZStack{
             GeometryReader { geometryReader in
-                if self.backgroundEnabled {
-                    Capsule()
-                        .foregroundColor(self.backgroundColor)
-                }
-                
                 Capsule()
-                    .frame(width: self.progress(value: self.value,
-                                                maxValue: self.maxValue,
-                                                width: geometryReader.size.width))
-                    .foregroundColor(self.foregroundColor)
-                    .animation(.easeIn)
+                    .foregroundColor(self.backgroundColor)
                 
+                if !self.locked {
+                    Capsule()
+                        .frame(width: progress(value: 1.0, maxValue: self.maxValue, width: geometryReader.size.width))
+                        .foregroundColor(self.foregroundColor)
+                        .animation(.easeIn)
+                }
             }
+            .frame(height: 8)
         }
     }
 }
@@ -57,7 +60,7 @@ struct ProgressBarCourse: View {
 struct ProgressBarCourse_Previews: PreviewProvider {
     
     static var previews: some View {
-        ProgressBarCourse(value: 3.0, maxValue: 10.0)
+        ProgressBarCourse(value: 3.0, maxValue: 10.0, locked: true)
             .frame(height: 10)
             .padding(30)
     }

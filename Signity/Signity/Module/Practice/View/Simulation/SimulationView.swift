@@ -52,7 +52,7 @@ struct SimulationView: View {
                 }
 
                 VStack {
-                    ProgressBar(value: .constant(0.5))
+                    ProgressBar(value: 0.5)
                     
                     HStack(alignment: .top) {
                         ChatBubble(text: viewModel.speakerCurrentWord)
