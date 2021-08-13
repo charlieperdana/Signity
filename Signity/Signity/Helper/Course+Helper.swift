@@ -34,4 +34,13 @@ extension Course {
             category_ = newValue
         }
     }
+    
+    var wordParts: [String] {
+        get {
+            return wordParts_ ?? []
+        }
+        set {
+            wordParts_ = newValue
+        }
+    }
 }

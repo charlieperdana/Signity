@@ -499,6 +499,9 @@
 		B77E6377BB182B3E306FF2D1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D1FDD3F9D4DB3C38A02F4D76 /* PhraseButton.swift */,
+				1AE6978CB75C4A8BAC76BA89 /* ProgressBar.swift */,
+				987CCAD410893A903846610A /* SentenceFeedbackView.swift */,
 				76DC06823247EC7547D98226 /* CameraNavigationBar.swift */,
 				61571D475D68A328D52A1734 /* ChatBubble.swift */,
 				270663A6100EF4D5836B3A09 /* VideoView.swift */,
@@ -549,10 +552,7 @@
 			isa = PBXGroup;
 			children = (
 				E21667F3922CF4623655E6DD /* LottieView.swift */,
-				D1FDD3F9D4DB3C38A02F4D76 /* PhraseButton.swift */,
 				B4F139692329014ADE4D25E3 /* PlaybackButton.swift */,
-				1AE6978CB75C4A8BAC76BA89 /* ProgressBar.swift */,
-				987CCAD410893A903846610A /* SentenceFeedbackView.swift */,
 				7D842F9A26C20CA0007A7F64 /* BackButton.swift */,
 				7D2A89BE26C41642009B16A5 /* SignityButton.swift */,
 				7D2A89C426C4E951009B16A5 /* SignityButtonOutline.swift */,

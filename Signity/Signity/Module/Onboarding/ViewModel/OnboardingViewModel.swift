@@ -52,9 +52,10 @@ class OnboardingViewModel: ObservableObject {
                     category.level = module.level
                     
                     var courses = [Course]()
-                    for submodules in module.submodules {
+                    for submodule in module.submodules {
                         let course = Course(context: context)
-                        course.name = submodules.name
+                        course.name = submodule.name
+                        course.wordParts = submodule.wordParts ?? []
                         course.completionState = 0
 
                         courses.append(course)

@@ -11,6 +11,7 @@
     <entity name="Course" representedClassName="Course" syncable="YES" codeGenerationType="class">
         <attribute name="completionState_" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name_" optional="YES" attributeType="String"/>
+        <attribute name="wordParts_" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromDataTransformer" customClassName="[String]"/>
         <relationship name="category_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="courses_" inverseEntity="Category"/>
     </entity>
     <entity name="ModuleGroup" representedClassName="ModuleGroup" syncable="YES" codeGenerationType="class">
@@ -21,7 +22,7 @@
     </entity>
     <elements>
         <element name="Category" positionX="-63" positionY="-18" width="128" height="119"/>
-        <element name="Course" positionX="-54" positionY="-9" width="128" height="74"/>
+        <element name="Course" positionX="-54" positionY="-9" width="128" height="89"/>
         <element name="ModuleGroup" positionX="-54" positionY="27" width="128" height="89"/>
     </elements>
 </model>
