@@ -11,14 +11,18 @@ class OnboardingViewModel: ObservableObject {
     private(set) var availableRegion = ["Jakarta", "Denpasar", "Lainnya"]
     @Published var selectedRegion = ""
     
-    func completeOnboardingSetup() {
+    func completeOnboardingSetup(newPractitioner: Bool = false) {
         let region = RegionType(rawValue: selectedRegion)
         let selectedRegion = region ?? .jakarta
         
         var proficiency = [RegionType: Int]()
         for region in availableRegion {
             if let regionType = RegionType(rawValue: region) {
-                proficiency[regionType] = (selectedRegion == regionType ? 100 : 0)
+                if newPractitioner {
+                    proficiency[regionType] = 0
+                } else {
+                    proficiency[regionType] = (selectedRegion == regionType ? 100 : 0)
+                }
             }
         }
         

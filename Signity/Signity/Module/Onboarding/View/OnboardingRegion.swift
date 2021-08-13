@@ -47,8 +47,6 @@ struct OnboardingRegion: View {
                     router.currentPage = .course
                 }
             }
-            //MARK: - NAVIGATION LINKS
-            NavigationLink(destination: CoursePage(), isActive: $showCourse) {}
             
             .navigationBarHidden(true)
         }

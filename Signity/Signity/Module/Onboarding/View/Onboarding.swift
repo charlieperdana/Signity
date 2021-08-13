@@ -28,8 +28,8 @@ struct Onboarding: View {
             
             VStack(alignment:.leading, spacing: 15) {
                 SignityButton(text: "Belum, saya masih pemula") {
-                    viewModel.completeOnboardingSetup()
-                    self.showCourse = true
+                    viewModel.completeOnboardingSetup(newPractitioner: true)
+                    router.currentPage = .course
                 }
                 SignityButtonOutline(text: "Pernah, saya mengerti BISINDO") {
                     self.showNextOnboard = true
@@ -42,9 +42,6 @@ struct Onboarding: View {
             
             //MARK: - NAVIGATION LINKS
             NavigationLink(destination: OnboardingRegion(viewModel: viewModel).environmentObject(router), isActive: $showNextOnboard) {}
-            NavigationLink(destination: CoursePage(), isActive: $showCourse) {
-                EmptyView()
-            }
         }
         .padding(.all)
         .padding(.bottom, 150)
