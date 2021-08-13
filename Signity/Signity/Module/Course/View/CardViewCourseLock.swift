@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct CardViewCourseLock: View {
-    let item: Category
     @State var showCategory = false
+    var item: Category
     
     var body: some View {
         HStack {
-            Image("\(item.code!) - \(item.name!) Locked")
+            Image("\(item.code) - \(item.name) Locked")
                 .resizable()
                 .scaledToFit()
             
             VStack(alignment: .leading) {
                 HStack {
-                    Text(item.type!)
+                    Text(item.type)
                         .font(.caption)
                         .foregroundColor(Color(#colorLiteral(red: 0.4078431373, green: 0.4078431373, blue: 0.4078431373, alpha: 1)))
                         .padding(.bottom,5)
@@ -30,7 +30,7 @@ struct CardViewCourseLock: View {
                 }
                 .font(.caption)
                 
-                Text("\(item.name!)")
+                Text("\(item.name)")
                     .font(.headline)
                     .accessibilityElement(children: .ignore)
                     .accessibilityLabel(Text("Attendees"))

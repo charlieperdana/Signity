@@ -47,22 +47,14 @@ struct CoursePage: View {
                     
                     VStack(alignment:.leading){
                         ForEach(viewModel.currentModules) { group in
-                            Section(header: Text(group.name!)
+                            Section(header: Text(group.name)
                                         .modifier(SignitySubtitle(color: .darkPurple))) {
-                                ForEach((group.categories?.array as! [Category])) { item in
-                                    if item.moduleGroup!.level > viewModel.regionProficiency {
-                                        CardViewCourseLock(item: item)
-                                            .frame(height: 100.0)
-                                            .listRowBackground(Color(#colorLiteral(red: 0.8862745098, green: 0.8862745098, blue: 0.8862745098, alpha: 1)))
-                                            .background(Color(#colorLiteral(red: 0.8862745098, green: 0.8862745098, blue: 0.8862745098, alpha: 1)))
-                                            .cornerRadius(13)
-                                    } else {
-                                        CardViewCourse(item: item)
-                                            .frame(height: 100.0)
-                                            .listRowBackground(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
-                                            .background(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
-                                            .cornerRadius(13)
-                                    }
+                                ForEach(group.categories) { item in
+                                    CardViewCourse(category: item, proficiency: viewModel.regionProficiency)
+                                        .frame(height: 100.0)
+                                        .listRowBackground(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
+                                        .background(Color(#colorLiteral(red: 0.2549019608, green: 0.3019607843, blue: 0.8470588235, alpha: 1)))
+                                        .cornerRadius(13)
                                     
                                 }
                             }

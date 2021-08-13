@@ -17,7 +17,7 @@ class ModuleGroupStorage: NSObject, ObservableObject {
     override init() {
         let fetchRequest: NSFetchRequest<ModuleGroup> = ModuleGroup.fetchRequest()
         fetchRequest.sortDescriptors = [
-            NSSortDescriptor(key: "level", ascending: true)
+            NSSortDescriptor(key: "ordering", ascending: true)
         ]
         
         moduleGroupsFetchController = NSFetchedResultsController(

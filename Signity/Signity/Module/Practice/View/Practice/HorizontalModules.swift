@@ -18,14 +18,10 @@ struct HorizontalModules: View {
         category.typeEnum == .situation
     }
     
-    var courses: [Course] {
-        (category.courses!.array as? [Course]) ?? []
-    }
-    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
-                ForEach(courses, id: \.self) { course in
+                ForEach(category.courses, id: \.self) { course in
                     if let courseName = course.name {
                         PhraseButton(practiceDone: course.completionState == 1, isSelected: courseName == currentSelected, isSentence: isSentence, phrase: courseName) {
                             self.currentSelected = courseName

@@ -52,9 +52,7 @@ class PracticeViewModel: ObservableObject {
                 print("Predicted: \(predictedSign)")
                 
                 if predictedSign == chosenWord {
-                    print("Correct!")
-                    for course in (category.courses?.array as! [Course]) {
-                        print("Found!")
+                    for course in category.courses {
                         if course.name == chosenWord {
                             course.completionState = 1
                             PersistenceController.shared.saveContext()

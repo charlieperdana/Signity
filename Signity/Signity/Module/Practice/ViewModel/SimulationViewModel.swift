@@ -33,10 +33,10 @@ class SimulationViewModel: ObservableObject {
     init(category: Category) {
         self.category = category
         
-        courses = category.courses?.array as! [Course]
+        courses = category.courses
         
-        speakerCurrentWord = courses[0].name!
-        userCurrentWord = courses[1].name!
+        speakerCurrentWord = courses[0].name
+        userCurrentWord = courses[1].name
     }
     
     func addToActionsList(landmark: [Double]) {
@@ -62,15 +62,15 @@ class SimulationViewModel: ObservableObject {
                     correctWord += 1
 
                     if correctWord == wordTracking.count {
-                        if userCurrentWord == courses[3].name! {
+                        if userCurrentWord == courses[3].name {
                             tempDone = true
                             navBarHidden = false
                             return
                         }
 
                         DispatchQueue.main.async { [self] in
-                            speakerCurrentWord = courses[2].name!
-                            userCurrentWord = courses[3].name!
+                            speakerCurrentWord = courses[2].name
+                            userCurrentWord = courses[3].name
                             wordTracking = [
                                 "Aku",
                                 "Sakit"

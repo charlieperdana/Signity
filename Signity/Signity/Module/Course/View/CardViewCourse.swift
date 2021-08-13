@@ -8,34 +8,48 @@
 import SwiftUI
 
 struct CardViewCourse: View {
-    
-    let item: Category
     @State var showCategory = false
+    
+    var category: Category
+    var proficiency: Int
+    
+    var categoryLocked: Bool {
+        category.level > proficiency
+    }
+    
+    var categoryIcon: String {
+        var name = "\(category.code) - \(category.name)"
+        if categoryLocked {
+            name += " Locked"
+        }
+        
+        return name
+    }
     
     var body: some View {
         NavigationLink(
-            destination: CategoryView(category: item), isActive: $showCategory) {
+            destination: CategoryView(category: category), isActive: $showCategory) {
             
             HStack {
-                Image("\(item.code!) - \(item.name!)")
+                Image(categoryIcon)
                     .resizable()
                     .scaledToFit()
                 
                 VStack(alignment: .leading) {
                     HStack {
-                        Text(item.type!)
+                        Text(category.type)
                             .padding(.bottom, 5)
                         Spacer()
-                        Text("\(item.completedCourses)/\(item.courseCount)")
+                        Text("\(category.completedCourses)/\(category.courseCount)")
                             .padding(.trailing, 20)
                     }
                     .modifier(SignitySubhead(color: .white))
                     
-                    Text(item.name!)
+                    Text(category.name)
                         .modifier(SignityHeadline(color: .white))
         
                     
-                    ProgressBarCourse(value: Double(item.completedCourses), maxValue: Double(item.courseCount))
+                    ProgressBarCourse(value: Double(category.completedCourses), maxValue: Double(category.courseCount))
                         .frame(height: 8)
                 }
                 .padding()
@@ -50,7 +64,7 @@ struct CardViewCourse: View {
 
 struct CardViewCourse_Previews: PreviewProvider {
     static var previews: some View {
-        CardViewCourse(item: Category())
+        CardViewCourse(category: Category(), proficiency: 0)
             .background(Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)))
             .previewLayout(.fixed(width: 400, height: 100))
             .cornerRadius(13)

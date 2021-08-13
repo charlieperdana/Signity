@@ -18,8 +18,8 @@ struct GridView: View {
     var body: some View {
         LazyVGrid(columns: items, alignment: .center, spacing: 15) {
             ForEach(courses) { course in
-                NavigationLink(destination: TutorialPhraseView(category: course.category!, chosenWord: course.name!)) {
-                    CharacterCell(text: course.name!)
+                NavigationLink(destination: TutorialPhraseView(category: course.category, chosenWord: course.name)) {
+                    CharacterCell(text: course.name)
                 }
             }
         }

@@ -49,14 +49,15 @@
 		7D2A89D926C570B2009B16A5 /* SignitySubhead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A89D826C570B2009B16A5 /* SignitySubhead.swift */; };
 		7D2A89DB26C570CE009B16A5 /* SignityFootnoteBold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A89DA26C570CE009B16A5 /* SignityFootnoteBold.swift */; };
 		7D2A89DD26C570E3009B16A5 /* SignityFootnote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A89DC26C570E3009B16A5 /* SignityFootnote.swift */; };
+		7D2A89E026C5F729009B16A5 /* ModuleGroup+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A89DF26C5F729009B16A5 /* ModuleGroup+Helper.swift */; };
+		7D2A89E226C5F7C9009B16A5 /* Category+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A89E126C5F7C9009B16A5 /* Category+Helper.swift */; };
+		7D2A89E426C5F9FB009B16A5 /* Course+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A89E326C5F9FB009B16A5 /* Course+Helper.swift */; };
 		7D842F8826C166D9007A7F64 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F8726C166D9007A7F64 /* SettingViewModel.swift */; };
 		7D842F8A26C16CA7007A7F64 /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F8926C16CA7007A7F64 /* CourseViewModel.swift */; };
 		7D842F8C26C172CE007A7F64 /* ModuleGroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F8B26C172CE007A7F64 /* ModuleGroupStorage.swift */; };
 		7D842F8E26C17391007A7F64 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F8D26C17391007A7F64 /* PersistenceController.swift */; };
 		7D842F9026C176D6007A7F64 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F8F26C176D6007A7F64 /* OnboardingViewModel.swift */; };
-		7D842F9326C1F699007A7F64 /* Category+TypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F9226C1F699007A7F64 /* Category+TypeEnum.swift */; };
 		7D842F9526C1F6F7007A7F64 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F9426C1F6F7007A7F64 /* CategoryView.swift */; };
-		7D842F9926C20078007A7F64 /* Category+CoursesCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F9826C20078007A7F64 /* Category+CoursesCount.swift */; };
 		7D842F9B26C20CA0007A7F64 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F9A26C20CA0007A7F64 /* BackButton.swift */; };
 		7D842F9E26C21A32007A7F64 /* SignityVisionJKT.mlkitmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F9D26C21A32007A7F64 /* SignityVisionJKT.mlkitmodel */; };
 		7D842FA026C21F31007A7F64 /* CoreMLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F9F26C21F31007A7F64 /* CoreMLHelper.swift */; };
@@ -136,14 +137,15 @@
 		7D2A89D826C570B2009B16A5 /* SignitySubhead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignitySubhead.swift; sourceTree = "<group>"; };
 		7D2A89DA26C570CE009B16A5 /* SignityFootnoteBold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityFootnoteBold.swift; sourceTree = "<group>"; };
 		7D2A89DC26C570E3009B16A5 /* SignityFootnote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityFootnote.swift; sourceTree = "<group>"; };
+		7D2A89DF26C5F729009B16A5 /* ModuleGroup+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModuleGroup+Helper.swift"; sourceTree = "<group>"; };
+		7D2A89E126C5F7C9009B16A5 /* Category+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+Helper.swift"; sourceTree = "<group>"; };
+		7D2A89E326C5F9FB009B16A5 /* Course+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+Helper.swift"; sourceTree = "<group>"; };
 		7D842F8726C166D9007A7F64 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		7D842F8926C16CA7007A7F64 /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
 		7D842F8B26C172CE007A7F64 /* ModuleGroupStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleGroupStorage.swift; sourceTree = "<group>"; };
 		7D842F8D26C17391007A7F64 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		7D842F8F26C176D6007A7F64 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
-		7D842F9226C1F699007A7F64 /* Category+TypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+TypeEnum.swift"; sourceTree = "<group>"; };
 		7D842F9426C1F6F7007A7F64 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
-		7D842F9826C20078007A7F64 /* Category+CoursesCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoursesCount.swift"; sourceTree = "<group>"; };
 		7D842F9A26C20CA0007A7F64 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		7D842F9D26C21A32007A7F64 /* SignityVisionJKT.mlkitmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SignityVisionJKT.mlkitmodel; sourceTree = "<group>"; };
 		7D842F9F26C21F31007A7F64 /* CoreMLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLHelper.swift; sourceTree = "<group>"; };
@@ -527,8 +529,6 @@
 			children = (
 				67D4914CC166E8C44F03F1D6 /* CourseModel.swift */,
 				7D842F8B26C172CE007A7F64 /* ModuleGroupStorage.swift */,
-				7D842F9226C1F699007A7F64 /* Category+TypeEnum.swift */,
-				7D842F9826C20078007A7F64 /* Category+CoursesCount.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -608,8 +608,11 @@
 		FBC6D37FF3248E300B6BAC2F /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				7D2A89DF26C5F729009B16A5 /* ModuleGroup+Helper.swift */,
 				7D842F8D26C17391007A7F64 /* PersistenceController.swift */,
 				7D842F9F26C21F31007A7F64 /* CoreMLHelper.swift */,
+				7D2A89E126C5F7C9009B16A5 /* Category+Helper.swift */,
+				7D2A89E326C5F9FB009B16A5 /* Course+Helper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -756,7 +759,6 @@
 				7D842F8826C166D9007A7F64 /* SettingViewModel.swift in Sources */,
 				7D842F9B26C20CA0007A7F64 /* BackButton.swift in Sources */,
 				7D842FA026C21F31007A7F64 /* CoreMLHelper.swift in Sources */,
-				7D842F9926C20078007A7F64 /* Category+CoursesCount.swift in Sources */,
 				099D7285C59A70202562D737 /* AccomplishmentTiru.swift in Sources */,
 				7D2A89C926C567E8009B16A5 /* SignityLargeTitle.swift in Sources */,
 				AA582D9468B35846D6B685FC /* AppDelegate.swift in Sources */,
@@ -771,6 +773,7 @@
 				7D2A89D126C56DC7009B16A5 /* SignityHeadline.swift in Sources */,
 				7D2A89C526C4E951009B16A5 /* SignityButtonOutline.swift in Sources */,
 				FE5220F21863C2B7F851F3AC /* CharacterCell.swift in Sources */,
+				7D2A89E226C5F7C9009B16A5 /* Category+Helper.swift in Sources */,
 				2DE307E1D08040D56ED29EE3 /* ChatBubble.swift in Sources */,
 				7D2A89D526C57061009B16A5 /* SignityBody.swift in Sources */,
 				9FED50ED7D44182DFC591429 /* ChatTriangleShape.swift in Sources */,
@@ -786,7 +789,6 @@
 				7D842F9026C176D6007A7F64 /* OnboardingViewModel.swift in Sources */,
 				7F4E21AB2E5892E60A117BB4 /* Hand.swift in Sources */,
 				7D2A89D926C570B2009B16A5 /* SignitySubhead.swift in Sources */,
-				7D842F9326C1F699007A7F64 /* Category+TypeEnum.swift in Sources */,
 				A0C9CC3E8AD3E4D3C9F8D885 /* HandGuide.swift in Sources */,
 				8127349C1209CDFEC89CD65F /* HandLandmarks.swift in Sources */,
 				009F2099106A103EA5013B4C /* HandLines.swift in Sources */,
@@ -803,6 +805,7 @@
 				986CD9B189F6B757A1B96189 /* PhraseCell.swift in Sources */,
 				7D842F8E26C17391007A7F64 /* PersistenceController.swift in Sources */,
 				7D842FB126C2C0EF007A7F64 /* RegionSelectionButton.swift in Sources */,
+				7D2A89E426C5F9FB009B16A5 /* Course+Helper.swift in Sources */,
 				496A42468A95303ECA86D483 /* PhraseButton.swift in Sources */,
 				524825ED58397E1E94A10618 /* PlaybackButton.swift in Sources */,
 				04C0819596DA94F45A6DEAB8 /* PracticeView.swift in Sources */,
@@ -817,6 +820,7 @@
 				3F426FA2579AA91947449ED2 /* SettingsView.swift in Sources */,
 				388B23B90718820A73A0951C /* Signity.xcdatamodeld in Sources */,
 				D7A6003F26CAD5C08AF09AE4 /* SimulationView.swift in Sources */,
+				7D2A89E026C5F729009B16A5 /* ModuleGroup+Helper.swift in Sources */,
 				156BDFD68BD5D417A9A3C1B1 /* SimulationViewModel.swift in Sources */,
 				C8CDC39F39C55B8C009FC006 /* TutorialPhraseView.swift in Sources */,
 				7D842F9E26C21A32007A7F64 /* SignityVisionJKT.mlkitmodel in Sources */,

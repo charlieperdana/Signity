@@ -14,7 +14,6 @@ struct Region {
 
 struct ModuleCategory {
     var name: String
-    var level: Int
     var modules: [Module]
 }
 
@@ -22,6 +21,7 @@ struct Module {
     var code: String
     var title: String
     var type: String
+    var level: Int16
     var submodules: [SubModules]
 }
 
@@ -36,12 +36,12 @@ struct AvailableCourses {
             categories: [
                 ModuleCategory(
                     name: "Fundamental",
-                    level: 0,
                     modules: [
                         Module(
                             code: "FUN001",
                             title: "Abjad",
                             type: "Kata Dasar",
+                            level: 0,
                             submodules: [
                                 SubModules(name: "A"), SubModules(name: "B"),
                                 SubModules(name: "C"), SubModules(name: "D"),
@@ -52,6 +52,7 @@ struct AvailableCourses {
                             code: "FUN002",
                             title: "Angka",
                             type: "Kata Dasar",
+                            level: 0,
                             submodules: [
                                 SubModules(name: "0"), SubModules(name: "1"),
                                 SubModules(name: "2"), SubModules(name: "3"),
@@ -62,12 +63,12 @@ struct AvailableCourses {
                 ),
                 ModuleCategory(
                     name: "Menyapa",
-                    level: 0,
                     modules: [
                         Module(
                             code: "MEN001",
                             title: "Sapaan",
                             type: "Kata Dasar",
+                            level: 0,
                             submodules: [
                                 SubModules(name: "Selamat siang"),
                                 SubModules(name: "Selamat siang"),
@@ -79,6 +80,7 @@ struct AvailableCourses {
                             code: "MEN002",
                             title: "Menanyakan Kabar",
                             type: "Situasi",
+                            level: 0,
                             submodules: [
                                 SubModules(name: "Halo, selamat siang"),
                                 SubModules(name: "Selamat Siang"),
@@ -90,12 +92,12 @@ struct AvailableCourses {
                 ),
                 ModuleCategory(
                     name: "Perkenalan",
-                    level: 1,
                     modules: [
                         Module(
                             code: "PER001",
                             title: "Nama",
                             type: "Kata Dasar",
+                            level: 1,
                             submodules: [
                                 
                             ]
@@ -104,6 +106,7 @@ struct AvailableCourses {
                             code: "PER002",
                             title: "Kota",
                             type: "Kata Dasar",
+                            level: 2,
                             submodules: [
 
                             ]
@@ -112,6 +115,7 @@ struct AvailableCourses {
                             code: "PER003",
                             title: "Bertemu Teman Baru",
                             type: "Situasi",
+                            level: 2,
                             submodules: [
                                 
                             ]
@@ -126,12 +130,12 @@ struct AvailableCourses {
             categories: [
                 ModuleCategory(
                     name: "Fundamental",
-                    level: 0,
                     modules: [
                         Module(
                             code: "FUN001",
                             title: "Abjad",
                             type: "Kata Dasar",
+                            level: 0,
                             submodules: [
                                 SubModules(name: "A"), SubModules(name: "B"),
                                 SubModules(name: "C"), SubModules(name: "D"),
@@ -142,6 +146,7 @@ struct AvailableCourses {
                             code: "FUN002",
                             title: "Angka",
                             type: "Kata Dasar",
+                            level: 0,
                             submodules: [
                                 SubModules(name: "0"), SubModules(name: "1"),
                                 SubModules(name: "2"), SubModules(name: "3"),
