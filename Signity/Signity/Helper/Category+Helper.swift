@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Type: String {
+enum CategoryType: String {
     case basic = "Kata Dasar"
     case situation = "Situasi"
 }
@@ -73,8 +73,12 @@ extension Category {
         }
     }
     
-    var typeEnum: Type {
-        Type(rawValue: self.type) ?? .basic
+    var typeEnum: CategoryType {
+        CategoryType(rawValue: self.type) ?? .basic
+    }
+    
+    var isCharacter: Bool {
+        courses[0].name.count == 1
     }
     
     var courseCount: Int {

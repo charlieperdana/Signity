@@ -21,21 +21,7 @@ struct CategoryView: View {
     var body: some View {
         VStack {
             ScrollView(.vertical, showsIndicators: false) {
-                if category.typeEnum == .basic {
-                    GridView(numOfColumn: 5, courses: category.courses)
-                } else {
-                    VStack {
-                        ForEach(category.courses.indices, id: \.self) { i in
-                            NavigationLink(
-                                destination: TutorialPhraseView(
-                                    category: category,
-                                    chosenWord: category.courses[i].name)) {
-                                    
-                                    PhraseCell(asker: i % 2 == 0, text: category.courses[i].name)
-                            }
-                        }
-                    }
-                }
+                GridView(category: category)
             }
             
             if category.typeEnum == .situation {

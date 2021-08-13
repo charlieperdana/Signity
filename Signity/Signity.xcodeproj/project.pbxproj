@@ -52,6 +52,7 @@
 		7D2A89E026C5F729009B16A5 /* ModuleGroup+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A89DF26C5F729009B16A5 /* ModuleGroup+Helper.swift */; };
 		7D2A89E226C5F7C9009B16A5 /* Category+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A89E126C5F7C9009B16A5 /* Category+Helper.swift */; };
 		7D2A89E426C5F9FB009B16A5 /* Course+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A89E326C5F9FB009B16A5 /* Course+Helper.swift */; };
+		7D2A89E926C64EE6009B16A5 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A89E826C64EE6009B16A5 /* CourseCell.swift */; };
 		7D842F8826C166D9007A7F64 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F8726C166D9007A7F64 /* SettingViewModel.swift */; };
 		7D842F8A26C16CA7007A7F64 /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F8926C16CA7007A7F64 /* CourseViewModel.swift */; };
 		7D842F8C26C172CE007A7F64 /* ModuleGroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F8B26C172CE007A7F64 /* ModuleGroupStorage.swift */; };
@@ -72,7 +73,6 @@
 		851C5E38307AD135B7FD9397 /* ComparePhraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FFF2DD3D1AE814A9C6EE77 /* ComparePhraseView.swift */; };
 		8607050E3280A0DC11FE7B0F /* dolphin.json in Resources */ = {isa = PBXBuildFile; fileRef = 862F352F3B100B1E86D29A27 /* dolphin.json */; };
 		943739E86AEF32D30B9D9D13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F10AB9ED99D0899092C811 /* LaunchScreen.storyboard */; };
-		986CD9B189F6B757A1B96189 /* PhraseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6327FAFD01F9CBA5AD2A2B74 /* PhraseCell.swift */; };
 		9AC993F189A7B4D1CC60019C /* OnboardingSimulasi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1946E712BBE28EF1AE9E39 /* OnboardingSimulasi.swift */; };
 		9FED50ED7D44182DFC591429 /* ChatTriangleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F0F68D1A393723854BF024 /* ChatTriangleShape.swift */; };
 		A0C9CC3E8AD3E4D3C9F8D885 /* HandGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038060D677E653F93F8D914 /* HandGuide.swift */; };
@@ -92,7 +92,6 @@
 		EFE5E06B9AA1CED7A1ED0DB6 /* HintButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A658F1F3904143390E2BA0 /* HintButton.swift */; };
 		F2F8A5F45A805C2DCE1E1396 /* ProgressBarCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07268FEBCC090892FDDFDB /* ProgressBarCourse.swift */; };
 		FC65BE15315AB48DDB1684DF /* HorizontalModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0F6AB7A446A3B393E745F /* HorizontalModules.swift */; };
-		FE5220F21863C2B7F851F3AC /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B18DC5CF32CD6EE3B2B19E2 /* CharacterCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,10 +114,8 @@
 		5952026596553C5C9494F027 /* AccomplishmentSimulasi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccomplishmentSimulasi.swift; sourceTree = "<group>"; };
 		61571D475D68A328D52A1734 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		617AE4E0ADFD1EB1B30CEEA9 /* person.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = person.json; sourceTree = "<group>"; };
-		6327FAFD01F9CBA5AD2A2B74 /* PhraseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseCell.swift; sourceTree = "<group>"; };
 		6666808466A209E8F198A6D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67D4914CC166E8C44F03F1D6 /* CourseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseModel.swift; sourceTree = "<group>"; };
-		6B18DC5CF32CD6EE3B2B19E2 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		6B4A96650914334E40940ED1 /* AccomplishmentTiru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccomplishmentTiru.swift; sourceTree = "<group>"; };
 		74C32BE981B5B58D7DF608A1 /* HandLandmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandLandmarks.swift; sourceTree = "<group>"; };
 		76DC06823247EC7547D98226 /* CameraNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraNavigationBar.swift; sourceTree = "<group>"; };
@@ -139,6 +136,7 @@
 		7D2A89DF26C5F729009B16A5 /* ModuleGroup+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModuleGroup+Helper.swift"; sourceTree = "<group>"; };
 		7D2A89E126C5F7C9009B16A5 /* Category+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+Helper.swift"; sourceTree = "<group>"; };
 		7D2A89E326C5F9FB009B16A5 /* Course+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+Helper.swift"; sourceTree = "<group>"; };
+		7D2A89E826C64EE6009B16A5 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		7D842F8726C166D9007A7F64 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		7D842F8926C16CA7007A7F64 /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
 		7D842F8B26C172CE007A7F64 /* ModuleGroupStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleGroupStorage.swift; sourceTree = "<group>"; };
@@ -343,10 +341,9 @@
 		64D84C22B73422DC04CEEDE3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6B18DC5CF32CD6EE3B2B19E2 /* CharacterCell.swift */,
-				6327FAFD01F9CBA5AD2A2B74 /* PhraseCell.swift */,
 				7D842F9426C1F6F7007A7F64 /* CategoryView.swift */,
 				7D2A89BC26C3FF97009B16A5 /* GridView.swift */,
+				7D2A89E826C64EE6009B16A5 /* CourseCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -767,6 +764,7 @@
 				099D7285C59A70202562D737 /* AccomplishmentTiru.swift in Sources */,
 				7D2A89C926C567E8009B16A5 /* SignityLargeTitle.swift in Sources */,
 				AA582D9468B35846D6B685FC /* AppDelegate.swift in Sources */,
+				7D2A89E926C64EE6009B16A5 /* CourseCell.swift in Sources */,
 				78608EBDC9EEB6E96F27EE7F /* CameraNavigationBar.swift in Sources */,
 				7D842FAA26C23FDA007A7F64 /* SignityVisionMotionJKT.mlkitmodel in Sources */,
 				DB4207052D8FD93F264D787B /* CameraRepresentable.swift in Sources */,
@@ -776,7 +774,6 @@
 				AD4ACC98BE902A96BFDA7EEC /* CardViewCourse.swift in Sources */,
 				7D2A89D126C56DC7009B16A5 /* SignityHeadline.swift in Sources */,
 				7D2A89C526C4E951009B16A5 /* SignityButtonOutline.swift in Sources */,
-				FE5220F21863C2B7F851F3AC /* CharacterCell.swift in Sources */,
 				7D2A89E226C5F7C9009B16A5 /* Category+Helper.swift in Sources */,
 				2DE307E1D08040D56ED29EE3 /* ChatBubble.swift in Sources */,
 				7D2A89D526C57061009B16A5 /* SignityBody.swift in Sources */,
@@ -806,7 +803,6 @@
 				60C13B7A61BF3FDD49E56CD3 /* OnboardingRegion.swift in Sources */,
 				7D842F8A26C16CA7007A7F64 /* CourseViewModel.swift in Sources */,
 				9AC993F189A7B4D1CC60019C /* OnboardingSimulasi.swift in Sources */,
-				986CD9B189F6B757A1B96189 /* PhraseCell.swift in Sources */,
 				7D842F8E26C17391007A7F64 /* PersistenceController.swift in Sources */,
 				7D842FB126C2C0EF007A7F64 /* RegionSelectionButton.swift in Sources */,
 				7D2A89E426C5F9FB009B16A5 /* Course+Helper.swift in Sources */,

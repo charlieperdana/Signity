@@ -7,16 +7,20 @@
 
 import SwiftUI
 
-class ViewModel: ObservableObject {
-    var availableRegions = ["Jakarta", "Denpasar", "Lainnya"]
-    @Published var currentChosen: RegionType = .jakarta
-}
-
 struct ContentView: View {
-    @StateObject var viewModel = ViewModel()
+    
+    var items: [GridItem] = Array(repeating: .init(.flexible(minimum: 0, maximum: .infinity)), count: 5)
     
     var body: some View {
-        Text("Hello World")
+        LazyVGrid(columns: items, alignment: .center) {
+            ForEach(0..<5) {i in
+                ZStack {
+                    RoundedRectangle(cornerRadius: 13)
+                        .foregroundColor(Color("MainPurple"))
+                    Text(String(i))
+                }
+            }
+        }
     }
 }
 

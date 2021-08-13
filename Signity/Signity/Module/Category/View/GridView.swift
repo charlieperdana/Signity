@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct GridView: View {
-    var numOfColumn: Int
-    var courses: [Course]
+    var category: Category
+    
+    var numOfColumn: Int {
+        category.isCharacter && category.typeEnum == .basic ? 5 : 1
+    }
 
     var items: [GridItem] {
         Array(repeating: .init(.flexible(minimum: 0, maximum: .infinity)), count: numOfColumn)
@@ -17,9 +20,9 @@ struct GridView: View {
     
     var body: some View {
         LazyVGrid(columns: items, alignment: .center, spacing: 15) {
-            ForEach(courses) { course in
-                NavigationLink(destination: TutorialPhraseView(category: course.category, chosenWord: course.name)) {
-                    CharacterCell(text: course.name)
+            ForEach(category.courses.indices) { i in
+                NavigationLink(destination: TutorialPhraseView(category: category, chosenWord: category.courses[i].name)) {
+                    CourseCell(course: category.courses[i], isEven: i % 2 == 0)
                 }
             }
         }
@@ -28,6 +31,6 @@ struct GridView: View {
 
 struct MultipleColumnView_Previews: PreviewProvider {
     static var previews: some View {
-        return GridView(numOfColumn: 5, courses: [])
+        return GridView(category: Category())
     }
 }
