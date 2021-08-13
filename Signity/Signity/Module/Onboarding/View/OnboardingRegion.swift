@@ -12,6 +12,7 @@ struct OnboardingRegion: View {
     @State var showCourse = false
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @EnvironmentObject var router: ViewRouter
     
     var body: some View {
         VStack {
@@ -43,7 +44,7 @@ struct OnboardingRegion: View {
                 Spacer()
                 SignityButton(text: "Selesai") {
                     viewModel.completeOnboardingSetup()
-                    self.showCourse = true
+                    router.currentPage = .course
                 }
             }
             //MARK: - NAVIGATION LINKS

@@ -10,52 +10,53 @@ import SwiftUI
 struct AccomplishmentTiru: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-    @State var showCoursePage = false
+    @State var showSimulation = false
+    
+    var category: Category
     
     var body: some View {
-        NavigationView{
+        ZStack {
+            Color("MainPurple")
+                .ignoresSafeArea(.all)
             
-            ZStack{
-                
-                Color(#colorLiteral(red: 0.2533461452, green: 0.3034159541, blue: 0.8465253711, alpha: 1)).ignoresSafeArea(.all)
-                
-                VStack{
-                    
-                    Text("Latihan Tiru Selesai!")
-                        .modifier(SignityTitle(color: .white))
-                    
-                    Spacer()
-                    
-                    Image("LatihanTiru_Badge")
-                        .offset(y:70)
-                    
-                    Spacer()
-                    
-                    Image("bottomCircle")
-                        .offset(y:148)
-                    
-                    Spacer()
-                    
-                    SignityButton(text: "Kembali ke pelajaran") {
-                        self.showCoursePage = true
-                    }
-                    
-                    NavigationLink(destination: CoursePage(), isActive: $showCoursePage) {
-                        EmptyView()
-                    }
+            VStack{
+                BackButton(color: .white) {
+                    self.presentationMode.wrappedValue.dismiss()
                 }
+                .padding()
                 
+                Text("Latihan Tiru Selesai!")
+                    .modifier(SignityTitle(color: .white))
+                
+                Spacer()
+                
+                Image("LatihanTiru_Badge")
+                    .offset(y:70)
+                
+                Spacer()
+                
+                Image("bottomCircle")
+                    .offset(y: 200)
+                
+                Spacer()
+                
+                SignityButton(text: "Mulai Latihan Simulasi") {
+                    self.showSimulation = true
+                }
+                .padding()
+                
+                NavigationLink(destination: OnboardingSimulasi(category: category), isActive: $showSimulation) {
+                    EmptyView()
+                }
             }
-            .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading: BackButton() {
-                self.presentationMode.wrappedValue.dismiss()
-            })
+            .padding()
+            .navigationBarHidden(true)
         }
     }
 }
 
 struct AccomplishmentTiru_Previews: PreviewProvider {
     static var previews: some View {
-        AccomplishmentTiru()
+        AccomplishmentTiru(category: Category())
     }
 }

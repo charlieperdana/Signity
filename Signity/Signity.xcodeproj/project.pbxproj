@@ -54,6 +54,9 @@
 		7D2A89E426C5F9FB009B16A5 /* Course+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A89E326C5F9FB009B16A5 /* Course+Helper.swift */; };
 		7D2A89E926C64EE6009B16A5 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A89E826C64EE6009B16A5 /* CourseCell.swift */; };
 		7D2A89ED26C6B4EA009B16A5 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D2A89EC26C6B4EA009B16A5 /* Colors.xcassets */; };
+		7D2A89EF26C6B763009B16A5 /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A89EE26C6B763009B16A5 /* NavigationHelper.swift */; };
+		7D2A89F126C6C4B2009B16A5 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A89F026C6C4B2009B16A5 /* ViewRouter.swift */; };
+		7D2A89F326C6C4EC009B16A5 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A89F226C6C4EC009B16A5 /* RootView.swift */; };
 		7D842F8826C166D9007A7F64 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F8726C166D9007A7F64 /* SettingViewModel.swift */; };
 		7D842F8A26C16CA7007A7F64 /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F8926C16CA7007A7F64 /* CourseViewModel.swift */; };
 		7D842F8C26C172CE007A7F64 /* ModuleGroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F8B26C172CE007A7F64 /* ModuleGroupStorage.swift */; };
@@ -85,7 +88,6 @@
 		C4FD1649159EA4B236539F48 /* CameraViewController+DrawLandmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41022655D8306F102604B79C /* CameraViewController+DrawLandmark.swift */; };
 		C8CDC39F39C55B8C009FC006 /* TutorialPhraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9E77E37D87A98CE8298F0 /* TutorialPhraseView.swift */; };
 		CCAB2B0F632FF0C5AE04FD1A /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C6A2C6E9383B8717A12A3E /* TutorialViewModel.swift */; };
-		D00C409638D13A7EDA5DDCD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7B3399D5BCEF5CDBDB6DA1 /* ContentView.swift */; };
 		D7A6003F26CAD5C08AF09AE4 /* SimulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBABD56B2392B76F8D92AD37 /* SimulationView.swift */; };
 		DB4207052D8FD93F264D787B /* CameraRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96FBD18996C823EE0C1B021 /* CameraRepresentable.swift */; };
 		E6BB61039551A3FA7EACDA5A /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD188080E4DE4461D42AC80B /* CollectionView.swift */; };
@@ -109,7 +111,6 @@
 		42C6A2C6E9383B8717A12A3E /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewModel.swift; sourceTree = "<group>"; };
 		46A0276B4BC014FE02C84F0E /* blender.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blender.json; sourceTree = "<group>"; };
 		4890FC63A94D6EFE0F660E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		4F7B3399D5BCEF5CDBDB6DA1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		547B85768E0463A85FF0B252 /* SignityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityUITests.swift; sourceTree = "<group>"; };
 		553E439926C13AD700ED706E /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		5952026596553C5C9494F027 /* AccomplishmentSimulasi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccomplishmentSimulasi.swift; sourceTree = "<group>"; };
@@ -139,6 +140,9 @@
 		7D2A89E326C5F9FB009B16A5 /* Course+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+Helper.swift"; sourceTree = "<group>"; };
 		7D2A89E826C64EE6009B16A5 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		7D2A89EC26C6B4EA009B16A5 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		7D2A89EE26C6B763009B16A5 /* NavigationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHelper.swift; sourceTree = "<group>"; };
+		7D2A89F026C6C4B2009B16A5 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		7D2A89F226C6C4EC009B16A5 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		7D842F8726C166D9007A7F64 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		7D842F8926C16CA7007A7F64 /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
 		7D842F8B26C172CE007A7F64 /* ModuleGroupStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleGroupStorage.swift; sourceTree = "<group>"; };
@@ -431,6 +435,7 @@
 				A53AD3AC945FB39BCE9894F5 /* Practice */,
 				B54BDE346464675A4C4FFD2C /* Settings */,
 				ED152C325C6ABE4E24C8566C /* Tutorial */,
+				7D2A89F226C6C4EC009B16A5 /* RootView.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -617,6 +622,8 @@
 				7D842F9F26C21F31007A7F64 /* CoreMLHelper.swift */,
 				7D2A89E126C5F7C9009B16A5 /* Category+Helper.swift */,
 				7D2A89E326C5F9FB009B16A5 /* Course+Helper.swift */,
+				7D2A89EE26C6B763009B16A5 /* NavigationHelper.swift */,
+				7D2A89F026C6C4B2009B16A5 /* ViewRouter.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -626,7 +633,6 @@
 			children = (
 				862F352F3B100B1E86D29A27 /* dolphin.json */,
 				4890FC63A94D6EFE0F660E19 /* Info.plist */,
-				4F7B3399D5BCEF5CDBDB6DA1 /* ContentView.swift */,
 				C07A0C50D46C78B7D34FDB24 /* Assets.xcassets */,
 				7D2A89EC26C6B4EA009B16A5 /* Colors.xcassets */,
 				9B6D4BF9EA5222795581EC5A /* Application */,
@@ -772,6 +778,7 @@
 				78608EBDC9EEB6E96F27EE7F /* CameraNavigationBar.swift in Sources */,
 				7D842FAA26C23FDA007A7F64 /* SignityVisionMotionJKT.mlkitmodel in Sources */,
 				DB4207052D8FD93F264D787B /* CameraRepresentable.swift in Sources */,
+				7D2A89EF26C6B763009B16A5 /* NavigationHelper.swift in Sources */,
 				7D842F9526C1F6F7007A7F64 /* CategoryView.swift in Sources */,
 				C4FD1649159EA4B236539F48 /* CameraViewController+DrawLandmark.swift in Sources */,
 				1FB5593379EFEEBDE7821C35 /* CameraViewController.swift in Sources */,
@@ -787,7 +794,6 @@
 				851C5E38307AD135B7FD9397 /* ComparePhraseView.swift in Sources */,
 				553E439A26C13AD700ED706E /* UserProfile.swift in Sources */,
 				7D2A89D726C57074009B16A5 /* SignitySubheadBold.swift in Sources */,
-				D00C409638D13A7EDA5DDCD5 /* ContentView.swift in Sources */,
 				321BCF0933B9CC69F646AE75 /* CourseModel.swift in Sources */,
 				7D2A89CD26C56C56009B16A5 /* SignityTitle.swift in Sources */,
 				61E538B9C9C7313D2974E558 /* CoursePage.swift in Sources */,
@@ -797,6 +803,7 @@
 				A0C9CC3E8AD3E4D3C9F8D885 /* HandGuide.swift in Sources */,
 				8127349C1209CDFEC89CD65F /* HandLandmarks.swift in Sources */,
 				009F2099106A103EA5013B4C /* HandLines.swift in Sources */,
+				7D2A89F326C6C4EC009B16A5 /* RootView.swift in Sources */,
 				EFE5E06B9AA1CED7A1ED0DB6 /* HintButton.swift in Sources */,
 				7D2A89CB26C56AF7009B16A5 /* SignityTextColor.swift in Sources */,
 				FC65BE15315AB48DDB1684DF /* HorizontalModules.swift in Sources */,
@@ -829,6 +836,7 @@
 				C8CDC39F39C55B8C009FC006 /* TutorialPhraseView.swift in Sources */,
 				7D842F9E26C21A32007A7F64 /* SignityVisionJKT.mlkitmodel in Sources */,
 				CCAB2B0F632FF0C5AE04FD1A /* TutorialViewModel.swift in Sources */,
+				7D2A89F126C6C4B2009B16A5 /* ViewRouter.swift in Sources */,
 				18981A457D6D6F35F7F8D404 /* VideoView.swift in Sources */,
 				1A3CC2C0ED8B45467608EF24 /* YourTurnView.swift in Sources */,
 			);

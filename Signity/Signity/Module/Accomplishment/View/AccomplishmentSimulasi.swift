@@ -15,55 +15,41 @@ struct AccomplishmentSimulasi: View {
     
     var body: some View {
         ZStack{
-            Color(#colorLiteral(red: 0.2533461452, green: 0.3034159541, blue: 0.8465253711, alpha: 1)).ignoresSafeArea(.all)
+            Color("MainPurple")
+                .ignoresSafeArea(.all)
             
             VStack{
-                HStack {
-                    Button(action: {
-                        self.presentationMode.wrappedValue.dismiss()
-                    }) {
-                        HStack {
-                            Image("backBtn")
-                                .aspectRatio(contentMode: .fit)
-                                .foregroundColor(.white)
-                            
-                        }
-                    }
-                    Spacer()
+                BackButton(color: .white) {
+                    self.presentationMode.wrappedValue.dismiss()
                 }
-                .padding(.top, 75)
+                .padding()
                 
-                
-                Text("Simulasi Pelajaran Selesai!")
+                Text("Simulasi Selesai!")
                     .modifier(SignityTitle(color: .white))
                 
                 Spacer()
                 
                 Image("LatihanSimulasi_Badge")
-                    .offset(y:48)
+                    .offset(y:78)
                 
                 Spacer()
                 
                 
                 Image("bottomCircle")
-                    .offset(y:148)
+                    .offset(y: 200)
                 
                 
                 Spacer()
                 
                 
                 SignityButton(text: "Kembali ke pelajaran") {
-                    self.showCoursePage = true
+                    NavigationUtil.popToRootView()
                 }
+                .padding()
                 
-                NavigationLink(destination: CoursePage(), isActive: $showCoursePage) {
-                    EmptyView()
-                }
             }
-            .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading: BackButton() {
-                self.presentationMode.wrappedValue.dismiss()
-            })
+            .padding()
+            .navigationBarHidden(true)
         }
     }
 }

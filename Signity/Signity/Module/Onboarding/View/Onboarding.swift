@@ -8,51 +8,49 @@
 import SwiftUI
 
 struct Onboarding: View {
+    @EnvironmentObject var router: ViewRouter
     @StateObject var viewModel = OnboardingViewModel()
     @State var showNextOnboard = false
     @State var showCourse = false
     
     var body: some View {
-        NavigationView {
-            VStack(alignment: .center)  {
-                Spacer()
-                
-                Text("Selamat Datang!")
-                    .modifier(SignitySubtitle(color: .text))
-                
-                Image("onboarding1")
-                
-                Text("Apakah kamu pernah belajar BISINDO sebelumnya?")
-                    .modifier(SignityBody(color: .text))
-                    .offset(y: 10)
-                
-                VStack(alignment:.leading, spacing: 15) {
-                    SignityButton(text: "Belum, saya masih pemula") {
-                        viewModel.completeOnboardingSetup()
-                        self.showCourse = true
-                    }
-                    SignityButtonOutline(text: "Pernah, saya mengerti BISINDO") {
-                        self.showNextOnboard = true
-                    }
+        VStack(alignment: .center)  {
+            Spacer()
+            
+            Text("Selamat Datang!")
+                .modifier(SignitySubtitle(color: .text))
+            
+            Image("onboarding1")
+            
+            Text("Apakah kamu pernah belajar BISINDO sebelumnya?")
+                .modifier(SignityBody(color: .text))
+                .offset(y: 10)
+            
+            VStack(alignment:.leading, spacing: 15) {
+                SignityButton(text: "Belum, saya masih pemula") {
+                    viewModel.completeOnboardingSetup()
+                    self.showCourse = true
                 }
-                .padding(.vertical)
-                .offset(y: 20)
-                
-                Spacer()
-                
-                //MARK: - NAVIGATION LINKS
-                NavigationLink(destination: OnboardingRegion(viewModel: viewModel), isActive: $showNextOnboard) {}
-                NavigationLink(destination: CoursePage(), isActive: $showCourse) {
-                    EmptyView()
+                SignityButtonOutline(text: "Pernah, saya mengerti BISINDO") {
+                    self.showNextOnboard = true
                 }
             }
-            .padding(.all)
-            .padding(.bottom, 150)
+            .padding(.vertical)
+            .offset(y: 20)
             
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarHidden(true)
+            Spacer()
+            
+            //MARK: - NAVIGATION LINKS
+            NavigationLink(destination: OnboardingRegion(viewModel: viewModel).environmentObject(router), isActive: $showNextOnboard) {}
+            NavigationLink(destination: CoursePage(), isActive: $showCourse) {
+                EmptyView()
+            }
         }
-        .accentColor(Color("NavigationItem"))
+        .padding(.all)
+        .padding(.bottom, 150)
+        
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarHidden(true)
         
         .onAppear {
             self.showCourse = UserDefaults.standard.didCompleteSetup

@@ -28,7 +28,7 @@ struct OnboardingSimulasi: View {
             Spacer()
             
             Text("Berlatih tanya jawab seperti percakapan langsung")
-                .modifier(SignityHeadlineThin(color: .gray1))
+                .modifier(SignityHeadlineThin(color: .text))
                 .padding(.horizontal,50)
                 .offset(y:-60)
             
@@ -42,7 +42,8 @@ struct OnboardingSimulasi: View {
                 destination: SimulationView(category: category),
                 isActive: $showSimulation) {}
         }
-        .navigationBarBackButtonHidden(true)
+        .padding()
+        .navigationBarHidden(true)
     }
 }
 

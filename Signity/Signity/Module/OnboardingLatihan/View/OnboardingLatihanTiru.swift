@@ -30,7 +30,7 @@ struct OnboardingLatihanTiru: View {
             Spacer()
             
             Text("Latihan kalimat BISINDO dengan menirukan video peragaan")
-                .modifier(SignityHeadlineThin(color: .gray1))
+                .modifier(SignityHeadlineThin(color: .text))
                 .padding(.horizontal, 50)
                 .offset(y: -52)
             
