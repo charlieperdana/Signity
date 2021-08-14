@@ -23,7 +23,7 @@ struct HorizontalModules: View {
             HStack {
                 ForEach(category.courses, id: \.self) { course in
                     if let courseName = course.name {
-                        PhraseButton(practiceDone: course.completionState == 1, isSelected: courseName == currentSelected, isSentence: isSentence, phrase: courseName) {
+                        PhraseButton(practiceDone: course.completionState == 1, isSelected: courseName == currentSelected, isSentence: !category.isCharacter, phrase: courseName) {
                             self.currentSelected = courseName
                         }
                     }

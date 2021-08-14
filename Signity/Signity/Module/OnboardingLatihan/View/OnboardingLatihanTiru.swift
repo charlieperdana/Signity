@@ -45,7 +45,7 @@ struct OnboardingLatihanTiru: View {
             }
         }
         .padding()
-
+        .navigationBarHidden(true)
     }
 }
 
