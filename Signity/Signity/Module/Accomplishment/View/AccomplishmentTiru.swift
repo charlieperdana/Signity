@@ -14,6 +14,10 @@ struct AccomplishmentTiru: View {
     
     var category: Category
     
+    var text: String {
+        category.typeEnum == .situation ? "Mulai Latihan Simulasi" : "Kembali ke pelajaran"
+    }
+    
     var body: some View {
         ZStack {
             Color("MainPurple")
@@ -40,8 +44,12 @@ struct AccomplishmentTiru: View {
                 
                 Spacer()
                 
-                SignityButton(text: "Mulai Latihan Simulasi") {
-                    self.showSimulation = true
+                SignityButton(text: text) {
+                    if category.typeEnum == .situation {
+                        self.showSimulation = true
+                    } else {
+                        NavigationUtil.popToRootView()
+                    }
                 }
                 .padding()
                 
