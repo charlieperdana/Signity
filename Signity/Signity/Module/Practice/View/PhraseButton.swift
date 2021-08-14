@@ -29,7 +29,7 @@ struct PhraseButton: View {
         }
     }
     var backgroundColor: Color {
-        practiceDone ? Color("Green") : Color.white
+        practiceDone ? Color("FeedbackCorrect") : Color.white
     }
     var textColor: SignityTextColor {
         practiceDone ? .white : .darkPurple
