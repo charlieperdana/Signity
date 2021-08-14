@@ -8,35 +8,14 @@
 import CoreML
 
 class CoreMLHelper {
-    var jakartaSign: SignityVisionJKT
-    var jakartaMotionSign: SignityVisionMotionJKT
-    
-    init() {
-        jakartaSign = try! SignityVisionJKT(configuration: MLModelConfiguration())
-        jakartaMotionSign = try! SignityVisionMotionJKT(configuration: MLModelConfiguration())
-    }
-    
-    func predict(multiArray: MLMultiArray) -> String { // 1 x 60 x 126
+    func predict(multiArray: MLMultiArray) -> String {
         do {
-            let prediction = try jakartaSign.prediction(Landmarks: multiArray)
+            let model = try SignityVisionJKT()
+            let prediction = try model.prediction(Landmarks: multiArray)
             
             return prediction.classLabel
         } catch {
-            
+            fatalError("Fail to predict")
         }
-        
-        return ""
-    }
-    
-    func predictAction(multiArray: MLMultiArray) -> String {
-        do {
-            let prediction = try jakartaMotionSign.prediction(Landmarks: multiArray)
-            
-            return prediction.classLabel
-        } catch {
-            
-        }
-        
-        return ""
     }
 }

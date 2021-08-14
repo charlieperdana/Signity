@@ -62,7 +62,7 @@ class SimulationViewModel: ObservableObject {
                 }
             }
             
-            let predictedSign = predictor.predictAction(multiArray: landmarks)
+            let predictedSign = predictor.predict(multiArray: landmarks)
             self.evaluatePrediction(for: predictedSign)
         } catch {
             

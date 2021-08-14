@@ -34,7 +34,7 @@ class CourseViewModel: ObservableObject {
         
         moduleGroupsPublisher.sink { moduleGroups in
             self.allModules = moduleGroups
-            
+
             self.currentModules = moduleGroups.filter {
                 $0.regionName == self.currentRegion
             }

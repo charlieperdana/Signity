@@ -57,6 +57,7 @@
 		7D2A89EF26C6B763009B16A5 /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A89EE26C6B763009B16A5 /* NavigationHelper.swift */; };
 		7D2A89F126C6C4B2009B16A5 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A89F026C6C4B2009B16A5 /* ViewRouter.swift */; };
 		7D2A89F326C6C4EC009B16A5 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A89F226C6C4EC009B16A5 /* RootView.swift */; };
+		7D2A89F726C7CB03009B16A5 /* SignityVisionJKT.mlkitmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A89F626C7CB03009B16A5 /* SignityVisionJKT.mlkitmodel */; };
 		7D842F8826C166D9007A7F64 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F8726C166D9007A7F64 /* SettingViewModel.swift */; };
 		7D842F8A26C16CA7007A7F64 /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F8926C16CA7007A7F64 /* CourseViewModel.swift */; };
 		7D842F8C26C172CE007A7F64 /* ModuleGroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F8B26C172CE007A7F64 /* ModuleGroupStorage.swift */; };
@@ -64,13 +65,11 @@
 		7D842F9026C176D6007A7F64 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F8F26C176D6007A7F64 /* OnboardingViewModel.swift */; };
 		7D842F9526C1F6F7007A7F64 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F9426C1F6F7007A7F64 /* CategoryView.swift */; };
 		7D842F9B26C20CA0007A7F64 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F9A26C20CA0007A7F64 /* BackButton.swift */; };
-		7D842F9E26C21A32007A7F64 /* SignityVisionJKT.mlkitmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F9D26C21A32007A7F64 /* SignityVisionJKT.mlkitmodel */; };
 		7D842FA026C21F31007A7F64 /* CoreMLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842F9F26C21F31007A7F64 /* CoreMLHelper.swift */; };
 		7D842FA326C232B4007A7F64 /* terimaKasihJKT.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D842FA126C232B3007A7F64 /* terimaKasihJKT.json */; };
 		7D842FA426C232B4007A7F64 /* terimaKasihDPS.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D842FA226C232B4007A7F64 /* terimaKasihDPS.json */; };
 		7D842FA626C236DD007A7F64 /* Apa kabar?.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D842FA526C236DD007A7F64 /* Apa kabar?.json */; };
 		7D842FA826C23A9A007A7F64 /* Halo, selamat siang.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D842FA726C23A9A007A7F64 /* Halo, selamat siang.json */; };
-		7D842FAA26C23FDA007A7F64 /* SignityVisionMotionJKT.mlkitmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7D842FA926C23FDA007A7F64 /* SignityVisionMotionJKT.mlkitmodel */; };
 		7D842FB126C2C0EF007A7F64 /* RegionSelectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D842FB026C2C0EF007A7F64 /* RegionSelectionButton.swift */; };
 		7F4E21AB2E5892E60A117BB4 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937BBB895E982E23EDE14EB8 /* Hand.swift */; };
 		8127349C1209CDFEC89CD65F /* HandLandmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C32BE981B5B58D7DF608A1 /* HandLandmarks.swift */; };
@@ -143,6 +142,7 @@
 		7D2A89EE26C6B763009B16A5 /* NavigationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHelper.swift; sourceTree = "<group>"; };
 		7D2A89F026C6C4B2009B16A5 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		7D2A89F226C6C4EC009B16A5 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		7D2A89F626C7CB03009B16A5 /* SignityVisionJKT.mlkitmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SignityVisionJKT.mlkitmodel; sourceTree = "<group>"; };
 		7D842F8726C166D9007A7F64 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		7D842F8926C16CA7007A7F64 /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
 		7D842F8B26C172CE007A7F64 /* ModuleGroupStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleGroupStorage.swift; sourceTree = "<group>"; };
@@ -150,13 +150,11 @@
 		7D842F8F26C176D6007A7F64 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		7D842F9426C1F6F7007A7F64 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		7D842F9A26C20CA0007A7F64 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
-		7D842F9D26C21A32007A7F64 /* SignityVisionJKT.mlkitmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SignityVisionJKT.mlkitmodel; sourceTree = "<group>"; };
 		7D842F9F26C21F31007A7F64 /* CoreMLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLHelper.swift; sourceTree = "<group>"; };
 		7D842FA126C232B3007A7F64 /* terimaKasihJKT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = terimaKasihJKT.json; sourceTree = "<group>"; };
 		7D842FA226C232B4007A7F64 /* terimaKasihDPS.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = terimaKasihDPS.json; sourceTree = "<group>"; };
 		7D842FA526C236DD007A7F64 /* Apa kabar?.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Apa kabar?.json"; sourceTree = "<group>"; };
 		7D842FA726C23A9A007A7F64 /* Halo, selamat siang.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Halo, selamat siang.json"; sourceTree = "<group>"; };
-		7D842FA926C23FDA007A7F64 /* SignityVisionMotionJKT.mlkitmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SignityVisionMotionJKT.mlkitmodel; sourceTree = "<group>"; };
 		7D842FB026C2C0EF007A7F64 /* RegionSelectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSelectionButton.swift; sourceTree = "<group>"; };
 		81A658F1F3904143390E2BA0 /* HintButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintButton.swift; sourceTree = "<group>"; };
 		83878CD97BD140ABD104ECC6 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
@@ -398,8 +396,7 @@
 		7D842F9C26C219E2007A7F64 /* MLModels */ = {
 			isa = PBXGroup;
 			children = (
-				7D842FA926C23FDA007A7F64 /* SignityVisionMotionJKT.mlkitmodel */,
-				7D842F9D26C21A32007A7F64 /* SignityVisionJKT.mlkitmodel */,
+				7D2A89F626C7CB03009B16A5 /* SignityVisionJKT.mlkitmodel */,
 			);
 			path = MLModels;
 			sourceTree = "<group>";
@@ -776,7 +773,6 @@
 				AA582D9468B35846D6B685FC /* AppDelegate.swift in Sources */,
 				7D2A89E926C64EE6009B16A5 /* CourseCell.swift in Sources */,
 				78608EBDC9EEB6E96F27EE7F /* CameraNavigationBar.swift in Sources */,
-				7D842FAA26C23FDA007A7F64 /* SignityVisionMotionJKT.mlkitmodel in Sources */,
 				DB4207052D8FD93F264D787B /* CameraRepresentable.swift in Sources */,
 				7D2A89EF26C6B763009B16A5 /* NavigationHelper.swift in Sources */,
 				7D842F9526C1F6F7007A7F64 /* CategoryView.swift in Sources */,
@@ -797,6 +793,7 @@
 				321BCF0933B9CC69F646AE75 /* CourseModel.swift in Sources */,
 				7D2A89CD26C56C56009B16A5 /* SignityTitle.swift in Sources */,
 				61E538B9C9C7313D2974E558 /* CoursePage.swift in Sources */,
+				7D2A89F726C7CB03009B16A5 /* SignityVisionJKT.mlkitmodel in Sources */,
 				7D842F9026C176D6007A7F64 /* OnboardingViewModel.swift in Sources */,
 				7F4E21AB2E5892E60A117BB4 /* Hand.swift in Sources */,
 				7D2A89D926C570B2009B16A5 /* SignitySubhead.swift in Sources */,
@@ -834,7 +831,6 @@
 				7D2A89E026C5F729009B16A5 /* ModuleGroup+Helper.swift in Sources */,
 				156BDFD68BD5D417A9A3C1B1 /* SimulationViewModel.swift in Sources */,
 				C8CDC39F39C55B8C009FC006 /* TutorialPhraseView.swift in Sources */,
-				7D842F9E26C21A32007A7F64 /* SignityVisionJKT.mlkitmodel in Sources */,
 				CCAB2B0F632FF0C5AE04FD1A /* TutorialViewModel.swift in Sources */,
 				7D2A89F126C6C4B2009B16A5 /* ViewRouter.swift in Sources */,
 				18981A457D6D6F35F7F8D404 /* VideoView.swift in Sources */,

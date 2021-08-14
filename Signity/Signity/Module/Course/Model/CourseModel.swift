@@ -57,7 +57,9 @@ struct AvailableCourses {
                             submodules: [
                                 SubModules(name: "0"), SubModules(name: "1"),
                                 SubModules(name: "2"), SubModules(name: "3"),
-                                SubModules(name: "4"), SubModules(name: "5")
+                                SubModules(name: "4"), SubModules(name: "5"),
+                                SubModules(name: "7"), SubModules(name: "8"),
+                                SubModules(name: "9")
                             ]
                         ),
                     ]
@@ -71,14 +73,30 @@ struct AvailableCourses {
                             type: "Kata Dasar",
                             level: 0,
                             submodules: [
+                                SubModules(name: "Halo"),
+                                SubModules(name: "Selamat pagi"),
                                 SubModules(name: "Selamat siang"),
-                                SubModules(name: "Selamat siang"),
-                                SubModules(name: "Hallo"),
-                                SubModules(name: "Hey")
+                                SubModules(name: "Selamat sore"),
+                                SubModules(name: "Selamat malam"),
+                                SubModules(name: "Selamat datang")
                             ]
                         ),
                         Module(
                             code: "MEN002",
+                            title: "Orang",
+                            type: "Kata Dasar",
+                            level: 0,
+                            submodules: [
+                                SubModules(name: "Aku"),
+                                SubModules(name: "Kamu"),
+                                SubModules(name: "Dia"),
+                                SubModules(name: "Kita"),
+                                SubModules(name: "Kalian"),
+                                SubModules(name: "Mereka")
+                            ]
+                        ),
+                        Module(
+                            code: "MEN003",
                             title: "Menanyakan Kabar",
                             type: "Situasi",
                             level: 0,
