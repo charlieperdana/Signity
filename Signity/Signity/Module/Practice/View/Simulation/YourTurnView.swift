@@ -15,8 +15,7 @@ struct YourTurnView: View {
                 .opacity(0.6)
                 .cornerRadius(15)
             Text("Giliranmu")
-                .font(.headline)
-                .foregroundColor(Color("DarkPurple"))
+                .modifier(SignityHeadlineThin(color: .darkPurple))
         }
         .frame(width: 100, height: 40)
     }

@@ -9,9 +9,6 @@ import SwiftUI
 
 struct CategoryView: View {
     var category: Category
-    var courses: [Course] {
-        (category.courses?.array as? [Course]) ?? []
-    }
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
@@ -24,42 +21,31 @@ struct CategoryView: View {
     var body: some View {
         VStack {
             ScrollView(.vertical, showsIndicators: false) {
-                if category.typeEnum == .basic {
-                    GridView(numOfColumn: 5, courses: courses)
-                } else {
-                    VStack {
-                        ForEach(courses.indices, id: \.self) { i in
-                            if let currentCategory = courses[i].category {
-                                NavigationLink(
-                                    destination: TutorialPhraseView(
-                                        category: currentCategory,
-                                        chosenWord: courses[i].name ?? "Not found")) {
-                                        
-                                    PhraseCell(asker: i % 2 == 0, text: courses[i].name ?? "Not found")
-                                }
-                            }
-                        }
-                    }
-                }
+                GridView(category: category)
             }
             
             if category.typeEnum == .situation {
                 SignityButton(text: "Mulai Latihan") {
+                    self.navBarHidden = true
                     self.showPracticeOnboarding = true
                 }
             }
             
             NavigationLink(
-                destination: OnboardingLatihanTiru(category: category, chosenWord: courses[0].name ?? "Not found"),
+                destination: OnboardingLatihanTiru(category: category, chosenWord: category.courses[0].name),
                 isActive: $showPracticeOnboarding
             ){}
         }
         .padding()
         
-        .navigationBarTitle(category.name ?? "Not found", displayMode: .inline)
+        .navigationBarHidden(self.navBarHidden)
+        .navigationBarTitle(category.name, displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: BackButton {
             self.presentationMode.wrappedValue.dismiss()
         })
+        .onAppear {
+            self.navBarHidden = false
+        }
     }
 }

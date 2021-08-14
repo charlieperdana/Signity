@@ -16,11 +16,11 @@ struct LottieView: UIViewRepresentable {
     func makeUIView(context: UIViewRepresentableContext<LottieView>) -> UIView {
         let view = UIView(frame: .zero)
         
-        animationView.animation = Animation.named(name)
+        self.loadAnimation()
         animationView.contentMode = .scaleAspectFit
+        animationView.backgroundBehavior = .pauseAndRestore
         animationView.loopMode = .loop
         animationView.animationSpeed = playbackSpeed
-        animationView.play()
         
         animationView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(animationView)
@@ -37,6 +37,17 @@ struct LottieView: UIViewRepresentable {
         uiView.subviews.forEach { subview in
             if let view = subview as? AnimationView {
                 view.animationSpeed = self.playbackSpeed
+            }
+        }
+    }
+    
+    private func loadAnimation() {
+        DispatchQueue.global(qos: .background).async {
+            let loadedAnimation = Animation.named(self.name)
+            
+            DispatchQueue.main.async {
+                self.animationView.animation = loadedAnimation
+                self.animationView.play()
             }
         }
     }

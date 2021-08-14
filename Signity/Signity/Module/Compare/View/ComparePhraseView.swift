@@ -11,24 +11,15 @@ struct ComparePhraseView: View {
     @State var isPresentingCompareModal = true
     @StateObject var viewModel = TutorialViewModel()
     
-    var xmarkButton : some View { Button(action: {
-        self.isPresentingCompareModal = false
-        }) {
-            HStack {
-            Image("xmark")
-            }
-        }
-    }
-    
     var chosenWord: String
+    
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
         NavigationView {
             VStack  {
                 Text(chosenWord)
-                    .font(.system(size: 17, design: .rounded))
-                    .fontWeight(.semibold)
-                    .foregroundColor(Color("DarkPurple"))
+                    .modifier(SignityHeadlineThin(color: .text))
                 
                 HStack {
                     VStack {
@@ -36,20 +27,18 @@ struct ComparePhraseView: View {
                             //lottie name should be variable of content
                             .frame(minWidth: 0, maxWidth: 171, minHeight: 0, maxHeight: 320)
                             .background(Color.white)
+                            .cornerRadius(13)
                         Text("Jakarta")
-                            .font(.system(size: 17, design: .rounded))
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color("DarkPurple"))
+                            .modifier(SignityHeadline(color: .text))
                     }
                     VStack {
                         LottieView(name: "terimaKasihDPS", playbackSpeed: viewModel.playbackSpeed)
                             //lottie name should be variable of content
                             .frame(minWidth: 0, maxWidth: 171, minHeight: 0, maxHeight: 320)
                             .background(Color.white)
+                            .cornerRadius(13)
                         Text("Denpasar")
-                            .font(.system(size: 17, design: .rounded))
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color("DarkPurple"))
+                            .modifier(SignityHeadline(color: .text))
                     }
                 }
                 PlaybackButton(state: viewModel.playbackState) {
@@ -64,7 +53,12 @@ struct ComparePhraseView: View {
             .padding(.all)
             
             .navigationBarTitle("Bandingkan", displayMode: .inline)
-            .navigationBarItems(trailing: xmarkButton)
+            .navigationBarItems(trailing: Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }, label: {
+                Image(systemName: "xmark")
+                    .foregroundColor(Color("NavigationItem"))
+            }))
             //navbar title name should be variable of category name
         }
     }

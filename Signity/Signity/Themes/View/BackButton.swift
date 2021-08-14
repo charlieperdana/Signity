@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct BackButton: View {
+    var color: Color = Color("Button")
     var action: () -> Void
     
     var body: some View {
@@ -16,7 +17,7 @@ struct BackButton: View {
                 Image(systemName: "chevron.backward")
                     .resizable()
                     .frame(width: 12, height: 20)
-                    .foregroundColor(Color("MainPurple"))
+                    .foregroundColor(color)
                 Spacer()
             }
         }

@@ -29,10 +29,10 @@ struct RegionSelectionButton: View {
                 Spacer()
             }
             .padding()
-            .foregroundColor(Color("MainPurple"))
+            .foregroundColor(Color("Button"))
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color("MainPurple"), lineWidth: 1))
+                    .stroke(Color("Button"), lineWidth: 1))
         })
     }
 }

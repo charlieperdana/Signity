@@ -10,89 +10,48 @@ import SwiftUI
 struct AccomplishmentSimulasi: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-
     
-    var btnBack : some View { Button(action: {
-        
-        self.presentationMode.wrappedValue.dismiss()
-        }) {
-            HStack {
-            Image("backBtnWhite")
-                .aspectRatio(contentMode: .fit)
-                .foregroundColor(.white)
-
-            }
-        }
-    }
+    @State var showCoursePage = false
     
     var body: some View {
-//        NavigationView{
-        
         ZStack{
-            
-            Color(#colorLiteral(red: 0.2533461452, green: 0.3034159541, blue: 0.8465253711, alpha: 1)).ignoresSafeArea(.all)
+            Color("MainPurple")
+                .ignoresSafeArea(.all)
             
             VStack{
-                HStack {
-                    Button(action: {
-                        self.presentationMode.wrappedValue.dismiss()
-                    }) {
-                        HStack {
-                            Image("backBtn")
-                                .aspectRatio(contentMode: .fit)
-                                .foregroundColor(.white)
-                            
-                        }
-                    }
-                    Spacer()
+                BackButton(color: .white) {
+                    self.presentationMode.wrappedValue.dismiss()
                 }
-                .padding(.top, 75)
+                .padding()
                 
-                    
-                    Text("Simulasi Pelajaran Selesai!")
-                        .font(.system(size: 32, design: .rounded))
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.white)
-                        .multilineTextAlignment(.center)
-                    
-                Spacer()
-                    
-                    Image("LatihanSimulasi_Badge")
-                        .offset(y:48)
-                    
-                Spacer()
-                    
-                    
-                    Image("bottomCircle")
-                        .offset(y:148)
+                Text("Simulasi Selesai!")
+                    .modifier(SignityTitle(color: .white))
                 
-                  
                 Spacer()
-                    
-                    
-                NavigationLink(
-                    destination: CoursePage(),
-                    
-                    label: {
-                        Text("Kembali ke pelajaran")
-                        .foregroundColor(.white)
-                        .font(.system(size:22, design:.rounded))
-                        .fontWeight(.bold)
-                        .frame(width: 358, height: 50)
-                            .background(Color("MainPurple"))
-                        .cornerRadius(13)
-                            })
+                
+                Image("LatihanSimulasi_Badge")
+                    .offset(y:78)
+                
+                Spacer()
+                
+                
+                Image("bottomCircle")
+                    .offset(y: 200)
+                
+                
+                Spacer()
+                
+                
+                SignityButton(text: "Kembali ke pelajaran") {
+                    NavigationUtil.popToRootView()
+                }
+                .padding()
+                
             }
-
-//    }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: btnBack)
-            
-            
-}
-        
-    
-}
+            .padding()
+            .navigationBarHidden(true)
+        }
+    }
 }
 
 

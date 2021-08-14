@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G80" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Category" representedClassName="Category" syncable="YES" codeGenerationType="class">
-        <attribute name="code" optional="YES" attributeType="String"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="type" optional="YES" attributeType="String"/>
-        <relationship name="courses" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Course" inverseName="category" inverseEntity="Course"/>
-        <relationship name="moduleGroup" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ModuleGroup" inverseName="categories" inverseEntity="ModuleGroup"/>
+        <attribute name="code_" optional="YES" attributeType="String"/>
+        <attribute name="level_" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name_" optional="YES" attributeType="String"/>
+        <attribute name="type_" optional="YES" attributeType="String"/>
+        <relationship name="courses_" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Course" inverseName="category_" inverseEntity="Course"/>
+        <relationship name="moduleGroup_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ModuleGroup" inverseName="categories_" inverseEntity="ModuleGroup"/>
     </entity>
     <entity name="Course" representedClassName="Course" syncable="YES" codeGenerationType="class">
-        <attribute name="completionState" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="courses" inverseEntity="Category"/>
+        <attribute name="completionState_" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name_" optional="YES" attributeType="String"/>
+        <attribute name="wordParts_" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromDataTransformer" customClassName="[String]"/>
+        <relationship name="category_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="courses_" inverseEntity="Category"/>
     </entity>
     <entity name="ModuleGroup" representedClassName="ModuleGroup" syncable="YES" codeGenerationType="class">
-        <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="regionName" optional="YES" attributeType="String"/>
-        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Category" inverseName="moduleGroup" inverseEntity="Category"/>
+        <attribute name="name_" optional="YES" attributeType="String"/>
+        <attribute name="ordering" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="regionName_" optional="YES" attributeType="String"/>
+        <relationship name="categories_" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Category" inverseName="moduleGroup_" inverseEntity="Category"/>
     </entity>
     <elements>
-        <element name="Category" positionX="-63" positionY="-18" width="128" height="104"/>
-        <element name="Course" positionX="-54" positionY="-9" width="128" height="74"/>
+        <element name="Category" positionX="-63" positionY="-18" width="128" height="119"/>
+        <element name="Course" positionX="-54" positionY="-9" width="128" height="89"/>
         <element name="ModuleGroup" positionX="-54" positionY="27" width="128" height="89"/>
     </elements>
 </model>

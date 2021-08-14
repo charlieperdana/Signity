@@ -57,7 +57,7 @@ struct PracticeView: View {
                                         viewModel.practiceDone = true
                                     })
                 
-                NavigationLink(destination: OnboardingSimulasi(category: category), isActive: $viewModel.practiceDone) {
+                NavigationLink(destination: AccomplishmentTiru(category: category), isActive: $viewModel.practiceDone) {
                     EmptyView()
                 }
             }

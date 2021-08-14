@@ -11,11 +11,10 @@ struct HintButton: View {
     var body: some View {
         Button(action: {}, label: {
             Text("Lupa?")
-                .font(.headline)
+                .modifier(SignityHeadlineThin(color: .white))
         })
         .frame(width: 80, height: 40)
-        .background(Color("MainPurple"))
-        .foregroundColor(.white)
+        .background(Color("Button"))
         .cornerRadius(15)
     }
 }

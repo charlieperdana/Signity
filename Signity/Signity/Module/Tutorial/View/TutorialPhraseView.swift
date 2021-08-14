@@ -22,9 +22,7 @@ struct TutorialPhraseView: View {
     var body: some View {
         VStack  {
             Text(chosenWord)
-                .font(.system(size: 17, design: .rounded))
-                .fontWeight(.semibold)
-                .foregroundColor(Color("DarkPurple"))
+                .modifier(SignityHeadlineThin(color: .text))
                 .padding(.top)
             
             LottieView(name: "terimaKasihJKT", playbackSpeed: viewModel.playbackSpeed)
@@ -41,20 +39,14 @@ struct TutorialPhraseView: View {
                 }
             }
             Spacer()
-            VStack(alignment:.leading) {
+            VStack(alignment: .center) {
                 SignityButton(text: "Mulai Latihan") {
                     self.navBarHidden = true
                     self.isPresentingPractice = true
                 }
                 
-                HStack {
-                    Spacer()
-                    Text("Bandingkan kalimat ini dengan BISINDO daerah lain")
-                        .font(.system(size: 13, design: .rounded))
-                        .fontWeight(.regular)
-                        .foregroundColor(Color("DarkPurple"))
-                    Spacer()
-                }
+                Text("Bandingkan kalimat ini dengan BISINDO daerah lain")
+                    .modifier(SignityFootnote(color: .text))
                 
                 SignityButtonOutline(text: "Bandingkan") {
                     self.isPresentingCompareModal = true
@@ -71,7 +63,7 @@ struct TutorialPhraseView: View {
         }
         .padding()
 
-        .navigationBarTitle(category.name ?? "Not found", displayMode: .inline)
+        .navigationBarTitle(category.name, displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: BackButton {
             self.presentationMode.wrappedValue.dismiss()

@@ -32,7 +32,7 @@ struct PlaybackButton: View {
         })
         .padding(.all, 5)
         .font(.headline)
-        .background(Color("MainPurple"))
+        .background(Color("Button"))
         .foregroundColor(.white)
         .cornerRadius(10)
     }

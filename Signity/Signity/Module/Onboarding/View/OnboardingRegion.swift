@@ -12,6 +12,7 @@ struct OnboardingRegion: View {
     @State var showCourse = false
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @EnvironmentObject var router: ViewRouter
     
     var body: some View {
         VStack {
@@ -22,10 +23,7 @@ struct OnboardingRegion: View {
             GeometryReader { geo in
                 VStack {
                     Text("BISINDO daerah mana yang kamu gunakan?")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("DarkPurple"))
-                        .multilineTextAlignment(.center)
+                        .modifier(SignitySubtitle(color: .text))
                         .padding(.leading)
                         .fixedSize(horizontal: false, vertical: true)
                     
@@ -46,11 +44,9 @@ struct OnboardingRegion: View {
                 Spacer()
                 SignityButton(text: "Selesai") {
                     viewModel.completeOnboardingSetup()
-                    self.showCourse = true
+                    router.currentPage = .course
                 }
             }
-            //MARK: - NAVIGATION LINKS
-            NavigationLink(destination: CoursePage(), isActive: $showCourse) {}
             
             .navigationBarHidden(true)
         }

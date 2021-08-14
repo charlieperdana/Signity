@@ -18,10 +18,9 @@ class SimulationViewModel: ObservableObject {
     
     @Published var speakerCurrentWord: String
     @Published var userCurrentWord: String
+    var userPosition: Int
     
-    @Published var wordTracking = [
-        "Selamat Siang"
-    ]
+    @Published var wordTracking: [String]
     @Published var correctWord = 0
     
     let predictor = CoreMLHelper()
@@ -33,10 +32,13 @@ class SimulationViewModel: ObservableObject {
     init(category: Category) {
         self.category = category
         
-        courses = category.courses?.array as! [Course]
+        courses = category.courses
         
-        speakerCurrentWord = courses[0].name!
-        userCurrentWord = courses[1].name!
+        userPosition = 1
+        userCurrentWord = courses[userPosition].name
+        wordTracking = courses[userPosition].wordParts
+        
+        speakerCurrentWord = courses[userPosition - 1].name
     }
     
     func addToActionsList(landmark: [Double]) {
@@ -46,45 +48,51 @@ class SimulationViewModel: ObservableObject {
         
         handLandmarks.append(landmark)
         
-        if handLandmarks.count == 60 {
-            do {
-                let landmarks = try MLMultiArray(shape: [1, 60, 126], dataType: .double)
-                for (row, arr) in self.handLandmarks.enumerated() {
-                    for (col, data) in arr.enumerated() {
-                        landmarks[[0 as NSNumber, row as NSNumber, col as NSNumber]] = NSNumber(floatLiteral: data)
-                    }
+        if handLandmarks.count >= 60 {
+            self.predictSign()
+        }
+    }
+    
+    private func predictSign() {
+        do {
+            let landmarks = try MLMultiArray(shape: [1, 60, 126], dataType: .double)
+            for (row, arr) in self.handLandmarks.enumerated() {
+                for (col, data) in arr.enumerated() {
+                    landmarks[[0 as NSNumber, row as NSNumber, col as NSNumber]] = NSNumber(floatLiteral: data)
                 }
-                
-                let predictedSign = predictor.predictAction(multiArray: landmarks)
-                print("Predicted: \(predictedSign)")
-                
-                if predictedSign == wordTracking[correctWord] {
-                    correctWord += 1
-
-                    if correctWord == wordTracking.count {
-                        if userCurrentWord == courses[3].name! {
-                            tempDone = true
-                            navBarHidden = false
-                            return
-                        }
-
-                        DispatchQueue.main.async { [self] in
-                            speakerCurrentWord = courses[2].name!
-                            userCurrentWord = courses[3].name!
-                            wordTracking = [
-                                "Aku",
-                                "Sakit"
-                            ]
-                            
-                            correctWord = 0
-                        }
-                    }
-                }
-            } catch {
-                
             }
             
-            handLandmarks.removeAll()
+            let predictedSign = predictor.predictAction(multiArray: landmarks)
+            self.evaluatePrediction(for: predictedSign)
+        } catch {
+            
+        }
+        
+        handLandmarks.removeFirst(30)
+    }
+    
+    private func evaluatePrediction(for label: String) {
+        // Check if predicted label is correct
+        if label == wordTracking[correctWord] {
+            correctWord += 1
+        }
+        
+        // Check if current sentence is done
+        DispatchQueue.main.async { [self] in
+            if correctWord == wordTracking.count {
+                correctWord = 0
+                
+                userPosition += 2
+                
+                if userPosition >= courses.count {
+                    navBarHidden = false
+                    tempDone = true
+                } else {
+                    userCurrentWord = courses[userPosition].name
+                    speakerCurrentWord = courses[userPosition - 1].name
+                    wordTracking = courses[userPosition].wordParts
+                }
+            }
         }
     }
 }

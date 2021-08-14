@@ -8,57 +8,73 @@
 import SwiftUI
 
 struct CardViewCourse: View {
-    
-    let item: Category
     @State var showCategory = false
     
+    var category: Category
+    var proficiency: Int
+    
+    var categoryLocked: Bool {
+        category.level > proficiency
+    }
+    
+    var categoryIcon: String {
+        var name = "\(category.code) - \(category.name)"
+        if categoryLocked {
+            name += " Locked"
+        }
+        
+        return name
+    }
+    
+    var foregroundColor: SignityTextColor {
+        categoryLocked ? .gray3 : .white
+    }
+    
+    var backgroundColor: Color {
+        categoryLocked ? Color("Gray1") : Color("CourseCategory")
+    }
+
     var body: some View {
         NavigationLink(
-            destination: CategoryView(category: item), isActive: $showCategory) {
+            destination: CategoryView(category: category)) {
             
             HStack {
-                Image("\(item.code!) - \(item.name!)")
+                Image(categoryIcon)
                     .resizable()
                     .scaledToFit()
                 
                 VStack(alignment: .leading) {
                     HStack {
-                        Text(item.type!)
-                            .font(.caption)
-                            .padding(.bottom,5)
+                        Text(category.type)
+                            .padding(.bottom, 5)
                         Spacer()
-                        Text("\(item.completedCourses)/\(item.courseCount)")
-                            .padding(.trailing, 20)
-                            .accessibilityElement(children: .ignore)
-                            .accessibilityLabel(Text("Meeting length"))
-                            .accessibilityValue(Text("20 minutes"))
+                        if categoryLocked {
+                            Image(systemName: "lock.fill")
+                        } else {
+                            Text("\(category.completedCourses)/\(category.courseCount)")
+                                .modifier(SignitySubhead(color: foregroundColor))
+                        }
                     }
-                    .font(.caption)
+                    .modifier(SignitySubhead(color: foregroundColor))
                     
-                    Text(item.name!)
-                        .font(.headline)
-                        .accessibilityElement(children: .ignore)
-                        .accessibilityLabel(Text("Attendees"))
-                        .accessibilityValue(Text("20"))
-        
+                    Text(category.name)
+                        .modifier(SignityHeadline(color: foregroundColor))
                     
-                    ProgressBarCourse(value: Double(item.completedCourses), maxValue: Double(item.courseCount))
-                        .frame(height: 8)
+                    ProgressBarCourse(value: Double(category.completedCourses), maxValue: Double(category.courseCount), locked: categoryLocked)
                 }
                 .padding()
-                .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                
-            }.onTapGesture {
-                self.showCategory = true
             }
+            .frame(height: 100.0)
+            .background(backgroundColor)
+            .cornerRadius(13)
         }
-        
+        .disabled(self.categoryLocked)
     }
 }
 
 struct CardViewCourse_Previews: PreviewProvider {
     static var previews: some View {
-        CardViewCourse(item: Category())
+        CardViewCourse(category: Category(), proficiency: 0)
             .background(Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)))
             .previewLayout(.fixed(width: 400, height: 100))
             .cornerRadius(13)
