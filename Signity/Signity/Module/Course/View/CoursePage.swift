@@ -45,11 +45,11 @@ struct CoursePage: View {
                 
                 
                 VStack(alignment:.leading){
-                    ForEach(viewModel.currentModules) { group in
+                    ForEach(viewModel.currentModules, id: \.self) { group in
                         Section(header: Text(group.name)
                                     .modifier(SignitySubtitle(color: .text))) {
-                            ForEach(group.categories) { item in
-                                CardViewCourse(category: item, proficiency: viewModel.regionProficiency)
+                            ForEach(group.categories, id: \.self) { item in
+                                CardViewCourse(category: item, proficiency: viewModel.regionProficiency).id(UUID())
                             }
                         }
                     }
@@ -62,6 +62,10 @@ struct CoursePage: View {
         .navigationBarHidden(true)
         .sheet(isPresented: $showSettings) {
             SettingsView()
+        }
+        
+        .onAppear {
+            viewModel.updateModules()
         }
     }
 }
