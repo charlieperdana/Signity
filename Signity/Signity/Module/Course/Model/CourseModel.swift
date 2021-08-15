@@ -58,8 +58,8 @@ struct AvailableCourses {
                                 SubModules(name: "0"), SubModules(name: "1"),
                                 SubModules(name: "2"), SubModules(name: "3"),
                                 SubModules(name: "4"), SubModules(name: "5"),
-                                SubModules(name: "7"), SubModules(name: "8"),
-                                SubModules(name: "9")
+                                SubModules(name: "6"), SubModules(name: "7"),
+                                SubModules(name: "8"), SubModules(name: "9")
                             ]
                         ),
                     ]
@@ -91,7 +91,6 @@ struct AvailableCourses {
                                 SubModules(name: "Kamu"),
                                 SubModules(name: "Dia"),
                                 SubModules(name: "Kita"),
-                                SubModules(name: "Kalian"),
                                 SubModules(name: "Mereka")
                             ]
                         ),
