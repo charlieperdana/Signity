@@ -46,7 +46,17 @@ struct AvailableCourses {
                             submodules: [
                                 SubModules(name: "A"), SubModules(name: "B"),
                                 SubModules(name: "C"), SubModules(name: "D"),
-                                SubModules(name: "E")
+                                SubModules(name: "E"), SubModules(name: "F"),
+                                SubModules(name: "G"), SubModules(name: "H"),
+                                SubModules(name: "I"), SubModules(name: "J"),
+                                SubModules(name: "K"), SubModules(name: "L"),
+                                SubModules(name: "M"), SubModules(name: "N"),
+                                SubModules(name: "O"), SubModules(name: "P"),
+                                SubModules(name: "Q"), SubModules(name: "R"),
+                                SubModules(name: "S"), SubModules(name: "T"),
+                                SubModules(name: "U"), SubModules(name: "V"),
+                                SubModules(name: "W"), SubModules(name: "X"),
+                                SubModules(name: "Y"), SubModules(name: "Z"),
                             ]
                         ),
                         Module(
@@ -74,6 +84,8 @@ struct AvailableCourses {
                             level: 0,
                             submodules: [
                                 SubModules(name: "Halo"),
+                                SubModules(name: "Sehat"),
+                                SubModules(name: "Apa kabar"),
                                 SubModules(name: "Selamat pagi"),
                                 SubModules(name: "Selamat siang"),
                                 SubModules(name: "Selamat sore"),

@@ -13,6 +13,8 @@ struct SettingsView: View {
     var communityImage = ["LogoGerkatin","PUSBISINDO","BISINDO 2.0"]
     var name = ["GERKATIN","PUSBISINDO","BISINDO 2.0"]
     var headline = ["Gerakan untuk Kesejahteraan Tuna rungu Indonesia", "Wadah pembelajaran dan penelitian bahasa isyarat alamiah di Indonesia","Platform informasi keberagaman Bahasa Isyarat Indonesia."]
+    var link = ["https://gerkatin.org/", "https://pusbisindo.org/","https://www.instagram.com/bisindo2.0/"]
+    
     
     @StateObject var viewModel = SettingViewModel()
     
@@ -34,7 +36,7 @@ struct SettingsView: View {
                         .padding(.bottom, 10)
                         .padding(.top, 12)
                     ForEach(name.indices) { i in
-                        CollectionView(communityImage:communityImage[i], name:name[i], headline:headline[i])
+                        CollectionView(communityImage:communityImage[i], name:name[i], headline:headline[i], link:link[i])
                     }
                 }
             }

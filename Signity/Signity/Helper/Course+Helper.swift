@@ -43,4 +43,10 @@ extension Course {
             wordParts_ = newValue
         }
     }
+    
+    var videoName: String {
+        get {
+            return name + " - " + self.category.moduleGroup.regionName
+        }
+    }
 }

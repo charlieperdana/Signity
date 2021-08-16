@@ -32,7 +32,7 @@ struct CategoryView: View {
             }
             
             NavigationLink(
-                destination: OnboardingLatihanTiru(category: category, chosenWord: category.courses[0].name),
+                destination: OnboardingLatihanTiru(category: category, chosenCourse: category.courses[0]),
                 isActive: $showPracticeOnboarding
             ){}
         }

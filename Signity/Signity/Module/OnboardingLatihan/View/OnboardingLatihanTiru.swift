@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OnboardingLatihanTiru: View {
     var category: Category
-    var chosenWord: String
+    var chosenCourse: Course
 
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
@@ -40,7 +40,7 @@ struct OnboardingLatihanTiru: View {
                 self.showPractice = true
             }
             
-            NavigationLink(destination: PracticeView(category: category, chosenWord: chosenWord), isActive: $showPractice) {
+            NavigationLink(destination: PracticeView(category: category, chosenCourse: chosenCourse), isActive: $showPractice) {
                 EmptyView()
             }
         }
@@ -52,6 +52,6 @@ struct OnboardingLatihanTiru: View {
 
 struct OnboardingLatihanTiru_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingLatihanTiru(category: Category(), chosenWord: "")
+        OnboardingLatihanTiru(category: Category(), chosenCourse: Course())
     }
 }
