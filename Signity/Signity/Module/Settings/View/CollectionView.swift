@@ -11,6 +11,9 @@ struct CollectionView: View {
     var communityImage : String
     var name : String
     var headline : String
+    var link : String
+    
+    @Environment(\.openURL) var openURL
     
     var body: some View {
         HStack {
@@ -34,11 +37,14 @@ struct CollectionView: View {
         .overlay(
             RoundedRectangle(cornerRadius: 13)
                 .stroke(Color("MainPurple"), lineWidth: 1))
+        .onTapGesture {
+            openURL(URL(string: link)!)
+        }
     }
 }
 
 struct CollectionView_Previews: PreviewProvider {
     static var previews: some View {
-        CollectionView(communityImage:"LogoGerkatin",name:"GERKATIN",headline:"Platform informasi tentang keberagaman Bahasa Isyarat Indonesia.")
+        CollectionView(communityImage:"LogoGerkatin",name:"GERKATIN",headline:"Platform informasi tentang keberagaman Bahasa Isyarat Indonesia.",link: "https://gerkatin.org/")
     }
 }
