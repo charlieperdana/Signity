@@ -14,8 +14,7 @@ struct SettingsView: View {
     var name = ["GERKATIN","PUSBISINDO","BISINDO 2.0"]
     var headline = ["Gerakan untuk Kesejahteraan Tuna rungu Indonesia", "Wadah pembelajaran dan penelitian bahasa isyarat alamiah di Indonesia","Platform informasi keberagaman Bahasa Isyarat Indonesia."]
     var link = ["https://gerkatin.org/", "https://pusbisindo.org/","https://www.instagram.com/bisindo2.0/"]
-    
-    
+
     @StateObject var viewModel = SettingViewModel()
     
     var body: some View {
