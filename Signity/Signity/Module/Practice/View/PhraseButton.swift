@@ -45,6 +45,7 @@ struct PhraseButton: View {
     }
 }
 
+
 struct PhraseButton_Previews: PreviewProvider {
     static var previews: some View {
         PhraseButton(phrase: "Selamat Pagi", action: {})

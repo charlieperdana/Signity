@@ -11,19 +11,19 @@ struct ComparePhraseView: View {
     @State var isPresentingCompareModal = true
     @StateObject var viewModel = TutorialViewModel()
     
-    var chosenWord: String
+    var chosenCourse: Course
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
         NavigationView {
             VStack  {
-                Text(chosenWord)
+                Text(chosenCourse.name)
                     .modifier(SignityHeadlineThin(color: .text))
                 
                 HStack {
                     VStack {
-                        LottieView(name: "terimaKasihJKT", playbackSpeed: viewModel.playbackSpeed)
+                        LottieView(name: chosenCourse.videoName, playbackSpeed: viewModel.playbackSpeed)
                             //lottie name should be variable of content
                             .frame(minWidth: 0, maxWidth: 171, minHeight: 0, maxHeight: 320)
                             .background(Color.white)
@@ -32,7 +32,7 @@ struct ComparePhraseView: View {
                             .modifier(SignityHeadline(color: .text))
                     }
                     VStack {
-                        LottieView(name: "terimaKasihDPS", playbackSpeed: viewModel.playbackSpeed)
+                        LottieView(name: chosenCourse.videoName, playbackSpeed: viewModel.playbackSpeed)
                             //lottie name should be variable of content
                             .frame(minWidth: 0, maxWidth: 171, minHeight: 0, maxHeight: 320)
                             .background(Color.white)
@@ -66,6 +66,6 @@ struct ComparePhraseView: View {
 
 struct ComparePhraseView_Previews: PreviewProvider {
     static var previews: some View {
-        ComparePhraseView(chosenWord: "")
+        ComparePhraseView(chosenCourse: Course())
     }
 }

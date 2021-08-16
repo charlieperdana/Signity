@@ -46,7 +46,17 @@ struct AvailableCourses {
                             submodules: [
                                 SubModules(name: "A"), SubModules(name: "B"),
                                 SubModules(name: "C"), SubModules(name: "D"),
-                                SubModules(name: "E")
+                                SubModules(name: "E"), SubModules(name: "F"),
+                                SubModules(name: "G"), SubModules(name: "H"),
+                                SubModules(name: "I"), SubModules(name: "J"),
+                                SubModules(name: "K"), SubModules(name: "L"),
+                                SubModules(name: "M"), SubModules(name: "N"),
+                                SubModules(name: "O"), SubModules(name: "P"),
+                                SubModules(name: "Q"), SubModules(name: "R"),
+                                SubModules(name: "S"), SubModules(name: "T"),
+                                SubModules(name: "U"), SubModules(name: "V"),
+                                SubModules(name: "W"), SubModules(name: "X"),
+                                SubModules(name: "Y"), SubModules(name: "Z"),
                             ]
                         ),
                         Module(
@@ -57,7 +67,9 @@ struct AvailableCourses {
                             submodules: [
                                 SubModules(name: "0"), SubModules(name: "1"),
                                 SubModules(name: "2"), SubModules(name: "3"),
-                                SubModules(name: "4"), SubModules(name: "5")
+                                SubModules(name: "4"), SubModules(name: "5"),
+                                SubModules(name: "6"), SubModules(name: "7"),
+                                SubModules(name: "8"), SubModules(name: "9")
                             ]
                         ),
                     ]
@@ -71,14 +83,31 @@ struct AvailableCourses {
                             type: "Kata Dasar",
                             level: 0,
                             submodules: [
+                                SubModules(name: "Halo"),
+                                SubModules(name: "Sehat"),
+                                SubModules(name: "Apa kabar"),
+                                SubModules(name: "Selamat pagi"),
                                 SubModules(name: "Selamat siang"),
-                                SubModules(name: "Selamat siang"),
-                                SubModules(name: "Hallo"),
-                                SubModules(name: "Hey")
+                                SubModules(name: "Selamat sore"),
+                                SubModules(name: "Selamat malam"),
+                                SubModules(name: "Selamat datang")
                             ]
                         ),
                         Module(
                             code: "MEN002",
+                            title: "Orang",
+                            type: "Kata Dasar",
+                            level: 0,
+                            submodules: [
+                                SubModules(name: "Aku"),
+                                SubModules(name: "Kamu"),
+                                SubModules(name: "Dia"),
+                                SubModules(name: "Kita"),
+                                SubModules(name: "Mereka")
+                            ]
+                        ),
+                        Module(
+                            code: "MEN003",
                             title: "Menanyakan Kabar",
                             type: "Situasi",
                             level: 0,

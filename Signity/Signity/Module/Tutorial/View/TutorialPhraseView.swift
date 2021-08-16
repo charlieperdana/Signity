@@ -15,17 +15,17 @@ struct TutorialPhraseView: View {
     @State var navBarHidden = false
     
     var category: Category
-    var chosenWord: String
+    var chosenCourse: Course
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
         VStack  {
-            Text(chosenWord)
+            Text(chosenCourse.name)
                 .modifier(SignityHeadlineThin(color: .text))
                 .padding(.top)
             
-            LottieView(name: "terimaKasihJKT", playbackSpeed: viewModel.playbackSpeed)
+            LottieView(name: chosenCourse.videoName, playbackSpeed: viewModel.playbackSpeed)
                 //lottie name should be variable of content
                 .frame(minWidth: 0, maxWidth: 240, minHeight: 0, maxHeight: 320)
                 .background(Color.white)
@@ -55,10 +55,10 @@ struct TutorialPhraseView: View {
             .padding(.vertical)
             .offset(y: 20)
             
-            NavigationLink(destination: OnboardingLatihanTiru(category: category, chosenWord: chosenWord), isActive: $isPresentingPractice) {}
+            NavigationLink(destination: OnboardingLatihanTiru(category: category, chosenCourse: chosenCourse), isActive: $isPresentingPractice) {}
 
             .sheet(isPresented: $isPresentingCompareModal, content: {
-                ComparePhraseView(chosenWord: chosenWord)
+                ComparePhraseView(chosenCourse: chosenCourse)
             })
         }
         .padding()

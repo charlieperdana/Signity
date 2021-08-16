@@ -8,44 +8,19 @@
 import Combine
 import CoreData
 
-class ModuleGroupStorage: NSObject, ObservableObject {
-    var moduleGroups = CurrentValueSubject<[ModuleGroup], Never>([])
-    private let moduleGroupsFetchController: NSFetchedResultsController<ModuleGroup>
-
-    static let shared = ModuleGroupStorage()
+class ModuleGroupStorage {
+    let context = PersistenceController.shared.persistentContainer.viewContext
     
-    override init() {
+    func fetch() -> [ModuleGroup] {
         let fetchRequest: NSFetchRequest<ModuleGroup> = ModuleGroup.fetchRequest()
         fetchRequest.sortDescriptors = [
             NSSortDescriptor(key: "ordering", ascending: true)
         ]
         
-        moduleGroupsFetchController = NSFetchedResultsController(
-            fetchRequest: fetchRequest,
-            managedObjectContext: PersistenceController.shared.persistentContainer.viewContext,
-            sectionNameKeyPath: nil,
-            cacheName: nil
-        )
-        
-        super.init()
-        
-        moduleGroupsFetchController.delegate = self
-        
-        do {
-            try moduleGroupsFetchController.performFetch()
-            moduleGroups.value = moduleGroupsFetchController.fetchedObjects ?? []
-        } catch {
-            print("Could not fetch object")
-        }
-    }
-}
-
-extension ModuleGroupStorage: NSFetchedResultsControllerDelegate {
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        guard let moduleGroups = controller.fetchedObjects as? [ModuleGroup] else {
-            return
+        if let modules = try? context.fetch(fetchRequest) {
+            return modules
         }
         
-        self.moduleGroups.value = moduleGroups
+        return []
     }
 }

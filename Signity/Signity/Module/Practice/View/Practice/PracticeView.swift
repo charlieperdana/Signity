@@ -18,8 +18,8 @@ struct PracticeView: View {
     
     var category: Category
     
-    init(category: Category, chosenWord: String) {
-        _viewModel = StateObject(wrappedValue: PracticeViewModel(category: category, chosenWord: chosenWord))
+    init(category: Category, chosenCourse: Course) {
+        _viewModel = StateObject(wrappedValue: PracticeViewModel(category: category, chosenWord: chosenCourse.name))
         
         self.category = category
     }

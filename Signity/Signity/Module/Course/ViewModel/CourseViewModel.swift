@@ -6,7 +6,7 @@
 //
 
 import Combine
-import Foundation
+import CoreData
 
 class CourseViewModel: ObservableObject {
     @Published var currentRegion: String = ""
@@ -18,7 +18,8 @@ class CourseViewModel: ObservableObject {
     private var cancellable = Set<AnyCancellable>()
     
     
-    init(moduleGroupsPublisher: AnyPublisher<[ModuleGroup], Never> = ModuleGroupStorage.shared.moduleGroups.eraseToAnyPublisher()) {
+    init() {
+        self.updateModules()
         
         UserDefaults.standard
             .publisher(for: \.userProfile)
@@ -31,14 +32,13 @@ class CourseViewModel: ObservableObject {
                 }
             }
             .store(in: &cancellable)
+    }
+
+    func updateModules(storage: ModuleGroupStorage = ModuleGroupStorage()) {
+        self.allModules = storage.fetch()
         
-        moduleGroupsPublisher.sink { moduleGroups in
-            self.allModules = moduleGroups
-            
-            self.currentModules = moduleGroups.filter {
-                $0.regionName == self.currentRegion
-            }
+        self.currentModules = self.allModules.filter {
+            $0.regionName == self.currentRegion
         }
-        .store(in: &cancellable)
     }
 }
