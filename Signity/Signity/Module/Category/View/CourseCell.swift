@@ -51,6 +51,25 @@ struct CourseCell: View {
                 Text(course.name)
                     .modifier(SignityHeadlineThin(color: textColor))
             }
+            
+        
+            
+            HStack(alignment: .bottom){
+                if course.completionState == 1 {
+                    if course.category.typeEnum == .basic{
+                        Image("checkedBtn")
+                            .frame(width: 55, height: 50, alignment: .bottomTrailing)
+
+                    }else{
+                        Image("checkedBtn")
+                            .frame(width: 320, height: 20, alignment: .bottomTrailing)
+                    }
+                    
+                }
+                
+            }
+            
+            
                 
         }
     }
