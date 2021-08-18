@@ -19,7 +19,7 @@ struct PracticeView: View {
     var category: Category
     
     init(category: Category, chosenCourse: Course) {
-        _viewModel = StateObject(wrappedValue: PracticeViewModel(category: category, chosenWord: chosenCourse.name))
+        _viewModel = StateObject(wrappedValue: PracticeViewModel(category: category, chosenCourse: chosenCourse))
         
         self.category = category
     }
@@ -67,14 +67,14 @@ struct PracticeView: View {
             } else {
                 VStack {
                     HStack(alignment: .top) {
-                        ChatBubble(text: viewModel.chosenWord)
+                        ChatBubble(text: viewModel.chosenCourse.name)
                         
-                        VideoView(videoName: .constant("Halo, selamat siang"), playbackSpeed: $viewModel.playbackSpeed, playbackState: $viewModel.playbackState)
+                        VideoView(videoName: viewModel.chosenCourse.videoName, playbackSpeed: $viewModel.playbackSpeed, playbackState: $viewModel.playbackState)
                             .frame(width: 175, height: 225)
                     }
                     .padding()
                     Spacer()
-                    HorizontalModules(category: self.category, currentSelected: $viewModel.chosenWord)
+                    HorizontalModules(category: self.category, currentSelected: $viewModel.chosenCourse)
                 }
                 .padding(.top, self.navBarHidden ? 35 : 75)
             }

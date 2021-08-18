@@ -60,7 +60,7 @@ class OnboardingViewModel: ObservableObject {
                         let course = Course(context: context)
                         course.name = submodule.name
                         course.wordParts = submodule.wordParts ?? []
-                        course.completionState = 1
+                        course.completionState = 0
 
                         courses.append(course)
                     }
