@@ -16,21 +16,19 @@ class PracticeViewModel: ObservableObject {
             playbackSpeed = (newValue == .slow ? 0.5 : 1.0)
         }
     }
-    @Published var currentVideo: String
     var playbackSpeed: CGFloat
     
     @Published var practiceDone = false
     
     @Published var category: Category
-    @Published var chosenWord: String
+    @Published var chosenCourse: Course
     
     let predictor = CoreMLHelper()
     
-    init(category: Category, chosenWord: String) {
+    init(category: Category, chosenCourse: Course) {
         self.category = category
-        self.chosenWord = chosenWord
-        
-        self.currentVideo = "blender"
+        self.chosenCourse = chosenCourse
+
         self.playbackState = .normal
         self.playbackSpeed = 1.0
     }
@@ -49,9 +47,10 @@ class PracticeViewModel: ObservableObject {
                 
                 let predictedSign = predictor.predict(multiArray: landmarks)
 
-                if predictedSign == chosenWord {
+                if predictedSign == chosenCourse.name {
+                    self.sendCorrectFeedback()
                     for course in category.courses {
-                        if course.name == chosenWord {
+                        if course.name == chosenCourse.name {
                             course.completionState = 1
                             PersistenceController.shared.saveContext()
                         }
@@ -64,5 +63,10 @@ class PracticeViewModel: ObservableObject {
             
             handLandmarks.removeFirst(30)
         }
+    }
+    
+    private func sendCorrectFeedback(hapticManager: HapticManager = HapticManager()) {
+        hapticManager.playCorrectHaptic()
+        AudioManager.shared.playSound(for: .successBell)
     }
 }

@@ -13,7 +13,7 @@ import SwiftUI
 
 struct HorizontalModules: View {
     var category: Category
-    @Binding var currentSelected: String
+    @Binding var currentSelected: Course
     var isSentence: Bool {
         category.typeEnum == .situation
     }
@@ -22,10 +22,8 @@ struct HorizontalModules: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
                 ForEach(category.courses, id: \.self) { course in
-                    if let courseName = course.name {
-                        PhraseButton(practiceDone: course.completionState == 1, isSelected: courseName == currentSelected, isSentence: !category.isCharacter, phrase: courseName) {
-                            self.currentSelected = courseName
-                        }
+                    PhraseButton(practiceDone: course.completionState == 1, isSelected: course == currentSelected, isSentence: !category.isCharacter, phrase: course.name) {
+                        self.currentSelected = course
                     }
 
                 }

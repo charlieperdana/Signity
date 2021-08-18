@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct VideoView: View {
-    @Binding var videoName: String
+    var videoName: String
     @Binding var playbackSpeed: CGFloat
     @Binding var playbackState: PlaybackState
     
@@ -32,6 +32,6 @@ struct VideoView: View {
 
 struct VideoView_Previews: PreviewProvider {
     static var previews: some View {
-        VideoView(videoName: .constant("blender"), playbackSpeed: .constant(0.5), playbackState: .constant(.normal))
+        VideoView(videoName: "1 - Jakarta", playbackSpeed: .constant(0.5), playbackState: .constant(.normal))
     }
 }

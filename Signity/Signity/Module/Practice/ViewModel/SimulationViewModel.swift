@@ -75,6 +75,7 @@ class SimulationViewModel: ObservableObject {
         // Check if predicted label is correct
         if label == wordTracking[correctWord] {
             correctWord += 1
+            self.sendCorrectFeedback()
         }
         
         // Check if current sentence is done
@@ -94,5 +95,10 @@ class SimulationViewModel: ObservableObject {
                 }
             }
         }
+    }
+    
+    private func sendCorrectFeedback(hapticManager: HapticManager = HapticManager()) {
+        hapticManager.playCorrectHaptic()
+        AudioManager.shared.playSound(for: .successBell)
     }
 }
