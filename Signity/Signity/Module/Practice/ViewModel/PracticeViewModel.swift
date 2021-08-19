@@ -8,6 +8,15 @@
 import SwiftUI
 import CoreML
 
+class PracticeVideoQueue {
+    static let shared = PracticeVideoQueue()
+    var videoName: String = ""
+    
+    private init() {
+        
+    }
+}
+
 class PracticeViewModel: ObservableObject {
     var handLandmarks = [[Double]]()
     @Published var detectedHands = [Hand]()
@@ -22,7 +31,6 @@ class PracticeViewModel: ObservableObject {
     
     @Published var category: Category
     @Published var chosenCourse: Course
-    
     let predictor = CoreMLHelper()
     
     init(category: Category, chosenCourse: Course) {

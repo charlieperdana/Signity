@@ -39,6 +39,13 @@ struct LottieView: UIViewRepresentable {
                 view.animationSpeed = self.playbackSpeed
             }
         }
+        
+        if self.name != PracticeVideoQueue.shared.videoName {
+            context.coordinator.parent.animationView.animation = Animation.named(self.name)
+            context.coordinator.parent.animationView.play()
+            
+            PracticeVideoQueue.shared.videoName = self.name
+        }
     }
     
     private func loadAnimation() {
@@ -51,4 +58,19 @@ struct LottieView: UIViewRepresentable {
             }
         }
     }
+    
+    // MARK: - UIRepresentable Coordinator
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+    
+    class Coordinator: NSObject {
+        var parent: LottieView
+        
+        init(_ parent: LottieView) {
+            self.parent = parent
+        }
+    }
 }
+
