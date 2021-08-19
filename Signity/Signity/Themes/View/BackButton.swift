@@ -20,6 +20,8 @@ struct BackButton: View {
                     .foregroundColor(color)
                 Spacer()
             }
+            .frame(width: 30)
+            .contentShape(Rectangle())
         }
     }
 }
