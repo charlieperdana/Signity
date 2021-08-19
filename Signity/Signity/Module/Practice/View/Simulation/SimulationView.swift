@@ -12,6 +12,8 @@ struct SimulationView: View {
     
     @StateObject var viewModel: SimulationViewModel
     
+    @State var isHintVisible = false
+    
     init(category: Category) {
         _viewModel = StateObject(wrappedValue: SimulationViewModel(category: category))
     }
@@ -50,14 +52,18 @@ struct SimulationView: View {
                 }
             }
             
+            if self.isHintVisible {
+                
+            }
+            
             VStack {
                 ProgressBar(value: 0.5)
                 
                 HStack(alignment: .top) {
                     ChatBubble(text: viewModel.speakerCurrentWord)
                     
-                    LottieView(name: viewModel.speakerCurrentWord, playbackSpeed: 1.0)
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200)
+                    LottieView(name: viewModel.courses[viewModel.userPosition - 1].videoName, playbackSpeed: 1.0)
+                        .frame(width: 150, height: 200)
                         .background(Color.white)
                         .cornerRadius(25)
                 }
@@ -68,7 +74,9 @@ struct SimulationView: View {
                 HStack {
                     YourTurnView()
                     Spacer()
-                    HintButton()
+                    HintButton() {
+                        self.isHintVisible = true
+                    }
                 }
                 .padding(.horizontal)
                 

@@ -70,7 +70,7 @@ struct PracticeView: View {
                         ChatBubble(text: viewModel.chosenCourse.name)
                         
                         VideoView(videoName: viewModel.chosenCourse.videoName, playbackSpeed: $viewModel.playbackSpeed, playbackState: $viewModel.playbackState)
-                            .frame(width: 175, height: 225)
+                            .frame(width: 150, height: 200)
                     }
                     .padding()
                     Spacer()

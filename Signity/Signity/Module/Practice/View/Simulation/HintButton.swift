@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct HintButton: View {
+    var action: () -> Void
+    
     var body: some View {
-        Button(action: {}, label: {
+        Button(action: action, label: {
             Text("Lupa?")
                 .modifier(SignityHeadlineThin(color: .white))
         })
@@ -21,6 +23,6 @@ struct HintButton: View {
 
 struct HintButton_Previews: PreviewProvider {
     static var previews: some View {
-        HintButton()
+        HintButton(action: {})
     }
 }
