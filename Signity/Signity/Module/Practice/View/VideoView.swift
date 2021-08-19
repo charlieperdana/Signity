@@ -15,7 +15,7 @@ struct VideoView: View {
     var body: some View {
         VStack(alignment: .trailing) {
             LottieView(name: videoName, playbackSpeed: playbackSpeed)
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200)
+                .frame(width: 150, height: 200)
                 .background(Color.white)
                 .cornerRadius(13)
             

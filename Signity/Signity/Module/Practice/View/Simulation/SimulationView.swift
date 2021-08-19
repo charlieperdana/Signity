@@ -53,37 +53,44 @@ struct SimulationView: View {
             }
             
             if self.isHintVisible {
-                
-            }
-            
-            VStack {
-                ProgressBar(value: 0.5)
-                
-                HStack(alignment: .top) {
-                    ChatBubble(text: viewModel.speakerCurrentWord)
+                ZStack {
+                    Color.black
+                        .opacity(0.5)
+                    VideoView(videoName: viewModel.courses[viewModel.userPosition].videoName, playbackSpeed: .constant(1.0), playbackState: .constant(.normal))
+                }
+                .onTapGesture {
+                    self.isHintVisible = false
+                }
+            } else {
+                VStack {
+                    ProgressBar(value: Double(viewModel.userPosition) / Double(viewModel.courses.count))
                     
-                    LottieView(name: viewModel.courses[viewModel.userPosition - 1].videoName, playbackSpeed: 1.0)
-                        .frame(width: 150, height: 200)
-                        .background(Color.white)
-                        .cornerRadius(25)
-                }
-                .padding()
-                
-                Spacer()
-                
-                HStack {
-                    YourTurnView()
-                    Spacer()
-                    HintButton() {
-                        self.isHintVisible = true
+                    HStack(alignment: .top) {
+                        ChatBubble(text: viewModel.speakerCurrentWord)
+                        
+                        LottieView(name: viewModel.courses[viewModel.userPosition - 1].videoName, playbackSpeed: 1.0)
+                            .frame(width: 150, height: 200)
+                            .background(Color.white)
+                            .cornerRadius(25)
                     }
+                    .padding()
+                    
+                    Spacer()
+                    
+                    HStack {
+                        YourTurnView()
+                        Spacer()
+                        HintButton() {
+                            self.isHintVisible = true
+                        }
+                    }
+                    .padding(.horizontal)
+                    
+                    SentenceFeedbackView(words: $viewModel.wordTracking, currentCorrect: $viewModel.correctWord)
+                        .padding(.bottom, 40)
                 }
-                .padding(.horizontal)
-                
-                SentenceFeedbackView(words: $viewModel.wordTracking, currentCorrect: $viewModel.correctWord)
-                    .padding(.bottom, 40)
+                .padding(.top, self.viewModel.navBarHidden ? 35 : 75)
             }
-            .padding(.top, self.viewModel.navBarHidden ? 35 : 75)
         }
         .navigationBarHidden(true)
         .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
