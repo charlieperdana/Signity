@@ -20,7 +20,7 @@ struct PlaybackButton: View {
         state == .slow ? "hare" : "tortoise"
     }
     var label: String {
-        state == .slow ? "Normal" : "Slow"
+        state == .slow ? "Normal" : "Pelan"
     }
     
     var body: some View {
