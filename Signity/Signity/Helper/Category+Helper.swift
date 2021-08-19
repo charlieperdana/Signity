@@ -78,7 +78,7 @@ extension Category {
     }
     
     var isCharacter: Bool {
-        courses[0].name.count == 1
+        courses[0].name.count < 3
     }
     
     var courseCount: Int {
