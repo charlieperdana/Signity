@@ -40,9 +40,21 @@ struct CourseCell: View {
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 13)
-                .frame(height: height)
-                .foregroundColor(bgColor)
+            ZStack(alignment: self.isLetter ? .bottomTrailing : .bottomTrailing) {
+                RoundedRectangle(cornerRadius: 13)
+                    .frame(height: height)
+                    .foregroundColor(bgColor)
+                
+                if course.completionState == 1 {
+                    if self.isLetter {
+                        Image("checkedBtn")
+                            .offset(x: -3, y: -3)
+                    } else {
+                        Image("checkedBtn")
+                            .offset(x: -12, y: -12)
+                    }
+                }
+            }
             
             if self.isLetter {
                 Text(course.name)
@@ -51,26 +63,7 @@ struct CourseCell: View {
                 Text(course.name)
                     .modifier(SignityHeadlineThin(color: textColor))
             }
-            
-        
-            
-            HStack(alignment: .bottom){
-                if course.completionState == 1 {
-                    if course.category.typeEnum == .basic{
-                        Image("checkedBtn")
-                            .frame(width: 55, height: 50, alignment: .bottomTrailing)
 
-                    }else{
-                        Image("checkedBtn")
-                            .frame(width: 320, height: 20, alignment: .bottomTrailing)
-                    }
-                    
-                }
-                
-            }
-            
-            
-                
         }
     }
 }
