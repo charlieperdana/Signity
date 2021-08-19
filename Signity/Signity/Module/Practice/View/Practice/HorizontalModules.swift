@@ -7,10 +7,6 @@
 
 import SwiftUI
 
-//TODO:
-//1. Put selected word in the middle
-//
-
 struct HorizontalModules: View {
     var category: Category
     @Binding var currentSelected: Course
@@ -20,12 +16,20 @@ struct HorizontalModules: View {
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack {
-                ForEach(category.courses, id: \.self) { course in
-                    PhraseButton(practiceDone: course.completionState == 1, isSelected: course == currentSelected, isSentence: !category.isCharacter, phrase: course.name) {
-                        self.currentSelected = course
+            ScrollViewReader { scrollValue in
+                HStack {
+                    ForEach(category.courses.indices, id: \.self) { i in
+                        let course = category.courses[i]
+                        
+                        PhraseButton(practiceDone: course.completionState == 1, isSelected: course == currentSelected, isSentence: !category.isCharacter, phrase: course.name) {
+                            self.currentSelected = course
+                            
+                            withAnimation {
+                                scrollValue.scrollTo(i, anchor: .center)
+                            }
+                        }
+                        .id(i)
                     }
-
                 }
             }
         }
