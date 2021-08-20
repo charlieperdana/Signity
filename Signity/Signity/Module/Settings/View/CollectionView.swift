@@ -29,7 +29,7 @@ struct CollectionView: View {
                     .modifier(SignityFootnote(color: .text))
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             }
-            Image("chevron.right")
+            Image(systemName: "chevron.right")
                 .padding(.trailing,20)
         }
         .padding(.bottom, 20)
