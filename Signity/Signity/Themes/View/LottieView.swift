@@ -41,9 +41,15 @@ struct LottieView: UIViewRepresentable {
         }
         
         if self.name != PracticeVideoQueue.shared.videoName {
-            context.coordinator.parent.animationView.animation = Animation.named(self.name)
-            context.coordinator.parent.animationView.play()
-            
+            DispatchQueue.global(qos: .background).async {
+                let newAnimation = Animation.named(self.name)
+                
+                DispatchQueue.main.async {
+                    context.coordinator.parent.animationView.animation = newAnimation
+                    context.coordinator.parent.animationView.play()
+                }
+            }
+
             PracticeVideoQueue.shared.videoName = self.name
         }
     }
