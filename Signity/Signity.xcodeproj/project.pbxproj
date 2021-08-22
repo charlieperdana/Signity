@@ -78,6 +78,7 @@
 		7D4745B026D23221000DE129 /* DataMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4745AF26D23221000DE129 /* DataMigrator.swift */; };
 		7D9866A026D2459B00BED6F6 /* PracticeOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98669F26D2459B00BED6F6 /* PracticeOnboardingViewModel.swift */; };
 		7D9866A726D2504C00BED6F6 /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9866A626D2504C00BED6F6 /* VideoViewModel.swift */; };
+		7D9866C526D25D0300BED6F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9866C426D25D0300BED6F6 /* LaunchScreen.storyboard */; };
 		7F3BE3B80E483F910C99E689 /* Selamat sore - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = BEDF4A6520593AEDA3AEAC19 /* Selamat sore - Jakarta.json */; };
 		7F4E21AB2E5892E60A117BB4 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937BBB895E982E23EDE14EB8 /* Hand.swift */; };
 		7FABAAC1EB4B9DCCDBC0D514 /* D - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 4747D3C91207CABFAB71A09B /* D - Jakarta.json */; };
@@ -91,7 +92,6 @@
 		8A3AE8E04EEA4B269A727094 /* J - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 5CFBAB7C79157A5F1BADE268 /* J - Jakarta.json */; };
 		8EE2D9897200C2F3E3A38B58 /* ModuleGroup+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B673D80995B1D93A51388E0 /* ModuleGroup+Helper.swift */; };
 		925027A5173066CF106821C9 /* P - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = E1350AA335147B2C263845A1 /* P - Jakarta.json */; };
-		943739E86AEF32D30B9D9D13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F10AB9ED99D0899092C811 /* LaunchScreen.storyboard */; };
 		950FD7D40337A9D6648B8894 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5AEF9C001FE18A49B15852 /* ViewRouter.swift */; };
 		951F4FCE57821E9636C38FDC /* R - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = C3DD34164E1471595C9E11EA /* R - Jakarta.json */; };
 		971ADA380C666658095D2BF6 /* Kita - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 51065CDE359A89A157355B05 /* Kita - Jakarta.json */; };
@@ -216,6 +216,7 @@
 		7D4745AF26D23221000DE129 /* DataMigrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMigrator.swift; sourceTree = "<group>"; };
 		7D98669F26D2459B00BED6F6 /* PracticeOnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeOnboardingViewModel.swift; sourceTree = "<group>"; };
 		7D9866A626D2504C00BED6F6 /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
+		7D9866C426D25D0300BED6F6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F9CC27601DB094D8E61E41B /* 7 - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "7 - Jakarta.json"; sourceTree = "<group>"; };
 		8083747B5219BD8C0D2C57F0 /* 4 - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "4 - Jakarta.json"; sourceTree = "<group>"; };
 		81A658F1F3904143390E2BA0 /* HintButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintButton.swift; sourceTree = "<group>"; };
@@ -284,7 +285,6 @@
 		EB07268FEBCC090892FDDFDB /* ProgressBarCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarCourse.swift; sourceTree = "<group>"; };
 		EF8FC1CD01C3FB6D3180A3B8 /* SignityHeadline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityHeadline.swift; sourceTree = "<group>"; };
 		F21BCD537E4A79EDEA7A614D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		F27B4F9AA54999C93A1645B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4ED6D9E4AED0DA8735563C3 /* Halo, selamat siang - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Halo, selamat siang - Jakarta.json"; sourceTree = "<group>"; };
 		F5AB4813573A829C87FFFF01 /* SignityButtonOutline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityButtonOutline.swift; sourceTree = "<group>"; };
 		F9AB0F638D78B2C9D89E2827 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
@@ -593,6 +593,14 @@
 			path = "Data Entity Helper";
 			sourceTree = "<group>";
 		};
+		7D9866C326D25CC600BED6F6 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				E3D6A0422622C32959874569 /* Signity.xcdatamodeld */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
 		7E504698076996AE8A41B51E /* SignityTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -633,6 +641,7 @@
 			isa = PBXGroup;
 			children = (
 				6666808466A209E8F198A6D2 /* SignityApp.swift */,
+				7D9866C426D25D0300BED6F6 /* LaunchScreen.storyboard */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -854,8 +863,7 @@
 				C07A0C50D46C78B7D34FDB24 /* Assets.xcassets */,
 				40EDB2C534BEF24321CFC962 /* Colors.xcassets */,
 				4890FC63A94D6EFE0F660E19 /* Info.plist */,
-				91F10AB9ED99D0899092C811 /* LaunchScreen.storyboard */,
-				E3D6A0422622C32959874569 /* Signity.xcdatamodeld */,
+				7D9866C326D25CC600BED6F6 /* Core Data */,
 				9B6D4BF9EA5222795581EC5A /* Application */,
 				FBC6D37FF3248E300B6BAC2F /* Helper */,
 				6D13A1EC313C1D69B0D1A2C7 /* MLModels */,
@@ -982,13 +990,13 @@
 				D543D7A75DBA58BEC84548ED /* H - Jakarta.json in Resources */,
 				A9604524511D79459E91E120 /* Halo - Jakarta.json in Resources */,
 				B30668537B126A2999904134 /* Halo, selamat siang - Jakarta.json in Resources */,
+				7D9866C526D25D0300BED6F6 /* LaunchScreen.storyboard in Resources */,
 				E96401F678D40618F5BC1151 /* I - Jakarta.json in Resources */,
 				8A3AE8E04EEA4B269A727094 /* J - Jakarta.json in Resources */,
 				B3FC8DB8EC077E5FA71BC4EB /* K - Jakarta.json in Resources */,
 				C5E6DAE5F4164BC713E70F0B /* Kamu - Jakarta.json in Resources */,
 				971ADA380C666658095D2BF6 /* Kita - Jakarta.json in Resources */,
 				551E41B9EA18EB84A045A29B /* L - Jakarta.json in Resources */,
-				943739E86AEF32D30B9D9D13 /* LaunchScreen.storyboard in Resources */,
 				6929AAF53BCDC1796B14B835 /* M - Jakarta.json in Resources */,
 				C0DAAA32EC5352D99FA2BB29 /* Mereka - Jakarta.json in Resources */,
 				8209AA4A657B4E35618E10D2 /* N - Jakarta.json in Resources */,
@@ -1119,17 +1127,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		91F10AB9ED99D0899092C811 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F27B4F9AA54999C93A1645B6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		17B94182A7E8D8A3A1DD35EF /* Release */ = {
