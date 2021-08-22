@@ -94,6 +94,13 @@ struct SimulationView: View {
         }
         .navigationBarHidden(true)
         .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+        
+        .onAppear {
+            TimeoutManager.shared.disableDimming()
+        }
+        .onDisappear {
+            TimeoutManager.shared.enableDimming()
+        }
     }
 }
 

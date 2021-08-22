@@ -81,7 +81,13 @@ struct PracticeView: View {
         }
         .navigationBarHidden(true)
         .edgesIgnoringSafeArea(.all)
-
+        
+        .onAppear {
+            TimeoutManager.shared.disableDimming()
+        }
+        .onDisappear {
+            TimeoutManager.shared.enableDimming()
+        }
     }
 }
 
