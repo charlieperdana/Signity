@@ -505,10 +505,10 @@
 		5FFA9597333082C74B14EDC4 = {
 			isa = PBXGroup;
 			children = (
+				E0136519A83643AE8063DEED /* Products */,
 				FCB6EC2D012A83BED90D7F81 /* Signity */,
 				7E504698076996AE8A41B51E /* SignityTests */,
 				0012394E3DE4D4F51085E670 /* SignityUITests */,
-				E0136519A83643AE8063DEED /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -848,14 +848,14 @@
 			isa = PBXGroup;
 			children = (
 				C3411B2BA0A69619D41E8986 /* AudioManager.swift */,
-				7D9866A526D24C0200BED6F6 /* Data Entity Helper */,
 				71E5060C78B5D58E9271CAEF /* CoreMLHelper.swift */,
+				7D4745AF26D23221000DE129 /* DataMigrator.swift */,
 				7918D4B3874676F114116536 /* HapticManager.swift */,
 				639F91617D3C8AB58BBD2FD0 /* NavigationHelper.swift */,
 				2A12289D82E0690B1E44C5A5 /* PersistenceController.swift */,
-				7C5AEF9C001FE18A49B15852 /* ViewRouter.swift */,
-				7D4745AF26D23221000DE129 /* DataMigrator.swift */,
 				7D9866C626D2625400BED6F6 /* TimeoutManager.swift */,
+				7C5AEF9C001FE18A49B15852 /* ViewRouter.swift */,
+				7D9866A526D24C0200BED6F6 /* Data Entity Helper */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
