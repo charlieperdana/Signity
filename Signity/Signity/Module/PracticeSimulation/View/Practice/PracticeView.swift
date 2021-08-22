@@ -68,7 +68,7 @@ struct PracticeView: View {
                     HStack(alignment: .top) {
                         ChatBubble(text: viewModel.chosenCourse.name)
                         
-                        VideoView(videoName: viewModel.chosenCourse.videoName, playbackSpeed: $viewModel.playbackSpeed, playbackState: $viewModel.playbackState)
+                        VideoView(videoName: viewModel.chosenCourse.videoName)
                             .frame(width: 150, height: 200)
                     }
                     .padding()

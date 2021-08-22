@@ -56,7 +56,7 @@ struct SimulationView: View {
                 ZStack {
                     Color.black
                         .opacity(0.5)
-                    VideoView(videoName: viewModel.courses[viewModel.userPosition].videoName, playbackSpeed: .constant(1.0), playbackState: .constant(.normal))
+                    VideoView(videoName: viewModel.courses[viewModel.userPosition].videoName)
                 }
                 .onTapGesture {
                     self.isHintVisible = false

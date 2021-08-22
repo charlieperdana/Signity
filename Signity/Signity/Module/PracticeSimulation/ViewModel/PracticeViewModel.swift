@@ -20,12 +20,6 @@ class PracticeVideoQueue {
 class PracticeViewModel: ObservableObject {
     var handLandmarks = [[Double]]()
     @Published var detectedHands = [Hand]()
-    @Published var playbackState: PlaybackState {
-        willSet {
-            playbackSpeed = (newValue == .slow ? 0.5 : 1.0)
-        }
-    }
-    var playbackSpeed: CGFloat
     
     @Published var practiceDone = false
     
@@ -36,9 +30,6 @@ class PracticeViewModel: ObservableObject {
     init(category: Category, chosenCourse: Course) {
         self.category = category
         self.chosenCourse = chosenCourse
-
-        self.playbackState = .normal
-        self.playbackSpeed = 1.0
     }
 
     func addLandmarks(landmark: [Double]) {
@@ -66,10 +57,10 @@ class PracticeViewModel: ObservableObject {
                     
                 }
             } catch {
-                
+                // handle errors
             }
             
-            handLandmarks.removeFirst(30)
+            handLandmarks.removeFirst(15)
         }
     }
     
