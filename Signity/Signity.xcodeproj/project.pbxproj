@@ -77,7 +77,6 @@
 		7D0764E626CD40D8000B3330 /* SignityVisionJKT.mlkitmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7D0764E526CD40D8000B3330 /* SignityVisionJKT.mlkitmodel */; };
 		7D4745B026D23221000DE129 /* DataMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4745AF26D23221000DE129 /* DataMigrator.swift */; };
 		7D9866A026D2459B00BED6F6 /* PracticeOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98669F26D2459B00BED6F6 /* PracticeOnboardingViewModel.swift */; };
-		7D9866A226D2466200BED6F6 /* SignityButtonDisabled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9866A126D2466200BED6F6 /* SignityButtonDisabled.swift */; };
 		7F3BE3B80E483F910C99E689 /* Selamat sore - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = BEDF4A6520593AEDA3AEAC19 /* Selamat sore - Jakarta.json */; };
 		7F4E21AB2E5892E60A117BB4 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937BBB895E982E23EDE14EB8 /* Hand.swift */; };
 		7FABAAC1EB4B9DCCDBC0D514 /* D - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 4747D3C91207CABFAB71A09B /* D - Jakarta.json */; };
@@ -85,9 +84,8 @@
 		8016EBDC06CE3DBD183DD5B0 /* Apa kabar - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = A24AD775634E7EBA25FC3720 /* Apa kabar - Jakarta.json */; };
 		8127349C1209CDFEC89CD65F /* HandLandmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C32BE981B5B58D7DF608A1 /* HandLandmarks.swift */; };
 		8209AA4A657B4E35618E10D2 /* N - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 63ECF12426FFBC7CD97E1E4F /* N - Jakarta.json */; };
-		84C9ED95ED60ADAA14C02907 /* ModuleGroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D042B5EEC853BBE2D3CBF26 /* ModuleGroupStorage.swift */; };
+		84C9ED95ED60ADAA14C02907 /* ModuleGroupRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D042B5EEC853BBE2D3CBF26 /* ModuleGroupRepository.swift */; };
 		851C5E38307AD135B7FD9397 /* ComparePhraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FFF2DD3D1AE814A9C6EE77 /* ComparePhraseView.swift */; };
-		8607050E3280A0DC11FE7B0F /* dolphin.json in Resources */ = {isa = PBXBuildFile; fileRef = 862F352F3B100B1E86D29A27 /* dolphin.json */; };
 		87B42D7007735A4EF751D4A8 /* SignityButtonOutline.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AB4813573A829C87FFFF01 /* SignityButtonOutline.swift */; };
 		8A3AE8E04EEA4B269A727094 /* J - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 5CFBAB7C79157A5F1BADE268 /* J - Jakarta.json */; };
 		8EE2D9897200C2F3E3A38B58 /* ModuleGroup+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B673D80995B1D93A51388E0 /* ModuleGroup+Helper.swift */; };
@@ -204,7 +202,7 @@
 		67D4914CC166E8C44F03F1D6 /* CourseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseModel.swift; sourceTree = "<group>"; };
 		6A2F7CC275455C0C4239D8D1 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		6B4A96650914334E40940ED1 /* AccomplishmentTiru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccomplishmentTiru.swift; sourceTree = "<group>"; };
-		6D042B5EEC853BBE2D3CBF26 /* ModuleGroupStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleGroupStorage.swift; sourceTree = "<group>"; };
+		6D042B5EEC853BBE2D3CBF26 /* ModuleGroupRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleGroupRepository.swift; sourceTree = "<group>"; };
 		7186B2763C53153D19ADDBCB /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		71E5060C78B5D58E9271CAEF /* CoreMLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLHelper.swift; sourceTree = "<group>"; };
 		74C32BE981B5B58D7DF608A1 /* HandLandmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandLandmarks.swift; sourceTree = "<group>"; };
@@ -217,12 +215,10 @@
 		7D0764E526CD40D8000B3330 /* SignityVisionJKT.mlkitmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SignityVisionJKT.mlkitmodel; sourceTree = "<group>"; };
 		7D4745AF26D23221000DE129 /* DataMigrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMigrator.swift; sourceTree = "<group>"; };
 		7D98669F26D2459B00BED6F6 /* PracticeOnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeOnboardingViewModel.swift; sourceTree = "<group>"; };
-		7D9866A126D2466200BED6F6 /* SignityButtonDisabled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityButtonDisabled.swift; sourceTree = "<group>"; };
 		7F9CC27601DB094D8E61E41B /* 7 - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "7 - Jakarta.json"; sourceTree = "<group>"; };
 		8083747B5219BD8C0D2C57F0 /* 4 - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "4 - Jakarta.json"; sourceTree = "<group>"; };
 		81A658F1F3904143390E2BA0 /* HintButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintButton.swift; sourceTree = "<group>"; };
 		83878CD97BD140ABD104ECC6 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
-		862F352F3B100B1E86D29A27 /* dolphin.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dolphin.json; sourceTree = "<group>"; };
 		8D875057216FCBD0A9456481 /* S - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "S - Jakarta.json"; sourceTree = "<group>"; };
 		8DB8AA153DB638E5543DF0E7 /* SignityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityTests.swift; sourceTree = "<group>"; };
 		8DD248B70321BE0D13110C85 /* OnboardingLatihanTiru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingLatihanTiru.swift; sourceTree = "<group>"; };
@@ -586,6 +582,16 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		7D9866A526D24C0200BED6F6 /* Data Entity Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2D28C57CCCF2C9306943215C /* Category+Helper.swift */,
+				22D68F9307BB6D98CC1A20D1 /* Course+Helper.swift */,
+				7B673D80995B1D93A51388E0 /* ModuleGroup+Helper.swift */,
+			);
+			path = "Data Entity Helper";
+			sourceTree = "<group>";
+		};
 		7E504698076996AE8A41B51E /* SignityTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -745,7 +751,7 @@
 			isa = PBXGroup;
 			children = (
 				67D4914CC166E8C44F03F1D6 /* CourseModel.swift */,
-				6D042B5EEC853BBE2D3CBF26 /* ModuleGroupStorage.swift */,
+				6D042B5EEC853BBE2D3CBF26 /* ModuleGroupRepository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -768,7 +774,6 @@
 				B4F139692329014ADE4D25E3 /* PlaybackButton.swift */,
 				1C891BE23C9495C2C20B8956 /* SignityButton.swift */,
 				F5AB4813573A829C87FFFF01 /* SignityButtonOutline.swift */,
-				7D9866A126D2466200BED6F6 /* SignityButtonDisabled.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -832,11 +837,9 @@
 			isa = PBXGroup;
 			children = (
 				C3411B2BA0A69619D41E8986 /* AudioManager.swift */,
-				2D28C57CCCF2C9306943215C /* Category+Helper.swift */,
+				7D9866A526D24C0200BED6F6 /* Data Entity Helper */,
 				71E5060C78B5D58E9271CAEF /* CoreMLHelper.swift */,
-				22D68F9307BB6D98CC1A20D1 /* Course+Helper.swift */,
 				7918D4B3874676F114116536 /* HapticManager.swift */,
-				7B673D80995B1D93A51388E0 /* ModuleGroup+Helper.swift */,
 				639F91617D3C8AB58BBD2FD0 /* NavigationHelper.swift */,
 				2A12289D82E0690B1E44C5A5 /* PersistenceController.swift */,
 				7C5AEF9C001FE18A49B15852 /* ViewRouter.swift */,
@@ -850,7 +853,6 @@
 			children = (
 				C07A0C50D46C78B7D34FDB24 /* Assets.xcassets */,
 				40EDB2C534BEF24321CFC962 /* Colors.xcassets */,
-				862F352F3B100B1E86D29A27 /* dolphin.json */,
 				4890FC63A94D6EFE0F660E19 /* Info.plist */,
 				91F10AB9ED99D0899092C811 /* LaunchScreen.storyboard */,
 				E3D6A0422622C32959874569 /* Signity.xcdatamodeld */,
@@ -1010,7 +1012,6 @@
 				59D5C6764C1DD6D1DB265713 /* X - Jakarta.json in Resources */,
 				CE9D48320822909E4EDA59D8 /* Y - Jakarta.json in Resources */,
 				1EDB37AC6D2DF968E1C218DC /* Z - Jakarta.json in Resources */,
-				8607050E3280A0DC11FE7B0F /* dolphin.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1063,12 +1064,11 @@
 				FC65BE15315AB48DDB1684DF /* HorizontalModules.swift in Sources */,
 				05B1A2715CE7F827FA6F36BA /* LottieView.swift in Sources */,
 				8EE2D9897200C2F3E3A38B58 /* ModuleGroup+Helper.swift in Sources */,
-				84C9ED95ED60ADAA14C02907 /* ModuleGroupStorage.swift in Sources */,
+				84C9ED95ED60ADAA14C02907 /* ModuleGroupRepository.swift in Sources */,
 				2CCBEDCBF63E8A82702D783D /* NavigationHelper.swift in Sources */,
 				3CC6C39BC8E7F3CFEED05989 /* Onboarding.swift in Sources */,
 				091367095C9F5642A1CB6776 /* OnboardingLatihanTiru.swift in Sources */,
 				60C13B7A61BF3FDD49E56CD3 /* OnboardingRegion.swift in Sources */,
-				7D9866A226D2466200BED6F6 /* SignityButtonDisabled.swift in Sources */,
 				9AC993F189A7B4D1CC60019C /* OnboardingSimulasi.swift in Sources */,
 				1D8F46EB59FF26771A73CFB7 /* OnboardingViewModel.swift in Sources */,
 				E6FCD9E029F1BA4C63893A16 /* PersistenceController.swift in Sources */,

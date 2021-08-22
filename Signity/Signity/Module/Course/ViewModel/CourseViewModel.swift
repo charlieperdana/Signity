@@ -34,7 +34,7 @@ class CourseViewModel: ObservableObject {
             .store(in: &cancellable)
     }
 
-    func updateModules(storage: ModuleGroupStorage = ModuleGroupStorage()) {
+    func updateModules(storage: ModuleGroupRepository = ModuleGroupRepository()) {
         self.allModules = storage.fetch()
         
         self.currentModules = self.allModules.filter {

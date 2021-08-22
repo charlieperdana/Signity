@@ -8,7 +8,7 @@
 import Combine
 import CoreData
 
-class ModuleGroupStorage {
+class ModuleGroupRepository {
     let context = PersistenceController.shared.persistentContainer.viewContext
     
     func fetch() -> [ModuleGroup] {
