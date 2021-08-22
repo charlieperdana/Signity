@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OnboardingLatihanTiru: View {
+    @StateObject var viewModel = PracticeOnboardingViewModel()
     var category: Category
     var chosenCourse: Course
 
@@ -36,8 +37,14 @@ struct OnboardingLatihanTiru: View {
             
             Spacer()
             
-            SignityButton(text: "Berikutnya") {
-                self.showPractice = true
+            if viewModel.cameraAuthorizationStatus != .authorized {
+                SignityButton(text: "Allow camera access") {
+                    viewModel.requestCameraAccess()
+                }
+            } else {
+                SignityButton(text: "Berikutnya") {
+                    self.showPractice = true
+                }
             }
             
             NavigationLink(destination: PracticeView(category: category, chosenCourse: chosenCourse), isActive: $showPractice) {

@@ -76,6 +76,8 @@
 		7D052D0B26CE756500682011 /* 10 - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D052D0A26CE756500682011 /* 10 - Jakarta.json */; };
 		7D0764E626CD40D8000B3330 /* SignityVisionJKT.mlkitmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7D0764E526CD40D8000B3330 /* SignityVisionJKT.mlkitmodel */; };
 		7D4745B026D23221000DE129 /* DataMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4745AF26D23221000DE129 /* DataMigrator.swift */; };
+		7D9866A026D2459B00BED6F6 /* PracticeOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98669F26D2459B00BED6F6 /* PracticeOnboardingViewModel.swift */; };
+		7D9866A226D2466200BED6F6 /* SignityButtonDisabled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9866A126D2466200BED6F6 /* SignityButtonDisabled.swift */; };
 		7F3BE3B80E483F910C99E689 /* Selamat sore - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = BEDF4A6520593AEDA3AEAC19 /* Selamat sore - Jakarta.json */; };
 		7F4E21AB2E5892E60A117BB4 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937BBB895E982E23EDE14EB8 /* Hand.swift */; };
 		7FABAAC1EB4B9DCCDBC0D514 /* D - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 4747D3C91207CABFAB71A09B /* D - Jakarta.json */; };
@@ -214,6 +216,8 @@
 		7D052D0A26CE756500682011 /* 10 - Jakarta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "10 - Jakarta.json"; sourceTree = "<group>"; };
 		7D0764E526CD40D8000B3330 /* SignityVisionJKT.mlkitmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SignityVisionJKT.mlkitmodel; sourceTree = "<group>"; };
 		7D4745AF26D23221000DE129 /* DataMigrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMigrator.swift; sourceTree = "<group>"; };
+		7D98669F26D2459B00BED6F6 /* PracticeOnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeOnboardingViewModel.swift; sourceTree = "<group>"; };
+		7D9866A126D2466200BED6F6 /* SignityButtonDisabled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityButtonDisabled.swift; sourceTree = "<group>"; };
 		7F9CC27601DB094D8E61E41B /* 7 - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "7 - Jakarta.json"; sourceTree = "<group>"; };
 		8083747B5219BD8C0D2C57F0 /* 4 - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "4 - Jakarta.json"; sourceTree = "<group>"; };
 		81A658F1F3904143390E2BA0 /* HintButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintButton.swift; sourceTree = "<group>"; };
@@ -474,12 +478,13 @@
 			path = Alphabet;
 			sourceTree = "<group>";
 		};
-		4D42AC9C26757F045F3FF6C3 /* OnboardingLatihan */ = {
+		4D42AC9C26757F045F3FF6C3 /* PracticeSimulationOnboarding */ = {
 			isa = PBXGroup;
 			children = (
+				7D98669E26D2457500BED6F6 /* ViewModel */,
 				79C835FF1E0714022ED1328B /* View */,
 			);
-			path = OnboardingLatihan;
+			path = PracticeSimulationOnboarding;
 			sourceTree = "<group>";
 		};
 		4E6BEFA720A38F1934AB2F34 /* ViewModel */ = {
@@ -573,6 +578,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		7D98669E26D2457500BED6F6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7D98669F26D2459B00BED6F6 /* PracticeOnboardingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		7E504698076996AE8A41B51E /* SignityTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -601,8 +614,8 @@
 				B0A4BA66435B4B8E6619D900 /* Compare */,
 				E6B4EA94337A05295D39ED5C /* Course */,
 				CEA1B5EE744C7B38717B757F /* Onboarding */,
-				4D42AC9C26757F045F3FF6C3 /* OnboardingLatihan */,
-				A53AD3AC945FB39BCE9894F5 /* Practice */,
+				4D42AC9C26757F045F3FF6C3 /* PracticeSimulationOnboarding */,
+				A53AD3AC945FB39BCE9894F5 /* PracticeSimulation */,
 				B54BDE346464675A4C4FFD2C /* Settings */,
 				ED152C325C6ABE4E24C8566C /* Tutorial */,
 			);
@@ -626,14 +639,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		A53AD3AC945FB39BCE9894F5 /* Practice */ = {
+		A53AD3AC945FB39BCE9894F5 /* PracticeSimulation */ = {
 			isa = PBXGroup;
 			children = (
 				5C4CB7B44BF9F7F48B60678D /* Model */,
 				B77E6377BB182B3E306FF2D1 /* View */,
 				4313579EF95A5BCF8214BF49 /* ViewModel */,
 			);
-			path = Practice;
+			path = PracticeSimulation;
 			sourceTree = "<group>";
 		};
 		A7BE239C761E118D7ECAC804 /* View */ = {
@@ -755,6 +768,7 @@
 				B4F139692329014ADE4D25E3 /* PlaybackButton.swift */,
 				1C891BE23C9495C2C20B8956 /* SignityButton.swift */,
 				F5AB4813573A829C87FFFF01 /* SignityButtonOutline.swift */,
+				7D9866A126D2466200BED6F6 /* SignityButtonDisabled.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1054,6 +1068,7 @@
 				3CC6C39BC8E7F3CFEED05989 /* Onboarding.swift in Sources */,
 				091367095C9F5642A1CB6776 /* OnboardingLatihanTiru.swift in Sources */,
 				60C13B7A61BF3FDD49E56CD3 /* OnboardingRegion.swift in Sources */,
+				7D9866A226D2466200BED6F6 /* SignityButtonDisabled.swift in Sources */,
 				9AC993F189A7B4D1CC60019C /* OnboardingSimulasi.swift in Sources */,
 				1D8F46EB59FF26771A73CFB7 /* OnboardingViewModel.swift in Sources */,
 				E6FCD9E029F1BA4C63893A16 /* PersistenceController.swift in Sources */,
@@ -1063,6 +1078,7 @@
 				089C735FB0DDADA06AE9B8D5 /* PracticeViewModel.swift in Sources */,
 				E15D6EBC22A8B6E96A7F6D43 /* ProgressBar.swift in Sources */,
 				F2F8A5F45A805C2DCE1E1396 /* ProgressBarCourse.swift in Sources */,
+				7D9866A026D2459B00BED6F6 /* PracticeOnboardingViewModel.swift in Sources */,
 				B1904620AE3FAABC127E5E62 /* RegionSelectionButton.swift in Sources */,
 				0152466490872986EC4A9900 /* RootView.swift in Sources */,
 				BD474682C4EF22D12528286A /* SceneDelegate.swift in Sources */,
