@@ -12,17 +12,18 @@ struct CategoryView: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-    let numOfColumn = 5
-    
     @State var navBarHidden = false
     @State var showPracticeOnboarding = false
     var chosenWord = ""
+    
+    @State var refreshID = UUID()
     
     var body: some View {
         VStack {
             ScrollView(.vertical, showsIndicators: false) {
                 GridView(category: category)
             }
+            .id(refreshID)
             
             if category.typeEnum == .situation {
                 SignityButton(text: "Mulai Latihan") {
@@ -32,7 +33,10 @@ struct CategoryView: View {
             }
             
             NavigationLink(
-                destination: OnboardingLatihanTiru(category: category, chosenCourse: category.courses[0]),
+                destination: OnboardingLatihanTiru(category: category, chosenCourse: category.courses[0])
+                    .onDisappear {
+                        self.refreshID = UUID()
+                    },
                 isActive: $showPracticeOnboarding
             ){}
         }
