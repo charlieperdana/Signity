@@ -75,6 +75,7 @@
 		78608EBDC9EEB6E96F27EE7F /* CameraNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DC06823247EC7547D98226 /* CameraNavigationBar.swift */; };
 		7D052D0B26CE756500682011 /* 10 - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D052D0A26CE756500682011 /* 10 - Jakarta.json */; };
 		7D0764E626CD40D8000B3330 /* SignityVisionJKT.mlkitmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7D0764E526CD40D8000B3330 /* SignityVisionJKT.mlkitmodel */; };
+		7D4745B026D23221000DE129 /* DataMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4745AF26D23221000DE129 /* DataMigrator.swift */; };
 		7F3BE3B80E483F910C99E689 /* Selamat sore - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = BEDF4A6520593AEDA3AEAC19 /* Selamat sore - Jakarta.json */; };
 		7F4E21AB2E5892E60A117BB4 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937BBB895E982E23EDE14EB8 /* Hand.swift */; };
 		7FABAAC1EB4B9DCCDBC0D514 /* D - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 4747D3C91207CABFAB71A09B /* D - Jakarta.json */; };
@@ -212,6 +213,7 @@
 		7C5AEF9C001FE18A49B15852 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		7D052D0A26CE756500682011 /* 10 - Jakarta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "10 - Jakarta.json"; sourceTree = "<group>"; };
 		7D0764E526CD40D8000B3330 /* SignityVisionJKT.mlkitmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SignityVisionJKT.mlkitmodel; sourceTree = "<group>"; };
+		7D4745AF26D23221000DE129 /* DataMigrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMigrator.swift; sourceTree = "<group>"; };
 		7F9CC27601DB094D8E61E41B /* 7 - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "7 - Jakarta.json"; sourceTree = "<group>"; };
 		8083747B5219BD8C0D2C57F0 /* 4 - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "4 - Jakarta.json"; sourceTree = "<group>"; };
 		81A658F1F3904143390E2BA0 /* HintButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintButton.swift; sourceTree = "<group>"; };
@@ -824,6 +826,7 @@
 				639F91617D3C8AB58BBD2FD0 /* NavigationHelper.swift */,
 				2A12289D82E0690B1E44C5A5 /* PersistenceController.swift */,
 				7C5AEF9C001FE18A49B15852 /* ViewRouter.swift */,
+				7D4745AF26D23221000DE129 /* DataMigrator.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -1020,6 +1023,7 @@
 				78608EBDC9EEB6E96F27EE7F /* CameraNavigationBar.swift in Sources */,
 				DB4207052D8FD93F264D787B /* CameraRepresentable.swift in Sources */,
 				C4FD1649159EA4B236539F48 /* CameraViewController+DrawLandmark.swift in Sources */,
+				7D4745B026D23221000DE129 /* DataMigrator.swift in Sources */,
 				1FB5593379EFEEBDE7821C35 /* CameraViewController.swift in Sources */,
 				AD4ACC98BE902A96BFDA7EEC /* CardViewCourse.swift in Sources */,
 				4D32099FCCF77EC32EB67FFA /* Category+Helper.swift in Sources */,

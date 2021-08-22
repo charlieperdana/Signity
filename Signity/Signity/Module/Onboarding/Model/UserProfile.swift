@@ -26,6 +26,7 @@ extension UserDefaults {
     private enum Keys {
         static let onboardingDidCompleteKey = "OnboardingDidComplete"
         static let userProfileKey = "UserProfile"
+        static let databaseVersionKey = "DatabaseVersion"
     }
     
     @objc var userProfile: UserProfile {
@@ -47,6 +48,15 @@ extension UserDefaults {
         }
         set {
             set(newValue, forKey: Keys.onboardingDidCompleteKey)
+        }
+    }
+    
+    @objc var currentDatabaseVersion: Int {
+        get {
+            integer(forKey: Keys.databaseVersionKey)
+        }
+        set {
+            setValue(newValue, forKey: Keys.databaseVersionKey)
         }
     }
 }
