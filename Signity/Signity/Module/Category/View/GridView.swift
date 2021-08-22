@@ -17,20 +17,15 @@ struct GridView: View {
     var items: [GridItem] {
         Array(repeating: .init(.flexible(minimum: 0, maximum: .infinity)), count: numOfColumn)
     }
-    
-    @State var refreshID = UUID()
-    
+
     var body: some View {
         LazyVGrid(columns: items, alignment: .center, spacing: 15) {
             ForEach(category.courses.indices) { i in
-                NavigationLink(destination: TutorialPhraseView(category: category, chosenCourse: category.courses[i]).onDisappear {
-                    self.refreshID = UUID()
-                }) {
+                NavigationLink(destination: TutorialPhraseView(category: category, chosenCourse: category.courses[i])) {
                     CourseCell(course: category.courses[i], isEven: i % 2 == 0)
                 }
             }
         }
-        .id(refreshID)
     }
 }
 

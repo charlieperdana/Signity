@@ -12,6 +12,8 @@ struct CoursePage: View {
     
     @StateObject var viewModel = CourseViewModel()
     
+    @State var refreshID = UUID()
+    
     var body: some View {
         ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: false) {
             VStack(alignment:.leading){
@@ -49,23 +51,23 @@ struct CoursePage: View {
                         Section(header: Text(group.name)
                                     .modifier(SignitySubtitle(color: .text))) {
                             ForEach(group.categories, id: \.self) { item in
-                                CardViewCourse(category: item, proficiency: viewModel.regionProficiency).id(UUID())
+                                CardViewCourse(category: item, proficiency: viewModel.regionProficiency)
                             }
                         }
                     }
                 }
+                .id(self.refreshID)
                 .padding(.horizontal)
             }
         }
         
-        .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
         .sheet(isPresented: $showSettings) {
             SettingsView()
         }
         
         .onAppear {
-            viewModel.updateModules()
+            self.refreshID = UUID()
         }
     }
 }

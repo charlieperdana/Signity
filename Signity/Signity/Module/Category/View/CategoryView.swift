@@ -33,23 +33,21 @@ struct CategoryView: View {
             }
             
             NavigationLink(
-                destination: OnboardingLatihanTiru(category: category, chosenCourse: category.courses[0])
-                    .onDisappear {
-                        self.refreshID = UUID()
-                    },
-                isActive: $showPracticeOnboarding
+                destination: OnboardingLatihanTiru(category: category, chosenCourse: category.courses[0]), isActive: $showPracticeOnboarding
             ){}
+
         }
         .padding()
-        
+
         .navigationBarHidden(self.navBarHidden)
         .navigationBarTitle(category.name, displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: BackButton {
             self.presentationMode.wrappedValue.dismiss()
         })
+        
         .onAppear {
-            self.navBarHidden = false
+            self.refreshID = UUID()
         }
     }
 }

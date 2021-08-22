@@ -47,12 +47,9 @@ struct OnboardingLatihanTiru: View {
                 }
             }
             
-            NavigationLink(destination: PracticeView(category: category, chosenCourse: chosenCourse), isActive: $showPractice) {
-                EmptyView()
-            }
+            NavigationLink(destination: PracticeView(category: category, chosenCourse: chosenCourse), isActive: $showPractice) {}
         }
         .padding()
-        .navigationBarHidden(true)
     }
 }
 
