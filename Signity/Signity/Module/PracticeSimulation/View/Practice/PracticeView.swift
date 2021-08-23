@@ -74,7 +74,7 @@ struct PracticeView: View {
                     }
                     .padding()
                     Spacer()
-                    HorizontalModules(category: self.category, currentSelected: $viewModel.chosenCourse)
+                    HorizontalModules(category: self.category, currentSelected: $viewModel.chosenCourse, currentIndex: viewModel.currentIndex)
                 }
                 .padding(.top, self.isNavBarHidden ? 45 : 85)
             }

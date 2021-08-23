@@ -10,6 +10,8 @@ import SwiftUI
 struct HorizontalModules: View {
     var category: Category
     @Binding var currentSelected: Course
+    var currentIndex: Int
+    
     var isSentence: Bool {
         category.typeEnum == .situation
     }
@@ -22,13 +24,20 @@ struct HorizontalModules: View {
                         let course = category.courses[i]
                         
                         PhraseButton(practiceDone: course.completionState == 1, isSelected: course == currentSelected, isSentence: !category.isCharacter, phrase: course.name) {
-                            self.currentSelected = course
                             
-                            withAnimation {
-                                scrollValue.scrollTo(i, anchor: .center)
-                            }
+                            self.currentSelected = course
                         }
                         .id(i)
+                    }
+                    .onChange(of: currentIndex) { index in
+                        withAnimation {
+                            scrollValue.scrollTo(index, anchor: .center)
+                        }
+                    }
+                    .onAppear {
+                        withAnimation {
+                            scrollValue.scrollTo(currentIndex, anchor: .center)
+                        }
                     }
                 }
             }

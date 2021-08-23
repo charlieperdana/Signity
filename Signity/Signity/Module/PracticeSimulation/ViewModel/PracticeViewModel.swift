@@ -24,12 +24,19 @@ class PracticeViewModel: ObservableObject {
     @Published var practiceDone = false
     
     @Published var category: Category
-    @Published var chosenCourse: Course
+    @Published var chosenCourse: Course {
+        willSet {
+            currentIndex = getCourseIndex(for: newValue)
+        }
+    }
+    @Published var currentIndex = 0
     let predictor = CoreMLHelper()
     
     init(category: Category, chosenCourse: Course) {
         self.category = category
         self.chosenCourse = chosenCourse
+        
+        currentIndex = getCourseIndex(for: chosenCourse)
     }
 
     func addLandmarks(landmark: [Double]) {
@@ -48,10 +55,14 @@ class PracticeViewModel: ObservableObject {
 
                 if predictedSign == chosenCourse.name {
                     self.sendCorrectFeedback()
-                    for course in category.courses {
-                        if course.name == chosenCourse.name {
-                            course.completionState = 1
+                    
+                    for i in category.courses.indices {
+                        if category.courses[i] == chosenCourse {
+                            category.courses[i].completionState = 1
                             PersistenceController.shared.saveContext()
+                            
+                            self.moveToNextQuestion()
+                            break
                         }
                     }
                     
@@ -60,8 +71,31 @@ class PracticeViewModel: ObservableObject {
                 // handle errors
             }
             
-            handLandmarks.removeFirst(15)
+            handLandmarks.removeFirst(5)
         }
+    }
+    
+    private func moveToNextQuestion() {
+        for i in (currentIndex + 1)..<category.courses.count {
+            if category.courses[i].completionState == 0 {
+                DispatchQueue.main.async { [self] in
+                    currentIndex = i
+                    chosenCourse = category.courses[i]
+                }
+                
+                break
+            }
+        }
+    }
+    
+    private func getCourseIndex(for course: Course) -> Int {
+        for i in category.courses.indices {
+            if category.courses[i] == course {
+                return i
+            }
+        }
+        
+        return 0
     }
     
     private func sendCorrectFeedback(hapticManager: HapticManager = HapticManager()) {
