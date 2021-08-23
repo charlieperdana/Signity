@@ -27,16 +27,29 @@ class PracticeViewModel: ObservableObject {
     @Published var chosenCourse: Course {
         willSet {
             currentIndex = getCourseIndex(for: newValue)
+            
+            if category.typeEnum == .situation {
+                self.wordTracking = category.courses[currentIndex].wordParts
+                self.correctWord = 0
+            }
         }
     }
     @Published var currentIndex = 0
     let predictor = CoreMLHelper()
+    
+    // Situation type variables
+    @Published var wordTracking: [String] = []
+    @Published var correctWord = 0
     
     init(category: Category, chosenCourse: Course) {
         self.category = category
         self.chosenCourse = chosenCourse
         
         currentIndex = getCourseIndex(for: chosenCourse)
+        
+        if category.typeEnum == .situation {
+            wordTracking = chosenCourse.wordParts
+        }
     }
 
     func addLandmarks(landmark: [Double]) {
@@ -52,26 +65,47 @@ class PracticeViewModel: ObservableObject {
                 }
                 
                 let predictedSign = predictor.predict(multiArray: landmarks)
-
-                if predictedSign == chosenCourse.name {
-                    self.sendCorrectFeedback()
-                    
-                    for i in category.courses.indices {
-                        if category.courses[i] == chosenCourse {
-                            category.courses[i].completionState = 1
-                            PersistenceController.shared.saveContext()
-                            
-                            self.moveToNextQuestion()
-                            break
-                        }
-                    }
-                    
+                if category.typeEnum == .situation {
+                    self.evaluateSituationPrediction(for: predictedSign)
+                } else {
+                    self.evaluatePrediction(for: predictedSign)
                 }
             } catch {
                 // handle errors
             }
             
-            handLandmarks.removeFirst(5)
+            handLandmarks.removeFirst(15)
+        }
+    }
+    
+    private func evaluatePrediction(for label: String) {
+        if label == chosenCourse.name {
+            self.sendCorrectFeedback()
+
+            category.courses[currentIndex].completionState = 1
+            PersistenceController.shared.saveContext()
+            
+            self.moveToNextQuestion()
+        }
+    }
+    
+    private func evaluateSituationPrediction(for label: String) {
+        if correctWord >= wordTracking.count {
+            return
+        }
+        
+        DispatchQueue.main.async { [self] in
+            if label == wordTracking[correctWord] {
+                correctWord += 1
+                self.sendCorrectFeedback()
+            }
+            
+            if correctWord == wordTracking.count {
+                category.courses[currentIndex].completionState = 1
+                PersistenceController.shared.saveContext()
+                
+                self.moveToNextQuestion()
+            }
         }
     }
     

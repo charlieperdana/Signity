@@ -80,6 +80,8 @@
 		7D9866A726D2504C00BED6F6 /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9866A626D2504C00BED6F6 /* VideoViewModel.swift */; };
 		7D9866C526D25D0300BED6F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9866C426D25D0300BED6F6 /* LaunchScreen.storyboard */; };
 		7D9866C726D2625400BED6F6 /* TimeoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9866C626D2625400BED6F6 /* TimeoutManager.swift */; };
+		7D9866C926D3E72200BED6F6 /* SituationHorizontalModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9866C826D3E72200BED6F6 /* SituationHorizontalModule.swift */; };
+		7D9866CB26D3EDDF00BED6F6 /* SentencePracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9866CA26D3EDDF00BED6F6 /* SentencePracticeView.swift */; };
 		7F3BE3B80E483F910C99E689 /* Selamat sore - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = BEDF4A6520593AEDA3AEAC19 /* Selamat sore - Jakarta.json */; };
 		7F4E21AB2E5892E60A117BB4 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937BBB895E982E23EDE14EB8 /* Hand.swift */; };
 		7FABAAC1EB4B9DCCDBC0D514 /* D - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 4747D3C91207CABFAB71A09B /* D - Jakarta.json */; };
@@ -219,6 +221,8 @@
 		7D9866A626D2504C00BED6F6 /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
 		7D9866C426D25D0300BED6F6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D9866C626D2625400BED6F6 /* TimeoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeoutManager.swift; sourceTree = "<group>"; };
+		7D9866C826D3E72200BED6F6 /* SituationHorizontalModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SituationHorizontalModule.swift; sourceTree = "<group>"; };
+		7D9866CA26D3EDDF00BED6F6 /* SentencePracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentencePracticeView.swift; sourceTree = "<group>"; };
 		7F9CC27601DB094D8E61E41B /* 7 - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "7 - Jakarta.json"; sourceTree = "<group>"; };
 		8083747B5219BD8C0D2C57F0 /* 4 - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "4 - Jakarta.json"; sourceTree = "<group>"; };
 		81A658F1F3904143390E2BA0 /* HintButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintButton.swift; sourceTree = "<group>"; };
@@ -383,6 +387,7 @@
 				9038060D677E653F93F8D914 /* HandGuide.swift */,
 				37E0F6AB7A446A3B393E745F /* HorizontalModules.swift */,
 				99A445EF09E4F9709D57F064 /* PracticeView.swift */,
+				7D9866C826D3E72200BED6F6 /* SituationHorizontalModule.swift */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -722,6 +727,7 @@
 				88CBFD65052E9248C1978184 /* CameraView */,
 				22557335EE844B7B6EC69B99 /* Practice */,
 				6022506133676281C10110E3 /* Simulation */,
+				7D9866CA26D3EDDF00BED6F6 /* SentencePracticeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1074,6 +1080,7 @@
 				1D086D01D8C58BFC0F78DA2E /* HapticManager.swift in Sources */,
 				EFE5E06B9AA1CED7A1ED0DB6 /* HintButton.swift in Sources */,
 				FC65BE15315AB48DDB1684DF /* HorizontalModules.swift in Sources */,
+				7D9866C926D3E72200BED6F6 /* SituationHorizontalModule.swift in Sources */,
 				05B1A2715CE7F827FA6F36BA /* LottieView.swift in Sources */,
 				8EE2D9897200C2F3E3A38B58 /* ModuleGroup+Helper.swift in Sources */,
 				84C9ED95ED60ADAA14C02907 /* ModuleGroupRepository.swift in Sources */,
@@ -1088,6 +1095,7 @@
 				524825ED58397E1E94A10618 /* PlaybackButton.swift in Sources */,
 				04C0819596DA94F45A6DEAB8 /* PracticeView.swift in Sources */,
 				089C735FB0DDADA06AE9B8D5 /* PracticeViewModel.swift in Sources */,
+				7D9866CB26D3EDDF00BED6F6 /* SentencePracticeView.swift in Sources */,
 				7D9866A726D2504C00BED6F6 /* VideoViewModel.swift in Sources */,
 				E15D6EBC22A8B6E96A7F6D43 /* ProgressBar.swift in Sources */,
 				F2F8A5F45A805C2DCE1E1396 /* ProgressBarCourse.swift in Sources */,
