@@ -12,7 +12,7 @@ struct SignityFootnote: ViewModifier {
     
     func body(content: Content) -> some View {
         content
-            .font(.footnote)
+            .font(.system(.footnote, design: .rounded))
             .foregroundColor(Color(color.rawValue))
     }
 }

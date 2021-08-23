@@ -12,7 +12,7 @@ struct SignityBody: ViewModifier {
     
     func body(content: Content) -> some View {
         content
-            .font(.body)
+            .font(.system(.body, design: .rounded))
             .multilineTextAlignment(.center)
             .foregroundColor(Color(color.rawValue))
     }
