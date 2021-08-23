@@ -11,10 +11,9 @@ struct PracticeView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     @StateObject var viewModel: PracticeViewModel
-    @State var value: Double = 0.5
     
-    @State var navBarHidden = false
-    @State var guidePassed = false
+    @State var isNavBarHidden = false
+    @State var isGuidePassed = false
     
     var category: Category
     
@@ -31,8 +30,8 @@ struct PracticeView: View {
             }) { hands, highConfidenceLandmarks in
                 viewModel.detectedHands = hands
 
-                if !guidePassed {
-                    guidePassed = (highConfidenceLandmarks == 42)
+                if !isGuidePassed {
+                    isGuidePassed = (highConfidenceLandmarks == 42)
                 }
             }
             .overlay(
@@ -45,11 +44,11 @@ struct PracticeView: View {
             )
             .onTapGesture {
                 withAnimation {
-                    self.navBarHidden.toggle()
+                    self.isNavBarHidden.toggle()
                 }
             }
             
-            if !navBarHidden {
+            if !isNavBarHidden {
                 CameraNavigationBar(title: "Latihan Tiru",
                                     leftAction: {
                                         mode.wrappedValue.dismiss()
@@ -62,26 +61,33 @@ struct PracticeView: View {
                 }
             }
             
-            if !guidePassed {
+            if !isGuidePassed {
                 HandGuide()
             } else {
                 VStack {
                     HStack(alignment: .top) {
                         ChatBubble(text: viewModel.chosenCourse.name)
+                            .offset(y: -15)
                         
-                        VideoView(videoName: viewModel.chosenCourse.videoName, playbackSpeed: $viewModel.playbackSpeed, playbackState: $viewModel.playbackState)
-                            .frame(width: 175, height: 225)
+                        VideoView(videoName: viewModel.chosenCourse.videoName)
+                            .frame(width: 150, height: 200)
                     }
                     .padding()
                     Spacer()
                     HorizontalModules(category: self.category, currentSelected: $viewModel.chosenCourse)
                 }
-                .padding(.top, self.navBarHidden ? 35 : 75)
+                .padding(.top, self.isNavBarHidden ? 45 : 85)
             }
         }
         .navigationBarHidden(true)
         .edgesIgnoringSafeArea(.all)
-
+        
+        .onAppear {
+            TimeoutManager.shared.disableDimming()
+        }
+        .onDisappear {
+            TimeoutManager.shared.enableDimming()
+        }
     }
 }
 

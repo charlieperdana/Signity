@@ -19,8 +19,9 @@ struct RootView: View {
                 CoursePage()
             }
         }
-        .navigationBarHidden(/*@START_MENU_TOKEN@*/false/*@END_MENU_TOKEN@*/)
+        .navigationBarHidden(true)
         .accentColor(Color("NavigationItem"))
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

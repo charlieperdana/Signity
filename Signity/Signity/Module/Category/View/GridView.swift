@@ -17,7 +17,7 @@ struct GridView: View {
     var items: [GridItem] {
         Array(repeating: .init(.flexible(minimum: 0, maximum: .infinity)), count: numOfColumn)
     }
-    
+
     var body: some View {
         LazyVGrid(columns: items, alignment: .center, spacing: 15) {
             ForEach(category.courses.indices) { i in

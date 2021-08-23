@@ -65,11 +65,11 @@ struct AvailableCourses {
                             type: "Kata Dasar",
                             level: 0,
                             submodules: [
-                                SubModules(name: "0"), SubModules(name: "1"),
-                                SubModules(name: "2"), SubModules(name: "3"),
-                                SubModules(name: "4"), SubModules(name: "5"),
-                                SubModules(name: "6"), SubModules(name: "7"),
-                                SubModules(name: "8"), SubModules(name: "9")
+                                SubModules(name: "1"), SubModules(name: "2"),
+                                SubModules(name: "3"), SubModules(name: "4"),
+                                SubModules(name: "5"), SubModules(name: "6"),
+                                SubModules(name: "7"), SubModules(name: "8"),
+                                SubModules(name: "9"), SubModules(name: "10")
                             ]
                         ),
                     ]
@@ -86,6 +86,7 @@ struct AvailableCourses {
                                 SubModules(name: "Halo"),
                                 SubModules(name: "Sehat"),
                                 SubModules(name: "Apa kabar"),
+                                SubModules(name: "Aku sakit"),
                                 SubModules(name: "Selamat pagi"),
                                 SubModules(name: "Selamat siang"),
                                 SubModules(name: "Selamat sore"),
@@ -117,7 +118,7 @@ struct AvailableCourses {
                                     wordParts: ["Halo", "Selamat siang"]
                                 ),
                                 SubModules(
-                                    name: "Selamat Siang",
+                                    name: "Selamat siang",
                                     wordParts: ["Selamat siang"]
                                 ),
                                 SubModules(

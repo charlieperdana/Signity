@@ -12,6 +12,8 @@ struct SimulationView: View {
     
     @StateObject var viewModel: SimulationViewModel
     
+    @State var isHintVisible = false
+    
     init(category: Category) {
         _viewModel = StateObject(wrappedValue: SimulationViewModel(category: category))
     }
@@ -50,35 +52,55 @@ struct SimulationView: View {
                 }
             }
             
-            VStack {
-                ProgressBar(value: 0.5)
-                
-                HStack(alignment: .top) {
-                    ChatBubble(text: viewModel.speakerCurrentWord)
+            if self.isHintVisible {
+                ZStack {
+                    Color.black
+                        .opacity(0.5)
+                    VideoView(videoName: viewModel.courses[viewModel.userPosition].videoName)
+                }
+                .onTapGesture {
+                    self.isHintVisible = false
+                }
+            } else {
+                VStack {
+                    ProgressBar(value: Double(viewModel.userPosition) / Double(viewModel.courses.count))
                     
-                    LottieView(name: viewModel.speakerCurrentWord, playbackSpeed: 1.0)
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200)
-                        .background(Color.white)
-                        .cornerRadius(25)
-                }
-                .padding()
-                
-                Spacer()
-                
-                HStack {
-                    YourTurnView()
+                    HStack(alignment: .top) {
+                        ChatBubble(text: viewModel.speakerCurrentWord)
+                        
+                        LottieView(name: viewModel.courses[viewModel.userPosition - 1].videoName, playbackSpeed: 1.0)
+                            .frame(width: 150, height: 200)
+                            .background(Color.white)
+                            .cornerRadius(25)
+                    }
+                    .padding()
+                    
                     Spacer()
-                    HintButton()
+                    
+                    HStack {
+                        YourTurnView()
+                        Spacer()
+                        HintButton() {
+                            self.isHintVisible = true
+                        }
+                    }
+                    .padding(.horizontal)
+                    
+                    SentenceFeedbackView(words: $viewModel.wordTracking, currentCorrect: $viewModel.correctWord)
+                        .padding(.bottom, 40)
                 }
-                .padding(.horizontal)
-                
-                SentenceFeedbackView(words: $viewModel.wordTracking, currentCorrect: $viewModel.correctWord)
-                    .padding(.bottom, 40)
+                .padding(.top, self.viewModel.navBarHidden ? 35 : 75)
             }
-            .padding(.top, self.viewModel.navBarHidden ? 35 : 75)
         }
         .navigationBarHidden(true)
         .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+        
+        .onAppear {
+            TimeoutManager.shared.disableDimming()
+        }
+        .onDisappear {
+            TimeoutManager.shared.enableDimming()
+        }
     }
 }
 

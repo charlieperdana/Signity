@@ -40,9 +40,11 @@ struct TutorialPhraseView: View {
             }
             Spacer()
             VStack(alignment: .center) {
-                SignityButton(text: "Mulai Latihan") {
-                    self.navBarHidden = true
-                    self.isPresentingPractice = true
+                if category.typeEnum != .situation {
+                    SignityButton(text: "Mulai Latihan") {
+                        self.navBarHidden = true
+                        self.isPresentingPractice = true
+                    }
                 }
                 
                 Text("Bandingkan kalimat ini dengan BISINDO daerah lain")

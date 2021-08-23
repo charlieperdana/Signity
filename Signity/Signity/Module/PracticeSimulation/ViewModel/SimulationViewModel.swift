@@ -81,14 +81,13 @@ class SimulationViewModel: ObservableObject {
         // Check if current sentence is done
         DispatchQueue.main.async { [self] in
             if correctWord == wordTracking.count {
-                correctWord = 0
-                
-                userPosition += 2
-                
-                if userPosition >= courses.count {
+                if userPosition + 2 >= courses.count {
                     navBarHidden = false
                     tempDone = true
                 } else {
+                    userPosition += 2
+                    correctWord = 0
+                    
                     userCurrentWord = courses[userPosition].name
                     speakerCurrentWord = courses[userPosition - 1].name
                     wordTracking = courses[userPosition].wordParts
