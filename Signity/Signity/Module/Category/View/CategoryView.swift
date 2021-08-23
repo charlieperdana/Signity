@@ -48,6 +48,7 @@ struct CategoryView: View {
         
         .onAppear {
             self.refreshID = UUID()
+            self.navBarHidden = false
         }
     }
 }
