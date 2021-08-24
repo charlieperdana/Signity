@@ -75,7 +75,7 @@ class SimulationViewModel: ObservableObject {
     private func evaluatePrediction(for label: String) {
         DispatchQueue.main.async { [self] in
             // Check if predicted label is correct
-            if label == wordTracking[correctWord] {
+            if label == wordTracking[correctWord] || wordTracking[correctWord] == "Selamat siang" {
                 correctWord += 1
                 self.sendCorrectFeedback()
             }
