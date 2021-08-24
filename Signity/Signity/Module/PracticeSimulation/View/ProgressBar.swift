@@ -31,7 +31,7 @@ struct ProgressBar: View {
         .padding(.top)
         .animation(.linear, value: animate)
         .onAppear {
-            self.animate.toggle()
+            self.animate = true
         }
     }
 }

@@ -19,6 +19,7 @@ class SimulationViewModel: ObservableObject {
     @Published var speakerCurrentWord: String
     @Published var userCurrentWord: String
     var userPosition: Int
+    var userTurnDone = 0
     
     @Published var wordTracking: [String]
     @Published var correctWord = 0
@@ -72,14 +73,14 @@ class SimulationViewModel: ObservableObject {
     }
     
     private func evaluatePrediction(for label: String) {
-        // Check if predicted label is correct
-        if label == wordTracking[correctWord] {
-            correctWord += 1
-            self.sendCorrectFeedback()
-        }
-        
-        // Check if current sentence is done
         DispatchQueue.main.async { [self] in
+            // Check if predicted label is correct
+            if label == wordTracking[correctWord] {
+                correctWord += 1
+                self.sendCorrectFeedback()
+            }
+        
+            // Check if current sentence is done
             if correctWord == wordTracking.count {
                 if userPosition + 2 >= courses.count {
                     navBarHidden = false
@@ -92,6 +93,8 @@ class SimulationViewModel: ObservableObject {
                     speakerCurrentWord = courses[userPosition - 1].name
                     wordTracking = courses[userPosition].wordParts
                 }
+                
+                userTurnDone += 1
             }
         }
     }
