@@ -88,7 +88,7 @@ class PracticeViewModel: ObservableObject {
             self.moveToNextQuestion()
         }
     }
-    
+
     private func evaluateSituationPrediction(for label: String) {
         if correctWord[currentIndex] >= wordTracking.count {
             return
@@ -96,6 +96,7 @@ class PracticeViewModel: ObservableObject {
         
         DispatchQueue.main.async { [self] in
             if label == wordTracking[correctWord[currentIndex]] {
+                
                 correctWord[currentIndex] += 1
                 self.sendCorrectFeedback()
             }

@@ -13,8 +13,6 @@ class CoreMLHelper {
             let model = try SignityVisionJKT()
             let prediction = try model.prediction(Landmarks: multiArray)
             
-            print(prediction.classLabel)
-            
             return prediction.classLabel
         } catch {
             fatalError("Fail to predict")
