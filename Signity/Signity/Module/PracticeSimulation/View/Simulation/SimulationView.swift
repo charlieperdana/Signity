@@ -86,7 +86,7 @@ struct SimulationView: View {
                     }
                     .padding(.horizontal)
                     
-                    SentenceFeedbackView(words: $viewModel.wordTracking, currentCorrect: $viewModel.correctWord)
+                    SentenceFeedbackView(words: viewModel.wordTracking, currentCorrect: viewModel.correctWord)
                         .padding(.bottom, 40)
                 }
                 .padding(.top, self.viewModel.navBarHidden ? 35 : 75)

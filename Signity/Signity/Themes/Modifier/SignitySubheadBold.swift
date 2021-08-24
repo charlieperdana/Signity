@@ -14,7 +14,7 @@ struct SignitySubheadBold: ViewModifier {
     
     func body(content: Content) -> some View {
         content
-            .font(.subheadline.bold())
+            .font(.system(.subheadline, design: .rounded).bold())
             .multilineTextAlignment(.center)
             .foregroundColor(Color(color.rawValue))
     }

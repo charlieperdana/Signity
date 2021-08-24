@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct SentenceFeedbackView: View {
-    @Binding var words: [String]
-    @Binding var currentCorrect: Int
+    var words: [String]
+    var currentCorrect: Int
     
     @State var animate = false
     
@@ -37,7 +37,7 @@ struct SentenceFeedbackView: View {
 
 struct SentenceFeedbackView_Previews: PreviewProvider {
     static var previews: some View {
-        SentenceFeedbackView(words: .constant([]), currentCorrect: .constant(1))
+        SentenceFeedbackView(words: ["Halo", "selamat siang"], currentCorrect: 1)
             .preferredColorScheme(.dark)
     }
 }

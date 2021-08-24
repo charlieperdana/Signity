@@ -16,9 +16,7 @@ struct SignityButton: View {
             HStack {
                 Spacer()
                 Text(text)
-                    .fontWeight(.bold)
-                    .font(.system(size: 17))
-                    .multilineTextAlignment(.center)
+                    .modifier(SignityHeadline(color: .white))
                 Spacer()
                 
             }

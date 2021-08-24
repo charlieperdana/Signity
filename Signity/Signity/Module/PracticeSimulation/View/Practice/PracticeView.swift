@@ -74,7 +74,11 @@ struct PracticeView: View {
                     }
                     .padding()
                     Spacer()
-                    HorizontalModules(category: self.category, currentSelected: $viewModel.chosenCourse)
+                    if self.category.typeEnum == .situation {
+                        SituationHorizontalModule(category: self.category, currentSelected: $viewModel.chosenCourse, currentIndex: viewModel.currentIndex, currentCorrect: viewModel.correctWord)
+                    } else {
+                        HorizontalModules(category: self.category, currentSelected: $viewModel.chosenCourse, currentIndex: viewModel.currentIndex)
+                    }
                 }
                 .padding(.top, self.isNavBarHidden ? 45 : 85)
             }

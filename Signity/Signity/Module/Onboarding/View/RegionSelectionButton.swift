@@ -23,9 +23,7 @@ struct RegionSelectionButton: View {
                 Image(systemName: checkmarkImage)
                 Spacer()
                 Text(regionName)
-                    .fontWeight(.bold)
-                    .font(.system(size: 17))
-                    .multilineTextAlignment(.center)
+                    .modifier(SignityHeadline(color: .mainPurple))
                 Spacer()
             }
             .padding()

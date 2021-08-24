@@ -1,26 +1,26 @@
 //
-//  HorizontalModules.swift
+//  SituationHorizontalModule.swift
 //  Signity
 //
-//  Created by Andrean Lay on 03/08/21.
+//  Created by Andrean Lay on 23/08/21.
 //
 
 import SwiftUI
 
-struct HorizontalModules: View {
+struct SituationHorizontalModule: View {
     var category: Category
     @Binding var currentSelected: Course
     var currentIndex: Int
-
+    var currentCorrect: Int
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             ScrollViewReader { scrollValue in
                 HStack {
                     ForEach(category.courses.indices, id: \.self) { i in
                         let course = category.courses[i]
-
-                        PhraseButton(practiceDone: course.completionState == 1, isSelected: course == currentSelected, isSentence: !category.isCharacter, phrase: course.name) {
-                            
+                        
+                        SentencePracticeView(isSelected: i == currentIndex, practiceDone: course.completionState == 1, words: course.wordParts, currentCorrect: currentCorrect) {
                             self.currentSelected = course
                         }
                         .id(i)
@@ -41,9 +41,3 @@ struct HorizontalModules: View {
         .padding(.bottom, 40)
     }
 }
-
-//struct HorizontalModules_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HorizontalModules(viewModel: PracticeViewModel())
-//    }
-//}
