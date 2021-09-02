@@ -30,7 +30,6 @@ class PracticeViewModel: ObservableObject {
             
             if category.typeEnum == .situation {
                 self.wordTracking = category.courses[currentIndex].wordParts
-                self.correctWord = 0
             }
         }
     }
@@ -39,7 +38,7 @@ class PracticeViewModel: ObservableObject {
     
     // Situation type variables
     @Published var wordTracking: [String] = []
-    @Published var correctWord = 0
+    @Published var correctWord: [Int] = []
     
     init(category: Category, chosenCourse: Course) {
         self.category = category
@@ -49,6 +48,7 @@ class PracticeViewModel: ObservableObject {
         
         if category.typeEnum == .situation {
             wordTracking = chosenCourse.wordParts
+            correctWord = Array(repeating: 0, count: category.courses.count)
         }
     }
 
@@ -88,19 +88,20 @@ class PracticeViewModel: ObservableObject {
             self.moveToNextQuestion()
         }
     }
-    
+
     private func evaluateSituationPrediction(for label: String) {
-        if correctWord >= wordTracking.count {
+        if correctWord[currentIndex] >= wordTracking.count {
             return
         }
         
         DispatchQueue.main.async { [self] in
-            if label == wordTracking[correctWord] {
-                correctWord += 1
+            if label == wordTracking[correctWord[currentIndex]] {
+                
+                correctWord[currentIndex] += 1
                 self.sendCorrectFeedback()
             }
             
-            if correctWord == wordTracking.count {
+            if correctWord[currentIndex] == wordTracking.count {
                 category.courses[currentIndex].completionState = 1
                 PersistenceController.shared.saveContext()
                 

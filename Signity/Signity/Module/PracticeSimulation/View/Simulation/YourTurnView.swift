@@ -11,8 +11,8 @@ struct YourTurnView: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .background(Color.white)
-                .opacity(0.6)
+                .fill(Color.white)
+                .opacity(0.9)
                 .cornerRadius(15)
             Text("Giliranmu")
                 .modifier(SignityHeadlineThin(color: .darkPurple))

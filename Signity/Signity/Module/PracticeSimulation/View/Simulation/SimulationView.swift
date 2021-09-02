@@ -63,7 +63,7 @@ struct SimulationView: View {
                 }
             } else {
                 VStack {
-                    ProgressBar(value: Double(viewModel.userPosition) / Double(viewModel.courses.count))
+                    ProgressBar(value: Double(viewModel.userTurnDone) / Double(viewModel.courses.count / 2))
                     
                     HStack(alignment: .top) {
                         ChatBubble(text: viewModel.speakerCurrentWord)

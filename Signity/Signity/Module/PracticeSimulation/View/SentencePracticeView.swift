@@ -29,7 +29,11 @@ struct SentencePracticeView: View {
     }
     
     var body: some View {
-        Button(action: action) {
+        ZStack {
+            Rectangle()
+                .fill(backgroundColor)
+                .frame(width: width, height: height)
+            
             HStack {
                 ForEach(words.indices, id: \.self) { i in
                     if practiceDone {
@@ -41,10 +45,9 @@ struct SentencePracticeView: View {
                 }
             }
             .modifier(SignitySubtitle(color: textColor))
-            .contentShape(Rectangle())
         }
-        .frame(width: width, height: height)
-        .background(backgroundColor)
+        .onTapGesture(perform: action)
+        .contentShape(Rectangle())
         .cornerRadius(13)
     }
 }
