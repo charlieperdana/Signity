@@ -1181,6 +1181,7 @@
 				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = 6QH35NFSG6;
 				INFOPLIST_FILE = Signity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1271,6 +1272,7 @@
 				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = 6QH35NFSG6;
 				INFOPLIST_FILE = Signity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
