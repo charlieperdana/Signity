@@ -3,672 +3,1211 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5561AACC26B7ED94001896B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561AACB26B7ED94001896B3 /* AppDelegate.swift */; };
-		5561AACE26B7ED94001896B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561AACD26B7ED94001896B3 /* SceneDelegate.swift */; };
-		5561AAD026B7ED94001896B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561AACF26B7ED94001896B3 /* ContentView.swift */; };
-		5561AAD326B7ED94001896B3 /* Signity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5561AAD126B7ED94001896B3 /* Signity.xcdatamodeld */; };
-		5561AAD526B7ED96001896B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5561AAD426B7ED96001896B3 /* Assets.xcassets */; };
-		5561AAD826B7ED96001896B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5561AAD726B7ED96001896B3 /* Preview Assets.xcassets */; };
-		5561AADB26B7ED96001896B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5561AAD926B7ED96001896B3 /* LaunchScreen.storyboard */; };
-		5561AAE626B7ED97001896B3 /* SignityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561AAE526B7ED97001896B3 /* SignityTests.swift */; };
-		5561AAF126B7ED97001896B3 /* SignityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561AAF026B7ED97001896B3 /* SignityUITests.swift */; };
+		009F2099106A103EA5013B4C /* HandLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916D3CD6E380E16083BEB87D /* HandLines.swift */; };
+		0152466490872986EC4A9900 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CF51485D5A2EB17F24088B /* RootView.swift */; };
+		03B63AFE978A949546309E26 /* SignityLargeTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295AEC2612CAC91A5B7C9CE /* SignityLargeTitle.swift */; };
+		04C0819596DA94F45A6DEAB8 /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A445EF09E4F9709D57F064 /* PracticeView.swift */; };
+		05B1A2715CE7F827FA6F36BA /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21667F3922CF4623655E6DD /* LottieView.swift */; };
+		07F91D6A3F60F9BC4BAE0E60 /* Aku sakit - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = C77DD3CB0BCCCB3D9DEF0A34 /* Aku sakit - Jakarta.json */; };
+		089C735FB0DDADA06AE9B8D5 /* PracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0B436DD6DAF9D1667BB1BC /* PracticeViewModel.swift */; };
+		091367095C9F5642A1CB6776 /* OnboardingLatihanTiru.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD248B70321BE0D13110C85 /* OnboardingLatihanTiru.swift */; };
+		099D7285C59A70202562D737 /* AccomplishmentTiru.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A96650914334E40940ED1 /* AccomplishmentTiru.swift */; };
+		0A6B9FAC778AA56172E14272 /* CoreMLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E5060C78B5D58E9271CAEF /* CoreMLHelper.swift */; };
+		0A9411512F3DC9679165D875 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3631CC3E031EFDDB9A982 /* CategoryView.swift */; };
+		156BDFD68BD5D417A9A3C1B1 /* SimulationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A2FA5741B2A373E33911FF /* SimulationViewModel.swift */; };
+		159D9BCB64D7DF599967E393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07A0C50D46C78B7D34FDB24 /* Assets.xcassets */; };
+		18981A457D6D6F35F7F8D404 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270663A6100EF4D5836B3A09 /* VideoView.swift */; };
+		190493F23E0D7D50B06EC02E /* G - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 45274D316F4BE5AEBA3A9199 /* G - Jakarta.json */; };
+		1A3CC2C0ED8B45467608EF24 /* YourTurnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB56FC9B7DCA54A4FA21B5F7 /* YourTurnView.swift */; };
+		1A586DE4CABFDF86BBCEAC54 /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F070DC6FB252CAE5748FE4 /* CourseViewModel.swift */; };
+		1D086D01D8C58BFC0F78DA2E /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918D4B3874676F114116536 /* HapticManager.swift */; };
+		1D24132FCAF7ACBFCD44C500 /* S - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D875057216FCBD0A9456481 /* S - Jakarta.json */; };
+		1D8F46EB59FF26771A73CFB7 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C735661DC906277F2493DA /* OnboardingViewModel.swift */; };
+		1EDB37AC6D2DF968E1C218DC /* Z - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = A8884D2D574D65533DCC7E32 /* Z - Jakarta.json */; };
+		1FB5593379EFEEBDE7821C35 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279805C3262B54732701EA9F /* CameraViewController.swift */; };
+		232B912F106AB594B87F867C /* B - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 0EA40B701E48CC3D2F0256C2 /* B - Jakarta.json */; };
+		2A8182AC40B3BBFA4F426F71 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40EDB2C534BEF24321CFC962 /* Colors.xcassets */; };
+		2CC1F6FC2800C5674AFC829C /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0859442287E45716BFD8B31 /* SettingViewModel.swift */; };
+		2CCBEDCBF63E8A82702D783D /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639F91617D3C8AB58BBD2FD0 /* NavigationHelper.swift */; };
+		2D0A7DACE9C479BD71971366 /* Q - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A7FB1346A3E9531081CCD4B /* Q - Jakarta.json */; };
+		2DE307E1D08040D56ED29EE3 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61571D475D68A328D52A1734 /* ChatBubble.swift */; };
+		2E47D03521314B2BB5B2A2CC /* F - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F7E86952265FA44B7422DF7 /* F - Jakarta.json */; };
+		2FB591573AA5F34FF51B33C1 /* SentenceFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BF9FF002D1854657553F53 /* SentenceFeedbackView.swift */; };
+		31A245C6ADAB54460924C8A6 /* SignityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B85768E0463A85FF0B252 /* SignityUITests.swift */; };
+		321BCF0933B9CC69F646AE75 /* CourseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D4914CC166E8C44F03F1D6 /* CourseModel.swift */; };
+		330DAD28013E83FEFBC0F62B /* SignitySubheadBold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A75E0DAA1A034DF66D6D66E /* SignitySubheadBold.swift */; };
+		3369F6E3DFDBD6D8BC124088 /* 4 - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 8083747B5219BD8C0D2C57F0 /* 4 - Jakarta.json */; };
+		347DEA0453009FBC5310F3E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E77AE505F7D6503D14129DC1 /* Preview Assets.xcassets */; };
+		374A3E7D8397E5145DFF4CA5 /* 2 - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = B9578A6006EFF5265BA92116 /* 2 - Jakarta.json */; };
+		388B23B90718820A73A0951C /* Signity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3D6A0422622C32959874569 /* Signity.xcdatamodeld */; };
+		3CC6C39BC8E7F3CFEED05989 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83878CD97BD140ABD104ECC6 /* Onboarding.swift */; };
+		3F426FA2579AA91947449ED2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F3D84A0A7604AB9049B68A /* SettingsView.swift */; };
+		417EB0B845325AC19DD6B8A3 /* SuccessBell.wav in Resources */ = {isa = PBXBuildFile; fileRef = 51AB49EAFF24B62BCD3F3DCE /* SuccessBell.wav */; };
+		430FE75375618ABC257C07D4 /* SignityHeadlineThin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A13C57B59CC0EA82D5C61DA /* SignityHeadlineThin.swift */; };
+		4D32099FCCF77EC32EB67FFA /* Category+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D28C57CCCF2C9306943215C /* Category+Helper.swift */; };
+		4E910E984B1CB95F4ED3FCAE /* V - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = DFCFE7F8CD9C84223E6DEAB7 /* V - Jakarta.json */; };
+		4FC328BB7F688A424231359B /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40A6ECC8C40857926B32199 /* CourseCell.swift */; };
+		505AF6A9C44D1A0F64312AE7 /* SignityFootnoteBold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A53975D909E72CDB60251BB /* SignityFootnoteBold.swift */; };
+		50C969208C5FD2F9BF35E351 /* 3 - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = CAF07DA1D14DD98482CA15EB /* 3 - Jakarta.json */; };
+		524825ED58397E1E94A10618 /* PlaybackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F139692329014ADE4D25E3 /* PlaybackButton.swift */; };
+		543DEBB3AD762EBC39534121 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7186B2763C53153D19ADDBCB /* BackButton.swift */; };
+		54C10597B529C0866D6184C1 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB0F638D78B2C9D89E2827 /* GridView.swift */; };
+		551E41B9EA18EB84A045A29B /* L - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = C16264057444C65C2F9964C2 /* L - Jakarta.json */; };
+		57DDE681F3F7C1BAAD994C0B /* SignityBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C84664FF64898F1A20BF6F0 /* SignityBody.swift */; };
+		5826EBA5497CF65DAC9132C3 /* SignityTextColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042397C24D0983336891B867 /* SignityTextColor.swift */; };
+		59D5C6764C1DD6D1DB265713 /* X - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 19DFD46B46D45E501C82DD6B /* X - Jakarta.json */; };
+		5B2CB0C4F72B3DF6F0B3E836 /* SignityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8AA153DB638E5543DF0E7 /* SignityTests.swift */; };
+		5C812A2A233457A59E95173F /* 1 - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BCD91389D746EF8D3C0190C /* 1 - Jakarta.json */; };
+		5CD42F4DFDA07594BF87D294 /* SignityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C891BE23C9495C2C20B8956 /* SignityButton.swift */; };
+		601A55C68C220620382D91B1 /* 7 - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F9CC27601DB094D8E61E41B /* 7 - Jakarta.json */; };
+		60C13B7A61BF3FDD49E56CD3 /* OnboardingRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5C4BE237D93EA6CB23CE2 /* OnboardingRegion.swift */; };
+		61E538B9C9C7313D2974E558 /* CoursePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C794D8A0D50E58BD6C56F66B /* CoursePage.swift */; };
+		6290B7DFD3C60D96FC63BB68 /* SignitySubhead.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1496F7FF14A3F8902A1E5F3 /* SignitySubhead.swift */; };
+		6929AAF53BCDC1796B14B835 /* M - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = A13336DC49AC9E3E94E6EE24 /* M - Jakarta.json */; };
+		6B357C8119924B4E000F8CB5 /* U - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = D625C9E2D9B38AF42F35CF15 /* U - Jakarta.json */; };
+		6BCFB1993B3E7CBF1A80D21E /* 6 - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = E1EF973C74D6BE240230944B /* 6 - Jakarta.json */; };
+		78608EBDC9EEB6E96F27EE7F /* CameraNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DC06823247EC7547D98226 /* CameraNavigationBar.swift */; };
+		7D052D0B26CE756500682011 /* 10 - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D052D0A26CE756500682011 /* 10 - Jakarta.json */; };
+		7D0764E626CD40D8000B3330 /* SignityVisionJKT.mlkitmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7D0764E526CD40D8000B3330 /* SignityVisionJKT.mlkitmodel */; };
+		7D4745B026D23221000DE129 /* DataMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4745AF26D23221000DE129 /* DataMigrator.swift */; };
+		7D9866A026D2459B00BED6F6 /* PracticeOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98669F26D2459B00BED6F6 /* PracticeOnboardingViewModel.swift */; };
+		7D9866A726D2504C00BED6F6 /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9866A626D2504C00BED6F6 /* VideoViewModel.swift */; };
+		7D9866C526D25D0300BED6F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D9866C426D25D0300BED6F6 /* LaunchScreen.storyboard */; };
+		7D9866C726D2625400BED6F6 /* TimeoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9866C626D2625400BED6F6 /* TimeoutManager.swift */; };
+		7D9866C926D3E72200BED6F6 /* SituationHorizontalModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9866C826D3E72200BED6F6 /* SituationHorizontalModule.swift */; };
+		7D9866CB26D3EDDF00BED6F6 /* SentencePracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9866CA26D3EDDF00BED6F6 /* SentencePracticeView.swift */; };
+		7D9866D526D4F8B700BED6F6 /* Selamat malam - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D9866CC26D4F8B600BED6F6 /* Selamat malam - Jakarta.json */; };
+		7D9866D626D4F8B700BED6F6 /* Selamat siang - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D9866CD26D4F8B600BED6F6 /* Selamat siang - Jakarta.json */; };
+		7D9866D726D4F8B700BED6F6 /* Selamat datang - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D9866CE26D4F8B600BED6F6 /* Selamat datang - Jakarta.json */; };
+		7D9866D826D4F8B700BED6F6 /* Selamat sore - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D9866CF26D4F8B600BED6F6 /* Selamat sore - Jakarta.json */; };
+		7D9866D926D4F8B700BED6F6 /* Aku - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D9866D026D4F8B600BED6F6 /* Aku - Jakarta.json */; };
+		7D9866DA26D4F8B700BED6F6 /* Apa kabar - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D9866D126D4F8B600BED6F6 /* Apa kabar - Jakarta.json */; };
+		7D9866DB26D4F8B700BED6F6 /* Halo - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D9866D226D4F8B700BED6F6 /* Halo - Jakarta.json */; };
+		7D9866DC26D4F8B700BED6F6 /* Sehat - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D9866D326D4F8B700BED6F6 /* Sehat - Jakarta.json */; };
+		7D9866DD26D4F8B700BED6F6 /* Selamat pagi - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D9866D426D4F8B700BED6F6 /* Selamat pagi - Jakarta.json */; };
+		7F4E21AB2E5892E60A117BB4 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937BBB895E982E23EDE14EB8 /* Hand.swift */; };
+		7FABAAC1EB4B9DCCDBC0D514 /* D - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 4747D3C91207CABFAB71A09B /* D - Jakarta.json */; };
+		80015975E01F910B4B38F30F /* O - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 5F4186295BF3D1433D37320F /* O - Jakarta.json */; };
+		8127349C1209CDFEC89CD65F /* HandLandmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C32BE981B5B58D7DF608A1 /* HandLandmarks.swift */; };
+		8209AA4A657B4E35618E10D2 /* N - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 63ECF12426FFBC7CD97E1E4F /* N - Jakarta.json */; };
+		84C9ED95ED60ADAA14C02907 /* ModuleGroupRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D042B5EEC853BBE2D3CBF26 /* ModuleGroupRepository.swift */; };
+		851C5E38307AD135B7FD9397 /* ComparePhraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FFF2DD3D1AE814A9C6EE77 /* ComparePhraseView.swift */; };
+		87B42D7007735A4EF751D4A8 /* SignityButtonOutline.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AB4813573A829C87FFFF01 /* SignityButtonOutline.swift */; };
+		8A3AE8E04EEA4B269A727094 /* J - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 5CFBAB7C79157A5F1BADE268 /* J - Jakarta.json */; };
+		8EE2D9897200C2F3E3A38B58 /* ModuleGroup+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B673D80995B1D93A51388E0 /* ModuleGroup+Helper.swift */; };
+		925027A5173066CF106821C9 /* P - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = E1350AA335147B2C263845A1 /* P - Jakarta.json */; };
+		950FD7D40337A9D6648B8894 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5AEF9C001FE18A49B15852 /* ViewRouter.swift */; };
+		951F4FCE57821E9636C38FDC /* R - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = C3DD34164E1471595C9E11EA /* R - Jakarta.json */; };
+		971ADA380C666658095D2BF6 /* Kita - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 51065CDE359A89A157355B05 /* Kita - Jakarta.json */; };
+		97AFE85F240050F70C3C6263 /* Apa kabar? - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 2830FE94B5D8784655FAF509 /* Apa kabar? - Jakarta.json */; };
+		9AC993F189A7B4D1CC60019C /* OnboardingSimulasi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1946E712BBE28EF1AE9E39 /* OnboardingSimulasi.swift */; };
+		9B75CF02640D312F21702354 /* 8 - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 2EBDBC6E7DC14460C82DB1CC /* 8 - Jakarta.json */; };
+		9FED50ED7D44182DFC591429 /* ChatTriangleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F0F68D1A393723854BF024 /* ChatTriangleShape.swift */; };
+		A0C9CC3E8AD3E4D3C9F8D885 /* HandGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9038060D677E653F93F8D914 /* HandGuide.swift */; };
+		A0CB7CA33651C506BFAD5CE7 /* A - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = BE9E6A542B27C2A0268BEFA2 /* A - Jakarta.json */; };
+		A0D41502BF4A9FD66A998AD5 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3411B2BA0A69619D41E8986 /* AudioManager.swift */; };
+		A398716BC290729857A6A460 /* PhraseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958BD4A1C4966149B2B00EDF /* PhraseButton.swift */; };
+		AA582D9468B35846D6B685FC /* SignityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6666808466A209E8F198A6D2 /* SignityApp.swift */; };
+		AD4ACC98BE902A96BFDA7EEC /* CardViewCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920CB00F8114C948820898D6 /* CardViewCourse.swift */; };
+		B1904620AE3FAABC127E5E62 /* RegionSelectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BB39D79A3F5E027C65D90 /* RegionSelectionButton.swift */; };
+		B30668537B126A2999904134 /* Halo, selamat siang - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = F4ED6D9E4AED0DA8735563C3 /* Halo, selamat siang - Jakarta.json */; };
+		B3FC8DB8EC077E5FA71BC4EB /* K - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 046FC033F2D11D1B55A62276 /* K - Jakarta.json */; };
+		B9ED22CF0CF16C1D509E7C70 /* AccomplishmentSimulasi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5952026596553C5C9494F027 /* AccomplishmentSimulasi.swift */; };
+		BBD76D079F35841456787B73 /* Dia - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 43FE4458FC110B8544E58A33 /* Dia - Jakarta.json */; };
+		BEB7D986FCFD3EFECD21E49F /* 9 - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = CE61D0023A18B3AE866FBACB /* 9 - Jakarta.json */; };
+		C0DAAA32EC5352D99FA2BB29 /* Mereka - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 28B21302C0D8E0BD27FDE29E /* Mereka - Jakarta.json */; };
+		C48FD8522B468790A0F21BD2 /* T - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C05B4CE25F27F1FC0FA0DF6 /* T - Jakarta.json */; };
+		C4FD1649159EA4B236539F48 /* CameraViewController+DrawLandmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41022655D8306F102604B79C /* CameraViewController+DrawLandmark.swift */; };
+		C5E6DAE5F4164BC713E70F0B /* Kamu - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 964C7B9BC76264D1EF775E7E /* Kamu - Jakarta.json */; };
+		C8CDC39F39C55B8C009FC006 /* TutorialPhraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9E77E37D87A98CE8298F0 /* TutorialPhraseView.swift */; };
+		CCAB2B0F632FF0C5AE04FD1A /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C6A2C6E9383B8717A12A3E /* TutorialViewModel.swift */; };
+		CE9D48320822909E4EDA59D8 /* Y - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B6A43C07EDF25C9E4B1BAF4 /* Y - Jakarta.json */; };
+		CF44C5FA4EBDBD288FD216E8 /* E - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 9473D7C43FEC1480F65C0D97 /* E - Jakarta.json */; };
+		D5035CBBC41C8912ECA15098 /* SignityFootnote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6310629CCF5D35F1D1DE46 /* SignityFootnote.swift */; };
+		D543D7A75DBA58BEC84548ED /* H - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = B87E2A3E7D32822E3CE8F9E8 /* H - Jakarta.json */; };
+		D7A6003F26CAD5C08AF09AE4 /* SimulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBABD56B2392B76F8D92AD37 /* SimulationView.swift */; };
+		DB4207052D8FD93F264D787B /* CameraRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96FBD18996C823EE0C1B021 /* CameraRepresentable.swift */; };
+		DFEA46E5CECB0F71969EE604 /* 5 - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 33719DA96EC38A7D1549DA15 /* 5 - Jakarta.json */; };
+		E15D6EBC22A8B6E96A7F6D43 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B869D5A5C485804C6B0F3C /* ProgressBar.swift */; };
+		E35C41BCAB9884A00EE56C9B /* C - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = E6BC5A47D05F98554310AC72 /* C - Jakarta.json */; };
+		E671D446AF2F3FDEE2EF9D51 /* Course+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D68F9307BB6D98CC1A20D1 /* Course+Helper.swift */; };
+		E6BB61039551A3FA7EACDA5A /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD188080E4DE4461D42AC80B /* CollectionView.swift */; };
+		E6FCD9E029F1BA4C63893A16 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A12289D82E0690B1E44C5A5 /* PersistenceController.swift */; };
+		E8B3A57AF14B77FCC8B6C813 /* SignityHeadline.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8FC1CD01C3FB6D3180A3B8 /* SignityHeadline.swift */; };
+		E96401F678D40618F5BC1151 /* I - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B834364B39F40721C2D0BF0 /* I - Jakarta.json */; };
+		ECAADD8A01DFA9B2A7DB43ED /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F7CC275455C0C4239D8D1 /* UserProfile.swift */; };
+		EE8A3342919A6E51AD06F3EB /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BD103C4E035C99740F69B634 /* Lottie */; };
+		EFE5E06B9AA1CED7A1ED0DB6 /* HintButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A658F1F3904143390E2BA0 /* HintButton.swift */; };
+		F2F8A5F45A805C2DCE1E1396 /* ProgressBarCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07268FEBCC090892FDDFDB /* ProgressBarCourse.swift */; };
+		F686960DA9B511D2C276C9CA /* SignitySubtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F2EC90F5777A75BA884B3F /* SignitySubtitle.swift */; };
+		F89D1E7F4D3F9FAD0674520F /* SignityTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2BDC0007D730016DFBFDF4 /* SignityTitle.swift */; };
+		FC65BE15315AB48DDB1684DF /* HorizontalModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0F6AB7A446A3B393E745F /* HorizontalModules.swift */; };
+		FD8C696AA8D4D29003F970F6 /* W - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 195D4BBA4067631D37C8B7C6 /* W - Jakarta.json */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5561AAE226B7ED97001896B3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5561AAC026B7ED94001896B3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5561AAC726B7ED94001896B3;
-			remoteInfo = Signity;
-		};
-		5561AAED26B7ED97001896B3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5561AAC026B7ED94001896B3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5561AAC726B7ED94001896B3;
-			remoteInfo = Signity;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		5561AAC826B7ED94001896B3 /* Signity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Signity.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5561AACB26B7ED94001896B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5561AACD26B7ED94001896B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5561AACF26B7ED94001896B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		5561AAD226B7ED94001896B3 /* Signity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Signity.xcdatamodel; sourceTree = "<group>"; };
-		5561AAD426B7ED96001896B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5561AAD726B7ED96001896B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5561AADA26B7ED96001896B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5561AADC26B7ED96001896B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5561AAE126B7ED97001896B3 /* SignityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5561AAE526B7ED97001896B3 /* SignityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityTests.swift; sourceTree = "<group>"; };
-		5561AAE726B7ED97001896B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5561AAEC26B7ED97001896B3 /* SignityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5561AAF026B7ED97001896B3 /* SignityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityUITests.swift; sourceTree = "<group>"; };
-		5561AAF226B7ED97001896B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		042397C24D0983336891B867 /* SignityTextColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityTextColor.swift; sourceTree = "<group>"; };
+		046FC033F2D11D1B55A62276 /* K - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "K - Jakarta.json"; sourceTree = "<group>"; };
+		0A13C57B59CC0EA82D5C61DA /* SignityHeadlineThin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityHeadlineThin.swift; sourceTree = "<group>"; };
+		0EA40B701E48CC3D2F0256C2 /* B - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "B - Jakarta.json"; sourceTree = "<group>"; };
+		13F3D84A0A7604AB9049B68A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		195D4BBA4067631D37C8B7C6 /* W - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "W - Jakarta.json"; sourceTree = "<group>"; };
+		19DFD46B46D45E501C82DD6B /* X - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "X - Jakarta.json"; sourceTree = "<group>"; };
+		1A75E0DAA1A034DF66D6D66E /* SignitySubheadBold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignitySubheadBold.swift; sourceTree = "<group>"; };
+		1A7FB1346A3E9531081CCD4B /* Q - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Q - Jakarta.json"; sourceTree = "<group>"; };
+		1C891BE23C9495C2C20B8956 /* SignityButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityButton.swift; sourceTree = "<group>"; };
+		22D68F9307BB6D98CC1A20D1 /* Course+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+Helper.swift"; sourceTree = "<group>"; };
+		270663A6100EF4D5836B3A09 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		279805C3262B54732701EA9F /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		27BF9FF002D1854657553F53 /* SentenceFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceFeedbackView.swift; sourceTree = "<group>"; };
+		2830FE94B5D8784655FAF509 /* Apa kabar? - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Apa kabar? - Jakarta.json"; sourceTree = "<group>"; };
+		28B21302C0D8E0BD27FDE29E /* Mereka - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Mereka - Jakarta.json"; sourceTree = "<group>"; };
+		2A12289D82E0690B1E44C5A5 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		2B6A43C07EDF25C9E4B1BAF4 /* Y - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Y - Jakarta.json"; sourceTree = "<group>"; };
+		2C05B4CE25F27F1FC0FA0DF6 /* T - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "T - Jakarta.json"; sourceTree = "<group>"; };
+		2C84664FF64898F1A20BF6F0 /* SignityBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityBody.swift; sourceTree = "<group>"; };
+		2D28C57CCCF2C9306943215C /* Category+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+Helper.swift"; sourceTree = "<group>"; };
+		2DC5C4BE237D93EA6CB23CE2 /* OnboardingRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRegion.swift; sourceTree = "<group>"; };
+		2EBDBC6E7DC14460C82DB1CC /* 8 - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "8 - Jakarta.json"; sourceTree = "<group>"; };
+		2FD16F2268223352C27FA8A2 /* Signity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Signity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30F31F17EFF5297A4B6C2558 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		33719DA96EC38A7D1549DA15 /* 5 - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "5 - Jakarta.json"; sourceTree = "<group>"; };
+		37E0F6AB7A446A3B393E745F /* HorizontalModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalModules.swift; sourceTree = "<group>"; };
+		3888DBCED1D5EC48E193EB91 /* SignityUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SignityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		40EDB2C534BEF24321CFC962 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		41022655D8306F102604B79C /* CameraViewController+DrawLandmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CameraViewController+DrawLandmark.swift"; sourceTree = "<group>"; };
+		42C6A2C6E9383B8717A12A3E /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewModel.swift; sourceTree = "<group>"; };
+		43FE4458FC110B8544E58A33 /* Dia - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Dia - Jakarta.json"; sourceTree = "<group>"; };
+		45274D316F4BE5AEBA3A9199 /* G - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "G - Jakarta.json"; sourceTree = "<group>"; };
+		4747D3C91207CABFAB71A09B /* D - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "D - Jakarta.json"; sourceTree = "<group>"; };
+		4890FC63A94D6EFE0F660E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4A53975D909E72CDB60251BB /* SignityFootnoteBold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityFootnoteBold.swift; sourceTree = "<group>"; };
+		51065CDE359A89A157355B05 /* Kita - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Kita - Jakarta.json"; sourceTree = "<group>"; };
+		51AB49EAFF24B62BCD3F3DCE /* SuccessBell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SuccessBell.wav; sourceTree = "<group>"; };
+		5295AEC2612CAC91A5B7C9CE /* SignityLargeTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityLargeTitle.swift; sourceTree = "<group>"; };
+		547B85768E0463A85FF0B252 /* SignityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityUITests.swift; sourceTree = "<group>"; };
+		5952026596553C5C9494F027 /* AccomplishmentSimulasi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccomplishmentSimulasi.swift; sourceTree = "<group>"; };
+		5CFBAB7C79157A5F1BADE268 /* J - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "J - Jakarta.json"; sourceTree = "<group>"; };
+		5F4186295BF3D1433D37320F /* O - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "O - Jakarta.json"; sourceTree = "<group>"; };
+		5F6310629CCF5D35F1D1DE46 /* SignityFootnote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityFootnote.swift; sourceTree = "<group>"; };
+		61571D475D68A328D52A1734 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		639F91617D3C8AB58BBD2FD0 /* NavigationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHelper.swift; sourceTree = "<group>"; };
+		63ECF12426FFBC7CD97E1E4F /* N - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "N - Jakarta.json"; sourceTree = "<group>"; };
+		6666808466A209E8F198A6D2 /* SignityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityApp.swift; sourceTree = "<group>"; };
+		67D4914CC166E8C44F03F1D6 /* CourseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseModel.swift; sourceTree = "<group>"; };
+		6A2F7CC275455C0C4239D8D1 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		6B4A96650914334E40940ED1 /* AccomplishmentTiru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccomplishmentTiru.swift; sourceTree = "<group>"; };
+		6D042B5EEC853BBE2D3CBF26 /* ModuleGroupRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleGroupRepository.swift; sourceTree = "<group>"; };
+		7186B2763C53153D19ADDBCB /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		71E5060C78B5D58E9271CAEF /* CoreMLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLHelper.swift; sourceTree = "<group>"; };
+		74C32BE981B5B58D7DF608A1 /* HandLandmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandLandmarks.swift; sourceTree = "<group>"; };
+		76DC06823247EC7547D98226 /* CameraNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraNavigationBar.swift; sourceTree = "<group>"; };
+		76F2EC90F5777A75BA884B3F /* SignitySubtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignitySubtitle.swift; sourceTree = "<group>"; };
+		7918D4B3874676F114116536 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		7B673D80995B1D93A51388E0 /* ModuleGroup+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModuleGroup+Helper.swift"; sourceTree = "<group>"; };
+		7C5AEF9C001FE18A49B15852 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		7D052D0A26CE756500682011 /* 10 - Jakarta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "10 - Jakarta.json"; sourceTree = "<group>"; };
+		7D0764E526CD40D8000B3330 /* SignityVisionJKT.mlkitmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SignityVisionJKT.mlkitmodel; sourceTree = "<group>"; };
+		7D4745AF26D23221000DE129 /* DataMigrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMigrator.swift; sourceTree = "<group>"; };
+		7D98669F26D2459B00BED6F6 /* PracticeOnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeOnboardingViewModel.swift; sourceTree = "<group>"; };
+		7D9866A626D2504C00BED6F6 /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
+		7D9866C426D25D0300BED6F6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7D9866C626D2625400BED6F6 /* TimeoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeoutManager.swift; sourceTree = "<group>"; };
+		7D9866C826D3E72200BED6F6 /* SituationHorizontalModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SituationHorizontalModule.swift; sourceTree = "<group>"; };
+		7D9866CA26D3EDDF00BED6F6 /* SentencePracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentencePracticeView.swift; sourceTree = "<group>"; };
+		7D9866CC26D4F8B600BED6F6 /* Selamat malam - Jakarta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Selamat malam - Jakarta.json"; sourceTree = "<group>"; };
+		7D9866CD26D4F8B600BED6F6 /* Selamat siang - Jakarta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Selamat siang - Jakarta.json"; sourceTree = "<group>"; };
+		7D9866CE26D4F8B600BED6F6 /* Selamat datang - Jakarta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Selamat datang - Jakarta.json"; sourceTree = "<group>"; };
+		7D9866CF26D4F8B600BED6F6 /* Selamat sore - Jakarta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Selamat sore - Jakarta.json"; sourceTree = "<group>"; };
+		7D9866D026D4F8B600BED6F6 /* Aku - Jakarta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Aku - Jakarta.json"; sourceTree = "<group>"; };
+		7D9866D126D4F8B600BED6F6 /* Apa kabar - Jakarta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Apa kabar - Jakarta.json"; sourceTree = "<group>"; };
+		7D9866D226D4F8B700BED6F6 /* Halo - Jakarta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Halo - Jakarta.json"; sourceTree = "<group>"; };
+		7D9866D326D4F8B700BED6F6 /* Sehat - Jakarta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Sehat - Jakarta.json"; sourceTree = "<group>"; };
+		7D9866D426D4F8B700BED6F6 /* Selamat pagi - Jakarta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Selamat pagi - Jakarta.json"; sourceTree = "<group>"; };
+		7F9CC27601DB094D8E61E41B /* 7 - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "7 - Jakarta.json"; sourceTree = "<group>"; };
+		8083747B5219BD8C0D2C57F0 /* 4 - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "4 - Jakarta.json"; sourceTree = "<group>"; };
+		81A658F1F3904143390E2BA0 /* HintButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintButton.swift; sourceTree = "<group>"; };
+		83878CD97BD140ABD104ECC6 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		8D875057216FCBD0A9456481 /* S - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "S - Jakarta.json"; sourceTree = "<group>"; };
+		8DB8AA153DB638E5543DF0E7 /* SignityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityTests.swift; sourceTree = "<group>"; };
+		8DD248B70321BE0D13110C85 /* OnboardingLatihanTiru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingLatihanTiru.swift; sourceTree = "<group>"; };
+		8F7E86952265FA44B7422DF7 /* F - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "F - Jakarta.json"; sourceTree = "<group>"; };
+		9038060D677E653F93F8D914 /* HandGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandGuide.swift; sourceTree = "<group>"; };
+		912BB39D79A3F5E027C65D90 /* RegionSelectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSelectionButton.swift; sourceTree = "<group>"; };
+		916D3CD6E380E16083BEB87D /* HandLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandLines.swift; sourceTree = "<group>"; };
+		920CB00F8114C948820898D6 /* CardViewCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCourse.swift; sourceTree = "<group>"; };
+		937BBB895E982E23EDE14EB8 /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
+		93CF51485D5A2EB17F24088B /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		9473D7C43FEC1480F65C0D97 /* E - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "E - Jakarta.json"; sourceTree = "<group>"; };
+		958BD4A1C4966149B2B00EDF /* PhraseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseButton.swift; sourceTree = "<group>"; };
+		964C7B9BC76264D1EF775E7E /* Kamu - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Kamu - Jakarta.json"; sourceTree = "<group>"; };
+		98F070DC6FB252CAE5748FE4 /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
+		99A445EF09E4F9709D57F064 /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
+		9B834364B39F40721C2D0BF0 /* I - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "I - Jakarta.json"; sourceTree = "<group>"; };
+		9BCD91389D746EF8D3C0190C /* 1 - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "1 - Jakarta.json"; sourceTree = "<group>"; };
+		9DBB438A18D7610A946A6CCC /* SignityTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SignityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0859442287E45716BFD8B31 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		A13336DC49AC9E3E94E6EE24 /* M - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "M - Jakarta.json"; sourceTree = "<group>"; };
+		A1496F7FF14A3F8902A1E5F3 /* SignitySubhead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignitySubhead.swift; sourceTree = "<group>"; };
+		A1E23FADA03783C9A2BD0290 /* Signity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Signity.xcdatamodel; sourceTree = "<group>"; };
+		A6FFF2DD3D1AE814A9C6EE77 /* ComparePhraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparePhraseView.swift; sourceTree = "<group>"; };
+		A8884D2D574D65533DCC7E32 /* Z - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Z - Jakarta.json"; sourceTree = "<group>"; };
+		B4F139692329014ADE4D25E3 /* PlaybackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackButton.swift; sourceTree = "<group>"; };
+		B87E2A3E7D32822E3CE8F9E8 /* H - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "H - Jakarta.json"; sourceTree = "<group>"; };
+		B9578A6006EFF5265BA92116 /* 2 - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "2 - Jakarta.json"; sourceTree = "<group>"; };
+		B96FBD18996C823EE0C1B021 /* CameraRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRepresentable.swift; sourceTree = "<group>"; };
+		BBABD56B2392B76F8D92AD37 /* SimulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationView.swift; sourceTree = "<group>"; };
+		BC1946E712BBE28EF1AE9E39 /* OnboardingSimulasi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSimulasi.swift; sourceTree = "<group>"; };
+		BE9E6A542B27C2A0268BEFA2 /* A - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "A - Jakarta.json"; sourceTree = "<group>"; };
+		BF0B436DD6DAF9D1667BB1BC /* PracticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewModel.swift; sourceTree = "<group>"; };
+		BF2BDC0007D730016DFBFDF4 /* SignityTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityTitle.swift; sourceTree = "<group>"; };
+		C07A0C50D46C78B7D34FDB24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C16264057444C65C2F9964C2 /* L - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "L - Jakarta.json"; sourceTree = "<group>"; };
+		C3411B2BA0A69619D41E8986 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		C3DD34164E1471595C9E11EA /* R - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "R - Jakarta.json"; sourceTree = "<group>"; };
+		C77DD3CB0BCCCB3D9DEF0A34 /* Aku sakit - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Aku sakit - Jakarta.json"; sourceTree = "<group>"; };
+		C794D8A0D50E58BD6C56F66B /* CoursePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePage.swift; sourceTree = "<group>"; };
+		CAF07DA1D14DD98482CA15EB /* 3 - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "3 - Jakarta.json"; sourceTree = "<group>"; };
+		CD188080E4DE4461D42AC80B /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		CE61D0023A18B3AE866FBACB /* 9 - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "9 - Jakarta.json"; sourceTree = "<group>"; };
+		CED3631CC3E031EFDDB9A982 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		D625C9E2D9B38AF42F35CF15 /* U - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "U - Jakarta.json"; sourceTree = "<group>"; };
+		D8F0F68D1A393723854BF024 /* ChatTriangleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTriangleShape.swift; sourceTree = "<group>"; };
+		DB56FC9B7DCA54A4FA21B5F7 /* YourTurnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTurnView.swift; sourceTree = "<group>"; };
+		DFCFE7F8CD9C84223E6DEAB7 /* V - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "V - Jakarta.json"; sourceTree = "<group>"; };
+		E1350AA335147B2C263845A1 /* P - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "P - Jakarta.json"; sourceTree = "<group>"; };
+		E1A2FA5741B2A373E33911FF /* SimulationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationViewModel.swift; sourceTree = "<group>"; };
+		E1EF973C74D6BE240230944B /* 6 - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "6 - Jakarta.json"; sourceTree = "<group>"; };
+		E21667F3922CF4623655E6DD /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		E40A6ECC8C40857926B32199 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
+		E6BC5A47D05F98554310AC72 /* C - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "C - Jakarta.json"; sourceTree = "<group>"; };
+		E77AE505F7D6503D14129DC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E7B869D5A5C485804C6B0F3C /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		E7C735661DC906277F2493DA /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		EB07268FEBCC090892FDDFDB /* ProgressBarCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarCourse.swift; sourceTree = "<group>"; };
+		EF8FC1CD01C3FB6D3180A3B8 /* SignityHeadline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityHeadline.swift; sourceTree = "<group>"; };
+		F21BCD537E4A79EDEA7A614D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F4ED6D9E4AED0DA8735563C3 /* Halo, selamat siang - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Halo, selamat siang - Jakarta.json"; sourceTree = "<group>"; };
+		F5AB4813573A829C87FFFF01 /* SignityButtonOutline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignityButtonOutline.swift; sourceTree = "<group>"; };
+		F9AB0F638D78B2C9D89E2827 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		FCF9E77E37D87A98CE8298F0 /* TutorialPhraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPhraseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5561AAC526B7ED94001896B3 /* Frameworks */ = {
+		0DF16B431A1627A046AC3D22 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5561AADE26B7ED97001896B3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5561AAE926B7ED97001896B3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				EE8A3342919A6E51AD06F3EB /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5561AABF26B7ED94001896B3 = {
+		0012394E3DE4D4F51085E670 /* SignityUITests */ = {
 			isa = PBXGroup;
 			children = (
-				5561AACA26B7ED94001896B3 /* Signity */,
-				5561AAE426B7ED97001896B3 /* SignityTests */,
-				5561AAEF26B7ED97001896B3 /* SignityUITests */,
-				5561AAC926B7ED94001896B3 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		5561AAC926B7ED94001896B3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5561AAC826B7ED94001896B3 /* Signity.app */,
-				5561AAE126B7ED97001896B3 /* SignityTests.xctest */,
-				5561AAEC26B7ED97001896B3 /* SignityUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		5561AACA26B7ED94001896B3 /* Signity */ = {
-			isa = PBXGroup;
-			children = (
-				5561AB0C26B7F0BD001896B3 /* Resources */,
-				5561AB0B26B7F015001896B3 /* Themes */,
-				5561AB0A26B7EFCF001896B3 /* Application */,
-				5561AB0126B7EDF8001896B3 /* Module */,
-				5561AACF26B7ED94001896B3 /* ContentView.swift */,
-				5561AAD426B7ED96001896B3 /* Assets.xcassets */,
-				5561AAD926B7ED96001896B3 /* LaunchScreen.storyboard */,
-				5561AADC26B7ED96001896B3 /* Info.plist */,
-				5561AAD126B7ED94001896B3 /* Signity.xcdatamodeld */,
-				5561AAD626B7ED96001896B3 /* Preview Content */,
-			);
-			path = Signity;
-			sourceTree = "<group>";
-		};
-		5561AAD626B7ED96001896B3 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				5561AAD726B7ED96001896B3 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		5561AAE426B7ED97001896B3 /* SignityTests */ = {
-			isa = PBXGroup;
-			children = (
-				5561AAE526B7ED97001896B3 /* SignityTests.swift */,
-				5561AAE726B7ED97001896B3 /* Info.plist */,
-			);
-			path = SignityTests;
-			sourceTree = "<group>";
-		};
-		5561AAEF26B7ED97001896B3 /* SignityUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5561AAF026B7ED97001896B3 /* SignityUITests.swift */,
-				5561AAF226B7ED97001896B3 /* Info.plist */,
+				F21BCD537E4A79EDEA7A614D /* Info.plist */,
+				547B85768E0463A85FF0B252 /* SignityUITests.swift */,
 			);
 			path = SignityUITests;
 			sourceTree = "<group>";
 		};
-		5561AB0126B7EDF8001896B3 /* Module */ = {
+		045AA0D022E073F8CEB394EE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5561AB0926B7EFA1001896B3 /* Compare */,
-				5561AB0826B7EF8C001896B3 /* Tutorial */,
-				5561AB0726B7EF67001896B3 /* Accomplishment */,
-				5561AB0626B7EF49001896B3 /* Setting */,
-				5561AB0526B7EF11001896B3 /* Course */,
-				5561AB0426B7EE72001896B3 /* Category */,
-				5561AB0326B7EE0C001896B3 /* Practice */,
-				5561AB0226B7EE05001896B3 /* Onboarding */,
+				6A2F7CC275455C0C4239D8D1 /* UserProfile.swift */,
 			);
-			path = Module;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		5561AB0226B7EE05001896B3 /* Onboarding */ = {
+		08F9829368CE698010107C23 /* Modifier */ = {
 			isa = PBXGroup;
 			children = (
-				5561AB2326B7F1C6001896B3 /* ViewModel */,
-				5561AB2526B7F1C6001896B3 /* View */,
-				5561AB2426B7F1C6001896B3 /* Model */,
+				2C84664FF64898F1A20BF6F0 /* SignityBody.swift */,
+				5F6310629CCF5D35F1D1DE46 /* SignityFootnote.swift */,
+				4A53975D909E72CDB60251BB /* SignityFootnoteBold.swift */,
+				EF8FC1CD01C3FB6D3180A3B8 /* SignityHeadline.swift */,
+				0A13C57B59CC0EA82D5C61DA /* SignityHeadlineThin.swift */,
+				5295AEC2612CAC91A5B7C9CE /* SignityLargeTitle.swift */,
+				A1496F7FF14A3F8902A1E5F3 /* SignitySubhead.swift */,
+				1A75E0DAA1A034DF66D6D66E /* SignitySubheadBold.swift */,
+				76F2EC90F5777A75BA884B3F /* SignitySubtitle.swift */,
+				042397C24D0983336891B867 /* SignityTextColor.swift */,
+				BF2BDC0007D730016DFBFDF4 /* SignityTitle.swift */,
 			);
-			path = Onboarding;
+			path = Modifier;
 			sourceTree = "<group>";
 		};
-		5561AB0326B7EE0C001896B3 /* Practice */ = {
+		0E79583B173EC7D6A6253A09 /* Accomplishment */ = {
 			isa = PBXGroup;
 			children = (
-				5561AB2026B7F1C2001896B3 /* ViewModel */,
-				5561AB2226B7F1C2001896B3 /* View */,
-				5561AB2126B7F1C2001896B3 /* Model */,
-			);
-			path = Practice;
-			sourceTree = "<group>";
-		};
-		5561AB0426B7EE72001896B3 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				5561AB1E26B7F1BF001896B3 /* ViewModel */,
-				5561AB1F26B7F1BF001896B3 /* View */,
-				5561AB1D26B7F1BF001896B3 /* Model */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		5561AB0526B7EF11001896B3 /* Course */ = {
-			isa = PBXGroup;
-			children = (
-				5561AB1B26B7F1BC001896B3 /* ViewModel */,
-				5561AB1A26B7F1BC001896B3 /* View */,
-				5561AB1C26B7F1BD001896B3 /* Model */,
-			);
-			path = Course;
-			sourceTree = "<group>";
-		};
-		5561AB0626B7EF49001896B3 /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				5561AB1926B7F1BA001896B3 /* ViewModel */,
-				5561AB1826B7F1BA001896B3 /* View */,
-				5561AB1726B7F1BA001896B3 /* Model */,
-			);
-			path = Setting;
-			sourceTree = "<group>";
-		};
-		5561AB0726B7EF67001896B3 /* Accomplishment */ = {
-			isa = PBXGroup;
-			children = (
-				5561AB1426B7F1B7001896B3 /* ViewModel */,
-				5561AB1526B7F1B7001896B3 /* View */,
-				5561AB1626B7F1B7001896B3 /* Model */,
+				B5D6E0671E5C1F2DEC5EF61C /* View */,
 			);
 			path = Accomplishment;
 			sourceTree = "<group>";
 		};
-		5561AB0826B7EF8C001896B3 /* Tutorial */ = {
+		19D5FED0E293B8F59B0D45CF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5561AB1126B7F1B3001896B3 /* ViewModel */,
-				5561AB1326B7F1B3001896B3 /* View */,
-				5561AB1226B7F1B3001896B3 /* Model */,
-			);
-			path = Tutorial;
-			sourceTree = "<group>";
-		};
-		5561AB0926B7EFA1001896B3 /* Compare */ = {
-			isa = PBXGroup;
-			children = (
-				5561AB1026B7F19E001896B3 /* ViewModel */,
-				5561AB0E26B7F190001896B3 /* View */,
-				5561AB0D26B7F18B001896B3 /* Model */,
-			);
-			path = Compare;
-			sourceTree = "<group>";
-		};
-		5561AB0A26B7EFCF001896B3 /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				5561AACB26B7ED94001896B3 /* AppDelegate.swift */,
-				5561AACD26B7ED94001896B3 /* SceneDelegate.swift */,
-			);
-			path = Application;
-			sourceTree = "<group>";
-		};
-		5561AB0B26B7F015001896B3 /* Themes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Themes;
-			sourceTree = "<group>";
-		};
-		5561AB0C26B7F0BD001896B3 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
+				1ED85DDF1C9DB2CED632A1D8 /* Jakarta */,
+				F03BDB24CB2E85980C3A6EB1 /* Sounds */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		5561AB0D26B7F18B001896B3 /* Model */ = {
+		1DBA444888E4132B42D3F52F /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				E77AE505F7D6503D14129DC1 /* Preview Assets.xcassets */,
 			);
-			path = Model;
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		5561AB0E26B7F190001896B3 /* View */ = {
+		1ED85DDF1C9DB2CED632A1D8 /* Jakarta */ = {
 			isa = PBXGroup;
 			children = (
+				4349A48D1492E73E4FF44835 /* Alphabet */,
+				320D457490E3E39660FE3989 /* Angka */,
+				C884CA4DE31A2232517009D4 /* Menyapa */,
+				66BBE91DF5C3BBF42A52DF8D /* Orang */,
+				367145DC6BA1383B4C63D6A3 /* Percakapan Menyapa */,
+			);
+			path = Jakarta;
+			sourceTree = "<group>";
+		};
+		22557335EE844B7B6EC69B99 /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+				9038060D677E653F93F8D914 /* HandGuide.swift */,
+				37E0F6AB7A446A3B393E745F /* HorizontalModules.swift */,
+				99A445EF09E4F9709D57F064 /* PracticeView.swift */,
+				7D9866C826D3E72200BED6F6 /* SituationHorizontalModule.swift */,
+			);
+			path = Practice;
+			sourceTree = "<group>";
+		};
+		22ED93F30749899D1D7D9BB4 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				08F9829368CE698010107C23 /* Modifier */,
+				E07E062FB526BC7C539C912A /* Shape */,
+				DB8D98FB6495A27094980305 /* View */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		320D457490E3E39660FE3989 /* Angka */ = {
+			isa = PBXGroup;
+			children = (
+				7D052D0A26CE756500682011 /* 10 - Jakarta.json */,
+				9BCD91389D746EF8D3C0190C /* 1 - Jakarta.json */,
+				B9578A6006EFF5265BA92116 /* 2 - Jakarta.json */,
+				CAF07DA1D14DD98482CA15EB /* 3 - Jakarta.json */,
+				8083747B5219BD8C0D2C57F0 /* 4 - Jakarta.json */,
+				33719DA96EC38A7D1549DA15 /* 5 - Jakarta.json */,
+				E1EF973C74D6BE240230944B /* 6 - Jakarta.json */,
+				7F9CC27601DB094D8E61E41B /* 7 - Jakarta.json */,
+				2EBDBC6E7DC14460C82DB1CC /* 8 - Jakarta.json */,
+				CE61D0023A18B3AE866FBACB /* 9 - Jakarta.json */,
+			);
+			path = Angka;
+			sourceTree = "<group>";
+		};
+		367145DC6BA1383B4C63D6A3 /* Percakapan Menyapa */ = {
+			isa = PBXGroup;
+			children = (
+				C77DD3CB0BCCCB3D9DEF0A34 /* Aku sakit - Jakarta.json */,
+				2830FE94B5D8784655FAF509 /* Apa kabar? - Jakarta.json */,
+				F4ED6D9E4AED0DA8735563C3 /* Halo, selamat siang - Jakarta.json */,
+			);
+			path = "Percakapan Menyapa";
+			sourceTree = "<group>";
+		};
+		41FAFDC851589B28B2D06D92 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				920CB00F8114C948820898D6 /* CardViewCourse.swift */,
+				C794D8A0D50E58BD6C56F66B /* CoursePage.swift */,
+				EB07268FEBCC090892FDDFDB /* ProgressBarCourse.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		5561AB1026B7F19E001896B3 /* ViewModel */ = {
+		4313579EF95A5BCF8214BF49 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BF0B436DD6DAF9D1667BB1BC /* PracticeViewModel.swift */,
+				E1A2FA5741B2A373E33911FF /* SimulationViewModel.swift */,
+				7D9866A626D2504C00BED6F6 /* VideoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		5561AB1126B7F1B3001896B3 /* ViewModel */ = {
+		4349A48D1492E73E4FF44835 /* Alphabet */ = {
 			isa = PBXGroup;
 			children = (
+				BE9E6A542B27C2A0268BEFA2 /* A - Jakarta.json */,
+				0EA40B701E48CC3D2F0256C2 /* B - Jakarta.json */,
+				E6BC5A47D05F98554310AC72 /* C - Jakarta.json */,
+				4747D3C91207CABFAB71A09B /* D - Jakarta.json */,
+				9473D7C43FEC1480F65C0D97 /* E - Jakarta.json */,
+				8F7E86952265FA44B7422DF7 /* F - Jakarta.json */,
+				45274D316F4BE5AEBA3A9199 /* G - Jakarta.json */,
+				B87E2A3E7D32822E3CE8F9E8 /* H - Jakarta.json */,
+				9B834364B39F40721C2D0BF0 /* I - Jakarta.json */,
+				5CFBAB7C79157A5F1BADE268 /* J - Jakarta.json */,
+				046FC033F2D11D1B55A62276 /* K - Jakarta.json */,
+				C16264057444C65C2F9964C2 /* L - Jakarta.json */,
+				A13336DC49AC9E3E94E6EE24 /* M - Jakarta.json */,
+				63ECF12426FFBC7CD97E1E4F /* N - Jakarta.json */,
+				5F4186295BF3D1433D37320F /* O - Jakarta.json */,
+				E1350AA335147B2C263845A1 /* P - Jakarta.json */,
+				1A7FB1346A3E9531081CCD4B /* Q - Jakarta.json */,
+				C3DD34164E1471595C9E11EA /* R - Jakarta.json */,
+				8D875057216FCBD0A9456481 /* S - Jakarta.json */,
+				2C05B4CE25F27F1FC0FA0DF6 /* T - Jakarta.json */,
+				D625C9E2D9B38AF42F35CF15 /* U - Jakarta.json */,
+				DFCFE7F8CD9C84223E6DEAB7 /* V - Jakarta.json */,
+				195D4BBA4067631D37C8B7C6 /* W - Jakarta.json */,
+				19DFD46B46D45E501C82DD6B /* X - Jakarta.json */,
+				2B6A43C07EDF25C9E4B1BAF4 /* Y - Jakarta.json */,
+				A8884D2D574D65533DCC7E32 /* Z - Jakarta.json */,
+			);
+			path = Alphabet;
+			sourceTree = "<group>";
+		};
+		4D42AC9C26757F045F3FF6C3 /* PracticeSimulationOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				7D98669E26D2457500BED6F6 /* ViewModel */,
+				79C835FF1E0714022ED1328B /* View */,
+			);
+			path = PracticeSimulationOnboarding;
+			sourceTree = "<group>";
+		};
+		4E6BEFA720A38F1934AB2F34 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E7C735661DC906277F2493DA /* OnboardingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		5561AB1226B7F1B3001896B3 /* Model */ = {
+		5C4CB7B44BF9F7F48B60678D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				937BBB895E982E23EDE14EB8 /* Hand.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		5561AB1326B7F1B3001896B3 /* View */ = {
+		5FFA9597333082C74B14EDC4 = {
 			isa = PBXGroup;
 			children = (
+				E0136519A83643AE8063DEED /* Products */,
+				FCB6EC2D012A83BED90D7F81 /* Signity */,
+				7E504698076996AE8A41B51E /* SignityTests */,
+				0012394E3DE4D4F51085E670 /* SignityUITests */,
+			);
+			sourceTree = "<group>";
+		};
+		6022506133676281C10110E3 /* Simulation */ = {
+			isa = PBXGroup;
+			children = (
+				81A658F1F3904143390E2BA0 /* HintButton.swift */,
+				BBABD56B2392B76F8D92AD37 /* SimulationView.swift */,
+				DB56FC9B7DCA54A4FA21B5F7 /* YourTurnView.swift */,
+			);
+			path = Simulation;
+			sourceTree = "<group>";
+		};
+		64D84C22B73422DC04CEEDE3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CED3631CC3E031EFDDB9A982 /* CategoryView.swift */,
+				E40A6ECC8C40857926B32199 /* CourseCell.swift */,
+				F9AB0F638D78B2C9D89E2827 /* GridView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		5561AB1426B7F1B7001896B3 /* ViewModel */ = {
+		66BBE91DF5C3BBF42A52DF8D /* Orang */ = {
 			isa = PBXGroup;
 			children = (
+				43FE4458FC110B8544E58A33 /* Dia - Jakarta.json */,
+				964C7B9BC76264D1EF775E7E /* Kamu - Jakarta.json */,
+				51065CDE359A89A157355B05 /* Kita - Jakarta.json */,
+				28B21302C0D8E0BD27FDE29E /* Mereka - Jakarta.json */,
+			);
+			path = Orang;
+			sourceTree = "<group>";
+		};
+		6D13A1EC313C1D69B0D1A2C7 /* MLModels */ = {
+			isa = PBXGroup;
+			children = (
+				7D0764E526CD40D8000B3330 /* SignityVisionJKT.mlkitmodel */,
+			);
+			path = MLModels;
+			sourceTree = "<group>";
+		};
+		744B82F8851216C483355236 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				42C6A2C6E9383B8717A12A3E /* TutorialViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		5561AB1526B7F1B7001896B3 /* View */ = {
+		7480F3884209CAA77345723D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		5561AB1626B7F1B7001896B3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		5561AB1726B7F1BA001896B3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		5561AB1826B7F1BA001896B3 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		5561AB1926B7F1BA001896B3 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
+				98F070DC6FB252CAE5748FE4 /* CourseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		5561AB1A26B7F1BC001896B3 /* View */ = {
+		79C835FF1E0714022ED1328B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8DD248B70321BE0D13110C85 /* OnboardingLatihanTiru.swift */,
+				BC1946E712BBE28EF1AE9E39 /* OnboardingSimulasi.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		5561AB1B26B7F1BC001896B3 /* ViewModel */ = {
+		7D98669E26D2457500BED6F6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7D98669F26D2459B00BED6F6 /* PracticeOnboardingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		5561AB1C26B7F1BD001896B3 /* Model */ = {
+		7D9866A526D24C0200BED6F6 /* Data Entity Helper */ = {
 			isa = PBXGroup;
 			children = (
+				2D28C57CCCF2C9306943215C /* Category+Helper.swift */,
+				22D68F9307BB6D98CC1A20D1 /* Course+Helper.swift */,
+				7B673D80995B1D93A51388E0 /* ModuleGroup+Helper.swift */,
 			);
-			path = Model;
+			path = "Data Entity Helper";
 			sourceTree = "<group>";
 		};
-		5561AB1D26B7F1BF001896B3 /* Model */ = {
+		7D9866C326D25CC600BED6F6 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				E3D6A0422622C32959874569 /* Signity.xcdatamodeld */,
 			);
-			path = Model;
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
-		5561AB1E26B7F1BF001896B3 /* ViewModel */ = {
+		7E504698076996AE8A41B51E /* SignityTests */ = {
 			isa = PBXGroup;
 			children = (
+				30F31F17EFF5297A4B6C2558 /* Info.plist */,
+				8DB8AA153DB638E5543DF0E7 /* SignityTests.swift */,
 			);
-			path = ViewModel;
+			path = SignityTests;
 			sourceTree = "<group>";
 		};
-		5561AB1F26B7F1BF001896B3 /* View */ = {
+		88CBFD65052E9248C1978184 /* CameraView */ = {
 			isa = PBXGroup;
 			children = (
+				B96FBD18996C823EE0C1B021 /* CameraRepresentable.swift */,
+				279805C3262B54732701EA9F /* CameraViewController.swift */,
+				41022655D8306F102604B79C /* CameraViewController+DrawLandmark.swift */,
+			);
+			path = CameraView;
+			sourceTree = "<group>";
+		};
+		8E1C538F52E121018283636A /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				93CF51485D5A2EB17F24088B /* RootView.swift */,
+				0E79583B173EC7D6A6253A09 /* Accomplishment */,
+				EB0E29A3FFEED25B4B1FE302 /* Category */,
+				B0A4BA66435B4B8E6619D900 /* Compare */,
+				E6B4EA94337A05295D39ED5C /* Course */,
+				CEA1B5EE744C7B38717B757F /* Onboarding */,
+				4D42AC9C26757F045F3FF6C3 /* PracticeSimulationOnboarding */,
+				A53AD3AC945FB39BCE9894F5 /* PracticeSimulation */,
+				B54BDE346464675A4C4FFD2C /* Settings */,
+				ED152C325C6ABE4E24C8566C /* Tutorial */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		9B6D4BF9EA5222795581EC5A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				6666808466A209E8F198A6D2 /* SignityApp.swift */,
+				7D9866C426D25D0300BED6F6 /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A3DEB09683C1C67A7586C600 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A6FFF2DD3D1AE814A9C6EE77 /* ComparePhraseView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		5561AB2026B7F1C2001896B3 /* ViewModel */ = {
+		A53AD3AC945FB39BCE9894F5 /* PracticeSimulation */ = {
 			isa = PBXGroup;
 			children = (
+				5C4CB7B44BF9F7F48B60678D /* Model */,
+				B77E6377BB182B3E306FF2D1 /* View */,
+				4313579EF95A5BCF8214BF49 /* ViewModel */,
 			);
-			path = ViewModel;
+			path = PracticeSimulation;
 			sourceTree = "<group>";
 		};
-		5561AB2126B7F1C2001896B3 /* Model */ = {
+		A7BE239C761E118D7ECAC804 /* View */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		5561AB2226B7F1C2001896B3 /* View */ = {
-			isa = PBXGroup;
-			children = (
+				83878CD97BD140ABD104ECC6 /* Onboarding.swift */,
+				2DC5C4BE237D93EA6CB23CE2 /* OnboardingRegion.swift */,
+				912BB39D79A3F5E027C65D90 /* RegionSelectionButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		5561AB2326B7F1C6001896B3 /* ViewModel */ = {
+		A90143814976D782E7D67E7F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A0859442287E45716BFD8B31 /* SettingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		5561AB2426B7F1C6001896B3 /* Model */ = {
+		B0A4BA66435B4B8E6619D900 /* Compare */ = {
 			isa = PBXGroup;
 			children = (
+				A3DEB09683C1C67A7586C600 /* View */,
+			);
+			path = Compare;
+			sourceTree = "<group>";
+		};
+		B54BDE346464675A4C4FFD2C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B88A3BDB9AB45D97DF3F5F77 /* View */,
+				A90143814976D782E7D67E7F /* ViewModel */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		B5D6E0671E5C1F2DEC5EF61C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5952026596553C5C9494F027 /* AccomplishmentSimulasi.swift */,
+				6B4A96650914334E40940ED1 /* AccomplishmentTiru.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B77E6377BB182B3E306FF2D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				76DC06823247EC7547D98226 /* CameraNavigationBar.swift */,
+				61571D475D68A328D52A1734 /* ChatBubble.swift */,
+				958BD4A1C4966149B2B00EDF /* PhraseButton.swift */,
+				E7B869D5A5C485804C6B0F3C /* ProgressBar.swift */,
+				27BF9FF002D1854657553F53 /* SentenceFeedbackView.swift */,
+				270663A6100EF4D5836B3A09 /* VideoView.swift */,
+				88CBFD65052E9248C1978184 /* CameraView */,
+				22557335EE844B7B6EC69B99 /* Practice */,
+				6022506133676281C10110E3 /* Simulation */,
+				7D9866CA26D3EDDF00BED6F6 /* SentencePracticeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B88A3BDB9AB45D97DF3F5F77 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CD188080E4DE4461D42AC80B /* CollectionView.swift */,
+				13F3D84A0A7604AB9049B68A /* SettingsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C6678D35740C746E97B74942 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCF9E77E37D87A98CE8298F0 /* TutorialPhraseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C884CA4DE31A2232517009D4 /* Menyapa */ = {
+			isa = PBXGroup;
+			children = (
+				7D9866D026D4F8B600BED6F6 /* Aku - Jakarta.json */,
+				7D9866D126D4F8B600BED6F6 /* Apa kabar - Jakarta.json */,
+				7D9866D226D4F8B700BED6F6 /* Halo - Jakarta.json */,
+				7D9866D326D4F8B700BED6F6 /* Sehat - Jakarta.json */,
+				7D9866CE26D4F8B600BED6F6 /* Selamat datang - Jakarta.json */,
+				7D9866CC26D4F8B600BED6F6 /* Selamat malam - Jakarta.json */,
+				7D9866D426D4F8B700BED6F6 /* Selamat pagi - Jakarta.json */,
+				7D9866CD26D4F8B600BED6F6 /* Selamat siang - Jakarta.json */,
+				7D9866CF26D4F8B600BED6F6 /* Selamat sore - Jakarta.json */,
+			);
+			path = Menyapa;
+			sourceTree = "<group>";
+		};
+		CE2B7123E3C9546B3820C69F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67D4914CC166E8C44F03F1D6 /* CourseModel.swift */,
+				6D042B5EEC853BBE2D3CBF26 /* ModuleGroupRepository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		5561AB2526B7F1C6001896B3 /* View */ = {
+		CEA1B5EE744C7B38717B757F /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				045AA0D022E073F8CEB394EE /* Model */,
+				A7BE239C761E118D7ECAC804 /* View */,
+				4E6BEFA720A38F1934AB2F34 /* ViewModel */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		DB8D98FB6495A27094980305 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7186B2763C53153D19ADDBCB /* BackButton.swift */,
+				E21667F3922CF4623655E6DD /* LottieView.swift */,
+				B4F139692329014ADE4D25E3 /* PlaybackButton.swift */,
+				1C891BE23C9495C2C20B8956 /* SignityButton.swift */,
+				F5AB4813573A829C87FFFF01 /* SignityButtonOutline.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E0136519A83643AE8063DEED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2FD16F2268223352C27FA8A2 /* Signity.app */,
+				9DBB438A18D7610A946A6CCC /* SignityTests.xctest */,
+				3888DBCED1D5EC48E193EB91 /* SignityUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E07E062FB526BC7C539C912A /* Shape */ = {
+			isa = PBXGroup;
+			children = (
+				D8F0F68D1A393723854BF024 /* ChatTriangleShape.swift */,
+				74C32BE981B5B58D7DF608A1 /* HandLandmarks.swift */,
+				916D3CD6E380E16083BEB87D /* HandLines.swift */,
+			);
+			path = Shape;
+			sourceTree = "<group>";
+		};
+		E6B4EA94337A05295D39ED5C /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B7123E3C9546B3820C69F /* Model */,
+				41FAFDC851589B28B2D06D92 /* View */,
+				7480F3884209CAA77345723D /* ViewModel */,
+			);
+			path = Course;
+			sourceTree = "<group>";
+		};
+		EB0E29A3FFEED25B4B1FE302 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				64D84C22B73422DC04CEEDE3 /* View */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		ED152C325C6ABE4E24C8566C /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				C6678D35740C746E97B74942 /* View */,
+				744B82F8851216C483355236 /* ViewModel */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		F03BDB24CB2E85980C3A6EB1 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				51AB49EAFF24B62BCD3F3DCE /* SuccessBell.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		FBC6D37FF3248E300B6BAC2F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C3411B2BA0A69619D41E8986 /* AudioManager.swift */,
+				71E5060C78B5D58E9271CAEF /* CoreMLHelper.swift */,
+				7D4745AF26D23221000DE129 /* DataMigrator.swift */,
+				7918D4B3874676F114116536 /* HapticManager.swift */,
+				639F91617D3C8AB58BBD2FD0 /* NavigationHelper.swift */,
+				2A12289D82E0690B1E44C5A5 /* PersistenceController.swift */,
+				7D9866C626D2625400BED6F6 /* TimeoutManager.swift */,
+				7C5AEF9C001FE18A49B15852 /* ViewRouter.swift */,
+				7D9866A526D24C0200BED6F6 /* Data Entity Helper */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		FCB6EC2D012A83BED90D7F81 /* Signity */ = {
+			isa = PBXGroup;
+			children = (
+				C07A0C50D46C78B7D34FDB24 /* Assets.xcassets */,
+				40EDB2C534BEF24321CFC962 /* Colors.xcassets */,
+				4890FC63A94D6EFE0F660E19 /* Info.plist */,
+				7D9866C326D25CC600BED6F6 /* Core Data */,
+				9B6D4BF9EA5222795581EC5A /* Application */,
+				FBC6D37FF3248E300B6BAC2F /* Helper */,
+				6D13A1EC313C1D69B0D1A2C7 /* MLModels */,
+				8E1C538F52E121018283636A /* Module */,
+				1DBA444888E4132B42D3F52F /* Preview Content */,
+				19D5FED0E293B8F59B0D45CF /* Resources */,
+				22ED93F30749899D1D7D9BB4 /* Themes */,
+			);
+			path = Signity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5561AAC726B7ED94001896B3 /* Signity */ = {
+		7980CB7EE98D88F0CC4EA5AA /* SignityUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5561AAF526B7ED97001896B3 /* Build configuration list for PBXNativeTarget "Signity" */;
+			buildConfigurationList = A4BB601E084096DC1CD02809 /* Build configuration list for PBXNativeTarget "SignityUITests" */;
 			buildPhases = (
-				5561AAC426B7ED94001896B3 /* Sources */,
-				5561AAC526B7ED94001896B3 /* Frameworks */,
-				5561AAC626B7ED94001896B3 /* Resources */,
+				FE36C07CBDEEFD9EF805AC4D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SignityUITests;
+			productName = SignityUITests;
+			productReference = 3888DBCED1D5EC48E193EB91 /* SignityUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		8E2261436E0AA63C04B2CD30 /* Signity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05F24E7B598650EDB9ACF905 /* Build configuration list for PBXNativeTarget "Signity" */;
+			buildPhases = (
+				A072EF0FE885D3DB006F1F5A /* Sources */,
+				8FCA1090B541FD958451BB99 /* Resources */,
+				0DF16B431A1627A046AC3D22 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Signity;
+			packageProductDependencies = (
+				BD103C4E035C99740F69B634 /* Lottie */,
+			);
 			productName = Signity;
-			productReference = 5561AAC826B7ED94001896B3 /* Signity.app */;
+			productReference = 2FD16F2268223352C27FA8A2 /* Signity.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5561AAE026B7ED97001896B3 /* SignityTests */ = {
+		A1E7F156DAF95E23C4FED86F /* SignityTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5561AAF826B7ED97001896B3 /* Build configuration list for PBXNativeTarget "SignityTests" */;
+			buildConfigurationList = 7BD6007F6C5AC5CFBC7125BB /* Build configuration list for PBXNativeTarget "SignityTests" */;
 			buildPhases = (
-				5561AADD26B7ED97001896B3 /* Sources */,
-				5561AADE26B7ED97001896B3 /* Frameworks */,
-				5561AADF26B7ED97001896B3 /* Resources */,
+				4C9B6BCAF6AF300A63317101 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5561AAE326B7ED97001896B3 /* PBXTargetDependency */,
 			);
 			name = SignityTests;
 			productName = SignityTests;
-			productReference = 5561AAE126B7ED97001896B3 /* SignityTests.xctest */;
+			productReference = 9DBB438A18D7610A946A6CCC /* SignityTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		5561AAEB26B7ED97001896B3 /* SignityUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5561AAFB26B7ED97001896B3 /* Build configuration list for PBXNativeTarget "SignityUITests" */;
-			buildPhases = (
-				5561AAE826B7ED97001896B3 /* Sources */,
-				5561AAE926B7ED97001896B3 /* Frameworks */,
-				5561AAEA26B7ED97001896B3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5561AAEE26B7ED97001896B3 /* PBXTargetDependency */,
-			);
-			name = SignityUITests;
-			productName = SignityUITests;
-			productReference = 5561AAEC26B7ED97001896B3 /* SignityUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5561AAC026B7ED94001896B3 /* Project object */ = {
+		16A17110F0246B2B6064D282 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
-				TargetAttributes = {
-					5561AAC726B7ED94001896B3 = {
-						CreatedOnToolsVersion = 12.4;
-					};
-					5561AAE026B7ED97001896B3 = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 5561AAC726B7ED94001896B3;
-					};
-					5561AAEB26B7ED97001896B3 = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 5561AAC726B7ED94001896B3;
-					};
-				};
+				LastUpgradeCheck = 1200;
 			};
-			buildConfigurationList = 5561AAC326B7ED94001896B3 /* Build configuration list for PBXProject "Signity" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = 9960AD806CB30C9922FBB468 /* Build configuration list for PBXProject "Signity" */;
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
-			mainGroup = 5561AABF26B7ED94001896B3;
-			productRefGroup = 5561AAC926B7ED94001896B3 /* Products */;
+			mainGroup = 5FFA9597333082C74B14EDC4;
+			packageReferences = (
+				06E2DBB6FFEF938F0F04CE51 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5561AAC726B7ED94001896B3 /* Signity */,
-				5561AAE026B7ED97001896B3 /* SignityTests */,
-				5561AAEB26B7ED97001896B3 /* SignityUITests */,
+				8E2261436E0AA63C04B2CD30 /* Signity */,
+				A1E7F156DAF95E23C4FED86F /* SignityTests */,
+				7980CB7EE98D88F0CC4EA5AA /* SignityUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5561AAC626B7ED94001896B3 /* Resources */ = {
+		8FCA1090B541FD958451BB99 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5561AADB26B7ED96001896B3 /* LaunchScreen.storyboard in Resources */,
-				5561AAD826B7ED96001896B3 /* Preview Assets.xcassets in Resources */,
-				5561AAD526B7ED96001896B3 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5561AADF26B7ED97001896B3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5561AAEA26B7ED97001896B3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				5C812A2A233457A59E95173F /* 1 - Jakarta.json in Resources */,
+				374A3E7D8397E5145DFF4CA5 /* 2 - Jakarta.json in Resources */,
+				50C969208C5FD2F9BF35E351 /* 3 - Jakarta.json in Resources */,
+				3369F6E3DFDBD6D8BC124088 /* 4 - Jakarta.json in Resources */,
+				7D9866DD26D4F8B700BED6F6 /* Selamat pagi - Jakarta.json in Resources */,
+				DFEA46E5CECB0F71969EE604 /* 5 - Jakarta.json in Resources */,
+				6BCFB1993B3E7CBF1A80D21E /* 6 - Jakarta.json in Resources */,
+				601A55C68C220620382D91B1 /* 7 - Jakarta.json in Resources */,
+				9B75CF02640D312F21702354 /* 8 - Jakarta.json in Resources */,
+				BEB7D986FCFD3EFECD21E49F /* 9 - Jakarta.json in Resources */,
+				A0CB7CA33651C506BFAD5CE7 /* A - Jakarta.json in Resources */,
+				7D052D0B26CE756500682011 /* 10 - Jakarta.json in Resources */,
+				07F91D6A3F60F9BC4BAE0E60 /* Aku sakit - Jakarta.json in Resources */,
+				97AFE85F240050F70C3C6263 /* Apa kabar? - Jakarta.json in Resources */,
+				159D9BCB64D7DF599967E393 /* Assets.xcassets in Resources */,
+				232B912F106AB594B87F867C /* B - Jakarta.json in Resources */,
+				7D9866D926D4F8B700BED6F6 /* Aku - Jakarta.json in Resources */,
+				E35C41BCAB9884A00EE56C9B /* C - Jakarta.json in Resources */,
+				2A8182AC40B3BBFA4F426F71 /* Colors.xcassets in Resources */,
+				7FABAAC1EB4B9DCCDBC0D514 /* D - Jakarta.json in Resources */,
+				7D9866D626D4F8B700BED6F6 /* Selamat siang - Jakarta.json in Resources */,
+				BBD76D079F35841456787B73 /* Dia - Jakarta.json in Resources */,
+				CF44C5FA4EBDBD288FD216E8 /* E - Jakarta.json in Resources */,
+				2E47D03521314B2BB5B2A2CC /* F - Jakarta.json in Resources */,
+				190493F23E0D7D50B06EC02E /* G - Jakarta.json in Resources */,
+				D543D7A75DBA58BEC84548ED /* H - Jakarta.json in Resources */,
+				B30668537B126A2999904134 /* Halo, selamat siang - Jakarta.json in Resources */,
+				7D9866C526D25D0300BED6F6 /* LaunchScreen.storyboard in Resources */,
+				E96401F678D40618F5BC1151 /* I - Jakarta.json in Resources */,
+				7D9866DC26D4F8B700BED6F6 /* Sehat - Jakarta.json in Resources */,
+				8A3AE8E04EEA4B269A727094 /* J - Jakarta.json in Resources */,
+				B3FC8DB8EC077E5FA71BC4EB /* K - Jakarta.json in Resources */,
+				C5E6DAE5F4164BC713E70F0B /* Kamu - Jakarta.json in Resources */,
+				971ADA380C666658095D2BF6 /* Kita - Jakarta.json in Resources */,
+				551E41B9EA18EB84A045A29B /* L - Jakarta.json in Resources */,
+				6929AAF53BCDC1796B14B835 /* M - Jakarta.json in Resources */,
+				C0DAAA32EC5352D99FA2BB29 /* Mereka - Jakarta.json in Resources */,
+				7D9866D826D4F8B700BED6F6 /* Selamat sore - Jakarta.json in Resources */,
+				7D9866D526D4F8B700BED6F6 /* Selamat malam - Jakarta.json in Resources */,
+				8209AA4A657B4E35618E10D2 /* N - Jakarta.json in Resources */,
+				80015975E01F910B4B38F30F /* O - Jakarta.json in Resources */,
+				925027A5173066CF106821C9 /* P - Jakarta.json in Resources */,
+				7D9866DA26D4F8B700BED6F6 /* Apa kabar - Jakarta.json in Resources */,
+				7D9866DB26D4F8B700BED6F6 /* Halo - Jakarta.json in Resources */,
+				347DEA0453009FBC5310F3E7 /* Preview Assets.xcassets in Resources */,
+				2D0A7DACE9C479BD71971366 /* Q - Jakarta.json in Resources */,
+				951F4FCE57821E9636C38FDC /* R - Jakarta.json in Resources */,
+				1D24132FCAF7ACBFCD44C500 /* S - Jakarta.json in Resources */,
+				417EB0B845325AC19DD6B8A3 /* SuccessBell.wav in Resources */,
+				C48FD8522B468790A0F21BD2 /* T - Jakarta.json in Resources */,
+				6B357C8119924B4E000F8CB5 /* U - Jakarta.json in Resources */,
+				4E910E984B1CB95F4ED3FCAE /* V - Jakarta.json in Resources */,
+				FD8C696AA8D4D29003F970F6 /* W - Jakarta.json in Resources */,
+				59D5C6764C1DD6D1DB265713 /* X - Jakarta.json in Resources */,
+				CE9D48320822909E4EDA59D8 /* Y - Jakarta.json in Resources */,
+				7D9866D726D4F8B700BED6F6 /* Selamat datang - Jakarta.json in Resources */,
+				1EDB37AC6D2DF968E1C218DC /* Z - Jakarta.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5561AAC426B7ED94001896B3 /* Sources */ = {
+		4C9B6BCAF6AF300A63317101 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5561AACC26B7ED94001896B3 /* AppDelegate.swift in Sources */,
-				5561AACE26B7ED94001896B3 /* SceneDelegate.swift in Sources */,
-				5561AAD026B7ED94001896B3 /* ContentView.swift in Sources */,
-				5561AAD326B7ED94001896B3 /* Signity.xcdatamodeld in Sources */,
+				5B2CB0C4F72B3DF6F0B3E836 /* SignityTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5561AADD26B7ED97001896B3 /* Sources */ = {
+		A072EF0FE885D3DB006F1F5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5561AAE626B7ED97001896B3 /* SignityTests.swift in Sources */,
+				B9ED22CF0CF16C1D509E7C70 /* AccomplishmentSimulasi.swift in Sources */,
+				099D7285C59A70202562D737 /* AccomplishmentTiru.swift in Sources */,
+				AA582D9468B35846D6B685FC /* SignityApp.swift in Sources */,
+				A0D41502BF4A9FD66A998AD5 /* AudioManager.swift in Sources */,
+				543DEBB3AD762EBC39534121 /* BackButton.swift in Sources */,
+				7D9866C726D2625400BED6F6 /* TimeoutManager.swift in Sources */,
+				78608EBDC9EEB6E96F27EE7F /* CameraNavigationBar.swift in Sources */,
+				DB4207052D8FD93F264D787B /* CameraRepresentable.swift in Sources */,
+				C4FD1649159EA4B236539F48 /* CameraViewController+DrawLandmark.swift in Sources */,
+				7D4745B026D23221000DE129 /* DataMigrator.swift in Sources */,
+				1FB5593379EFEEBDE7821C35 /* CameraViewController.swift in Sources */,
+				AD4ACC98BE902A96BFDA7EEC /* CardViewCourse.swift in Sources */,
+				4D32099FCCF77EC32EB67FFA /* Category+Helper.swift in Sources */,
+				0A9411512F3DC9679165D875 /* CategoryView.swift in Sources */,
+				2DE307E1D08040D56ED29EE3 /* ChatBubble.swift in Sources */,
+				9FED50ED7D44182DFC591429 /* ChatTriangleShape.swift in Sources */,
+				E6BB61039551A3FA7EACDA5A /* CollectionView.swift in Sources */,
+				851C5E38307AD135B7FD9397 /* ComparePhraseView.swift in Sources */,
+				0A6B9FAC778AA56172E14272 /* CoreMLHelper.swift in Sources */,
+				E671D446AF2F3FDEE2EF9D51 /* Course+Helper.swift in Sources */,
+				4FC328BB7F688A424231359B /* CourseCell.swift in Sources */,
+				321BCF0933B9CC69F646AE75 /* CourseModel.swift in Sources */,
+				61E538B9C9C7313D2974E558 /* CoursePage.swift in Sources */,
+				1A586DE4CABFDF86BBCEAC54 /* CourseViewModel.swift in Sources */,
+				54C10597B529C0866D6184C1 /* GridView.swift in Sources */,
+				7F4E21AB2E5892E60A117BB4 /* Hand.swift in Sources */,
+				7D0764E626CD40D8000B3330 /* SignityVisionJKT.mlkitmodel in Sources */,
+				A0C9CC3E8AD3E4D3C9F8D885 /* HandGuide.swift in Sources */,
+				8127349C1209CDFEC89CD65F /* HandLandmarks.swift in Sources */,
+				009F2099106A103EA5013B4C /* HandLines.swift in Sources */,
+				1D086D01D8C58BFC0F78DA2E /* HapticManager.swift in Sources */,
+				EFE5E06B9AA1CED7A1ED0DB6 /* HintButton.swift in Sources */,
+				FC65BE15315AB48DDB1684DF /* HorizontalModules.swift in Sources */,
+				7D9866C926D3E72200BED6F6 /* SituationHorizontalModule.swift in Sources */,
+				05B1A2715CE7F827FA6F36BA /* LottieView.swift in Sources */,
+				8EE2D9897200C2F3E3A38B58 /* ModuleGroup+Helper.swift in Sources */,
+				84C9ED95ED60ADAA14C02907 /* ModuleGroupRepository.swift in Sources */,
+				2CCBEDCBF63E8A82702D783D /* NavigationHelper.swift in Sources */,
+				3CC6C39BC8E7F3CFEED05989 /* Onboarding.swift in Sources */,
+				091367095C9F5642A1CB6776 /* OnboardingLatihanTiru.swift in Sources */,
+				60C13B7A61BF3FDD49E56CD3 /* OnboardingRegion.swift in Sources */,
+				9AC993F189A7B4D1CC60019C /* OnboardingSimulasi.swift in Sources */,
+				1D8F46EB59FF26771A73CFB7 /* OnboardingViewModel.swift in Sources */,
+				E6FCD9E029F1BA4C63893A16 /* PersistenceController.swift in Sources */,
+				A398716BC290729857A6A460 /* PhraseButton.swift in Sources */,
+				524825ED58397E1E94A10618 /* PlaybackButton.swift in Sources */,
+				04C0819596DA94F45A6DEAB8 /* PracticeView.swift in Sources */,
+				089C735FB0DDADA06AE9B8D5 /* PracticeViewModel.swift in Sources */,
+				7D9866CB26D3EDDF00BED6F6 /* SentencePracticeView.swift in Sources */,
+				7D9866A726D2504C00BED6F6 /* VideoViewModel.swift in Sources */,
+				E15D6EBC22A8B6E96A7F6D43 /* ProgressBar.swift in Sources */,
+				F2F8A5F45A805C2DCE1E1396 /* ProgressBarCourse.swift in Sources */,
+				7D9866A026D2459B00BED6F6 /* PracticeOnboardingViewModel.swift in Sources */,
+				B1904620AE3FAABC127E5E62 /* RegionSelectionButton.swift in Sources */,
+				0152466490872986EC4A9900 /* RootView.swift in Sources */,
+				2FB591573AA5F34FF51B33C1 /* SentenceFeedbackView.swift in Sources */,
+				2CC1F6FC2800C5674AFC829C /* SettingViewModel.swift in Sources */,
+				3F426FA2579AA91947449ED2 /* SettingsView.swift in Sources */,
+				388B23B90718820A73A0951C /* Signity.xcdatamodeld in Sources */,
+				57DDE681F3F7C1BAAD994C0B /* SignityBody.swift in Sources */,
+				5CD42F4DFDA07594BF87D294 /* SignityButton.swift in Sources */,
+				87B42D7007735A4EF751D4A8 /* SignityButtonOutline.swift in Sources */,
+				D5035CBBC41C8912ECA15098 /* SignityFootnote.swift in Sources */,
+				505AF6A9C44D1A0F64312AE7 /* SignityFootnoteBold.swift in Sources */,
+				E8B3A57AF14B77FCC8B6C813 /* SignityHeadline.swift in Sources */,
+				430FE75375618ABC257C07D4 /* SignityHeadlineThin.swift in Sources */,
+				03B63AFE978A949546309E26 /* SignityLargeTitle.swift in Sources */,
+				6290B7DFD3C60D96FC63BB68 /* SignitySubhead.swift in Sources */,
+				330DAD28013E83FEFBC0F62B /* SignitySubheadBold.swift in Sources */,
+				F686960DA9B511D2C276C9CA /* SignitySubtitle.swift in Sources */,
+				5826EBA5497CF65DAC9132C3 /* SignityTextColor.swift in Sources */,
+				F89D1E7F4D3F9FAD0674520F /* SignityTitle.swift in Sources */,
+				D7A6003F26CAD5C08AF09AE4 /* SimulationView.swift in Sources */,
+				156BDFD68BD5D417A9A3C1B1 /* SimulationViewModel.swift in Sources */,
+				C8CDC39F39C55B8C009FC006 /* TutorialPhraseView.swift in Sources */,
+				CCAB2B0F632FF0C5AE04FD1A /* TutorialViewModel.swift in Sources */,
+				ECAADD8A01DFA9B2A7DB43ED /* UserProfile.swift in Sources */,
+				18981A457D6D6F35F7F8D404 /* VideoView.swift in Sources */,
+				950FD7D40337A9D6648B8894 /* ViewRouter.swift in Sources */,
+				1A3CC2C0ED8B45467608EF24 /* YourTurnView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5561AAE826B7ED97001896B3 /* Sources */ = {
+		FE36C07CBDEEFD9EF805AC4D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5561AAF126B7ED97001896B3 /* SignityUITests.swift in Sources */,
+				31A245C6ADAB54460924C8A6 /* SignityUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		5561AAE326B7ED97001896B3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5561AAC726B7ED94001896B3 /* Signity */;
-			targetProxy = 5561AAE226B7ED97001896B3 /* PBXContainerItemProxy */;
-		};
-		5561AAEE26B7ED97001896B3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5561AAC726B7ED94001896B3 /* Signity */;
-			targetProxy = 5561AAED26B7ED97001896B3 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		5561AAD926B7ED96001896B3 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5561AADA26B7ED96001896B3 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		5561AAF326B7ED97001896B3 /* Debug */ = {
+		17B94182A7E8D8A3A1DD35EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SignityTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = AppleAcademy.SignityTests;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1C66210BB0C1BA07FA1BCB9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SignityUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AppleAcademy.SignityUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		5561AAF426B7ED97001896B3 /* Release */ = {
+		36326A03FC6E74A16A53867A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 18;
+				DEVELOPMENT_TEAM = 6QH35NFSG6;
+				INFOPLIST_FILE = Signity/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DAHCA.Signity;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		47F4FB5513BCCDF5D23CC850 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SignityUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AppleAcademy.SignityUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4A0B4E989D1905F109B9D01F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -713,195 +1252,186 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
-		5561AAF626B7ED97001896B3 /* Debug */ = {
+		5B0F55218966679D240C0EC2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Signity/Preview Content\"";
-				DEVELOPMENT_TEAM = ND4DZWJCVY;
-				ENABLE_PREVIEWS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 18;
+				DEVELOPMENT_TEAM = 6QH35NFSG6;
 				INFOPLIST_FILE = Signity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AppleAcademy.Signity;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		5561AAF726B7ED97001896B3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Signity/Preview Content\"";
-				DEVELOPMENT_TEAM = ND4DZWJCVY;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Signity/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = AppleAcademy.Signity;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PRODUCT_BUNDLE_IDENTIFIER = DAHCA.Signity;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
-		5561AAF926B7ED97001896B3 /* Debug */ = {
+		8CCD283E34D3BACEB23119E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ND4DZWJCVY;
 				INFOPLIST_FILE = SignityTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = AppleAcademy.SignityTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Signity.app/Signity";
 			};
 			name = Debug;
 		};
-		5561AAFA26B7ED97001896B3 /* Release */ = {
+		8D5423A3F3517A82A40D091C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ND4DZWJCVY;
-				INFOPLIST_FILE = SignityTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"DEBUG=1",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AppleAcademy.SignityTests;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Signity.app/Signity";
-			};
-			name = Release;
-		};
-		5561AAFC26B7ED97001896B3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ND4DZWJCVY;
-				INFOPLIST_FILE = SignityUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = AppleAcademy.SignityUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Signity;
 			};
 			name = Debug;
-		};
-		5561AAFD26B7ED97001896B3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ND4DZWJCVY;
-				INFOPLIST_FILE = SignityUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = AppleAcademy.SignityUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Signity;
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5561AAC326B7ED94001896B3 /* Build configuration list for PBXProject "Signity" */ = {
+		05F24E7B598650EDB9ACF905 /* Build configuration list for PBXNativeTarget "Signity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5561AAF326B7ED97001896B3 /* Debug */,
-				5561AAF426B7ED97001896B3 /* Release */,
+				36326A03FC6E74A16A53867A /* Debug */,
+				5B0F55218966679D240C0EC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		5561AAF526B7ED97001896B3 /* Build configuration list for PBXNativeTarget "Signity" */ = {
+		7BD6007F6C5AC5CFBC7125BB /* Build configuration list for PBXNativeTarget "SignityTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5561AAF626B7ED97001896B3 /* Debug */,
-				5561AAF726B7ED97001896B3 /* Release */,
+				8CCD283E34D3BACEB23119E9 /* Debug */,
+				17B94182A7E8D8A3A1DD35EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		5561AAF826B7ED97001896B3 /* Build configuration list for PBXNativeTarget "SignityTests" */ = {
+		9960AD806CB30C9922FBB468 /* Build configuration list for PBXProject "Signity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5561AAF926B7ED97001896B3 /* Debug */,
-				5561AAFA26B7ED97001896B3 /* Release */,
+				8D5423A3F3517A82A40D091C /* Debug */,
+				4A0B4E989D1905F109B9D01F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		5561AAFB26B7ED97001896B3 /* Build configuration list for PBXNativeTarget "SignityUITests" */ = {
+		A4BB601E084096DC1CD02809 /* Build configuration list for PBXNativeTarget "SignityUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5561AAFC26B7ED97001896B3 /* Debug */,
-				5561AAFD26B7ED97001896B3 /* Release */,
+				1C66210BB0C1BA07FA1BCB9E /* Debug */,
+				47F4FB5513BCCDF5D23CC850 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		06E2DBB6FFEF938F0F04CE51 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD103C4E035C99740F69B634 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06E2DBB6FFEF938F0F04CE51 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
+
 /* Begin XCVersionGroup section */
-		5561AAD126B7ED94001896B3 /* Signity.xcdatamodeld */ = {
+		E3D6A0422622C32959874569 /* Signity.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				5561AAD226B7ED94001896B3 /* Signity.xcdatamodel */,
+				A1E23FADA03783C9A2BD0290 /* Signity.xcdatamodel */,
 			);
-			currentVersion = 5561AAD226B7ED94001896B3 /* Signity.xcdatamodel */;
+			currentVersion = A1E23FADA03783C9A2BD0290 /* Signity.xcdatamodel */;
 			path = Signity.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 5561AAC026B7ED94001896B3 /* Project object */;
+	rootObject = 16A17110F0246B2B6064D282 /* Project object */;
 }
