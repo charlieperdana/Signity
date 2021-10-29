@@ -17,4 +17,6 @@ enum SignityTextColor: String {
     case white = "White"
     case gray1 = "Gray1"
     case gray3 = "Gray3"
+    
+    case mainYellow = "MainYellow"
 }

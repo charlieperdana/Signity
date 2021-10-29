@@ -17,10 +17,16 @@ struct CardViewCourse: View {
         category.level > proficiency
     }
     
+    var categoryCompleted: Bool {
+        category.completedCourses == category.courseCount
+    }
+    
     var categoryIcon: String {
         var name = "\(category.code) - \(category.name)"
         if categoryLocked {
             name += " Locked"
+        } else if categoryCompleted {
+            name += " Complete"
         }
         
         return name
@@ -28,6 +34,10 @@ struct CardViewCourse: View {
     
     var foregroundColor: SignityTextColor {
         categoryLocked ? .gray3 : .white
+    }
+    
+    var progressCount: SignityTextColor {
+        categoryCompleted ? .mainYellow : .white
     }
     
     var backgroundColor: Color {
@@ -52,7 +62,7 @@ struct CardViewCourse: View {
                             Image(systemName: "lock.fill")
                         } else {
                             Text("\(category.completedCourses)/\(category.courseCount)")
-                                .modifier(SignitySubhead(color: foregroundColor))
+                                .modifier(SignitySubhead(color: progressCount))
                         }
                     }
                     .modifier(SignitySubhead(color: foregroundColor))
@@ -60,7 +70,7 @@ struct CardViewCourse: View {
                     Text(category.name)
                         .modifier(SignityHeadline(color: foregroundColor))
                     
-                    ProgressBarCourse(value: Double(category.completedCourses), maxValue: Double(category.courseCount), locked: categoryLocked)
+                    ProgressBarCourse(value: Double(category.completedCourses), maxValue: Double(category.courseCount), locked: categoryLocked, completed: categoryCompleted)
                 }
                 .padding()
             }

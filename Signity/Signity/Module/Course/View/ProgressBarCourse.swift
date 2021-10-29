@@ -17,12 +17,20 @@ struct ProgressBarCourse: View {
     
     init(value: Double,
          maxValue: Double,
-         locked: Bool) {
+         locked: Bool,
+         completed: Bool) {
         self.value = value
         self.maxValue = maxValue
         self.locked = locked
         self.backgroundColor = locked ? Color("Gray3") : Color("DarkPurple")
-        self.foregroundColor = locked ? Color.clear : Color("White")
+        
+        if locked {
+            self.foregroundColor = .clear
+        } else if completed {
+            self.foregroundColor = Color("MainYellow")
+        } else {
+            self.foregroundColor = .white
+        }
     }
     
     private func progress(value: Double,
@@ -49,7 +57,6 @@ struct ProgressBarCourse: View {
                     Capsule()
                         .frame(width: progress(value: self.value, maxValue: self.maxValue, width: geometryReader.size.width))
                         .foregroundColor(self.foregroundColor)
-                        .animation(.easeIn)
                 }
             }
             .frame(height: 8)
@@ -60,7 +67,7 @@ struct ProgressBarCourse: View {
 struct ProgressBarCourse_Previews: PreviewProvider {
     
     static var previews: some View {
-        ProgressBarCourse(value: 3.0, maxValue: 10.0, locked: true)
+        ProgressBarCourse(value: 3.0, maxValue: 10.0, locked: true, completed: false)
             .frame(height: 10)
             .padding(30)
     }
