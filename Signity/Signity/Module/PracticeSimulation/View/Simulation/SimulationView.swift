@@ -64,30 +64,11 @@ struct SimulationView: View {
             } else {
                 VStack {
                     ProgressBar(value: Double(viewModel.userTurnDone) / Double(viewModel.courses.count / 2))
-                    
-                    HStack(alignment: .top) {
-                        ChatBubble(text: viewModel.speakerCurrentWord)
-                        
-                        LottieView(name: viewModel.courses[viewModel.userPosition - 1].videoName, playbackSpeed: 1.0)
-                            .frame(width: 150, height: 200)
-                            .background(Color.white)
-                            .cornerRadius(25)
-                    }
-                    .padding()
+                    SpeakerView(viewModel: self.viewModel)
                     
                     Spacer()
                     
-                    HStack {
-                        YourTurnView()
-                        Spacer()
-                        HintButton() {
-                            self.isHintVisible = true
-                        }
-                    }
-                    .padding(.horizontal)
-                    
-                    SentenceFeedbackView(words: viewModel.wordTracking, currentCorrect: viewModel.correctWord)
-                        .padding(.bottom, 40)
+                    UserGuideView(isHintVisible: $isHintVisible, viewModel: self.viewModel)
                 }
                 .padding(.top, self.viewModel.navBarHidden ? 35 : 75)
             }

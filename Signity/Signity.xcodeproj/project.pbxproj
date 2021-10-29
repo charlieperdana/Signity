@@ -89,6 +89,10 @@
 		7D9866DB26D4F8B700BED6F6 /* Halo - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D9866D226D4F8B700BED6F6 /* Halo - Jakarta.json */; };
 		7D9866DC26D4F8B700BED6F6 /* Sehat - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D9866D326D4F8B700BED6F6 /* Sehat - Jakarta.json */; };
 		7D9866DD26D4F8B700BED6F6 /* Selamat pagi - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D9866D426D4F8B700BED6F6 /* Selamat pagi - Jakarta.json */; };
+		7DF9B9C3272C347B0060F992 /* PracticeGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF9B9C2272C347B0060F992 /* PracticeGuideView.swift */; };
+		7DF9B9C5272C34CF0060F992 /* PracticeModulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF9B9C4272C34CF0060F992 /* PracticeModulesView.swift */; };
+		7DF9B9C7272C35F50060F992 /* SpeakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF9B9C6272C35F50060F992 /* SpeakerView.swift */; };
+		7DF9B9C9272C36750060F992 /* UserGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF9B9C8272C36750060F992 /* UserGuideView.swift */; };
 		7F4E21AB2E5892E60A117BB4 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937BBB895E982E23EDE14EB8 /* Hand.swift */; };
 		7FABAAC1EB4B9DCCDBC0D514 /* D - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 4747D3C91207CABFAB71A09B /* D - Jakarta.json */; };
 		80015975E01F910B4B38F30F /* O - Jakarta.json in Resources */ = {isa = PBXBuildFile; fileRef = 5F4186295BF3D1433D37320F /* O - Jakarta.json */; };
@@ -228,6 +232,10 @@
 		7D9866D226D4F8B700BED6F6 /* Halo - Jakarta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Halo - Jakarta.json"; sourceTree = "<group>"; };
 		7D9866D326D4F8B700BED6F6 /* Sehat - Jakarta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Sehat - Jakarta.json"; sourceTree = "<group>"; };
 		7D9866D426D4F8B700BED6F6 /* Selamat pagi - Jakarta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Selamat pagi - Jakarta.json"; sourceTree = "<group>"; };
+		7DF9B9C2272C347B0060F992 /* PracticeGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeGuideView.swift; sourceTree = "<group>"; };
+		7DF9B9C4272C34CF0060F992 /* PracticeModulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeModulesView.swift; sourceTree = "<group>"; };
+		7DF9B9C6272C35F50060F992 /* SpeakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerView.swift; sourceTree = "<group>"; };
+		7DF9B9C8272C36750060F992 /* UserGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGuideView.swift; sourceTree = "<group>"; };
 		7F9CC27601DB094D8E61E41B /* 7 - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "7 - Jakarta.json"; sourceTree = "<group>"; };
 		8083747B5219BD8C0D2C57F0 /* 4 - Jakarta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "4 - Jakarta.json"; sourceTree = "<group>"; };
 		81A658F1F3904143390E2BA0 /* HintButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintButton.swift; sourceTree = "<group>"; };
@@ -388,6 +396,8 @@
 				37E0F6AB7A446A3B393E745F /* HorizontalModules.swift */,
 				99A445EF09E4F9709D57F064 /* PracticeView.swift */,
 				7D9866C826D3E72200BED6F6 /* SituationHorizontalModule.swift */,
+				7DF9B9C2272C347B0060F992 /* PracticeGuideView.swift */,
+				7DF9B9C4272C34CF0060F992 /* PracticeModulesView.swift */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -523,6 +533,8 @@
 				81A658F1F3904143390E2BA0 /* HintButton.swift */,
 				BBABD56B2392B76F8D92AD37 /* SimulationView.swift */,
 				DB56FC9B7DCA54A4FA21B5F7 /* YourTurnView.swift */,
+				7DF9B9C6272C35F50060F992 /* SpeakerView.swift */,
+				7DF9B9C8272C36750060F992 /* UserGuideView.swift */,
 			);
 			path = Simulation;
 			sourceTree = "<group>";
@@ -1062,6 +1074,7 @@
 				4D32099FCCF77EC32EB67FFA /* Category+Helper.swift in Sources */,
 				0A9411512F3DC9679165D875 /* CategoryView.swift in Sources */,
 				2DE307E1D08040D56ED29EE3 /* ChatBubble.swift in Sources */,
+				7DF9B9C3272C347B0060F992 /* PracticeGuideView.swift in Sources */,
 				9FED50ED7D44182DFC591429 /* ChatTriangleShape.swift in Sources */,
 				E6BB61039551A3FA7EACDA5A /* CollectionView.swift in Sources */,
 				851C5E38307AD135B7FD9397 /* ComparePhraseView.swift in Sources */,
@@ -1109,6 +1122,7 @@
 				57DDE681F3F7C1BAAD994C0B /* SignityBody.swift in Sources */,
 				5CD42F4DFDA07594BF87D294 /* SignityButton.swift in Sources */,
 				87B42D7007735A4EF751D4A8 /* SignityButtonOutline.swift in Sources */,
+				7DF9B9C5272C34CF0060F992 /* PracticeModulesView.swift in Sources */,
 				D5035CBBC41C8912ECA15098 /* SignityFootnote.swift in Sources */,
 				505AF6A9C44D1A0F64312AE7 /* SignityFootnoteBold.swift in Sources */,
 				E8B3A57AF14B77FCC8B6C813 /* SignityHeadline.swift in Sources */,
@@ -1119,7 +1133,9 @@
 				F686960DA9B511D2C276C9CA /* SignitySubtitle.swift in Sources */,
 				5826EBA5497CF65DAC9132C3 /* SignityTextColor.swift in Sources */,
 				F89D1E7F4D3F9FAD0674520F /* SignityTitle.swift in Sources */,
+				7DF9B9C9272C36750060F992 /* UserGuideView.swift in Sources */,
 				D7A6003F26CAD5C08AF09AE4 /* SimulationView.swift in Sources */,
+				7DF9B9C7272C35F50060F992 /* SpeakerView.swift in Sources */,
 				156BDFD68BD5D417A9A3C1B1 /* SimulationViewModel.swift in Sources */,
 				C8CDC39F39C55B8C009FC006 /* TutorialPhraseView.swift in Sources */,
 				CCAB2B0F632FF0C5AE04FD1A /* TutorialViewModel.swift in Sources */,

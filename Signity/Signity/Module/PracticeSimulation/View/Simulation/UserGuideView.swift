@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct UserGuideView: View {
+    @Binding var isHintVisible: Bool
+    @ObservedObject var viewModel: SimulationViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct UserGuideView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserGuideView()
+        HStack {
+            YourTurnView()
+            Spacer()
+            HintButton() {
+                self.isHintVisible = true
+            }
+        }
+        .padding(.horizontal)
+        
+        SentenceFeedbackView(words: viewModel.wordTracking, currentCorrect: viewModel.correctWord)
+            .padding(.bottom, 40)
     }
 }

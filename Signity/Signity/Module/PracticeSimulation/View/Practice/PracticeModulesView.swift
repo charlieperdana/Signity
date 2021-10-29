@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct PracticeModulesView: View {
+    var category: Category
+    @ObservedObject var viewModel: PracticeViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct PracticeModulesView_Previews: PreviewProvider {
-    static var previews: some View {
-        PracticeModulesView()
+        if self.category.typeEnum == .situation {
+            SituationHorizontalModule(category: self.category, currentSelected: $viewModel.chosenCourse, currentIndex: viewModel.currentIndex, currentCorrect: viewModel.correctWord)
+        } else {
+            HorizontalModules(category: self.category, currentSelected: $viewModel.chosenCourse, currentIndex: viewModel.currentIndex)
+        }
     }
 }

@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct PracticeGuideView: View {
+    @ObservedObject var viewModel: PracticeViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct PracticeGuideView_Previews: PreviewProvider {
-    static var previews: some View {
-        PracticeGuideView()
+        HStack(alignment: .top) {
+            ChatBubble(text: viewModel.chosenCourse.name)
+                .offset(y: -15)
+            
+            VideoView(videoName: viewModel.chosenCourse.videoName)
+                .frame(width: 150, height: 200)
+        }
+        .padding()
     }
 }

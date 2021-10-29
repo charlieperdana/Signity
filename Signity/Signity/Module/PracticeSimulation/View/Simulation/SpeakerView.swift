@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct SpeakerView: View {
+    @ObservedObject var viewModel: SimulationViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct TopSimulationView_Previews: PreviewProvider {
-    static var previews: some View {
-        SpeakerView()
+        HStack(alignment: .top) {
+            ChatBubble(text: viewModel.speakerCurrentWord)
+            
+            LottieView(name: viewModel.courses[viewModel.userPosition - 1].videoName, playbackSpeed: 1.0)
+                .frame(width: 150, height: 200)
+                .background(Color.white)
+                .cornerRadius(25)
+        }
+        .padding()
     }
 }

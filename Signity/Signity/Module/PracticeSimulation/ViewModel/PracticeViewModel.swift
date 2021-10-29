@@ -74,7 +74,7 @@ class PracticeViewModel: ObservableObject {
                 // handle errors
             }
             
-            handLandmarks.removeFirst(15)
+            handLandmarks.removeFirst()
         }
     }
     
