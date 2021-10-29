@@ -49,7 +49,6 @@ struct ProgressBarCourse: View {
                     Capsule()
                         .frame(width: progress(value: self.value, maxValue: self.maxValue, width: geometryReader.size.width))
                         .foregroundColor(self.foregroundColor)
-                        .animation(.easeIn)
                 }
             }
             .frame(height: 8)
