@@ -65,20 +65,9 @@ struct PracticeView: View {
                 HandGuide()
             } else {
                 VStack {
-                    HStack(alignment: .top) {
-                        ChatBubble(text: viewModel.chosenCourse.name)
-                            .offset(y: -15)
-                        
-                        VideoView(videoName: viewModel.chosenCourse.videoName)
-                            .frame(width: 150, height: 200)
-                    }
-                    .padding()
+                    PracticeGuideView(viewModel: self.viewModel)
                     Spacer()
-                    if self.category.typeEnum == .situation {
-                        SituationHorizontalModule(category: self.category, currentSelected: $viewModel.chosenCourse, currentIndex: viewModel.currentIndex, currentCorrect: viewModel.correctWord)
-                    } else {
-                        HorizontalModules(category: self.category, currentSelected: $viewModel.chosenCourse, currentIndex: viewModel.currentIndex)
-                    }
+                    PracticeModulesView(category: self.category, viewModel: self.viewModel)
                 }
                 .padding(.top, self.isNavBarHidden ? 45 : 85)
             }
