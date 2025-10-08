@@ -27,11 +27,11 @@ struct Onboarding: View {
                 .offset(y: 10)
             
             VStack(alignment:.leading, spacing: 15) {
-                SignityButton(text: "Belum, saya masih pemula") {
+                SignityButton(text: "Belum, saya masih pemula!") {
                     viewModel.completeOnboardingSetup(newPractitioner: true)
                     router.currentPage = .course
                 }
-                SignityButtonOutline(text: "Pernah, saya mengerti BISINDO") {
+                SignityButtonOutline(text: "Pernah, saya mengerti BISINDO.") {
                     self.showNextOnboard = true
                 }
             }
