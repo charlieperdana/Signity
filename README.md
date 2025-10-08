@@ -12,6 +12,7 @@ Signity's Video Ad can be accessed at [this link](https://www.youtube.com/watch?
 - [x] <s>Published app to Test Flight</s>
 - [ ] Develop watchOS app
 - [ ] Improve machine learning model
+- [ ] Improve Deep Learning, Computer Vision and NLP
 
 ## System Requirements
 * iOS 14.0 and later
